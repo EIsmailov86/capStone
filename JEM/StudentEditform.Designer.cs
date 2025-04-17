@@ -31,8 +31,8 @@
             this.grbStudentEdit = new System.Windows.Forms.GroupBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txbMyBio = new System.Windows.Forms.TextBox();
+            this.txbBalance = new System.Windows.Forms.TextBox();
             this.lblBalance = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -40,17 +40,20 @@
             this.lblSubject = new System.Windows.Forms.Label();
             this.lblGrade = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbPhone = new System.Windows.Forms.TextBox();
+            this.cmbSubject = new System.Windows.Forms.ComboBox();
+            this.cmbGrade = new System.Windows.Forms.ComboBox();
+            this.txbAddress = new System.Windows.Forms.TextBox();
+            this.txbEmail = new System.Windows.Forms.TextBox();
+            this.txbName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMyTeacher = new System.Windows.Forms.Button();
+            this.btnPayment = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.grbStudentEdit.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -61,8 +64,8 @@
             // 
             this.grbStudentEdit.Controls.Add(this.btnClear);
             this.grbStudentEdit.Controls.Add(this.btnUpdate);
-            this.grbStudentEdit.Controls.Add(this.textBox6);
-            this.grbStudentEdit.Controls.Add(this.textBox5);
+            this.grbStudentEdit.Controls.Add(this.txbMyBio);
+            this.grbStudentEdit.Controls.Add(this.txbBalance);
             this.grbStudentEdit.Controls.Add(this.lblBalance);
             this.grbStudentEdit.Controls.Add(this.lblEmail);
             this.grbStudentEdit.Controls.Add(this.lblAddress);
@@ -70,12 +73,12 @@
             this.grbStudentEdit.Controls.Add(this.lblSubject);
             this.grbStudentEdit.Controls.Add(this.lblGrade);
             this.grbStudentEdit.Controls.Add(this.lblName);
-            this.grbStudentEdit.Controls.Add(this.textBox4);
-            this.grbStudentEdit.Controls.Add(this.comboBox2);
-            this.grbStudentEdit.Controls.Add(this.comboBox1);
-            this.grbStudentEdit.Controls.Add(this.textBox3);
-            this.grbStudentEdit.Controls.Add(this.textBox2);
-            this.grbStudentEdit.Controls.Add(this.textBox1);
+            this.grbStudentEdit.Controls.Add(this.txbPhone);
+            this.grbStudentEdit.Controls.Add(this.cmbSubject);
+            this.grbStudentEdit.Controls.Add(this.cmbGrade);
+            this.grbStudentEdit.Controls.Add(this.txbAddress);
+            this.grbStudentEdit.Controls.Add(this.txbEmail);
+            this.grbStudentEdit.Controls.Add(this.txbName);
             this.grbStudentEdit.Location = new System.Drawing.Point(300, 130);
             this.grbStudentEdit.Name = "grbStudentEdit";
             this.grbStudentEdit.Size = new System.Drawing.Size(511, 400);
@@ -101,21 +104,21 @@
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // txbMyBio
             // 
-            this.textBox6.Location = new System.Drawing.Point(309, 32);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(144, 288);
-            this.textBox6.TabIndex = 15;
-            this.textBox6.Text = "My Bio...";
+            this.txbMyBio.Location = new System.Drawing.Point(309, 32);
+            this.txbMyBio.Multiline = true;
+            this.txbMyBio.Name = "txbMyBio";
+            this.txbMyBio.Size = new System.Drawing.Size(144, 288);
+            this.txbMyBio.TabIndex = 15;
+            this.txbMyBio.Text = "My Bio...";
             // 
-            // textBox5
+            // txbBalance
             // 
-            this.textBox5.Location = new System.Drawing.Point(131, 298);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(121, 22);
-            this.textBox5.TabIndex = 13;
+            this.txbBalance.Location = new System.Drawing.Point(131, 298);
+            this.txbBalance.Name = "txbBalance";
+            this.txbBalance.Size = new System.Drawing.Size(121, 22);
+            this.txbBalance.TabIndex = 13;
             // 
             // lblBalance
             // 
@@ -180,49 +183,49 @@
             this.lblName.TabIndex = 6;
             this.lblName.Text = "Name";
             // 
-            // textBox4
+            // txbPhone
             // 
-            this.textBox4.Location = new System.Drawing.Point(131, 160);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 22);
-            this.textBox4.TabIndex = 5;
+            this.txbPhone.Location = new System.Drawing.Point(131, 160);
+            this.txbPhone.Name = "txbPhone";
+            this.txbPhone.Size = new System.Drawing.Size(121, 22);
+            this.txbPhone.TabIndex = 5;
             // 
-            // comboBox2
+            // cmbSubject
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(131, 109);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 4;
+            this.cmbSubject.FormattingEnabled = true;
+            this.cmbSubject.Location = new System.Drawing.Point(131, 109);
+            this.cmbSubject.Name = "cmbSubject";
+            this.cmbSubject.Size = new System.Drawing.Size(121, 24);
+            this.cmbSubject.TabIndex = 4;
             // 
-            // comboBox1
+            // cmbGrade
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(131, 69);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 3;
+            this.cmbGrade.FormattingEnabled = true;
+            this.cmbGrade.Location = new System.Drawing.Point(131, 69);
+            this.cmbGrade.Name = "cmbGrade";
+            this.cmbGrade.Size = new System.Drawing.Size(121, 24);
+            this.cmbGrade.TabIndex = 3;
             // 
-            // textBox3
+            // txbAddress
             // 
-            this.textBox3.Location = new System.Drawing.Point(131, 206);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 22);
-            this.textBox3.TabIndex = 2;
+            this.txbAddress.Location = new System.Drawing.Point(131, 206);
+            this.txbAddress.Name = "txbAddress";
+            this.txbAddress.Size = new System.Drawing.Size(121, 22);
+            this.txbAddress.TabIndex = 2;
             // 
-            // textBox2
+            // txbEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(131, 251);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 22);
-            this.textBox2.TabIndex = 1;
+            this.txbEmail.Location = new System.Drawing.Point(131, 251);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.Size = new System.Drawing.Size(121, 22);
+            this.txbEmail.TabIndex = 1;
             // 
-            // textBox1
+            // txbName
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 0;
+            this.txbName.Location = new System.Drawing.Point(131, 32);
+            this.txbName.Name = "txbName";
+            this.txbName.Size = new System.Drawing.Size(121, 22);
+            this.txbName.TabIndex = 0;
             // 
             // panel1
             // 
@@ -234,34 +237,18 @@
             this.panel1.Size = new System.Drawing.Size(135, 653);
             this.panel1.TabIndex = 1;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(135, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(847, 31);
-            this.panel2.TabIndex = 0;
-            // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnMyTeacher);
+            this.panel3.Controls.Add(this.btnPayment);
+            this.panel3.Controls.Add(this.btnDashboard);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(135, 123);
+            this.panel3.Size = new System.Drawing.Size(135, 431);
             this.panel3.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::JEM.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -273,6 +260,54 @@
             this.label1.Size = new System.Drawing.Size(45, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "JEM";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(135, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(847, 31);
+            this.panel2.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::JEM.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnMyTeacher
+            // 
+            this.btnMyTeacher.Location = new System.Drawing.Point(12, 334);
+            this.btnMyTeacher.Name = "btnMyTeacher";
+            this.btnMyTeacher.Size = new System.Drawing.Size(114, 42);
+            this.btnMyTeacher.TabIndex = 20;
+            this.btnMyTeacher.Text = "My Teacher";
+            this.btnMyTeacher.UseVisualStyleBackColor = true;
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.Location = new System.Drawing.Point(12, 237);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(114, 69);
+            this.btnPayment.TabIndex = 19;
+            this.btnPayment.Text = "Payment/\r\nNotifications";
+            this.btnPayment.UseVisualStyleBackColor = true;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Location = new System.Drawing.Point(12, 167);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(114, 42);
+            this.btnDashboard.TabIndex = 18;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnMyInfo_Click);
             // 
             // StudentEditform
             // 
@@ -298,7 +333,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grbStudentEdit;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txbBalance;
         private System.Windows.Forms.Label lblBalance;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblAddress;
@@ -306,13 +341,13 @@
         private System.Windows.Forms.Label lblSubject;
         private System.Windows.Forms.Label lblGrade;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txbPhone;
+        private System.Windows.Forms.ComboBox cmbSubject;
+        private System.Windows.Forms.ComboBox cmbGrade;
+        private System.Windows.Forms.TextBox txbAddress;
+        private System.Windows.Forms.TextBox txbEmail;
+        private System.Windows.Forms.TextBox txbName;
+        private System.Windows.Forms.TextBox txbMyBio;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Panel panel1;
@@ -320,5 +355,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnMyTeacher;
+        private System.Windows.Forms.Button btnPayment;
+        private System.Windows.Forms.Button btnDashboard;
     }
 }

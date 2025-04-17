@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace JEM
 {
-    public partial class StudentEditform : Form
+    public partial class StudentTeacherForm : Form
     {
-        public StudentEditform()
+        public StudentTeacherForm()
         {
             InitializeComponent();
-        }
-
-        private void btnMyInfo_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
