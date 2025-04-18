@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMyTeacher = new System.Windows.Forms.Button();
+            this.btnMyInfo = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grbNotifications = new System.Windows.Forms.GroupBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.txbNotifications = new System.Windows.Forms.TextBox();
             this.cmbHeading = new System.Windows.Forms.ComboBox();
-            this.lblNotifications = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grbPayment = new System.Windows.Forms.GroupBox();
             this.rbtAgree = new System.Windows.Forms.RadioButton();
             this.lblAgreewithTerms = new System.Windows.Forms.Label();
             this.txbAmount = new System.Windows.Forms.TextBox();
@@ -46,13 +48,10 @@
             this.rbtCreditCard = new System.Windows.Forms.RadioButton();
             this.cmbPay = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnMyTeacher = new System.Windows.Forms.Button();
-            this.btnMyInfo = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.grbNotifications.SuspendLayout();
+            this.grbPayment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +67,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(135, 653);
             this.panel1.TabIndex = 0;
+            // 
+            // btnMyTeacher
+            // 
+            this.btnMyTeacher.Location = new System.Drawing.Point(12, 356);
+            this.btnMyTeacher.Name = "btnMyTeacher";
+            this.btnMyTeacher.Size = new System.Drawing.Size(114, 42);
+            this.btnMyTeacher.TabIndex = 23;
+            this.btnMyTeacher.Text = "My Teacher";
+            this.btnMyTeacher.UseVisualStyleBackColor = true;
+            // 
+            // btnMyInfo
+            // 
+            this.btnMyInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyInfo.Location = new System.Drawing.Point(12, 259);
+            this.btnMyInfo.Name = "btnMyInfo";
+            this.btnMyInfo.Size = new System.Drawing.Size(114, 69);
+            this.btnMyInfo.TabIndex = 22;
+            this.btnMyInfo.Text = "My Info";
+            this.btnMyInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Location = new System.Drawing.Point(12, 189);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(114, 42);
+            this.btnDashboard.TabIndex = 21;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -98,18 +125,17 @@
             this.panel2.Size = new System.Drawing.Size(847, 31);
             this.panel2.TabIndex = 1;
             // 
-            // groupBox1
+            // grbNotifications
             // 
-            this.groupBox1.Controls.Add(this.btnDelete);
-            this.groupBox1.Controls.Add(this.txbNotifications);
-            this.groupBox1.Controls.Add(this.cmbHeading);
-            this.groupBox1.Controls.Add(this.lblNotifications);
-            this.groupBox1.Location = new System.Drawing.Point(164, 139);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(327, 389);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.grbNotifications.Controls.Add(this.btnDelete);
+            this.grbNotifications.Controls.Add(this.txbNotifications);
+            this.grbNotifications.Controls.Add(this.cmbHeading);
+            this.grbNotifications.Location = new System.Drawing.Point(164, 139);
+            this.grbNotifications.Name = "grbNotifications";
+            this.grbNotifications.Size = new System.Drawing.Size(327, 389);
+            this.grbNotifications.TabIndex = 2;
+            this.grbNotifications.TabStop = false;
+            this.grbNotifications.Text = "Notifications";
             // 
             // btnDelete
             // 
@@ -137,30 +163,21 @@
             this.cmbHeading.TabIndex = 1;
             this.cmbHeading.Text = "Heading";
             // 
-            // lblNotifications
+            // grbPayment
             // 
-            this.lblNotifications.AutoSize = true;
-            this.lblNotifications.Location = new System.Drawing.Point(130, 27);
-            this.lblNotifications.Name = "lblNotifications";
-            this.lblNotifications.Size = new System.Drawing.Size(80, 16);
-            this.lblNotifications.TabIndex = 0;
-            this.lblNotifications.Text = "Notifications";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.rbtAgree);
-            this.groupBox2.Controls.Add(this.lblAgreewithTerms);
-            this.groupBox2.Controls.Add(this.txbAmount);
-            this.groupBox2.Controls.Add(this.rbtPaypal);
-            this.groupBox2.Controls.Add(this.rbtCheckingAccount);
-            this.groupBox2.Controls.Add(this.rbtCreditCard);
-            this.groupBox2.Controls.Add(this.cmbPay);
-            this.groupBox2.Location = new System.Drawing.Point(601, 139);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(308, 389);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.grbPayment.Controls.Add(this.rbtAgree);
+            this.grbPayment.Controls.Add(this.lblAgreewithTerms);
+            this.grbPayment.Controls.Add(this.txbAmount);
+            this.grbPayment.Controls.Add(this.rbtPaypal);
+            this.grbPayment.Controls.Add(this.rbtCheckingAccount);
+            this.grbPayment.Controls.Add(this.rbtCreditCard);
+            this.grbPayment.Controls.Add(this.cmbPay);
+            this.grbPayment.Location = new System.Drawing.Point(601, 139);
+            this.grbPayment.Name = "grbPayment";
+            this.grbPayment.Size = new System.Drawing.Size(308, 389);
+            this.grbPayment.TabIndex = 3;
+            this.grbPayment.TabStop = false;
+            this.grbPayment.Text = "Payment";
             // 
             // rbtAgree
             // 
@@ -242,41 +259,13 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // btnMyTeacher
-            // 
-            this.btnMyTeacher.Location = new System.Drawing.Point(12, 356);
-            this.btnMyTeacher.Name = "btnMyTeacher";
-            this.btnMyTeacher.Size = new System.Drawing.Size(114, 42);
-            this.btnMyTeacher.TabIndex = 23;
-            this.btnMyTeacher.Text = "My Teacher";
-            this.btnMyTeacher.UseVisualStyleBackColor = true;
-            // 
-            // btnMyInfo
-            // 
-            this.btnMyInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyInfo.Location = new System.Drawing.Point(12, 259);
-            this.btnMyInfo.Name = "btnMyInfo";
-            this.btnMyInfo.Size = new System.Drawing.Size(114, 69);
-            this.btnMyInfo.TabIndex = 22;
-            this.btnMyInfo.Text = "My Info";
-            this.btnMyInfo.UseVisualStyleBackColor = true;
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Location = new System.Drawing.Point(12, 189);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(114, 42);
-            this.btnDashboard.TabIndex = 21;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = true;
-            // 
             // StudentExtraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 653);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grbPayment);
+            this.Controls.Add(this.grbNotifications);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "StudentExtraForm";
@@ -285,10 +274,10 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.grbNotifications.ResumeLayout(false);
+            this.grbNotifications.PerformLayout();
+            this.grbPayment.ResumeLayout(false);
+            this.grbPayment.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -301,12 +290,11 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblNotifications;
+        private System.Windows.Forms.GroupBox grbNotifications;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txbNotifications;
         private System.Windows.Forms.ComboBox cmbHeading;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grbPayment;
         private System.Windows.Forms.ComboBox cmbPay;
         private System.Windows.Forms.Label lblAgreewithTerms;
         private System.Windows.Forms.TextBox txbAmount;

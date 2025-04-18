@@ -50,13 +50,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMyInfo = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
-            this.picUser = new System.Windows.Forms.PictureBox();
             this.btnMyTeacher = new System.Windows.Forms.Button();
+            this.picUser = new System.Windows.Forms.PictureBox();
+            this.grbSearch = new System.Windows.Forms.GroupBox();
+            this.cmbDate = new System.Windows.Forms.ComboBox();
+            this.cbmSubject = new System.Windows.Forms.ComboBox();
+            this.btnFilterbyDate = new System.Windows.Forms.Button();
+            this.btnFilterbySubject = new System.Windows.Forms.Button();
+            this.pgbBalance = new System.Windows.Forms.ProgressBar();
+            this.lblBalance = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).BeginInit();
             this.grbScheduleApp.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
+            this.grbSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvSchedule
@@ -195,9 +203,9 @@
             this.grbScheduleApp.Controls.Add(this.cmbTime);
             this.grbScheduleApp.Controls.Add(this.lblDate);
             this.grbScheduleApp.Controls.Add(this.cmbSubject);
-            this.grbScheduleApp.Location = new System.Drawing.Point(180, 331);
+            this.grbScheduleApp.Location = new System.Drawing.Point(180, 342);
             this.grbScheduleApp.Name = "grbScheduleApp";
-            this.grbScheduleApp.Size = new System.Drawing.Size(359, 301);
+            this.grbScheduleApp.Size = new System.Drawing.Size(359, 290);
             this.grbScheduleApp.TabIndex = 10;
             this.grbScheduleApp.TabStop = false;
             this.grbScheduleApp.Text = "Schedule Appointment";
@@ -263,6 +271,15 @@
             this.btnPayment.Text = "Payment/\r\nNotifications";
             this.btnPayment.UseVisualStyleBackColor = true;
             // 
+            // btnMyTeacher
+            // 
+            this.btnMyTeacher.Location = new System.Drawing.Point(9, 328);
+            this.btnMyTeacher.Name = "btnMyTeacher";
+            this.btnMyTeacher.Size = new System.Drawing.Size(114, 42);
+            this.btnMyTeacher.TabIndex = 17;
+            this.btnMyTeacher.Text = "My Teacher";
+            this.btnMyTeacher.UseVisualStyleBackColor = true;
+            // 
             // picUser
             // 
             this.picUser.Image = global::JEM.Properties.Resources.user;
@@ -273,20 +290,77 @@
             this.picUser.TabIndex = 15;
             this.picUser.TabStop = false;
             // 
-            // btnMyTeacher
+            // grbSearch
             // 
-            this.btnMyTeacher.Location = new System.Drawing.Point(9, 328);
-            this.btnMyTeacher.Name = "btnMyTeacher";
-            this.btnMyTeacher.Size = new System.Drawing.Size(114, 42);
-            this.btnMyTeacher.TabIndex = 17;
-            this.btnMyTeacher.Text = "My Teacher";
-            this.btnMyTeacher.UseVisualStyleBackColor = true;
+            this.grbSearch.Controls.Add(this.btnFilterbySubject);
+            this.grbSearch.Controls.Add(this.btnFilterbyDate);
+            this.grbSearch.Controls.Add(this.cbmSubject);
+            this.grbSearch.Controls.Add(this.cmbDate);
+            this.grbSearch.Location = new System.Drawing.Point(648, 362);
+            this.grbSearch.Name = "grbSearch";
+            this.grbSearch.Size = new System.Drawing.Size(279, 270);
+            this.grbSearch.TabIndex = 15;
+            this.grbSearch.TabStop = false;
+            this.grbSearch.Text = "Search";
+            // 
+            // cmbDate
+            // 
+            this.cmbDate.FormattingEnabled = true;
+            this.cmbDate.Location = new System.Drawing.Point(47, 53);
+            this.cmbDate.Name = "cmbDate";
+            this.cmbDate.Size = new System.Drawing.Size(200, 24);
+            this.cmbDate.TabIndex = 9;
+            // 
+            // cbmSubject
+            // 
+            this.cbmSubject.FormattingEnabled = true;
+            this.cbmSubject.Location = new System.Drawing.Point(47, 187);
+            this.cbmSubject.Name = "cbmSubject";
+            this.cbmSubject.Size = new System.Drawing.Size(200, 24);
+            this.cbmSubject.TabIndex = 10;
+            // 
+            // btnFilterbyDate
+            // 
+            this.btnFilterbyDate.Location = new System.Drawing.Point(47, 118);
+            this.btnFilterbyDate.Name = "btnFilterbyDate";
+            this.btnFilterbyDate.Size = new System.Drawing.Size(200, 23);
+            this.btnFilterbyDate.TabIndex = 11;
+            this.btnFilterbyDate.Text = "Filter by Date";
+            this.btnFilterbyDate.UseVisualStyleBackColor = true;
+            // 
+            // btnFilterbySubject
+            // 
+            this.btnFilterbySubject.Location = new System.Drawing.Point(47, 241);
+            this.btnFilterbySubject.Name = "btnFilterbySubject";
+            this.btnFilterbySubject.Size = new System.Drawing.Size(200, 23);
+            this.btnFilterbySubject.TabIndex = 12;
+            this.btnFilterbySubject.Text = "Filter by Subject";
+            this.btnFilterbySubject.UseVisualStyleBackColor = true;
+            // 
+            // pgbBalance
+            // 
+            this.pgbBalance.Location = new System.Drawing.Point(648, 314);
+            this.pgbBalance.Name = "pgbBalance";
+            this.pgbBalance.Size = new System.Drawing.Size(279, 23);
+            this.pgbBalance.TabIndex = 16;
+            // 
+            // lblBalance
+            // 
+            this.lblBalance.AutoSize = true;
+            this.lblBalance.Location = new System.Drawing.Point(546, 314);
+            this.lblBalance.Name = "lblBalance";
+            this.lblBalance.Size = new System.Drawing.Size(57, 16);
+            this.lblBalance.TabIndex = 17;
+            this.lblBalance.Text = "Balance";
             // 
             // studentdashboardform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.lblBalance);
+            this.Controls.Add(this.pgbBalance);
+            this.Controls.Add(this.grbSearch);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.grbScheduleApp);
@@ -301,7 +375,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
+            this.grbSearch.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -331,5 +407,12 @@
         private System.Windows.Forms.Button btnMyInfo;
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Button btnMyTeacher;
+        private System.Windows.Forms.GroupBox grbSearch;
+        private System.Windows.Forms.Button btnFilterbySubject;
+        private System.Windows.Forms.Button btnFilterbyDate;
+        private System.Windows.Forms.ComboBox cbmSubject;
+        private System.Windows.Forms.ComboBox cmbDate;
+        private System.Windows.Forms.ProgressBar pgbBalance;
+        private System.Windows.Forms.Label lblBalance;
     }
 }

@@ -32,8 +32,6 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txbMyBio = new System.Windows.Forms.TextBox();
-            this.txbBalance = new System.Windows.Forms.TextBox();
-            this.lblBalance = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
@@ -48,12 +46,12 @@
             this.txbName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMyTeacher = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.grbStudentEdit.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -65,8 +63,6 @@
             this.grbStudentEdit.Controls.Add(this.btnClear);
             this.grbStudentEdit.Controls.Add(this.btnUpdate);
             this.grbStudentEdit.Controls.Add(this.txbMyBio);
-            this.grbStudentEdit.Controls.Add(this.txbBalance);
-            this.grbStudentEdit.Controls.Add(this.lblBalance);
             this.grbStudentEdit.Controls.Add(this.lblEmail);
             this.grbStudentEdit.Controls.Add(this.lblAddress);
             this.grbStudentEdit.Controls.Add(this.lblPhone);
@@ -88,7 +84,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(299, 358);
+            this.btnClear.Location = new System.Drawing.Point(309, 325);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(140, 23);
             this.btnClear.TabIndex = 17;
@@ -97,7 +93,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(108, 358);
+            this.btnUpdate.Location = new System.Drawing.Point(108, 325);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(144, 23);
             this.btnUpdate.TabIndex = 16;
@@ -109,25 +105,9 @@
             this.txbMyBio.Location = new System.Drawing.Point(309, 32);
             this.txbMyBio.Multiline = true;
             this.txbMyBio.Name = "txbMyBio";
-            this.txbMyBio.Size = new System.Drawing.Size(144, 288);
+            this.txbMyBio.Size = new System.Drawing.Size(179, 241);
             this.txbMyBio.TabIndex = 15;
             this.txbMyBio.Text = "My Bio...";
-            // 
-            // txbBalance
-            // 
-            this.txbBalance.Location = new System.Drawing.Point(131, 298);
-            this.txbBalance.Name = "txbBalance";
-            this.txbBalance.Size = new System.Drawing.Size(121, 22);
-            this.txbBalance.TabIndex = 13;
-            // 
-            // lblBalance
-            // 
-            this.lblBalance.AutoSize = true;
-            this.lblBalance.Location = new System.Drawing.Point(30, 301);
-            this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(57, 16);
-            this.lblBalance.TabIndex = 12;
-            this.lblBalance.Text = "Balance";
             // 
             // lblEmail
             // 
@@ -250,36 +230,6 @@
             this.panel3.Size = new System.Drawing.Size(135, 431);
             this.panel3.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
-            this.label1.Location = new System.Drawing.Point(40, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "JEM";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(135, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(847, 31);
-            this.panel2.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::JEM.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnMyTeacher
             // 
             this.btnMyTeacher.Location = new System.Drawing.Point(12, 334);
@@ -309,6 +259,36 @@
             this.btnDashboard.UseVisualStyleBackColor = true;
             this.btnDashboard.Click += new System.EventHandler(this.btnMyInfo_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
+            this.label1.Location = new System.Drawing.Point(40, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 19);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "JEM";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::JEM.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(135, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(847, 31);
+            this.panel2.TabIndex = 0;
+            // 
             // StudentEditform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -333,8 +313,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grbStudentEdit;
-        private System.Windows.Forms.TextBox txbBalance;
-        private System.Windows.Forms.Label lblBalance;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblPhone;

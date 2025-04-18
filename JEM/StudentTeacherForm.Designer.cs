@@ -30,22 +30,22 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cmbSubject = new System.Windows.Forms.ComboBox();
-            this.txbInfoandBio = new System.Windows.Forms.TextBox();
-            this.picTeacher = new System.Windows.Forms.PictureBox();
-            this.txbMessageTeacher = new System.Windows.Forms.TextBox();
-            this.btnSendMessage = new System.Windows.Forms.Button();
             this.btnMyTeacher = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.grbTeacherInfo = new System.Windows.Forms.GroupBox();
+            this.btnSendMessage = new System.Windows.Forms.Button();
+            this.txbMessageTeacher = new System.Windows.Forms.TextBox();
+            this.picTeacher = new System.Windows.Forms.PictureBox();
+            this.txbInfoandBio = new System.Windows.Forms.TextBox();
+            this.cmbSubject = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.grbTeacherInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTeacher)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +70,34 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(135, 385);
             this.panel3.TabIndex = 2;
+            // 
+            // btnMyTeacher
+            // 
+            this.btnMyTeacher.Location = new System.Drawing.Point(9, 237);
+            this.btnMyTeacher.Name = "btnMyTeacher";
+            this.btnMyTeacher.Size = new System.Drawing.Size(114, 42);
+            this.btnMyTeacher.TabIndex = 23;
+            this.btnMyTeacher.Text = "My Teacher";
+            this.btnMyTeacher.UseVisualStyleBackColor = true;
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.Location = new System.Drawing.Point(9, 296);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(114, 69);
+            this.btnPayment.TabIndex = 22;
+            this.btnPayment.Text = "Payment/\r\nNotifications";
+            this.btnPayment.UseVisualStyleBackColor = true;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Location = new System.Drawing.Point(9, 161);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(114, 42);
+            this.btnDashboard.TabIndex = 21;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -101,54 +129,19 @@
             this.panel2.Size = new System.Drawing.Size(847, 31);
             this.panel2.TabIndex = 2;
             // 
-            // groupBox2
+            // grbTeacherInfo
             // 
-            this.groupBox2.Controls.Add(this.btnSendMessage);
-            this.groupBox2.Controls.Add(this.txbMessageTeacher);
-            this.groupBox2.Controls.Add(this.picTeacher);
-            this.groupBox2.Controls.Add(this.txbInfoandBio);
-            this.groupBox2.Controls.Add(this.cmbSubject);
-            this.groupBox2.Location = new System.Drawing.Point(232, 88);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(626, 500);
-            this.groupBox2.TabIndex = 13;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
-            // 
-            // cmbSubject
-            // 
-            this.cmbSubject.FormattingEnabled = true;
-            this.cmbSubject.Location = new System.Drawing.Point(38, 47);
-            this.cmbSubject.Name = "cmbSubject";
-            this.cmbSubject.Size = new System.Drawing.Size(201, 24);
-            this.cmbSubject.TabIndex = 4;
-            this.cmbSubject.Text = "Subject";
-            // 
-            // txbInfoandBio
-            // 
-            this.txbInfoandBio.Location = new System.Drawing.Point(38, 103);
-            this.txbInfoandBio.Multiline = true;
-            this.txbInfoandBio.Name = "txbInfoandBio";
-            this.txbInfoandBio.Size = new System.Drawing.Size(201, 338);
-            this.txbInfoandBio.TabIndex = 5;
-            this.txbInfoandBio.Text = "Teacher\'s Info and Bio";
-            // 
-            // picTeacher
-            // 
-            this.picTeacher.Location = new System.Drawing.Point(352, 47);
-            this.picTeacher.Name = "picTeacher";
-            this.picTeacher.Size = new System.Drawing.Size(173, 157);
-            this.picTeacher.TabIndex = 6;
-            this.picTeacher.TabStop = false;
-            // 
-            // txbMessageTeacher
-            // 
-            this.txbMessageTeacher.Location = new System.Drawing.Point(301, 238);
-            this.txbMessageTeacher.Multiline = true;
-            this.txbMessageTeacher.Name = "txbMessageTeacher";
-            this.txbMessageTeacher.Size = new System.Drawing.Size(274, 150);
-            this.txbMessageTeacher.TabIndex = 7;
-            this.txbMessageTeacher.Text = "Message Teacher";
+            this.grbTeacherInfo.Controls.Add(this.btnSendMessage);
+            this.grbTeacherInfo.Controls.Add(this.txbMessageTeacher);
+            this.grbTeacherInfo.Controls.Add(this.picTeacher);
+            this.grbTeacherInfo.Controls.Add(this.txbInfoandBio);
+            this.grbTeacherInfo.Controls.Add(this.cmbSubject);
+            this.grbTeacherInfo.Location = new System.Drawing.Point(232, 88);
+            this.grbTeacherInfo.Name = "grbTeacherInfo";
+            this.grbTeacherInfo.Size = new System.Drawing.Size(626, 500);
+            this.grbTeacherInfo.TabIndex = 13;
+            this.grbTeacherInfo.TabStop = false;
+            this.grbTeacherInfo.Text = "Teacher Info";
             // 
             // btnSendMessage
             // 
@@ -159,40 +152,47 @@
             this.btnSendMessage.Text = "Send Message";
             this.btnSendMessage.UseVisualStyleBackColor = true;
             // 
-            // btnMyTeacher
+            // txbMessageTeacher
             // 
-            this.btnMyTeacher.Location = new System.Drawing.Point(9, 237);
-            this.btnMyTeacher.Name = "btnMyTeacher";
-            this.btnMyTeacher.Size = new System.Drawing.Size(114, 42);
-            this.btnMyTeacher.TabIndex = 23;
-            this.btnMyTeacher.Text = "My Teacher";
-            this.btnMyTeacher.UseVisualStyleBackColor = true;
+            this.txbMessageTeacher.Location = new System.Drawing.Point(301, 238);
+            this.txbMessageTeacher.Multiline = true;
+            this.txbMessageTeacher.Name = "txbMessageTeacher";
+            this.txbMessageTeacher.Size = new System.Drawing.Size(274, 150);
+            this.txbMessageTeacher.TabIndex = 7;
+            this.txbMessageTeacher.Text = "Message Teacher";
             // 
-            // btnPayment
+            // picTeacher
             // 
-            this.btnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayment.Location = new System.Drawing.Point(9, 296);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(114, 69);
-            this.btnPayment.TabIndex = 22;
-            this.btnPayment.Text = "Payment/\r\nNotifications";
-            this.btnPayment.UseVisualStyleBackColor = true;
+            this.picTeacher.Location = new System.Drawing.Point(352, 47);
+            this.picTeacher.Name = "picTeacher";
+            this.picTeacher.Size = new System.Drawing.Size(173, 157);
+            this.picTeacher.TabIndex = 6;
+            this.picTeacher.TabStop = false;
             // 
-            // btnDashboard
+            // txbInfoandBio
             // 
-            this.btnDashboard.Location = new System.Drawing.Point(9, 161);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(114, 42);
-            this.btnDashboard.TabIndex = 21;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.txbInfoandBio.Location = new System.Drawing.Point(38, 103);
+            this.txbInfoandBio.Multiline = true;
+            this.txbInfoandBio.Name = "txbInfoandBio";
+            this.txbInfoandBio.Size = new System.Drawing.Size(201, 338);
+            this.txbInfoandBio.TabIndex = 5;
+            this.txbInfoandBio.Text = "Teacher\'s Info and Bio";
+            // 
+            // cmbSubject
+            // 
+            this.cmbSubject.FormattingEnabled = true;
+            this.cmbSubject.Location = new System.Drawing.Point(38, 47);
+            this.cmbSubject.Name = "cmbSubject";
+            this.cmbSubject.Size = new System.Drawing.Size(201, 24);
+            this.cmbSubject.TabIndex = 4;
+            this.cmbSubject.Text = "Subject";
             // 
             // StudentTeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 653);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.grbTeacherInfo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "StudentTeacherForm";
@@ -201,8 +201,8 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.grbTeacherInfo.ResumeLayout(false);
+            this.grbTeacherInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTeacher)).EndInit();
             this.ResumeLayout(false);
 
@@ -215,7 +215,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grbTeacherInfo;
         private System.Windows.Forms.ComboBox cmbSubject;
         private System.Windows.Forms.TextBox txbInfoandBio;
         private System.Windows.Forms.PictureBox picTeacher;

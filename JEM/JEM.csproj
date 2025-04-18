@@ -79,6 +79,24 @@
     <Compile Include="StudentTeacherForm.Designer.cs">
       <DependentUpon>StudentTeacherForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeacherDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherDashboard.Designer.cs">
+      <DependentUpon>TeacherDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherSchedule.Designer.cs">
+      <DependentUpon>TeacherSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherStudentForm.Designer.cs">
+      <DependentUpon>TeacherStudentForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +121,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentTeacherForm.resx">
       <DependentUpon>StudentTeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherDashboard.resx">
+      <DependentUpon>TeacherDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherSchedule.resx">
+      <DependentUpon>TeacherSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherStudentForm.resx">
+      <DependentUpon>TeacherStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
