@@ -28,76 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnMyTeacher = new System.Windows.Forms.Button();
-            this.btnPayment = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
+            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.pnlLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.grbTeacherInfo = new System.Windows.Forms.GroupBox();
             this.btnSendMessage = new System.Windows.Forms.Button();
             this.txbMessageTeacher = new System.Windows.Forms.TextBox();
-            this.picTeacher = new System.Windows.Forms.PictureBox();
             this.txbInfoandBio = new System.Windows.Forms.TextBox();
             this.cmbSubject = new System.Windows.Forms.ComboBox();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picTeacher = new System.Windows.Forms.PictureBox();
+            this.btnPayment = new System.Windows.Forms.Button();
+            this.btnNotifications = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pnlMenu.SuspendLayout();
+            this.pnlLogo.SuspendLayout();
             this.grbTeacherInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTeacher)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlMenu
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(135, 653);
-            this.panel1.TabIndex = 1;
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.pnlMenu.Controls.Add(this.button2);
+            this.pnlMenu.Controls.Add(this.btnPayment);
+            this.pnlMenu.Controls.Add(this.btnNotifications);
+            this.pnlMenu.Controls.Add(this.btnDashboard);
+            this.pnlMenu.Controls.Add(this.pnlLogo);
+            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(135, 653);
+            this.pnlMenu.TabIndex = 1;
             // 
-            // panel3
+            // pnlLogo
             // 
-            this.panel3.Controls.Add(this.btnMyTeacher);
-            this.panel3.Controls.Add(this.btnPayment);
-            this.panel3.Controls.Add(this.btnDashboard);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(135, 385);
-            this.panel3.TabIndex = 2;
-            // 
-            // btnMyTeacher
-            // 
-            this.btnMyTeacher.Location = new System.Drawing.Point(9, 237);
-            this.btnMyTeacher.Name = "btnMyTeacher";
-            this.btnMyTeacher.Size = new System.Drawing.Size(114, 42);
-            this.btnMyTeacher.TabIndex = 23;
-            this.btnMyTeacher.Text = "My Teacher";
-            this.btnMyTeacher.UseVisualStyleBackColor = true;
-            // 
-            // btnPayment
-            // 
-            this.btnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayment.Location = new System.Drawing.Point(9, 296);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(114, 69);
-            this.btnPayment.TabIndex = 22;
-            this.btnPayment.Text = "Payment/\r\nNotifications";
-            this.btnPayment.UseVisualStyleBackColor = true;
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Location = new System.Drawing.Point(9, 161);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(114, 42);
-            this.btnDashboard.TabIndex = 21;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.pnlLogo.Controls.Add(this.label1);
+            this.pnlLogo.Controls.Add(this.pictureBox1);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(135, 128);
+            this.pnlLogo.TabIndex = 2;
             // 
             // label1
             // 
@@ -109,16 +84,6 @@
             this.label1.Size = new System.Drawing.Size(45, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "JEM";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::JEM.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -161,14 +126,6 @@
             this.txbMessageTeacher.TabIndex = 7;
             this.txbMessageTeacher.Text = "Message Teacher";
             // 
-            // picTeacher
-            // 
-            this.picTeacher.Location = new System.Drawing.Point(352, 47);
-            this.picTeacher.Name = "picTeacher";
-            this.picTeacher.Size = new System.Drawing.Size(173, 157);
-            this.picTeacher.TabIndex = 6;
-            this.picTeacher.TabStop = false;
-            // 
             // txbInfoandBio
             // 
             this.txbInfoandBio.Location = new System.Drawing.Point(38, 103);
@@ -187,6 +144,92 @@
             this.cmbSubject.TabIndex = 4;
             this.cmbSubject.Text = "Subject";
             // 
+            // picTeacher
+            // 
+            this.picTeacher.Location = new System.Drawing.Point(352, 47);
+            this.picTeacher.Name = "picTeacher";
+            this.picTeacher.Size = new System.Drawing.Size(173, 157);
+            this.picTeacher.TabIndex = 6;
+            this.picTeacher.TabStop = false;
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPayment.FlatAppearance.BorderSize = 0;
+            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayment.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnPayment.Image = global::JEM.Properties.Resources.xxsmallpayment;
+            this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPayment.Location = new System.Drawing.Point(0, 212);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(135, 42);
+            this.btnPayment.TabIndex = 22;
+            this.btnPayment.Text = "   Payment";
+            this.btnPayment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPayment.UseVisualStyleBackColor = true;
+            // 
+            // btnNotifications
+            // 
+            this.btnNotifications.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNotifications.FlatAppearance.BorderSize = 0;
+            this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotifications.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnNotifications.Image = global::JEM.Properties.Resources.xxsmallnotification;
+            this.btnNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNotifications.Location = new System.Drawing.Point(0, 170);
+            this.btnNotifications.Name = "btnNotifications";
+            this.btnNotifications.Size = new System.Drawing.Size(135, 42);
+            this.btnNotifications.TabIndex = 22;
+            this.btnNotifications.Text = "   Notifications";
+            this.btnNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNotifications.UseVisualStyleBackColor = true;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDashboard.Image = global::JEM.Properties.Resources.xxsmall_home_black_square;
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 128);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(135, 42);
+            this.btnDashboard.TabIndex = 22;
+            this.btnDashboard.Text = "   Dashboard";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::JEM.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.Image = global::JEM.Properties.Resources.xxsmallsettings_black;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 611);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(135, 42);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "   My Info";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // StudentTeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -194,24 +237,24 @@
             this.ClientSize = new System.Drawing.Size(982, 653);
             this.Controls.Add(this.grbTeacherInfo);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlMenu);
             this.Name = "StudentTeacherForm";
             this.Text = "StudentTeacherForm";
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlMenu.ResumeLayout(false);
+            this.pnlLogo.ResumeLayout(false);
+            this.pnlLogo.PerformLayout();
             this.grbTeacherInfo.ResumeLayout(false);
             this.grbTeacherInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTeacher)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
@@ -221,8 +264,9 @@
         private System.Windows.Forms.PictureBox picTeacher;
         private System.Windows.Forms.Button btnSendMessage;
         private System.Windows.Forms.TextBox txbMessageTeacher;
-        private System.Windows.Forms.Button btnMyTeacher;
-        private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Button btnNotifications;
+        private System.Windows.Forms.Button btnPayment;
+        private System.Windows.Forms.Button button2;
     }
 }

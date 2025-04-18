@@ -85,6 +85,12 @@
     <Compile Include="TeacherDashboard.Designer.cs">
       <DependentUpon>TeacherDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeacherNotificationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherNotificationsForm.Designer.cs">
+      <DependentUpon>TeacherNotificationsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeacherSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     <EmbeddedResource Include="TeacherDashboard.resx">
       <DependentUpon>TeacherDashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TeacherNotificationsForm.resx">
+      <DependentUpon>TeacherNotificationsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeacherSchedule.resx">
       <DependentUpon>TeacherSchedule.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +155,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_black_square.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\small_home_black_square.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xxsmall_home_black_square.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xxsmallcalendar-checkmark_schedule.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xxsmallsettings_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xxsmalluser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xxsmalluserONE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xxsmallteacher.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xxsmallnotification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xxsmallpayment.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -44,27 +44,33 @@
             this.cmbSubject = new System.Windows.Forms.ComboBox();
             this.btnScheduleSession = new System.Windows.Forms.Button();
             this.grbScheduleApp = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblJEM = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMyInfo = new System.Windows.Forms.Button();
-            this.btnPayment = new System.Windows.Forms.Button();
-            this.btnMyTeacher = new System.Windows.Forms.Button();
-            this.picUser = new System.Windows.Forms.PictureBox();
             this.grbSearch = new System.Windows.Forms.GroupBox();
-            this.cmbDate = new System.Windows.Forms.ComboBox();
-            this.cbmSubject = new System.Windows.Forms.ComboBox();
-            this.btnFilterbyDate = new System.Windows.Forms.Button();
             this.btnFilterbySubject = new System.Windows.Forms.Button();
+            this.btnFilterbyDate = new System.Windows.Forms.Button();
+            this.cbmSubject = new System.Windows.Forms.ComboBox();
+            this.cmbDate = new System.Windows.Forms.ComboBox();
             this.pgbBalance = new System.Windows.Forms.ProgressBar();
             this.lblBalance = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnMyInfo = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnNotifications = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.btnPayment = new System.Windows.Forms.Button();
+            this.btnMyTeacher = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).BeginInit();
             this.grbScheduleApp.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             this.grbSearch.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.pnlMenu.SuspendLayout();
+            this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvSchedule
@@ -210,85 +216,13 @@
             this.grbScheduleApp.TabStop = false;
             this.grbScheduleApp.Text = "Schedule Appointment";
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(135, 653);
-            this.flowLayoutPanel1.TabIndex = 14;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnMyTeacher);
-            this.panel2.Controls.Add(this.btnPayment);
-            this.panel2.Controls.Add(this.picUser);
-            this.panel2.Controls.Add(this.btnMyInfo);
-            this.panel2.Controls.Add(this.lblJEM);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(135, 390);
-            this.panel2.TabIndex = 0;
-            // 
-            // lblJEM
-            // 
-            this.lblJEM.AutoSize = true;
-            this.lblJEM.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJEM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
-            this.lblJEM.Location = new System.Drawing.Point(40, 87);
-            this.lblJEM.Name = "lblJEM";
-            this.lblJEM.Size = new System.Drawing.Size(45, 19);
-            this.lblJEM.TabIndex = 2;
-            this.lblJEM.Text = "JEM";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(135, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(847, 31);
             this.panel1.TabIndex = 0;
-            // 
-            // btnMyInfo
-            // 
-            this.btnMyInfo.Location = new System.Drawing.Point(9, 161);
-            this.btnMyInfo.Name = "btnMyInfo";
-            this.btnMyInfo.Size = new System.Drawing.Size(114, 42);
-            this.btnMyInfo.TabIndex = 15;
-            this.btnMyInfo.Text = "My Info";
-            this.btnMyInfo.UseVisualStyleBackColor = true;
-            // 
-            // btnPayment
-            // 
-            this.btnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayment.Location = new System.Drawing.Point(9, 231);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(114, 69);
-            this.btnPayment.TabIndex = 16;
-            this.btnPayment.Text = "Payment/\r\nNotifications";
-            this.btnPayment.UseVisualStyleBackColor = true;
-            // 
-            // btnMyTeacher
-            // 
-            this.btnMyTeacher.Location = new System.Drawing.Point(9, 328);
-            this.btnMyTeacher.Name = "btnMyTeacher";
-            this.btnMyTeacher.Size = new System.Drawing.Size(114, 42);
-            this.btnMyTeacher.TabIndex = 17;
-            this.btnMyTeacher.Text = "My Teacher";
-            this.btnMyTeacher.UseVisualStyleBackColor = true;
-            // 
-            // picUser
-            // 
-            this.picUser.Image = global::JEM.Properties.Resources.user;
-            this.picUser.Location = new System.Drawing.Point(33, 21);
-            this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(63, 63);
-            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picUser.TabIndex = 15;
-            this.picUser.TabStop = false;
             // 
             // grbSearch
             // 
@@ -303,21 +237,14 @@
             this.grbSearch.TabStop = false;
             this.grbSearch.Text = "Search";
             // 
-            // cmbDate
+            // btnFilterbySubject
             // 
-            this.cmbDate.FormattingEnabled = true;
-            this.cmbDate.Location = new System.Drawing.Point(47, 53);
-            this.cmbDate.Name = "cmbDate";
-            this.cmbDate.Size = new System.Drawing.Size(200, 24);
-            this.cmbDate.TabIndex = 9;
-            // 
-            // cbmSubject
-            // 
-            this.cbmSubject.FormattingEnabled = true;
-            this.cbmSubject.Location = new System.Drawing.Point(47, 187);
-            this.cbmSubject.Name = "cbmSubject";
-            this.cbmSubject.Size = new System.Drawing.Size(200, 24);
-            this.cbmSubject.TabIndex = 10;
+            this.btnFilterbySubject.Location = new System.Drawing.Point(47, 241);
+            this.btnFilterbySubject.Name = "btnFilterbySubject";
+            this.btnFilterbySubject.Size = new System.Drawing.Size(200, 23);
+            this.btnFilterbySubject.TabIndex = 12;
+            this.btnFilterbySubject.Text = "Filter by Subject";
+            this.btnFilterbySubject.UseVisualStyleBackColor = true;
             // 
             // btnFilterbyDate
             // 
@@ -328,14 +255,21 @@
             this.btnFilterbyDate.Text = "Filter by Date";
             this.btnFilterbyDate.UseVisualStyleBackColor = true;
             // 
-            // btnFilterbySubject
+            // cbmSubject
             // 
-            this.btnFilterbySubject.Location = new System.Drawing.Point(47, 241);
-            this.btnFilterbySubject.Name = "btnFilterbySubject";
-            this.btnFilterbySubject.Size = new System.Drawing.Size(200, 23);
-            this.btnFilterbySubject.TabIndex = 12;
-            this.btnFilterbySubject.Text = "Filter by Subject";
-            this.btnFilterbySubject.UseVisualStyleBackColor = true;
+            this.cbmSubject.FormattingEnabled = true;
+            this.cbmSubject.Location = new System.Drawing.Point(47, 187);
+            this.cbmSubject.Name = "cbmSubject";
+            this.cbmSubject.Size = new System.Drawing.Size(200, 24);
+            this.cbmSubject.TabIndex = 10;
+            // 
+            // cmbDate
+            // 
+            this.cmbDate.FormattingEnabled = true;
+            this.cmbDate.Location = new System.Drawing.Point(47, 53);
+            this.cmbDate.Name = "cmbDate";
+            this.cmbDate.Size = new System.Drawing.Size(200, 24);
+            this.cmbDate.TabIndex = 9;
             // 
             // pgbBalance
             // 
@@ -353,29 +287,185 @@
             this.lblBalance.TabIndex = 17;
             this.lblBalance.Text = "Balance";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel2.Controls.Add(this.pnlMenu);
+            this.panel2.Controls.Add(this.btnDashboard);
+            this.panel2.Controls.Add(this.btnPayment);
+            this.panel2.Controls.Add(this.btnMyTeacher);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(135, 653);
+            this.panel2.TabIndex = 18;
+            // 
+            // pnlMenu
+            // 
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.pnlMenu.Controls.Add(this.btnMyInfo);
+            this.pnlMenu.Controls.Add(this.button1);
+            this.pnlMenu.Controls.Add(this.btnNotifications);
+            this.pnlMenu.Controls.Add(this.button2);
+            this.pnlMenu.Controls.Add(this.pnlLogo);
+            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(135, 653);
+            this.pnlMenu.TabIndex = 21;
+            // 
+            // btnMyInfo
+            // 
+            this.btnMyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnMyInfo.FlatAppearance.BorderSize = 0;
+            this.btnMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMyInfo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnMyInfo.Image = global::JEM.Properties.Resources.xxsmallsettings_black;
+            this.btnMyInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMyInfo.Location = new System.Drawing.Point(0, 611);
+            this.btnMyInfo.Name = "btnMyInfo";
+            this.btnMyInfo.Size = new System.Drawing.Size(135, 42);
+            this.btnMyInfo.TabIndex = 22;
+            this.btnMyInfo.Text = "   My Info";
+            this.btnMyInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMyInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMyInfo.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Image = global::JEM.Properties.Resources.xxsmallpayment;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 212);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 42);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "   Payment";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnNotifications
+            // 
+            this.btnNotifications.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNotifications.FlatAppearance.BorderSize = 0;
+            this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotifications.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnNotifications.Image = global::JEM.Properties.Resources.xxsmallnotification;
+            this.btnNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNotifications.Location = new System.Drawing.Point(0, 170);
+            this.btnNotifications.Name = "btnNotifications";
+            this.btnNotifications.Size = new System.Drawing.Size(135, 42);
+            this.btnNotifications.TabIndex = 22;
+            this.btnNotifications.Text = "   Notifications";
+            this.btnNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNotifications.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.Image = global::JEM.Properties.Resources.xxsmallteacher;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 128);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(135, 42);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "   My Teacher";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.label2);
+            this.pnlLogo.Controls.Add(this.pictureBox2);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(135, 128);
+            this.pnlLogo.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
+            this.label2.Location = new System.Drawing.Point(40, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "JEM";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::JEM.Properties.Resources.user;
+            this.pictureBox2.Location = new System.Drawing.Point(32, 19);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Location = new System.Drawing.Point(18, 450);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(114, 42);
+            this.btnDashboard.TabIndex = 18;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.Location = new System.Drawing.Point(21, 546);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(114, 69);
+            this.btnPayment.TabIndex = 19;
+            this.btnPayment.Text = "Payment/\r\nNotifications";
+            this.btnPayment.UseVisualStyleBackColor = true;
+            // 
+            // btnMyTeacher
+            // 
+            this.btnMyTeacher.Location = new System.Drawing.Point(0, 498);
+            this.btnMyTeacher.Name = "btnMyTeacher";
+            this.btnMyTeacher.Size = new System.Drawing.Size(114, 42);
+            this.btnMyTeacher.TabIndex = 20;
+            this.btnMyTeacher.Text = "My Teacher";
+            this.btnMyTeacher.UseVisualStyleBackColor = true;
+            // 
             // studentdashboardform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblBalance);
             this.Controls.Add(this.pgbBalance);
             this.Controls.Add(this.grbSearch);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.grbScheduleApp);
             this.Controls.Add(this.dgvSchedule);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "studentdashboardform";
             this.Text = "studentdashboardform";
+            this.Load += new System.EventHandler(this.studentdashboardform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).EndInit();
             this.grbScheduleApp.ResumeLayout(false);
             this.grbScheduleApp.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             this.grbSearch.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.pnlMenu.ResumeLayout(false);
+            this.pnlLogo.ResumeLayout(false);
+            this.pnlLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,7 +482,6 @@
         private System.Windows.Forms.ComboBox cmbSubject;
         private System.Windows.Forms.Button btnScheduleSession;
         private System.Windows.Forms.GroupBox grbScheduleApp;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -401,12 +490,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox picUser;
-        private System.Windows.Forms.Label lblJEM;
-        private System.Windows.Forms.Button btnMyInfo;
-        private System.Windows.Forms.Button btnPayment;
-        private System.Windows.Forms.Button btnMyTeacher;
         private System.Windows.Forms.GroupBox grbSearch;
         private System.Windows.Forms.Button btnFilterbySubject;
         private System.Windows.Forms.Button btnFilterbyDate;
@@ -414,5 +497,17 @@
         private System.Windows.Forms.ComboBox cmbDate;
         private System.Windows.Forms.ProgressBar pgbBalance;
         private System.Windows.Forms.Label lblBalance;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.Button btnMyInfo;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNotifications;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel pnlLogo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Button btnPayment;
+        private System.Windows.Forms.Button btnMyTeacher;
     }
 }
