@@ -237,11 +237,8 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
-<<<<<<< HEAD
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
-=======
->>>>>>> ebed46240d0a64a8932ebdedae7fb9501a2cb62b
     }
 }
 
