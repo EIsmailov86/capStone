@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Mysqlx.Cursor;
+using Org.BouncyCastle.Asn1.X509;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace JEM
 {
@@ -42,7 +45,7 @@ namespace JEM
 
 
             InitializeComponent();
-            InitializeTestUsers(testStudent, testTeacher);
+            //InitializeTestUsers(testStudent, testTeacher);
         }
 
 
@@ -111,5 +114,65 @@ namespace JEM
 
         #endregion
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+            var loggedIn = false;
+
+            using (MySqlConnection dbConnection = ConnectToDb())
+            {
+
+                string StudentSelectQuery = "SELECT UserName, Password FROM student";
+                MySqlCommand searchStudentCommand = new MySqlCommand(StudentSelectQuery, dbConnection);
+                MySqlDataReader reader = searchStudentCommand.ExecuteReader();
+
+
+                while (reader.Read() && loggedIn == false)
+                {
+                    string userName = reader["UserName"].ToString();
+                    string password = reader["Password"].ToString();
+
+                    if (txtUserName.Text.Equals(userName) && txtPassword.Text.Equals(password))
+                    {
+                        //Open Student Page
+                        var myForm = new studentdashboardform();
+                        myForm.Show();
+
+                        loggedIn = true;
+                    }
+                }
+
+                reader.Close();
+                
+
+                string TeacherSelectQuery = "SELECT UserName, Password FROM teacher";
+                MySqlCommand searchTeacherCommand = new MySqlCommand(TeacherSelectQuery, dbConnection);
+                reader = searchTeacherCommand.ExecuteReader();
+
+                while (reader.Read() && loggedIn == false)
+                {
+                    string userName = reader["UserName"].ToString();
+                    string password = reader["Password"].ToString();
+
+                    if (txtUserName.Text.Equals(userName) && txtPassword.Text.Equals(password))
+                    {
+                        //Open Teacher Page
+                        var myForm = new TeacherDashboard();
+                        myForm.Show();
+
+                        loggedIn = true;
+                    }
+                }
+            }
+
+            
+            txtUserName.Clear();
+            txtPassword.Clear();
+            if (loggedIn == false)
+            {
+                MessageBox.Show("Invalid Login Credentials");
+            }
+
+        }
     }
 }
