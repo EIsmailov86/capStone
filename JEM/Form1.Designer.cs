@@ -42,8 +42,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+=======
+>>>>>>> ebed46240d0a64a8932ebdedae7fb9501a2cb62b
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -176,6 +179,7 @@
             this.panel7.Size = new System.Drawing.Size(200, 100);
             this.panel7.TabIndex = 12;
             // 
+<<<<<<< HEAD
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Violet;
@@ -192,13 +196,18 @@
             this.panel9.Size = new System.Drawing.Size(200, 100);
             this.panel9.TabIndex = 14;
             // 
+=======
+>>>>>>> ebed46240d0a64a8932ebdedae7fb9501a2cb62b
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 653);
+<<<<<<< HEAD
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
+=======
+>>>>>>> ebed46240d0a64a8932ebdedae7fb9501a2cb62b
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -237,8 +246,11 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
+<<<<<<< HEAD
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
+=======
+>>>>>>> ebed46240d0a64a8932ebdedae7fb9501a2cb62b
     }
 }
 
