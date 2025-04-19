@@ -16,5 +16,10 @@ namespace JEM
         {
             InitializeComponent();
         }
+
+        private void btnMyInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

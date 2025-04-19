@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace JEM
 {
-    public partial class studentdashboardform : Form
+    public partial class TeacherSchedule : Form
     {
-        public studentdashboardform()
+        public TeacherSchedule()
         {
             InitializeComponent();
-        }
-
-        private void studentdashboardform_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
