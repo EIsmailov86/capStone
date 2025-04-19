@@ -89,7 +89,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(135, 123);
+            this.panel3.Size = new System.Drawing.Size(135, 128);
             this.panel3.TabIndex = 2;
             // 
             // label1
@@ -353,7 +353,7 @@
             this.btnSchedule.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSchedule.Image = global::JEM.Properties.Resources.xxsmallcalendar_checkmark_schedule;
             this.btnSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSchedule.Location = new System.Drawing.Point(0, 165);
+            this.btnSchedule.Location = new System.Drawing.Point(0, 170);
             this.btnSchedule.Name = "btnSchedule";
             this.btnSchedule.Size = new System.Drawing.Size(135, 42);
             this.btnSchedule.TabIndex = 21;
@@ -370,7 +370,7 @@
             this.btnDashboard.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDashboard.Image = global::JEM.Properties.Resources.xxsmall_home_black_square;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 123);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 128);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(135, 42);
             this.btnDashboard.TabIndex = 21;
@@ -397,7 +397,7 @@
             this.btnNotifications.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnNotifications.Image = global::JEM.Properties.Resources.xxsmallnotification;
             this.btnNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotifications.Location = new System.Drawing.Point(0, 207);
+            this.btnNotifications.Location = new System.Drawing.Point(0, 212);
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Size = new System.Drawing.Size(135, 42);
             this.btnNotifications.TabIndex = 23;

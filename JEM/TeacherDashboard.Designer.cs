@@ -57,13 +57,13 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pibStudentPicture = new System.Windows.Forms.PictureBox();
+            this.btnNotifications = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSchedule = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnNotifications = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).BeginInit();
@@ -335,7 +335,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(135, 123);
+            this.panel6.Size = new System.Drawing.Size(135, 128);
             this.panel6.TabIndex = 2;
             // 
             // label1
@@ -357,6 +357,23 @@
             this.pibStudentPicture.TabIndex = 0;
             this.pibStudentPicture.TabStop = false;
             // 
+            // btnNotifications
+            // 
+            this.btnNotifications.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNotifications.FlatAppearance.BorderSize = 0;
+            this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotifications.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnNotifications.Image = global::JEM.Properties.Resources.xxsmallnotification;
+            this.btnNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNotifications.Location = new System.Drawing.Point(0, 212);
+            this.btnNotifications.Name = "btnNotifications";
+            this.btnNotifications.Size = new System.Drawing.Size(135, 42);
+            this.btnNotifications.TabIndex = 23;
+            this.btnNotifications.Text = "   Notifications";
+            this.btnNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNotifications.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -365,7 +382,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Image = global::JEM.Properties.Resources.xxsmalluserONE;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 165);
+            this.button1.Location = new System.Drawing.Point(0, 170);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 42);
             this.button1.TabIndex = 21;
@@ -399,7 +416,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.button4.Image = global::JEM.Properties.Resources.xxsmallcalendar_checkmark_schedule;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 123);
+            this.button4.Location = new System.Drawing.Point(0, 128);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(135, 42);
             this.button4.TabIndex = 21;
@@ -440,23 +457,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnNotifications
-            // 
-            this.btnNotifications.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNotifications.FlatAppearance.BorderSize = 0;
-            this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotifications.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnNotifications.Image = global::JEM.Properties.Resources.xxsmallnotification;
-            this.btnNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotifications.Location = new System.Drawing.Point(0, 207);
-            this.btnNotifications.Name = "btnNotifications";
-            this.btnNotifications.Size = new System.Drawing.Size(135, 42);
-            this.btnNotifications.TabIndex = 23;
-            this.btnNotifications.Text = "   Notifications";
-            this.btnNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNotifications.UseVisualStyleBackColor = true;
             // 
             // TeacherDashboard
             // 
