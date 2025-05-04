@@ -316,7 +316,7 @@
             this.btnClear.Location = new System.Drawing.Point(306, 277);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(140, 23);
-            this.btnClear.TabIndex = 17;
+            this.btnClear.TabIndex = 8;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -328,7 +328,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(103, 257);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(76, 74);
-            this.btnUpdate.TabIndex = 16;
+            this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Update Info";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUpdate.UseCompatibleTextRendering = true;
@@ -341,7 +341,7 @@
             this.txbMyBio.Multiline = true;
             this.txbMyBio.Name = "txbMyBio";
             this.txbMyBio.Size = new System.Drawing.Size(179, 154);
-            this.txbMyBio.TabIndex = 15;
+            this.txbMyBio.TabIndex = 5;
             this.txbMyBio.Text = "My Bio...";
             // 
             // lblEmail
@@ -385,28 +385,28 @@
             this.txbPhone.Location = new System.Drawing.Point(128, 112);
             this.txbPhone.Name = "txbPhone";
             this.txbPhone.Size = new System.Drawing.Size(121, 22);
-            this.txbPhone.TabIndex = 5;
+            this.txbPhone.TabIndex = 2;
             // 
             // txbAddress
             // 
             this.txbAddress.Location = new System.Drawing.Point(128, 158);
             this.txbAddress.Name = "txbAddress";
             this.txbAddress.Size = new System.Drawing.Size(121, 22);
-            this.txbAddress.TabIndex = 2;
+            this.txbAddress.TabIndex = 3;
             // 
             // txbEmail
             // 
             this.txbEmail.Location = new System.Drawing.Point(128, 203);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(121, 22);
-            this.txbEmail.TabIndex = 1;
+            this.txbEmail.TabIndex = 4;
             // 
             // txbName
             // 
             this.txbName.Location = new System.Drawing.Point(128, 71);
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(121, 22);
-            this.txbName.TabIndex = 0;
+            this.txbName.TabIndex = 1;
             // 
             // picTeEdTeacherPicture
             // 
@@ -424,7 +424,7 @@
             this.btnTeEdUploadPicture.Location = new System.Drawing.Point(789, 340);
             this.btnTeEdUploadPicture.Name = "btnTeEdUploadPicture";
             this.btnTeEdUploadPicture.Size = new System.Drawing.Size(87, 76);
-            this.btnTeEdUploadPicture.TabIndex = 8;
+            this.btnTeEdUploadPicture.TabIndex = 6;
             this.btnTeEdUploadPicture.Text = "Upload Picture";
             this.btnTeEdUploadPicture.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTeEdUploadPicture.UseCompatibleTextRendering = true;

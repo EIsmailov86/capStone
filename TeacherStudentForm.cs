@@ -425,12 +425,6 @@ namespace JEM
 
                     ListBoxItem listboxStudent = lbsTeStStudents.SelectedItem as ListBoxItem;
 
-                    // Got a reference to the id from the listBoxItem internal class instead of through this query
-                    //string getIdQuery = "SELECT Id FROM student WHERE Name = @Name LIMIT 1";
-                    //MySqlCommand getIdCmd = new MySqlCommand(getIdQuery, conn);
-                    //getIdCmd.Parameters.AddWithValue("@Name", studentName);
-                    //int studentId = Convert.ToInt32(getIdCmd.ExecuteScalar());
-
                     string deleteSessionsQuery = "DELETE FROM session WHERE StudentId = @StudentId";
                     MySqlCommand deleteSessionsCmd = new MySqlCommand(deleteSessionsQuery, conn);
                     deleteSessionsCmd.Parameters.AddWithValue("@StudentId", listboxStudent.Id);
