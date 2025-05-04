@@ -39,14 +39,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -154,14 +150,6 @@
             this.panel2.Size = new System.Drawing.Size(847, 31);
             this.panel2.TabIndex = 8;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Red;
-            this.panel4.Location = new System.Drawing.Point(843, 524);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(80, 100);
-            this.panel4.TabIndex = 9;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -170,14 +158,6 @@
             this.panel5.Size = new System.Drawing.Size(87, 100);
             this.panel5.TabIndex = 10;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Yellow;
-            this.panel6.Location = new System.Drawing.Point(843, 266);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(80, 100);
-            this.panel6.TabIndex = 11;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -185,14 +165,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(87, 100);
             this.panel7.TabIndex = 12;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Violet;
-            this.panel8.Location = new System.Drawing.Point(843, 394);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(80, 100);
-            this.panel8.TabIndex = 13;
             // 
             // panel9
             // 
@@ -209,15 +181,6 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(87, 100);
             this.panel10.TabIndex = 15;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Aquamarine;
-            this.panel11.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel11.Location = new System.Drawing.Point(843, 103);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(87, 100);
-            this.panel11.TabIndex = 16;
             // 
             // panel12
             // 
@@ -269,14 +232,10 @@
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel12);
-            this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtPassword);
@@ -308,14 +267,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;

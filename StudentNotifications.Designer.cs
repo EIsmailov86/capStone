@@ -269,6 +269,7 @@
             this.cmbHeading.Size = new System.Drawing.Size(198, 24);
             this.cmbHeading.TabIndex = 1;
             this.cmbHeading.Text = "Heading";
+            this.cmbHeading.SelectedIndexChanged += new System.EventHandler(this.LoadMessageBody);
             // 
             // StudentNotifications
             // 
