@@ -61,10 +61,10 @@ namespace JEM
                 #region Teacher
                 if (!loggedIn)
                 {
-                    string teacherQuery = "SELECT * FROM student WHERE UserName = @UserName";
+                    string teacherQuery = "SELECT * FROM teacher WHERE UserName = @UserName";
                     MySqlCommand teacherCmd = new MySqlCommand(teacherQuery, dbConnection);
                     teacherCmd.Parameters.AddWithValue("@UserName", txtUserName.Text);
-                    teacherCmd.Parameters.AddWithValue("@Password", txtPassword.Text);
+                    //teacherCmd.Parameters.AddWithValue("@Password", txtPassword.Text);
 
                     using (MySqlDataReader reader = teacherCmd.ExecuteReader())
                     {
@@ -86,7 +86,7 @@ namespace JEM
                                     Password = reader["Password"].ToString(),
                                     TeClassId = Convert.ToInt32(reader["TeClassId"]),
                                     Bio = reader["Bio"].ToString(),
-                                    ImageTeacher = reader["ImageTeacher"] != DBNull.Value ? (byte[])reader["ImageTeacher"] : null // ✅ CORRECT
+                                    ImageTeacher = reader["ImageTeacher"] != DBNull.Value ? (byte[])reader["ImageTeacher"] : null 
                                 };
 
                                 teachers.Add(loggedInTeacher);
@@ -134,6 +134,13 @@ namespace JEM
         {
             Register register = new Register();
             register.ShowDialog();
+        }
+
+        private void btnTeacherRegister_Click(object sender, EventArgs e)
+        {
+            RegisterTeacher registerTeacher = new RegisterTeacher();
+            registerTeacher.ShowDialog();
+
         }
     }
 }

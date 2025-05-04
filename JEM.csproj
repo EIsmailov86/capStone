@@ -123,6 +123,12 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegisterTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterTeacher.Designer.cs">
+      <DependentUpon>RegisterTeacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="SecurityHelper.cs" />
     <Compile Include="Session.cs" />
     <Compile Include="Student.cs" />
@@ -206,6 +212,9 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterTeacher.resx">
+      <DependentUpon>RegisterTeacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="studentdashboardform.resx">
       <DependentUpon>studentdashboardform.cs</DependentUpon>
