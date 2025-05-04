@@ -364,7 +364,9 @@ namespace JEM
                             Address = @Address, 
                             Email = @Email, 
                             Bio = @Bio 
-                         WHERE Name = @OriginalName";
+                         WHERE Id = @StudentId";
+
+                ListBoxItem listboxStudent = lbsTeStStudents.SelectedItem as ListBoxItem;
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Name", txbTeStName.Text.Trim());
@@ -374,7 +376,7 @@ namespace JEM
                 cmd.Parameters.AddWithValue("@Address", txbTeStAddress.Text.Trim());
                 cmd.Parameters.AddWithValue("@Email", txbTeStEmail.Text.Trim());
                 cmd.Parameters.AddWithValue("@Bio", txbTeStTeStBio.Text.Trim());
-                cmd.Parameters.AddWithValue("@OriginalName", selectedStudentName);
+                cmd.Parameters.AddWithValue("@StudentId", listboxStudent.Id);
 
                 int rows = cmd.ExecuteNonQuery();
 
@@ -420,21 +422,23 @@ namespace JEM
             {
                 using (MySqlConnection conn = ConnectToDb())
                 {
-                    string getIdQuery = "SELECT Id FROM student WHERE Name = @Name LIMIT 1";
-                    MySqlCommand getIdCmd = new MySqlCommand(getIdQuery, conn);
-                    getIdCmd.Parameters.AddWithValue("@Name", studentName);
-                    int studentId = Convert.ToInt32(getIdCmd.ExecuteScalar());
+                    ListBoxItem listboxStudent = lbsTeStStudents.SelectedItem as ListBoxItem;
 
                     string deleteSessionsQuery = "DELETE FROM session WHERE StudentId = @StudentId";
                     MySqlCommand deleteSessionsCmd = new MySqlCommand(deleteSessionsQuery, conn);
-                    deleteSessionsCmd.Parameters.AddWithValue("@StudentId", studentId);
+                    deleteSessionsCmd.Parameters.AddWithValue("@StudentId", listboxStudent.Id);
                     deleteSessionsCmd.ExecuteNonQuery();
 
                     string deleteStudentQuery = "DELETE FROM student WHERE Id = @StudentId";
                     MySqlCommand deleteStudentCmd = new MySqlCommand(deleteStudentQuery, conn);
-                    deleteStudentCmd.Parameters.AddWithValue("@StudentId", studentId);
+                    deleteStudentCmd.Parameters.AddWithValue("@StudentId", listboxStudent.Id);
 
-                    int rows = deleteStudentCmd.ExecuteNonQuery();
+                    string deleteNotifications = "DELETE FROM notifications WHERE StudentId = @StudentId";
+                    MySqlCommand deleteNotificationCmd = new MySqlCommand(deleteNotifications, conn);
+                    deleteNotificationCmd.Parameters.AddWithValue("@StudentId", listboxStudent.Id);
+
+                    int rows = deleteNotificationCmd.ExecuteNonQuery();
+                    rows = deleteStudentCmd.ExecuteNonQuery();
                     if (rows > 0)
                     {
                         MessageBox.Show("Student and sessions deleted successfully.");
