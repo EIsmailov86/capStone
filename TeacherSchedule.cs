@@ -252,6 +252,14 @@ namespace JEM
                     MessageBox.Show("Session scheduled successfully!");
                     dgvTeShSchedule.Rows.Clear();
                     LoadSchedule();
+                    CreateNotifications(2, loggedInTeacher.Id, studentId,
+                        "Tutoring Session on " + sessionDate.ToString("M/d/yyyy"),
+                        "You have been scheduled for a tutoring session\r\n" +
+                        "Subject:" + subjectName + "\r\n" +
+                        "Teacher: " + loggedInTeacher.Name + "\r\n" +
+                        "Date: " + sessionDate.ToString("M/d/yyyy") + "\r\n" +
+                        "Time: " + timeslot + "\r\n" +
+                        "Cost: " + cost);
                 }
                 else
                 {
@@ -346,6 +354,48 @@ namespace JEM
                 {
                     using (MySqlConnection conn = ConnectToDb())
                     {
+
+                        string selectQuery = "SELECT se.StudentId, se.SessionId, su.subjectName, se.SessionDate, se.Timeslot, te.Name AS teacherName, st.Name AS StudentName, gr.GradeYear, se.Cost " +
+                            "FROM session AS se " +
+                            "LEFT JOIN subject AS su ON se.SubjectId=su.subjectId " +
+                            "LEFT JOIN teacher AS te ON se.TeacherId=te.Id " +
+                            "LEFT JOIN gradeyear AS gr ON su.SubjectId=gr.GradeId " +
+                            "LEFT JOIN student AS st ON se.StudentId=st.Id " +
+                            "WHERE @SessionId = se.SessionId";
+
+                        MySqlCommand selectcmd = new MySqlCommand(selectQuery, conn);
+                        selectcmd.Parameters.AddWithValue("@SessionId", sessionId);
+
+                        using (MySqlDataReader reader = selectcmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Session sessionRow = new Session
+                                {
+                                    SessionId = Convert.ToInt32(reader["SessionId"]),
+                                    SubjectName = reader["SubjectName"].ToString(),
+                                    StudentName = reader["StudentName"].ToString(),
+                                    TeacherName = reader["TeacherName"].ToString(),
+                                    SessionDate = (DateTime)reader["SessionDate"],
+                                    TimeSlot = reader["Timeslot"].ToString(),
+                                    GradeYear = reader["GradeYear"].ToString(),
+                                    Cost = Convert.ToInt32(reader["Cost"]),
+                                };
+
+                                int studentId = Convert.ToInt32(reader["StudentId"]);
+
+                                CreateNotifications(2, loggedInTeacher.Id, studentId,
+                                    "Tutoring Session Cancelled on " + sessionRow.SessionDate.ToString("M/d/yyyy"),
+                                    "The following Session has been cancelled\r\n" +
+                                    "Subject:" + sessionRow.SubjectName + "\r\n" +
+                                    "Teacher: " + loggedInTeacher.Name + "\r\n" +
+                                    "Date: " + sessionRow.SessionDate.ToString("M/d/yyyy") + "\r\n" +
+                                    "Time: " + sessionRow.TimeSlot + "\r\n" +
+                                    "Cost: " + sessionRow.Cost);
+
+                            }
+                        }
+
                         string query = "DELETE FROM session WHERE SessionId = @SessionId";
                         MySqlCommand cmd = new MySqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@SessionId", sessionId);

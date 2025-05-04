@@ -252,6 +252,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txbNotifications
             // 
@@ -269,6 +270,7 @@
             this.cmbHeading.Size = new System.Drawing.Size(198, 24);
             this.cmbHeading.TabIndex = 1;
             this.cmbHeading.Text = "Heading";
+            this.cmbHeading.SelectedIndexChanged += new System.EventHandler(this.LoadMessageBody);
             // 
             // StudentNotifications
             // 
