@@ -40,18 +40,18 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblSubject = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cmbTime = new System.Windows.Forms.ComboBox();
-            this.cmbSubject = new System.Windows.Forms.ComboBox();
+            this.dtpStDaSessionDate = new System.Windows.Forms.DateTimePicker();
+            this.cmbStDaTime = new System.Windows.Forms.ComboBox();
+            this.cmbStDaSubject = new System.Windows.Forms.ComboBox();
             this.grbScheduleApp = new System.Windows.Forms.GroupBox();
-            this.btnScheduleSession = new System.Windows.Forms.Button();
+            this.btnStDaScheduleSession = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblStDaWelcome = new System.Windows.Forms.Label();
             this.grbSearch = new System.Windows.Forms.GroupBox();
-            this.btnFilterbySubject = new System.Windows.Forms.Button();
-            this.btnFilterbyDate = new System.Windows.Forms.Button();
-            this.cbmSubject = new System.Windows.Forms.ComboBox();
-            this.cmbDate = new System.Windows.Forms.ComboBox();
+            this.btnStDaFilterBySubject = new System.Windows.Forms.Button();
+            this.btnStDaFilterByDate = new System.Windows.Forms.Button();
+            this.cmbStDaFilterSubject = new System.Windows.Forms.ComboBox();
+            this.cmbStDaFilterDate = new System.Windows.Forms.ComboBox();
             this.pgbStDaBalance = new System.Windows.Forms.ProgressBar();
             this.lblStDaRemainingBalance = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -172,41 +172,41 @@
             this.lblSubject.TabIndex = 4;
             this.lblSubject.Text = "Subject";
             // 
-            // dateTimePicker1
+            // dtpStDaSessionDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(132, 66);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtpStDaSessionDate.Location = new System.Drawing.Point(132, 66);
+            this.dtpStDaSessionDate.Name = "dtpStDaSessionDate";
+            this.dtpStDaSessionDate.Size = new System.Drawing.Size(200, 22);
+            this.dtpStDaSessionDate.TabIndex = 5;
             // 
-            // cmbTime
+            // cmbStDaTime
             // 
-            this.cmbTime.FormattingEnabled = true;
-            this.cmbTime.Location = new System.Drawing.Point(132, 129);
-            this.cmbTime.Name = "cmbTime";
-            this.cmbTime.Size = new System.Drawing.Size(200, 24);
-            this.cmbTime.TabIndex = 6;
+            this.cmbStDaTime.FormattingEnabled = true;
+            this.cmbStDaTime.Location = new System.Drawing.Point(132, 129);
+            this.cmbStDaTime.Name = "cmbStDaTime";
+            this.cmbStDaTime.Size = new System.Drawing.Size(200, 24);
+            this.cmbStDaTime.TabIndex = 6;
             // 
-            // cmbSubject
+            // cmbStDaSubject
             // 
-            this.cmbSubject.FormattingEnabled = true;
-            this.cmbSubject.Location = new System.Drawing.Point(132, 198);
-            this.cmbSubject.Name = "cmbSubject";
-            this.cmbSubject.Size = new System.Drawing.Size(200, 24);
-            this.cmbSubject.TabIndex = 7;
+            this.cmbStDaSubject.FormattingEnabled = true;
+            this.cmbStDaSubject.Location = new System.Drawing.Point(132, 198);
+            this.cmbStDaSubject.Name = "cmbStDaSubject";
+            this.cmbStDaSubject.Size = new System.Drawing.Size(200, 24);
+            this.cmbStDaSubject.TabIndex = 7;
             // 
             // grbScheduleApp
             // 
             this.grbScheduleApp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbScheduleApp.AutoSize = true;
             this.grbScheduleApp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.grbScheduleApp.Controls.Add(this.dateTimePicker1);
+            this.grbScheduleApp.Controls.Add(this.dtpStDaSessionDate);
             this.grbScheduleApp.Controls.Add(this.lblSubject);
-            this.grbScheduleApp.Controls.Add(this.btnScheduleSession);
+            this.grbScheduleApp.Controls.Add(this.btnStDaScheduleSession);
             this.grbScheduleApp.Controls.Add(this.lblTime);
-            this.grbScheduleApp.Controls.Add(this.cmbTime);
+            this.grbScheduleApp.Controls.Add(this.cmbStDaTime);
             this.grbScheduleApp.Controls.Add(this.lblDate);
-            this.grbScheduleApp.Controls.Add(this.cmbSubject);
+            this.grbScheduleApp.Controls.Add(this.cmbStDaSubject);
             this.grbScheduleApp.Location = new System.Drawing.Point(180, 342);
             this.grbScheduleApp.Name = "grbScheduleApp";
             this.grbScheduleApp.Size = new System.Drawing.Size(338, 305);
@@ -214,19 +214,20 @@
             this.grbScheduleApp.TabStop = false;
             this.grbScheduleApp.Text = "Schedule Appointment";
             // 
-            // btnScheduleSession
+            // btnStDaScheduleSession
             // 
-            this.btnScheduleSession.AutoSize = true;
-            this.btnScheduleSession.Image = global::JEM.Properties.Resources.xxx40px_person_clock_calendar;
-            this.btnScheduleSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScheduleSession.Location = new System.Drawing.Point(147, 234);
-            this.btnScheduleSession.Name = "btnScheduleSession";
-            this.btnScheduleSession.Size = new System.Drawing.Size(173, 50);
-            this.btnScheduleSession.TabIndex = 8;
-            this.btnScheduleSession.Text = "Schedule Session";
-            this.btnScheduleSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnScheduleSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnScheduleSession.UseVisualStyleBackColor = true;
+            this.btnStDaScheduleSession.AutoSize = true;
+            this.btnStDaScheduleSession.Image = global::JEM.Properties.Resources.xxx40px_person_clock_calendar;
+            this.btnStDaScheduleSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStDaScheduleSession.Location = new System.Drawing.Point(147, 234);
+            this.btnStDaScheduleSession.Name = "btnStDaScheduleSession";
+            this.btnStDaScheduleSession.Size = new System.Drawing.Size(173, 50);
+            this.btnStDaScheduleSession.TabIndex = 8;
+            this.btnStDaScheduleSession.Text = "Schedule Session";
+            this.btnStDaScheduleSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnStDaScheduleSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStDaScheduleSession.UseVisualStyleBackColor = true;
+            this.btnStDaScheduleSession.Click += new System.EventHandler(this.btnStDaScheduleSession_Click);
             // 
             // panel1
             // 
@@ -253,10 +254,10 @@
             this.grbSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbSearch.AutoSize = true;
             this.grbSearch.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.grbSearch.Controls.Add(this.btnFilterbySubject);
-            this.grbSearch.Controls.Add(this.btnFilterbyDate);
-            this.grbSearch.Controls.Add(this.cbmSubject);
-            this.grbSearch.Controls.Add(this.cmbDate);
+            this.grbSearch.Controls.Add(this.btnStDaFilterBySubject);
+            this.grbSearch.Controls.Add(this.btnStDaFilterByDate);
+            this.grbSearch.Controls.Add(this.cmbStDaFilterSubject);
+            this.grbSearch.Controls.Add(this.cmbStDaFilterDate);
             this.grbSearch.Location = new System.Drawing.Point(648, 455);
             this.grbSearch.Name = "grbSearch";
             this.grbSearch.Size = new System.Drawing.Size(264, 192);
@@ -264,45 +265,47 @@
             this.grbSearch.TabStop = false;
             this.grbSearch.Text = "Search";
             // 
-            // btnFilterbySubject
+            // btnStDaFilterBySubject
             // 
-            this.btnFilterbySubject.AutoSize = true;
-            this.btnFilterbySubject.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFilterbySubject.Image = global::JEM.Properties.Resources._34px_searchsubject;
-            this.btnFilterbySubject.Location = new System.Drawing.Point(212, 125);
-            this.btnFilterbySubject.Name = "btnFilterbySubject";
-            this.btnFilterbySubject.Size = new System.Drawing.Size(40, 46);
-            this.btnFilterbySubject.TabIndex = 12;
-            this.btnFilterbySubject.UseVisualStyleBackColor = true;
+            this.btnStDaFilterBySubject.AutoSize = true;
+            this.btnStDaFilterBySubject.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnStDaFilterBySubject.Image = global::JEM.Properties.Resources._34px_searchsubject;
+            this.btnStDaFilterBySubject.Location = new System.Drawing.Point(212, 125);
+            this.btnStDaFilterBySubject.Name = "btnStDaFilterBySubject";
+            this.btnStDaFilterBySubject.Size = new System.Drawing.Size(40, 46);
+            this.btnStDaFilterBySubject.TabIndex = 12;
+            this.btnStDaFilterBySubject.UseVisualStyleBackColor = true;
             // 
-            // btnFilterbyDate
+            // btnStDaFilterByDate
             // 
-            this.btnFilterbyDate.AutoSize = true;
-            this.btnFilterbyDate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFilterbyDate.Image = global::JEM.Properties.Resources.xxx40px_search_by_Date;
-            this.btnFilterbyDate.Location = new System.Drawing.Point(212, 41);
-            this.btnFilterbyDate.Name = "btnFilterbyDate";
-            this.btnFilterbyDate.Size = new System.Drawing.Size(46, 46);
-            this.btnFilterbyDate.TabIndex = 11;
-            this.btnFilterbyDate.UseVisualStyleBackColor = true;
+            this.btnStDaFilterByDate.AutoSize = true;
+            this.btnStDaFilterByDate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnStDaFilterByDate.Image = global::JEM.Properties.Resources.xxx40px_search_by_Date;
+            this.btnStDaFilterByDate.Location = new System.Drawing.Point(212, 41);
+            this.btnStDaFilterByDate.Name = "btnStDaFilterByDate";
+            this.btnStDaFilterByDate.Size = new System.Drawing.Size(46, 46);
+            this.btnStDaFilterByDate.TabIndex = 11;
+            this.btnStDaFilterByDate.UseVisualStyleBackColor = true;
             // 
-            // cbmSubject
+            // cmbStDaFilterSubject
             // 
-            this.cbmSubject.FormattingEnabled = true;
-            this.cbmSubject.Location = new System.Drawing.Point(6, 136);
-            this.cbmSubject.Name = "cbmSubject";
-            this.cbmSubject.Size = new System.Drawing.Size(200, 24);
-            this.cbmSubject.TabIndex = 10;
-            this.cbmSubject.Text = "Filter by Subject";
+            this.cmbStDaFilterSubject.FormattingEnabled = true;
+            this.cmbStDaFilterSubject.Location = new System.Drawing.Point(6, 136);
+            this.cmbStDaFilterSubject.Name = "cmbStDaFilterSubject";
+            this.cmbStDaFilterSubject.Size = new System.Drawing.Size(200, 24);
+            this.cmbStDaFilterSubject.TabIndex = 10;
+            this.cmbStDaFilterSubject.Text = "Filter by Subject";
+            this.cmbStDaFilterSubject.SelectedIndexChanged += new System.EventHandler(this.btnStDaFilterBySubject_Click);
             // 
-            // cmbDate
+            // cmbStDaFilterDate
             // 
-            this.cmbDate.FormattingEnabled = true;
-            this.cmbDate.Location = new System.Drawing.Point(6, 52);
-            this.cmbDate.Name = "cmbDate";
-            this.cmbDate.Size = new System.Drawing.Size(200, 24);
-            this.cmbDate.TabIndex = 9;
-            this.cmbDate.Text = "Filter by Date";
+            this.cmbStDaFilterDate.FormattingEnabled = true;
+            this.cmbStDaFilterDate.Location = new System.Drawing.Point(6, 52);
+            this.cmbStDaFilterDate.Name = "cmbStDaFilterDate";
+            this.cmbStDaFilterDate.Size = new System.Drawing.Size(200, 24);
+            this.cmbStDaFilterDate.TabIndex = 9;
+            this.cmbStDaFilterDate.Text = "Filter by Date";
+            this.cmbStDaFilterDate.SelectedIndexChanged += new System.EventHandler(this.btnStDaFilterByDate_Click);
             // 
             // pgbStDaBalance
             // 
@@ -519,10 +522,10 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblSubject;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox cmbTime;
-        private System.Windows.Forms.ComboBox cmbSubject;
-        private System.Windows.Forms.Button btnScheduleSession;
+        private System.Windows.Forms.DateTimePicker dtpStDaSessionDate;
+        private System.Windows.Forms.ComboBox cmbStDaTime;
+        private System.Windows.Forms.ComboBox cmbStDaSubject;
+        private System.Windows.Forms.Button btnStDaScheduleSession;
         private System.Windows.Forms.GroupBox grbScheduleApp;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
@@ -533,10 +536,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.GroupBox grbSearch;
-        private System.Windows.Forms.Button btnFilterbySubject;
-        private System.Windows.Forms.Button btnFilterbyDate;
-        private System.Windows.Forms.ComboBox cbmSubject;
-        private System.Windows.Forms.ComboBox cmbDate;
+        private System.Windows.Forms.Button btnStDaFilterBySubject;
+        private System.Windows.Forms.Button btnStDaFilterByDate;
+        private System.Windows.Forms.ComboBox cmbStDaFilterSubject;
+        private System.Windows.Forms.ComboBox cmbStDaFilterDate;
         private System.Windows.Forms.ProgressBar pgbStDaBalance;
         private System.Windows.Forms.Label lblStDaRemainingBalance;
         private System.Windows.Forms.Panel panel2;
