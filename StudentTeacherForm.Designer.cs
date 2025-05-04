@@ -212,6 +212,7 @@
             this.btnSendMessage.TabIndex = 8;
             this.btnSendMessage.Text = "Send Message";
             this.btnSendMessage.UseVisualStyleBackColor = true;
+            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
             // 
             // txbMessageTeacher
             // 
