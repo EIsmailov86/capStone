@@ -74,6 +74,14 @@ namespace JEM
                 {
                     while (reader.Read())
                     {
+                        Teacher teacherRow = new Teacher
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Name = reader["Name"].ToString()
+                        };
+
+                        teachers.Add(teacherRow);
+
                         string name = reader["Name"].ToString();
                         cmbSubject.Items.Add(name);
 
@@ -134,6 +142,9 @@ namespace JEM
         #region Notifications
         private void btnSendMessage_Click(object sender, EventArgs e)
         {
+
+            //CreateNotifications(1, )
+
         }
 
         #endregion

@@ -422,6 +422,7 @@ namespace JEM
             {
                 using (MySqlConnection conn = ConnectToDb())
                 {
+
                     ListBoxItem listboxStudent = lbsTeStStudents.SelectedItem as ListBoxItem;
 
                     string deleteSessionsQuery = "DELETE FROM session WHERE StudentId = @StudentId";

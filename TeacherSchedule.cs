@@ -20,8 +20,8 @@ namespace JEM
             }
             loggedInTeacher = teacher;
             lblWelcome.Text = $"Welcome, {loggedInTeacher.Name}!";
-            LoadSchedule();
             LoadAllStudents(); 
+            LoadSchedule();
             LoadAvailableTimeSlots();
             LoadAllSubjects();
             LoadTeacherPicture();
@@ -37,21 +37,30 @@ namespace JEM
             dgvTeShSchedule.Columns.Add("SessionDate", "Date");
             dgvTeShSchedule.Columns.Add("SubjectName", "Subject");
             dgvTeShSchedule.Columns.Add("TimeSlot", "Time");
-            dgvTeShSchedule.Columns.Add("StudentName", "Student");
+            dgvTeShSchedule.Columns.Add("TeacherName", "Teacher");
             dgvTeShSchedule.Columns.Add("Cost", "Cost");
 
             using (MySqlConnection conn = ConnectToDb())
             {
                 string query = @"
-            SELECT se.SessionId, se.SessionDate, su.SubjectName, se.Timeslot, st.Name AS StudentName, se.Cost
+            SELECT se.SessionId, se.SessionDate, su.SubjectName, se.Timeslot, te.Name AS TeacherName, se.Cost
             FROM session se
             LEFT JOIN subject su ON se.SubjectId = su.SubjectId
-            LEFT JOIN student st ON se.StudentId = st.Id
-            WHERE se.TeacherId = @TeacherId
+            LEFT JOIN teacher te ON se.TeacherId = te.Id
+            WHERE se.StudentId = @StudentId
             ORDER BY se.SessionDate";
 
+
+                if (lbsTeShStudents.SelectedIndex < 0)
+                {
+                    lbsTeShStudents.SelectedIndex = 0;
+
+                }
+
+                ListItem listboxStudent = lbsTeShStudents.SelectedItem as ListItem;
+
                 MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@TeacherId", loggedInTeacher.Id);
+                cmd.Parameters.AddWithValue("@StudentId", listboxStudent.Value);
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -62,7 +71,7 @@ namespace JEM
                             Convert.ToDateTime(reader["SessionDate"]).ToShortDateString(),
                             reader["SubjectName"].ToString(),
                             reader["Timeslot"].ToString(),
-                            reader["StudentName"].ToString(),
+                            reader["TeacherName"].ToString(),
                             reader["Cost"].ToString()
                         );
                     }
@@ -266,6 +275,7 @@ namespace JEM
                     MessageBox.Show("Failed to schedule session.");
                 }
 
+                // Issue: teachers cannot see if a student is already scheduled with another teacher
                 string newSessionQuery = "SELECT se.SessionId, su.subjectName, se.SessionDate, se.Timeslot, te.Name AS teacherName, st.Name AS StudentName, gr.GradeYear, se.Cost " +
                     "FROM session AS se " +
                     "LEFT JOIN subject AS su ON se.SubjectId=su.subjectId " +
@@ -491,6 +501,11 @@ namespace JEM
         private void SelectedDateChange(object sender, EventArgs e)
         {
             ValidateTimeSlot();
+        }
+
+        private void StudentSelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSchedule();
         }
     }
 
