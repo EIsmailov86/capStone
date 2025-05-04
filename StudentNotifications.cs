@@ -101,7 +101,14 @@ namespace JEM
 
             cmbHeading.ValueMember = "NotificationId";
             cmbHeading.DisplayMember = "MessageHeader";
+
+            if (notifications.Count == 0)
+            {
+                cmbHeading.Text = "No New Notifications";
+                txbNotifications.Text = "";
+            }
         }
+
 
         private void LoadMessageBody(object sender, EventArgs e)
         {

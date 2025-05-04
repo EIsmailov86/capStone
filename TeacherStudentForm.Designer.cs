@@ -217,7 +217,7 @@
             this.lbsTeStStudents.Location = new System.Drawing.Point(509, 21);
             this.lbsTeStStudents.Name = "lbsTeStStudents";
             this.lbsTeStStudents.Size = new System.Drawing.Size(236, 324);
-            this.lbsTeStStudents.TabIndex = 5;
+            this.lbsTeStStudents.TabIndex = 14;
             this.lbsTeStStudents.Click += new System.EventHandler(this.lbsTeStStudents_SelectedIndexChanged);
             // 
             // grbStudentInfo
@@ -260,7 +260,7 @@
             this.txbTeStStartingBalance.Location = new System.Drawing.Point(136, 305);
             this.txbTeStStartingBalance.Name = "txbTeStStartingBalance";
             this.txbTeStStartingBalance.Size = new System.Drawing.Size(111, 22);
-            this.txbTeStStartingBalance.TabIndex = 40;
+            this.txbTeStStartingBalance.TabIndex = 7;
             this.txbTeStStartingBalance.TextChanged += new System.EventHandler(this.txbTeStStartingBalance_TextChanged);
             // 
             // lblTeStStartingBalance
@@ -288,7 +288,7 @@
             this.btnTeStDeleteStudent.Location = new System.Drawing.Point(174, 459);
             this.btnTeStDeleteStudent.Name = "btnTeStDeleteStudent";
             this.btnTeStDeleteStudent.Size = new System.Drawing.Size(73, 67);
-            this.btnTeStDeleteStudent.TabIndex = 37;
+            this.btnTeStDeleteStudent.TabIndex = 12;
             this.btnTeStDeleteStudent.Text = "Delete";
             this.btnTeStDeleteStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTeStDeleteStudent.UseCompatibleTextRendering = true;
@@ -307,7 +307,7 @@
             this.btnTeStCreateStudent.Location = new System.Drawing.Point(37, 349);
             this.btnTeStCreateStudent.Name = "btnTeStCreateStudent";
             this.btnTeStCreateStudent.Size = new System.Drawing.Size(73, 67);
-            this.btnTeStCreateStudent.TabIndex = 36;
+            this.btnTeStCreateStudent.TabIndex = 9;
             this.btnTeStCreateStudent.Text = "Create";
             this.btnTeStCreateStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTeStCreateStudent.UseCompatibleTextRendering = true;
@@ -321,7 +321,7 @@
             this.btnTeStUpdateBalance.Location = new System.Drawing.Point(604, 476);
             this.btnTeStUpdateBalance.Name = "btnTeStUpdateBalance";
             this.btnTeStUpdateBalance.Size = new System.Drawing.Size(85, 77);
-            this.btnTeStUpdateBalance.TabIndex = 35;
+            this.btnTeStUpdateBalance.TabIndex = 13;
             this.btnTeStUpdateBalance.Text = "Update Balance";
             this.btnTeStUpdateBalance.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTeStUpdateBalance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -352,7 +352,7 @@
             this.btnTeStClear.Location = new System.Drawing.Point(37, 459);
             this.btnTeStClear.Name = "btnTeStClear";
             this.btnTeStClear.Size = new System.Drawing.Size(73, 67);
-            this.btnTeStClear.TabIndex = 32;
+            this.btnTeStClear.TabIndex = 11;
             this.btnTeStClear.Text = "Clear";
             this.btnTeStClear.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTeStClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -367,7 +367,7 @@
             this.btnTeStUpdateStudent.Location = new System.Drawing.Point(174, 349);
             this.btnTeStUpdateStudent.Name = "btnTeStUpdateStudent";
             this.btnTeStUpdateStudent.Size = new System.Drawing.Size(73, 67);
-            this.btnTeStUpdateStudent.TabIndex = 31;
+            this.btnTeStUpdateStudent.TabIndex = 10;
             this.btnTeStUpdateStudent.Text = "Update";
             this.btnTeStUpdateStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTeStUpdateStudent.UseCompatibleTextRendering = true;
@@ -380,7 +380,7 @@
             this.txbTeStTeStBio.Multiline = true;
             this.txbTeStTeStBio.Name = "txbTeStTeStBio";
             this.txbTeStTeStBio.Size = new System.Drawing.Size(179, 324);
-            this.txbTeStTeStBio.TabIndex = 30;
+            this.txbTeStTeStBio.TabIndex = 8;
             this.txbTeStTeStBio.Text = "Bio";
             // 
             // lblEmail
@@ -442,7 +442,7 @@
             this.txbTeStPhone.Location = new System.Drawing.Point(126, 174);
             this.txbTeStPhone.Name = "txbTeStPhone";
             this.txbTeStPhone.Size = new System.Drawing.Size(121, 22);
-            this.txbTeStPhone.TabIndex = 23;
+            this.txbTeStPhone.TabIndex = 4;
             // 
             // cmbTeStSubject
             // 
@@ -450,7 +450,7 @@
             this.cmbTeStSubject.Location = new System.Drawing.Point(126, 123);
             this.cmbTeStSubject.Name = "cmbTeStSubject";
             this.cmbTeStSubject.Size = new System.Drawing.Size(121, 24);
-            this.cmbTeStSubject.TabIndex = 22;
+            this.cmbTeStSubject.TabIndex = 3;
             // 
             // cmbTeStGrade
             // 
@@ -458,28 +458,28 @@
             this.cmbTeStGrade.Location = new System.Drawing.Point(126, 83);
             this.cmbTeStGrade.Name = "cmbTeStGrade";
             this.cmbTeStGrade.Size = new System.Drawing.Size(121, 24);
-            this.cmbTeStGrade.TabIndex = 21;
+            this.cmbTeStGrade.TabIndex = 2;
             // 
             // txbTeStAddress
             // 
             this.txbTeStAddress.Location = new System.Drawing.Point(126, 220);
             this.txbTeStAddress.Name = "txbTeStAddress";
             this.txbTeStAddress.Size = new System.Drawing.Size(121, 22);
-            this.txbTeStAddress.TabIndex = 20;
+            this.txbTeStAddress.TabIndex = 5;
             // 
             // txbTeStEmail
             // 
             this.txbTeStEmail.Location = new System.Drawing.Point(126, 265);
             this.txbTeStEmail.Name = "txbTeStEmail";
             this.txbTeStEmail.Size = new System.Drawing.Size(121, 22);
-            this.txbTeStEmail.TabIndex = 19;
+            this.txbTeStEmail.TabIndex = 6;
             // 
             // txbTeStName
             // 
             this.txbTeStName.Location = new System.Drawing.Point(126, 46);
             this.txbTeStName.Name = "txbTeStName";
             this.txbTeStName.Size = new System.Drawing.Size(121, 22);
-            this.txbTeStName.TabIndex = 18;
+            this.txbTeStName.TabIndex = 1;
             // 
             // TeacherStudentForm
             // 
