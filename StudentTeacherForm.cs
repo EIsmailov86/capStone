@@ -52,6 +52,8 @@ namespace JEM
             this.SuppressCloseConfirmation = true;
             this.Close();
         }
+
+
         #endregion
 
         #region LoadTeachers
@@ -60,7 +62,7 @@ namespace JEM
             using (MySqlConnection conn = ConnectToDb())
             {
                 string query = @"
-                    SELECT DISTINCT t.Name, t.ImageTeacher, t.Bio
+                    SELECT DISTINCT t.Name, t.ImageTeacher, t.Bio, t.Id
                     FROM teacher t
                     JOIN session s ON s.TeacherId = t.Id
                     WHERE s.StudentId = @StudentId";
@@ -128,5 +130,14 @@ namespace JEM
             }
         }
         #endregion
+
+        #region Notifications
+        private void btnSendMessage_Click(object sender, EventArgs e)
+        {
+        }
+
+        #endregion
+
+
     }
 }
