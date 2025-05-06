@@ -41,6 +41,7 @@
             this.lblTeStWelcome = new System.Windows.Forms.Label();
             this.lbsTeStStudents = new System.Windows.Forms.ListBox();
             this.grbStudentInfo = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txbMessageHeader = new System.Windows.Forms.TextBox();
             this.btnSendMessage = new System.Windows.Forms.Button();
@@ -68,7 +69,6 @@
             this.txbTeStAddress = new System.Windows.Forms.TextBox();
             this.txbTeStEmail = new System.Windows.Forms.TextBox();
             this.txbTeStName = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibTeStTeacherPicture)).BeginInit();
@@ -219,7 +219,7 @@
             // 
             this.lbsTeStStudents.FormattingEnabled = true;
             this.lbsTeStStudents.ItemHeight = 16;
-            this.lbsTeStStudents.Location = new System.Drawing.Point(509, 33);
+            this.lbsTeStStudents.Location = new System.Drawing.Point(509, 46);
             this.lbsTeStStudents.Name = "lbsTeStStudents";
             this.lbsTeStStudents.Size = new System.Drawing.Size(236, 148);
             this.lbsTeStStudents.TabIndex = 14;
@@ -264,6 +264,15 @@
             this.grbStudentInfo.TabIndex = 6;
             this.grbStudentInfo.TabStop = false;
             this.grbStudentInfo.Text = "Student Info";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(573, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 16);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "List of Students";
             // 
             // label2
             // 
@@ -525,15 +534,6 @@
             this.txbTeStName.Name = "txbTeStName";
             this.txbTeStName.Size = new System.Drawing.Size(121, 22);
             this.txbTeStName.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(573, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 16);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "List of Students";
             // 
             // TeacherStudentForm
             // 
