@@ -41,10 +41,11 @@
             this.lblStTeWelcome = new System.Windows.Forms.Label();
             this.grbTeacherInfo = new System.Windows.Forms.GroupBox();
             this.btnSendMessage = new System.Windows.Forms.Button();
-            this.txbMessageTeacher = new System.Windows.Forms.TextBox();
+            this.txbMessageBody = new System.Windows.Forms.TextBox();
             this.picStTeTeacherPicture = new System.Windows.Forms.PictureBox();
             this.txbStTeInfoandBio = new System.Windows.Forms.TextBox();
             this.cmbSubject = new System.Windows.Forms.ComboBox();
+            this.txbMessageHeader = new System.Windows.Forms.TextBox();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -192,8 +193,9 @@
             // 
             // grbTeacherInfo
             // 
+            this.grbTeacherInfo.Controls.Add(this.txbMessageHeader);
             this.grbTeacherInfo.Controls.Add(this.btnSendMessage);
-            this.grbTeacherInfo.Controls.Add(this.txbMessageTeacher);
+            this.grbTeacherInfo.Controls.Add(this.txbMessageBody);
             this.grbTeacherInfo.Controls.Add(this.picStTeTeacherPicture);
             this.grbTeacherInfo.Controls.Add(this.txbStTeInfoandBio);
             this.grbTeacherInfo.Controls.Add(this.cmbSubject);
@@ -214,14 +216,14 @@
             this.btnSendMessage.UseVisualStyleBackColor = true;
             this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
             // 
-            // txbMessageTeacher
+            // txbMessageBody
             // 
-            this.txbMessageTeacher.Location = new System.Drawing.Point(301, 238);
-            this.txbMessageTeacher.Multiline = true;
-            this.txbMessageTeacher.Name = "txbMessageTeacher";
-            this.txbMessageTeacher.Size = new System.Drawing.Size(274, 150);
-            this.txbMessageTeacher.TabIndex = 7;
-            this.txbMessageTeacher.Text = "Message Teacher";
+            this.txbMessageBody.Location = new System.Drawing.Point(301, 249);
+            this.txbMessageBody.Multiline = true;
+            this.txbMessageBody.Name = "txbMessageBody";
+            this.txbMessageBody.Size = new System.Drawing.Size(274, 139);
+            this.txbMessageBody.TabIndex = 7;
+            this.txbMessageBody.Text = "Message Teacher Body";
             // 
             // picStTeTeacherPicture
             // 
@@ -249,6 +251,15 @@
             this.cmbSubject.Size = new System.Drawing.Size(201, 24);
             this.cmbSubject.TabIndex = 4;
             this.cmbSubject.Text = "Subject";
+            // 
+            // txbMessageHeader
+            // 
+            this.txbMessageHeader.Location = new System.Drawing.Point(301, 210);
+            this.txbMessageHeader.Multiline = true;
+            this.txbMessageHeader.Name = "txbMessageHeader";
+            this.txbMessageHeader.Size = new System.Drawing.Size(274, 33);
+            this.txbMessageHeader.TabIndex = 9;
+            this.txbMessageHeader.Text = "Message Teacher Header";
             // 
             // StudentTeacherForm
             // 
@@ -285,11 +296,12 @@
         private System.Windows.Forms.TextBox txbStTeInfoandBio;
         private System.Windows.Forms.PictureBox picStTeTeacherPicture;
         private System.Windows.Forms.Button btnSendMessage;
-        private System.Windows.Forms.TextBox txbMessageTeacher;
+        private System.Windows.Forms.TextBox txbMessageBody;
         private System.Windows.Forms.Button btnSTDashboard;
         private System.Windows.Forms.Button btnSTNotifications;
         private System.Windows.Forms.Button btnSTPayment;
         private System.Windows.Forms.Button btnSTMyInfo;
         private System.Windows.Forms.Label lblStTeWelcome;
+        private System.Windows.Forms.TextBox txbMessageHeader;
     }
 }

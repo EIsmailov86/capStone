@@ -46,6 +46,7 @@ namespace JEM
                             Display = $"{name} (Grade {gradeId})"
                         };
 
+
                         int index = lbsTeStStudents.Items.Add(item);
 
                         //balance is negative
@@ -547,6 +548,39 @@ namespace JEM
                 }
             }
         }
+        #endregion
+
+        #region Notifications
+
+        private void btnSendMessage_Click(object sender, EventArgs e)
+        {
+            if (txbMessageHeader.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Please fill in the message header field");
+            }
+            else if (txbMessageBody.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Please fill in the message body field");
+            }
+            else
+            {
+                if (lbsTeStStudents.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please select a student");
+                }
+                else
+                {
+                    ListBoxItem selectedStudent = lbsTeStStudents.SelectedItem as ListBoxItem;
+                    CreateNotifications(2, loggedInTeacher.Id, selectedStudent.Id, txbMessageHeader.Text, txbMessageBody.Text + "\r\n Message sent from " + loggedInTeacher.Name);
+
+                    MessageBox.Show("Notification has been created");
+
+                    txbMessageHeader.Text = "";
+                    txbMessageBody.Text = "";
+                }
+            }
+        }
+
         #endregion
     }
 }

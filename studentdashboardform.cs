@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -287,7 +288,7 @@ namespace JEM
             var timeslot = cmbStDaTime.Text;
             var subject = cmbStDaSubject.Text;
 
-            using (var conn = ConnectToDb())
+            using (MySqlConnection conn = ConnectToDb())
             {
                 // prevent double-booking
                 var chkStu = new MySqlCommand(@"
@@ -360,6 +361,14 @@ namespace JEM
                     InitializeStudentSchedule();
                     LoadAvailableTimeSlots();
                     UpdateBalanceProgressBar();
+
+                    CreateNotifications(1, chosenTeacherId, loggedInStudent.Id,
+                        "Tutoring Session on " + date.ToString("M/d/yyyy"),
+                        "You have been scheduled for a tutoring session\r\n" +
+                        "Subject:" + subject + "\r\n" +
+                        "Student: " + loggedInStudent.Name + "\r\n" +
+                        "Date: " + date.ToString("M/d/yyyy") + "\r\n" +
+                        "Time: " + timeslot + "\r\n");
                 }
                 else
                 {

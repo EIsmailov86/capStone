@@ -41,6 +41,10 @@
             this.lblTeStWelcome = new System.Windows.Forms.Label();
             this.lbsTeStStudents = new System.Windows.Forms.ListBox();
             this.grbStudentInfo = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txbMessageHeader = new System.Windows.Forms.TextBox();
+            this.btnSendMessage = new System.Windows.Forms.Button();
+            this.txbMessageBody = new System.Windows.Forms.TextBox();
             this.txbTeStStartingBalance = new System.Windows.Forms.TextBox();
             this.lblTeStStartingBalance = new System.Windows.Forms.Label();
             this.pibTeStStudentPicture = new System.Windows.Forms.PictureBox();
@@ -64,6 +68,7 @@
             this.txbTeStAddress = new System.Windows.Forms.TextBox();
             this.txbTeStEmail = new System.Windows.Forms.TextBox();
             this.txbTeStName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibTeStTeacherPicture)).BeginInit();
@@ -214,9 +219,9 @@
             // 
             this.lbsTeStStudents.FormattingEnabled = true;
             this.lbsTeStStudents.ItemHeight = 16;
-            this.lbsTeStStudents.Location = new System.Drawing.Point(509, 21);
+            this.lbsTeStStudents.Location = new System.Drawing.Point(509, 33);
             this.lbsTeStStudents.Name = "lbsTeStStudents";
-            this.lbsTeStStudents.Size = new System.Drawing.Size(236, 324);
+            this.lbsTeStStudents.Size = new System.Drawing.Size(236, 148);
             this.lbsTeStStudents.TabIndex = 14;
             this.lbsTeStStudents.Click += new System.EventHandler(this.lbsTeStStudents_SelectedIndexChanged);
             // 
@@ -224,6 +229,11 @@
             // 
             this.grbStudentInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbStudentInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.grbStudentInfo.Controls.Add(this.label3);
+            this.grbStudentInfo.Controls.Add(this.label2);
+            this.grbStudentInfo.Controls.Add(this.txbMessageHeader);
+            this.grbStudentInfo.Controls.Add(this.btnSendMessage);
+            this.grbStudentInfo.Controls.Add(this.txbMessageBody);
             this.grbStudentInfo.Controls.Add(this.txbTeStStartingBalance);
             this.grbStudentInfo.Controls.Add(this.lblTeStStartingBalance);
             this.grbStudentInfo.Controls.Add(this.pibTeStStudentPicture);
@@ -255,6 +265,41 @@
             this.grbStudentInfo.TabStop = false;
             this.grbStudentInfo.Text = "Student Info";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(573, 236);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 16);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Message Student";
+            // 
+            // txbMessageHeader
+            // 
+            this.txbMessageHeader.Location = new System.Drawing.Point(509, 265);
+            this.txbMessageHeader.Multiline = true;
+            this.txbMessageHeader.Name = "txbMessageHeader";
+            this.txbMessageHeader.Size = new System.Drawing.Size(236, 48);
+            this.txbMessageHeader.TabIndex = 42;
+            // 
+            // btnSendMessage
+            // 
+            this.btnSendMessage.Location = new System.Drawing.Point(525, 506);
+            this.btnSendMessage.Name = "btnSendMessage";
+            this.btnSendMessage.Size = new System.Drawing.Size(203, 23);
+            this.btnSendMessage.TabIndex = 41;
+            this.btnSendMessage.Text = "Send Message";
+            this.btnSendMessage.UseVisualStyleBackColor = true;
+            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
+            // 
+            // txbMessageBody
+            // 
+            this.txbMessageBody.Location = new System.Drawing.Point(509, 327);
+            this.txbMessageBody.Multiline = true;
+            this.txbMessageBody.Name = "txbMessageBody";
+            this.txbMessageBody.Size = new System.Drawing.Size(236, 159);
+            this.txbMessageBody.TabIndex = 40;
+            // 
             // txbTeStStartingBalance
             // 
             this.txbTeStStartingBalance.Location = new System.Drawing.Point(136, 305);
@@ -274,7 +319,7 @@
             // 
             // pibTeStStudentPicture
             // 
-            this.pibTeStStudentPicture.Location = new System.Drawing.Point(298, 46);
+            this.pibTeStStudentPicture.Location = new System.Drawing.Point(310, 45);
             this.pibTeStStudentPicture.Name = "pibTeStStudentPicture";
             this.pibTeStStudentPicture.Size = new System.Drawing.Size(139, 124);
             this.pibTeStStudentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -318,7 +363,7 @@
             // 
             this.btnTeStUpdateBalance.Image = global::JEM.Properties.Resources._34px_updateBalance;
             this.btnTeStUpdateBalance.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStUpdateBalance.Location = new System.Drawing.Point(604, 476);
+            this.btnTeStUpdateBalance.Location = new System.Drawing.Point(337, 456);
             this.btnTeStUpdateBalance.Name = "btnTeStUpdateBalance";
             this.btnTeStUpdateBalance.Size = new System.Drawing.Size(85, 77);
             this.btnTeStUpdateBalance.TabIndex = 13;
@@ -331,7 +376,7 @@
             // lblTeStRemainingBalance
             // 
             this.lblTeStRemainingBalance.AutoSize = true;
-            this.lblTeStRemainingBalance.Location = new System.Drawing.Point(614, 396);
+            this.lblTeStRemainingBalance.Location = new System.Drawing.Point(352, 376);
             this.lblTeStRemainingBalance.Name = "lblTeStRemainingBalance";
             this.lblTeStRemainingBalance.Size = new System.Drawing.Size(53, 20);
             this.lblTeStRemainingBalance.TabIndex = 34;
@@ -340,7 +385,7 @@
             // 
             // pgbTeStBalance
             // 
-            this.pgbTeStBalance.Location = new System.Drawing.Point(551, 434);
+            this.pgbTeStBalance.Location = new System.Drawing.Point(289, 414);
             this.pgbTeStBalance.Name = "pgbTeStBalance";
             this.pgbTeStBalance.Size = new System.Drawing.Size(174, 36);
             this.pgbTeStBalance.TabIndex = 33;
@@ -379,7 +424,7 @@
             this.txbTeStTeStBio.Location = new System.Drawing.Point(289, 212);
             this.txbTeStTeStBio.Multiline = true;
             this.txbTeStTeStBio.Name = "txbTeStTeStBio";
-            this.txbTeStTeStBio.Size = new System.Drawing.Size(179, 324);
+            this.txbTeStTeStBio.Size = new System.Drawing.Size(179, 138);
             this.txbTeStTeStBio.TabIndex = 8;
             this.txbTeStTeStBio.Text = "Bio";
             // 
@@ -481,6 +526,15 @@
             this.txbTeStName.Size = new System.Drawing.Size(121, 22);
             this.txbTeStName.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(573, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 16);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "List of Students";
+            // 
             // TeacherStudentForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -541,5 +595,10 @@
         private System.Windows.Forms.Label lblTeStWelcome;
         private System.Windows.Forms.TextBox txbTeStStartingBalance;
         private System.Windows.Forms.Label lblTeStStartingBalance;
+        private System.Windows.Forms.TextBox txbMessageHeader;
+        private System.Windows.Forms.Button btnSendMessage;
+        private System.Windows.Forms.TextBox txbMessageBody;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

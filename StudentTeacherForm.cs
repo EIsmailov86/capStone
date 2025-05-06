@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace JEM
 {
@@ -82,24 +84,29 @@ namespace JEM
 
                         teachers.Add(teacherRow);
 
-                        string name = reader["Name"].ToString();
-                        cmbSubject.Items.Add(name);
+                        //string name = reader["Name"].ToString();
+                        //cmbSubject.Items.Add(name);
+
+                        // may need to add the teacherRow instead and set displaymember to name
+                        cmbSubject.Items.Add(teacherRow);
+                        cmbSubject.DisplayMember = "Name";
 
                         //save picture
                         if (reader["ImageTeacher"] != DBNull.Value)
                         {
                             byte[] imageData = (byte[])reader["ImageTeacher"];
-                            teacherImages[name] = imageData;
+                            //teacherImages[name] = imageData;
+                            teacherImages[teacherRow.Name] = imageData;
                         }
 
                         //save bio
                         if (reader["Bio"] != DBNull.Value)
                         {
-                            teacherBios[name] = reader["Bio"].ToString();
+                            teacherBios[teacherRow.Name] = reader["Bio"].ToString();
                         }
                         else
                         {
-                            teacherBios[name] = "No bio available.";
+                            teacherBios[teacherRow.Name] = "No bio available.";
                         }
                     }
                 }
@@ -143,7 +150,29 @@ namespace JEM
         private void btnSendMessage_Click(object sender, EventArgs e)
         {
 
-            //CreateNotifications(1, )
+            if (txbMessageHeader.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Please fill in the message header field");
+            }
+            else if (txbMessageBody.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Please fill in the message body field");
+            } else
+            {
+                if (cmbSubject.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please select a teacher");
+                } else
+                {
+                    Teacher selectedTeacher = cmbSubject.SelectedItem as Teacher;
+                    CreateNotifications(1, selectedTeacher.Id, loggedInStudent.Id, txbMessageHeader.Text, txbMessageBody.Text + "\r\n Message sent from " + loggedInStudent.Name);
+
+                    MessageBox.Show("Message has been Sent");
+
+                    txbMessageHeader.Text = "";
+                    txbMessageBody.Text = "";
+                }
+            }
 
         }
 
