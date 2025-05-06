@@ -40,12 +40,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblStTeWelcome = new System.Windows.Forms.Label();
             this.grbTeacherInfo = new System.Windows.Forms.GroupBox();
+            this.txbMessageHeader = new System.Windows.Forms.TextBox();
             this.btnSendMessage = new System.Windows.Forms.Button();
             this.txbMessageBody = new System.Windows.Forms.TextBox();
             this.picStTeTeacherPicture = new System.Windows.Forms.PictureBox();
             this.txbStTeInfoandBio = new System.Windows.Forms.TextBox();
             this.cmbSubject = new System.Windows.Forms.ComboBox();
-            this.txbMessageHeader = new System.Windows.Forms.TextBox();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -206,6 +206,15 @@
             this.grbTeacherInfo.TabStop = false;
             this.grbTeacherInfo.Text = "Teacher Info";
             // 
+            // txbMessageHeader
+            // 
+            this.txbMessageHeader.Location = new System.Drawing.Point(301, 210);
+            this.txbMessageHeader.Multiline = true;
+            this.txbMessageHeader.Name = "txbMessageHeader";
+            this.txbMessageHeader.Size = new System.Drawing.Size(274, 33);
+            this.txbMessageHeader.TabIndex = 9;
+            this.txbMessageHeader.Text = "Message Teacher Header";
+            // 
             // btnSendMessage
             // 
             this.btnSendMessage.Location = new System.Drawing.Point(301, 418);
@@ -227,7 +236,7 @@
             // 
             // picStTeTeacherPicture
             // 
-            this.picStTeTeacherPicture.Location = new System.Drawing.Point(352, 47);
+            this.picStTeTeacherPicture.Location = new System.Drawing.Point(358, 21);
             this.picStTeTeacherPicture.Name = "picStTeTeacherPicture";
             this.picStTeTeacherPicture.Size = new System.Drawing.Size(173, 157);
             this.picStTeTeacherPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -251,15 +260,6 @@
             this.cmbSubject.Size = new System.Drawing.Size(201, 24);
             this.cmbSubject.TabIndex = 4;
             this.cmbSubject.Text = "Subject";
-            // 
-            // txbMessageHeader
-            // 
-            this.txbMessageHeader.Location = new System.Drawing.Point(301, 210);
-            this.txbMessageHeader.Multiline = true;
-            this.txbMessageHeader.Name = "txbMessageHeader";
-            this.txbMessageHeader.Size = new System.Drawing.Size(274, 33);
-            this.txbMessageHeader.TabIndex = 9;
-            this.txbMessageHeader.Text = "Message Teacher Header";
             // 
             // StudentTeacherForm
             // 

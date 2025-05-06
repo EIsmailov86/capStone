@@ -573,7 +573,7 @@ namespace JEM
                     ListBoxItem selectedStudent = lbsTeStStudents.SelectedItem as ListBoxItem;
                     CreateNotifications(2, loggedInTeacher.Id, selectedStudent.Id, txbMessageHeader.Text, txbMessageBody.Text + "\r\n Message sent from " + loggedInTeacher.Name);
 
-                    MessageBox.Show("Notification has been created");
+                    MessageBox.Show("Message has been Sent");
 
                     txbMessageHeader.Text = "";
                     txbMessageBody.Text = "";
