@@ -45,7 +45,7 @@
             this.txbMessageBody = new System.Windows.Forms.TextBox();
             this.picStTeTeacherPicture = new System.Windows.Forms.PictureBox();
             this.txbStTeInfoandBio = new System.Windows.Forms.TextBox();
-            this.cmbSubject = new System.Windows.Forms.ComboBox();
+            this.cmbTeacher = new System.Windows.Forms.ComboBox();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -198,7 +198,7 @@
             this.grbTeacherInfo.Controls.Add(this.txbMessageBody);
             this.grbTeacherInfo.Controls.Add(this.picStTeTeacherPicture);
             this.grbTeacherInfo.Controls.Add(this.txbStTeInfoandBio);
-            this.grbTeacherInfo.Controls.Add(this.cmbSubject);
+            this.grbTeacherInfo.Controls.Add(this.cmbTeacher);
             this.grbTeacherInfo.Location = new System.Drawing.Point(232, 88);
             this.grbTeacherInfo.Name = "grbTeacherInfo";
             this.grbTeacherInfo.Size = new System.Drawing.Size(626, 500);
@@ -252,14 +252,15 @@
             this.txbStTeInfoandBio.TabIndex = 5;
             this.txbStTeInfoandBio.Text = "Teacher\'s Info and Bio";
             // 
-            // cmbSubject
+            // cmbTeacher
             // 
-            this.cmbSubject.FormattingEnabled = true;
-            this.cmbSubject.Location = new System.Drawing.Point(38, 47);
-            this.cmbSubject.Name = "cmbSubject";
-            this.cmbSubject.Size = new System.Drawing.Size(201, 24);
-            this.cmbSubject.TabIndex = 4;
-            this.cmbSubject.Text = "Subject";
+            this.cmbTeacher.FormattingEnabled = true;
+            this.cmbTeacher.Location = new System.Drawing.Point(38, 47);
+            this.cmbTeacher.Name = "cmbTeacher";
+            this.cmbTeacher.Size = new System.Drawing.Size(201, 24);
+            this.cmbTeacher.TabIndex = 4;
+            this.cmbTeacher.Text = "Teachers";
+            this.cmbTeacher.SelectedIndexChanged += new System.EventHandler(this.cmbTeacher_SelectedIndexChanged);
             // 
             // StudentTeacherForm
             // 
@@ -292,7 +293,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox grbTeacherInfo;
-        private System.Windows.Forms.ComboBox cmbSubject;
+        private System.Windows.Forms.ComboBox cmbTeacher;
         private System.Windows.Forms.TextBox txbStTeInfoandBio;
         private System.Windows.Forms.PictureBox picStTeTeacherPicture;
         private System.Windows.Forms.Button btnSendMessage;

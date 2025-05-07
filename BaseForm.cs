@@ -46,6 +46,9 @@ namespace JEM
         #region ConnectToDb
         public MySqlConnection ConnectToDb()
         {
+
+            //string connectionString = $"Server=127.0.0.1;Database=jem_jed;Uid=root;Pwd=mysql;";
+
             string connectionString = $"Server=127.0.0.1;Database=jem_jed;Uid=root;Pwd=mysql;";
             MySqlConnection dbConnection = new MySqlConnection(connectionString);
             dbConnection.Open();

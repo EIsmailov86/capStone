@@ -44,7 +44,7 @@
             this.cmbStDaTime = new System.Windows.Forms.ComboBox();
             this.cmbStDaSubject = new System.Windows.Forms.ComboBox();
             this.grbScheduleApp = new System.Windows.Forms.GroupBox();
-            this.btnStDaScheduleSession = new System.Windows.Forms.Button();
+            this.btnStDaRequestSession = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblStDaWelcome = new System.Windows.Forms.Label();
             this.grbSearch = new System.Windows.Forms.GroupBox();
@@ -66,6 +66,8 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnMyTeacher = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbStDaTeacher = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).BeginInit();
             this.grbScheduleApp.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -148,7 +150,7 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(35, 72);
+            this.lblDate.Location = new System.Drawing.Point(37, 90);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(36, 16);
             this.lblDate.TabIndex = 2;
@@ -157,7 +159,7 @@
             // lblTime
             // 
             this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(35, 137);
+            this.lblTime.Location = new System.Drawing.Point(35, 140);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(38, 16);
             this.lblTime.TabIndex = 3;
@@ -166,7 +168,7 @@
             // lblSubject
             // 
             this.lblSubject.AutoSize = true;
-            this.lblSubject.Location = new System.Drawing.Point(35, 206);
+            this.lblSubject.Location = new System.Drawing.Point(35, 198);
             this.lblSubject.Name = "lblSubject";
             this.lblSubject.Size = new System.Drawing.Size(52, 16);
             this.lblSubject.TabIndex = 4;
@@ -174,7 +176,7 @@
             // 
             // dtpStDaSessionDate
             // 
-            this.dtpStDaSessionDate.Location = new System.Drawing.Point(132, 66);
+            this.dtpStDaSessionDate.Location = new System.Drawing.Point(132, 84);
             this.dtpStDaSessionDate.Name = "dtpStDaSessionDate";
             this.dtpStDaSessionDate.Size = new System.Drawing.Size(200, 22);
             this.dtpStDaSessionDate.TabIndex = 5;
@@ -182,7 +184,7 @@
             // cmbStDaTime
             // 
             this.cmbStDaTime.FormattingEnabled = true;
-            this.cmbStDaTime.Location = new System.Drawing.Point(132, 129);
+            this.cmbStDaTime.Location = new System.Drawing.Point(132, 137);
             this.cmbStDaTime.Name = "cmbStDaTime";
             this.cmbStDaTime.Size = new System.Drawing.Size(200, 24);
             this.cmbStDaTime.TabIndex = 6;
@@ -190,7 +192,7 @@
             // cmbStDaSubject
             // 
             this.cmbStDaSubject.FormattingEnabled = true;
-            this.cmbStDaSubject.Location = new System.Drawing.Point(132, 198);
+            this.cmbStDaSubject.Location = new System.Drawing.Point(132, 195);
             this.cmbStDaSubject.Name = "cmbStDaSubject";
             this.cmbStDaSubject.Size = new System.Drawing.Size(200, 24);
             this.cmbStDaSubject.TabIndex = 7;
@@ -200,9 +202,11 @@
             this.grbScheduleApp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbScheduleApp.AutoSize = true;
             this.grbScheduleApp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.grbScheduleApp.Controls.Add(this.label1);
+            this.grbScheduleApp.Controls.Add(this.cmbStDaTeacher);
             this.grbScheduleApp.Controls.Add(this.dtpStDaSessionDate);
             this.grbScheduleApp.Controls.Add(this.lblSubject);
-            this.grbScheduleApp.Controls.Add(this.btnStDaScheduleSession);
+            this.grbScheduleApp.Controls.Add(this.btnStDaRequestSession);
             this.grbScheduleApp.Controls.Add(this.lblTime);
             this.grbScheduleApp.Controls.Add(this.cmbStDaTime);
             this.grbScheduleApp.Controls.Add(this.lblDate);
@@ -212,22 +216,22 @@
             this.grbScheduleApp.Size = new System.Drawing.Size(338, 305);
             this.grbScheduleApp.TabIndex = 10;
             this.grbScheduleApp.TabStop = false;
-            this.grbScheduleApp.Text = "Schedule Appointment";
+            this.grbScheduleApp.Text = "Request Session";
             // 
-            // btnStDaScheduleSession
+            // btnStDaRequestSession
             // 
-            this.btnStDaScheduleSession.AutoSize = true;
-            this.btnStDaScheduleSession.Image = global::JEM.Properties.Resources.xxx40px_person_clock_calendar;
-            this.btnStDaScheduleSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStDaScheduleSession.Location = new System.Drawing.Point(147, 234);
-            this.btnStDaScheduleSession.Name = "btnStDaScheduleSession";
-            this.btnStDaScheduleSession.Size = new System.Drawing.Size(173, 50);
-            this.btnStDaScheduleSession.TabIndex = 8;
-            this.btnStDaScheduleSession.Text = "Schedule Session";
-            this.btnStDaScheduleSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnStDaScheduleSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnStDaScheduleSession.UseVisualStyleBackColor = true;
-            this.btnStDaScheduleSession.Click += new System.EventHandler(this.btnStDaScheduleSession_Click);
+            this.btnStDaRequestSession.AutoSize = true;
+            this.btnStDaRequestSession.Image = global::JEM.Properties.Resources.xxx40px_person_clock_calendar;
+            this.btnStDaRequestSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStDaRequestSession.Location = new System.Drawing.Point(147, 234);
+            this.btnStDaRequestSession.Name = "btnStDaRequestSession";
+            this.btnStDaRequestSession.Size = new System.Drawing.Size(173, 50);
+            this.btnStDaRequestSession.TabIndex = 8;
+            this.btnStDaRequestSession.Text = "Request Session";
+            this.btnStDaRequestSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnStDaRequestSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStDaRequestSession.UseVisualStyleBackColor = true;
+            this.btnStDaRequestSession.Click += new System.EventHandler(this.btnStDaRequestSession_Click);
             // 
             // panel1
             // 
@@ -483,6 +487,23 @@
             this.btnMyTeacher.Text = "My Teacher";
             this.btnMyTeacher.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Teacher";
+            // 
+            // cmbStDaTeacher
+            // 
+            this.cmbStDaTeacher.FormattingEnabled = true;
+            this.cmbStDaTeacher.Location = new System.Drawing.Point(132, 35);
+            this.cmbStDaTeacher.Name = "cmbStDaTeacher";
+            this.cmbStDaTeacher.Size = new System.Drawing.Size(200, 24);
+            this.cmbStDaTeacher.TabIndex = 10;
+            // 
             // studentdashboardform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -525,7 +546,7 @@
         private System.Windows.Forms.DateTimePicker dtpStDaSessionDate;
         private System.Windows.Forms.ComboBox cmbStDaTime;
         private System.Windows.Forms.ComboBox cmbStDaSubject;
-        private System.Windows.Forms.Button btnStDaScheduleSession;
+        private System.Windows.Forms.Button btnStDaRequestSession;
         private System.Windows.Forms.GroupBox grbScheduleApp;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
@@ -555,5 +576,7 @@
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Button btnMyTeacher;
         private System.Windows.Forms.Label lblStDaWelcome;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbStDaTeacher;
     }
 }

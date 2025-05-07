@@ -55,6 +55,7 @@
             this.rbtCheckingAccount = new System.Windows.Forms.RadioButton();
             this.rbtCreditCard = new System.Windows.Forms.RadioButton();
             this.cmbPay = new System.Windows.Forms.ComboBox();
+            this.btnStExPayment = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnlMenu.SuspendLayout();
@@ -292,6 +293,7 @@
             // 
             // grbPayment
             // 
+            this.grbPayment.Controls.Add(this.btnStExPayment);
             this.grbPayment.Controls.Add(this.rbtAgree);
             this.grbPayment.Controls.Add(this.lblAgreewithTerms);
             this.grbPayment.Controls.Add(this.txbAmount);
@@ -301,7 +303,7 @@
             this.grbPayment.Controls.Add(this.cmbPay);
             this.grbPayment.Location = new System.Drawing.Point(376, 128);
             this.grbPayment.Name = "grbPayment";
-            this.grbPayment.Size = new System.Drawing.Size(308, 389);
+            this.grbPayment.Size = new System.Drawing.Size(312, 449);
             this.grbPayment.TabIndex = 3;
             this.grbPayment.TabStop = false;
             this.grbPayment.Text = "Payment";
@@ -376,6 +378,15 @@
             this.cmbPay.TabIndex = 4;
             this.cmbPay.Text = "Pay for Class OR Semester";
             // 
+            // btnStExPayment
+            // 
+            this.btnStExPayment.Location = new System.Drawing.Point(82, 370);
+            this.btnStExPayment.Name = "btnStExPayment";
+            this.btnStExPayment.Size = new System.Drawing.Size(133, 39);
+            this.btnStExPayment.TabIndex = 11;
+            this.btnStExPayment.Text = "Submit Payment";
+            this.btnStExPayment.UseVisualStyleBackColor = true;
+            // 
             // StudentExtraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -428,5 +439,6 @@
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label lblStExWelcome;
+        private System.Windows.Forms.Button btnStExPayment;
     }
 }

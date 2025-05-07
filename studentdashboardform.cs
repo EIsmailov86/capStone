@@ -35,6 +35,8 @@ namespace JEM
             LoadFilterSubjects();
             //btnStDaFilterByDate.Click += btnStDaFilterByDate_Click;
             //btnStDaFilterBySubject.Click += btnStDaFilterBySubject_Click;
+
+            LoadTeacher();
         }
 
         #region RefreshStudentBudget
@@ -216,6 +218,42 @@ namespace JEM
         }
         #endregion
 
+        #region LoadTeachers
+        private void LoadTeacher()
+        {
+            using (MySqlConnection conn = ConnectToDb())
+            {
+                // loads all teachers for now, grouping specific teachers and students by a 'region' or districtId is out of scope for our project
+                string query = @"
+                    SELECT DISTINCT t.Name, t.ImageTeacher, t.Bio, t.Id
+                    FROM teacher t";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Teacher teacherRow = new Teacher
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Name = reader["Name"].ToString()
+                        };
+
+                        teachers.Add(teacherRow);
+
+                        // may need to add the teacherRow instead and set displaymember to name
+                        cmbStDaTeacher.Items.Add(teacherRow);
+                        cmbStDaTeacher.DisplayMember = "Name";
+                    }
+                }
+            }
+
+
+        }
+
+        #endregion
+
         #region LoadAvailableTimeSlots
         private void LoadAvailableTimeSlots()
         {
@@ -270,13 +308,15 @@ namespace JEM
         #endregion
 
         #region btnStDaScheduleSession_Click
-        private void btnStDaScheduleSession_Click(object sender, EventArgs e)
+        // private void btnStDaScheduleSession_Click(object sender, EventArgs e)
+        private void btnStDaRequestSession_Click(object sender, EventArgs e)
         {
             if (cmbStDaSubject.SelectedItem == null ||
-                cmbStDaTime.SelectedItem == null)
+                cmbStDaTime.SelectedItem == null || 
+                cmbStDaTeacher.SelectedItem == null)
             {
                 MessageBox.Show(
-                    "Please pick a subject, date and time.",
+                    "Please pick a subject, date, time and teacher.",
                     "Missing Info",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation
@@ -310,6 +350,18 @@ namespace JEM
                     );
                     return;
                 }
+
+                // get a reference to the currently selected teacher in the cmbTeachersBox
+
+                Teacher selectedTeacher = cmbStDaTeacher.SelectedItem as Teacher;
+
+                CreateNotifications(1, selectedTeacher.Id, loggedInStudent.Id,
+                    loggedInStudent.Name + "Has requested a tutoring Session on " + date.ToString("M/d/yyyy"),
+                    "Requested session detials: \r\n" +
+                    "Subject:" + subject + "\r\n" +
+                    "Student: " + loggedInStudent.Name + "\r\n" +
+                    "Date: " + date.ToString("M/d/yyyy") + "\r\n" +
+                    "Time: " + timeslot + "\r\n" );
 
                 // pick any teacher assigned to student's class
                 int chosenTeacherId;
