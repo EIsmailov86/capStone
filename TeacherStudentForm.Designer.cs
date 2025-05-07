@@ -41,6 +41,11 @@
             this.lblTeStWelcome = new System.Windows.Forms.Label();
             this.lbsTeStStudents = new System.Windows.Forms.ListBox();
             this.grbStudentInfo = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txbMessageHeader = new System.Windows.Forms.TextBox();
+            this.btnSendMessage = new System.Windows.Forms.Button();
+            this.txbMessageBody = new System.Windows.Forms.TextBox();
             this.txbTeStStartingBalance = new System.Windows.Forms.TextBox();
             this.lblTeStStartingBalance = new System.Windows.Forms.Label();
             this.pibTeStStudentPicture = new System.Windows.Forms.PictureBox();
@@ -214,16 +219,21 @@
             // 
             this.lbsTeStStudents.FormattingEnabled = true;
             this.lbsTeStStudents.ItemHeight = 16;
-            this.lbsTeStStudents.Location = new System.Drawing.Point(509, 21);
+            this.lbsTeStStudents.Location = new System.Drawing.Point(509, 46);
             this.lbsTeStStudents.Name = "lbsTeStStudents";
-            this.lbsTeStStudents.Size = new System.Drawing.Size(236, 324);
-            this.lbsTeStStudents.TabIndex = 5;
+            this.lbsTeStStudents.Size = new System.Drawing.Size(236, 148);
+            this.lbsTeStStudents.TabIndex = 14;
             this.lbsTeStStudents.Click += new System.EventHandler(this.lbsTeStStudents_SelectedIndexChanged);
             // 
             // grbStudentInfo
             // 
             this.grbStudentInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbStudentInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.grbStudentInfo.Controls.Add(this.label3);
+            this.grbStudentInfo.Controls.Add(this.label2);
+            this.grbStudentInfo.Controls.Add(this.txbMessageHeader);
+            this.grbStudentInfo.Controls.Add(this.btnSendMessage);
+            this.grbStudentInfo.Controls.Add(this.txbMessageBody);
             this.grbStudentInfo.Controls.Add(this.txbTeStStartingBalance);
             this.grbStudentInfo.Controls.Add(this.lblTeStStartingBalance);
             this.grbStudentInfo.Controls.Add(this.pibTeStStudentPicture);
@@ -255,12 +265,56 @@
             this.grbStudentInfo.TabStop = false;
             this.grbStudentInfo.Text = "Student Info";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(573, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 16);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "List of Students";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(573, 236);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 16);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Message Student";
+            // 
+            // txbMessageHeader
+            // 
+            this.txbMessageHeader.Location = new System.Drawing.Point(509, 265);
+            this.txbMessageHeader.Multiline = true;
+            this.txbMessageHeader.Name = "txbMessageHeader";
+            this.txbMessageHeader.Size = new System.Drawing.Size(236, 48);
+            this.txbMessageHeader.TabIndex = 42;
+            // 
+            // btnSendMessage
+            // 
+            this.btnSendMessage.Location = new System.Drawing.Point(525, 506);
+            this.btnSendMessage.Name = "btnSendMessage";
+            this.btnSendMessage.Size = new System.Drawing.Size(203, 23);
+            this.btnSendMessage.TabIndex = 41;
+            this.btnSendMessage.Text = "Send Message";
+            this.btnSendMessage.UseVisualStyleBackColor = true;
+            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
+            // 
+            // txbMessageBody
+            // 
+            this.txbMessageBody.Location = new System.Drawing.Point(509, 327);
+            this.txbMessageBody.Multiline = true;
+            this.txbMessageBody.Name = "txbMessageBody";
+            this.txbMessageBody.Size = new System.Drawing.Size(236, 159);
+            this.txbMessageBody.TabIndex = 40;
+            // 
             // txbTeStStartingBalance
             // 
             this.txbTeStStartingBalance.Location = new System.Drawing.Point(136, 305);
             this.txbTeStStartingBalance.Name = "txbTeStStartingBalance";
             this.txbTeStStartingBalance.Size = new System.Drawing.Size(111, 22);
-            this.txbTeStStartingBalance.TabIndex = 40;
+            this.txbTeStStartingBalance.TabIndex = 7;
             this.txbTeStStartingBalance.TextChanged += new System.EventHandler(this.txbTeStStartingBalance_TextChanged);
             // 
             // lblTeStStartingBalance
@@ -274,7 +328,7 @@
             // 
             // pibTeStStudentPicture
             // 
-            this.pibTeStStudentPicture.Location = new System.Drawing.Point(298, 46);
+            this.pibTeStStudentPicture.Location = new System.Drawing.Point(310, 45);
             this.pibTeStStudentPicture.Name = "pibTeStStudentPicture";
             this.pibTeStStudentPicture.Size = new System.Drawing.Size(139, 124);
             this.pibTeStStudentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -288,7 +342,7 @@
             this.btnTeStDeleteStudent.Location = new System.Drawing.Point(174, 459);
             this.btnTeStDeleteStudent.Name = "btnTeStDeleteStudent";
             this.btnTeStDeleteStudent.Size = new System.Drawing.Size(73, 67);
-            this.btnTeStDeleteStudent.TabIndex = 37;
+            this.btnTeStDeleteStudent.TabIndex = 12;
             this.btnTeStDeleteStudent.Text = "Delete";
             this.btnTeStDeleteStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTeStDeleteStudent.UseCompatibleTextRendering = true;
@@ -307,7 +361,7 @@
             this.btnTeStCreateStudent.Location = new System.Drawing.Point(37, 349);
             this.btnTeStCreateStudent.Name = "btnTeStCreateStudent";
             this.btnTeStCreateStudent.Size = new System.Drawing.Size(73, 67);
-            this.btnTeStCreateStudent.TabIndex = 36;
+            this.btnTeStCreateStudent.TabIndex = 9;
             this.btnTeStCreateStudent.Text = "Create";
             this.btnTeStCreateStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTeStCreateStudent.UseCompatibleTextRendering = true;
@@ -318,10 +372,10 @@
             // 
             this.btnTeStUpdateBalance.Image = global::JEM.Properties.Resources._34px_updateBalance;
             this.btnTeStUpdateBalance.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStUpdateBalance.Location = new System.Drawing.Point(604, 476);
+            this.btnTeStUpdateBalance.Location = new System.Drawing.Point(337, 456);
             this.btnTeStUpdateBalance.Name = "btnTeStUpdateBalance";
             this.btnTeStUpdateBalance.Size = new System.Drawing.Size(85, 77);
-            this.btnTeStUpdateBalance.TabIndex = 35;
+            this.btnTeStUpdateBalance.TabIndex = 13;
             this.btnTeStUpdateBalance.Text = "Update Balance";
             this.btnTeStUpdateBalance.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTeStUpdateBalance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -331,7 +385,7 @@
             // lblTeStRemainingBalance
             // 
             this.lblTeStRemainingBalance.AutoSize = true;
-            this.lblTeStRemainingBalance.Location = new System.Drawing.Point(614, 396);
+            this.lblTeStRemainingBalance.Location = new System.Drawing.Point(352, 376);
             this.lblTeStRemainingBalance.Name = "lblTeStRemainingBalance";
             this.lblTeStRemainingBalance.Size = new System.Drawing.Size(53, 20);
             this.lblTeStRemainingBalance.TabIndex = 34;
@@ -340,7 +394,7 @@
             // 
             // pgbTeStBalance
             // 
-            this.pgbTeStBalance.Location = new System.Drawing.Point(551, 434);
+            this.pgbTeStBalance.Location = new System.Drawing.Point(289, 414);
             this.pgbTeStBalance.Name = "pgbTeStBalance";
             this.pgbTeStBalance.Size = new System.Drawing.Size(174, 36);
             this.pgbTeStBalance.TabIndex = 33;
@@ -352,7 +406,7 @@
             this.btnTeStClear.Location = new System.Drawing.Point(37, 459);
             this.btnTeStClear.Name = "btnTeStClear";
             this.btnTeStClear.Size = new System.Drawing.Size(73, 67);
-            this.btnTeStClear.TabIndex = 32;
+            this.btnTeStClear.TabIndex = 11;
             this.btnTeStClear.Text = "Clear";
             this.btnTeStClear.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTeStClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -367,7 +421,7 @@
             this.btnTeStUpdateStudent.Location = new System.Drawing.Point(174, 349);
             this.btnTeStUpdateStudent.Name = "btnTeStUpdateStudent";
             this.btnTeStUpdateStudent.Size = new System.Drawing.Size(73, 67);
-            this.btnTeStUpdateStudent.TabIndex = 31;
+            this.btnTeStUpdateStudent.TabIndex = 10;
             this.btnTeStUpdateStudent.Text = "Update";
             this.btnTeStUpdateStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTeStUpdateStudent.UseCompatibleTextRendering = true;
@@ -379,8 +433,8 @@
             this.txbTeStTeStBio.Location = new System.Drawing.Point(289, 212);
             this.txbTeStTeStBio.Multiline = true;
             this.txbTeStTeStBio.Name = "txbTeStTeStBio";
-            this.txbTeStTeStBio.Size = new System.Drawing.Size(179, 324);
-            this.txbTeStTeStBio.TabIndex = 30;
+            this.txbTeStTeStBio.Size = new System.Drawing.Size(179, 138);
+            this.txbTeStTeStBio.TabIndex = 8;
             this.txbTeStTeStBio.Text = "Bio";
             // 
             // lblEmail
@@ -442,7 +496,7 @@
             this.txbTeStPhone.Location = new System.Drawing.Point(126, 174);
             this.txbTeStPhone.Name = "txbTeStPhone";
             this.txbTeStPhone.Size = new System.Drawing.Size(121, 22);
-            this.txbTeStPhone.TabIndex = 23;
+            this.txbTeStPhone.TabIndex = 4;
             // 
             // cmbTeStSubject
             // 
@@ -450,7 +504,7 @@
             this.cmbTeStSubject.Location = new System.Drawing.Point(126, 123);
             this.cmbTeStSubject.Name = "cmbTeStSubject";
             this.cmbTeStSubject.Size = new System.Drawing.Size(121, 24);
-            this.cmbTeStSubject.TabIndex = 22;
+            this.cmbTeStSubject.TabIndex = 3;
             // 
             // cmbTeStGrade
             // 
@@ -458,28 +512,28 @@
             this.cmbTeStGrade.Location = new System.Drawing.Point(126, 83);
             this.cmbTeStGrade.Name = "cmbTeStGrade";
             this.cmbTeStGrade.Size = new System.Drawing.Size(121, 24);
-            this.cmbTeStGrade.TabIndex = 21;
+            this.cmbTeStGrade.TabIndex = 2;
             // 
             // txbTeStAddress
             // 
             this.txbTeStAddress.Location = new System.Drawing.Point(126, 220);
             this.txbTeStAddress.Name = "txbTeStAddress";
             this.txbTeStAddress.Size = new System.Drawing.Size(121, 22);
-            this.txbTeStAddress.TabIndex = 20;
+            this.txbTeStAddress.TabIndex = 5;
             // 
             // txbTeStEmail
             // 
             this.txbTeStEmail.Location = new System.Drawing.Point(126, 265);
             this.txbTeStEmail.Name = "txbTeStEmail";
             this.txbTeStEmail.Size = new System.Drawing.Size(121, 22);
-            this.txbTeStEmail.TabIndex = 19;
+            this.txbTeStEmail.TabIndex = 6;
             // 
             // txbTeStName
             // 
             this.txbTeStName.Location = new System.Drawing.Point(126, 46);
             this.txbTeStName.Name = "txbTeStName";
             this.txbTeStName.Size = new System.Drawing.Size(121, 22);
-            this.txbTeStName.TabIndex = 18;
+            this.txbTeStName.TabIndex = 1;
             // 
             // TeacherStudentForm
             // 
@@ -541,5 +595,10 @@
         private System.Windows.Forms.Label lblTeStWelcome;
         private System.Windows.Forms.TextBox txbTeStStartingBalance;
         private System.Windows.Forms.Label lblTeStStartingBalance;
+        private System.Windows.Forms.TextBox txbMessageHeader;
+        private System.Windows.Forms.Button btnSendMessage;
+        private System.Windows.Forms.TextBox txbMessageBody;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

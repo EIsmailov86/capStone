@@ -46,6 +46,7 @@ namespace JEM
                             Display = $"{name} (Grade {gradeId})"
                         };
 
+
                         int index = lbsTeStStudents.Items.Add(item);
 
                         //balance is negative
@@ -364,7 +365,9 @@ namespace JEM
                             Address = @Address, 
                             Email = @Email, 
                             Bio = @Bio 
-                         WHERE Name = @OriginalName";
+                         WHERE Id = @StudentId";
+
+                ListBoxItem listboxStudent = lbsTeStStudents.SelectedItem as ListBoxItem;
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Name", txbTeStName.Text.Trim());
@@ -374,7 +377,7 @@ namespace JEM
                 cmd.Parameters.AddWithValue("@Address", txbTeStAddress.Text.Trim());
                 cmd.Parameters.AddWithValue("@Email", txbTeStEmail.Text.Trim());
                 cmd.Parameters.AddWithValue("@Bio", txbTeStTeStBio.Text.Trim());
-                cmd.Parameters.AddWithValue("@OriginalName", selectedStudentName);
+                cmd.Parameters.AddWithValue("@StudentId", listboxStudent.Id);
 
                 int rows = cmd.ExecuteNonQuery();
 
@@ -420,21 +423,24 @@ namespace JEM
             {
                 using (MySqlConnection conn = ConnectToDb())
                 {
-                    string getIdQuery = "SELECT Id FROM student WHERE Name = @Name LIMIT 1";
-                    MySqlCommand getIdCmd = new MySqlCommand(getIdQuery, conn);
-                    getIdCmd.Parameters.AddWithValue("@Name", studentName);
-                    int studentId = Convert.ToInt32(getIdCmd.ExecuteScalar());
+
+                    ListBoxItem listboxStudent = lbsTeStStudents.SelectedItem as ListBoxItem;
 
                     string deleteSessionsQuery = "DELETE FROM session WHERE StudentId = @StudentId";
                     MySqlCommand deleteSessionsCmd = new MySqlCommand(deleteSessionsQuery, conn);
-                    deleteSessionsCmd.Parameters.AddWithValue("@StudentId", studentId);
+                    deleteSessionsCmd.Parameters.AddWithValue("@StudentId", listboxStudent.Id);
                     deleteSessionsCmd.ExecuteNonQuery();
 
                     string deleteStudentQuery = "DELETE FROM student WHERE Id = @StudentId";
                     MySqlCommand deleteStudentCmd = new MySqlCommand(deleteStudentQuery, conn);
-                    deleteStudentCmd.Parameters.AddWithValue("@StudentId", studentId);
+                    deleteStudentCmd.Parameters.AddWithValue("@StudentId", listboxStudent.Id);
 
-                    int rows = deleteStudentCmd.ExecuteNonQuery();
+                    string deleteNotifications = "DELETE FROM notifications WHERE StudentId = @StudentId";
+                    MySqlCommand deleteNotificationCmd = new MySqlCommand(deleteNotifications, conn);
+                    deleteNotificationCmd.Parameters.AddWithValue("@StudentId", listboxStudent.Id);
+
+                    int rows = deleteNotificationCmd.ExecuteNonQuery();
+                    rows = deleteStudentCmd.ExecuteNonQuery();
                     if (rows > 0)
                     {
                         MessageBox.Show("Student and sessions deleted successfully.");
@@ -542,6 +548,39 @@ namespace JEM
                 }
             }
         }
+        #endregion
+
+        #region Notifications
+
+        private void btnSendMessage_Click(object sender, EventArgs e)
+        {
+            if (txbMessageHeader.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Please fill in the message header field");
+            }
+            else if (txbMessageBody.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Please fill in the message body field");
+            }
+            else
+            {
+                if (lbsTeStStudents.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please select a student");
+                }
+                else
+                {
+                    ListBoxItem selectedStudent = lbsTeStStudents.SelectedItem as ListBoxItem;
+                    CreateNotifications(2, loggedInTeacher.Id, selectedStudent.Id, txbMessageHeader.Text, txbMessageBody.Text + "\r\n Message sent from " + loggedInTeacher.Name);
+
+                    MessageBox.Show("Message has been Sent");
+
+                    txbMessageHeader.Text = "";
+                    txbMessageBody.Text = "";
+                }
+            }
+        }
+
         #endregion
     }
 }

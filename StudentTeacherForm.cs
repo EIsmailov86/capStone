@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace JEM
 {
@@ -18,6 +20,8 @@ namespace JEM
             loggedInStudent = student;
             lblStTeWelcome.Text = $"Welcome, {loggedInStudent.Name}!";
             LoadTeachersForStudent();
+
+            LoadBio();
         }
 
         #region Nav Buttons
@@ -74,37 +78,51 @@ namespace JEM
                 {
                     while (reader.Read())
                     {
-                        string name = reader["Name"].ToString();
-                        cmbSubject.Items.Add(name);
+                        Teacher teacherRow = new Teacher
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Name = reader["Name"].ToString(),
+                            Bio = reader["Bio"].ToString()
+                        };
+
+                        teachers.Add(teacherRow);
+
+                        //string name = reader["Name"].ToString();
+                        //cmbSubject.Items.Add(name);
+
+                        // may need to add the teacherRow instead and set displaymember to name
+                        cmbTeacher.Items.Add(teacherRow);
+                        cmbTeacher.DisplayMember = "Name";
 
                         //save picture
                         if (reader["ImageTeacher"] != DBNull.Value)
                         {
                             byte[] imageData = (byte[])reader["ImageTeacher"];
-                            teacherImages[name] = imageData;
+                            //teacherImages[name] = imageData;
+                            teacherImages[teacherRow.Name] = imageData;
                         }
 
                         //save bio
                         if (reader["Bio"] != DBNull.Value)
                         {
-                            teacherBios[name] = reader["Bio"].ToString();
+                            teacherBios[teacherRow.Name] = reader["Bio"].ToString();
                         }
                         else
                         {
-                            teacherBios[name] = "No bio available.";
+                            teacherBios[teacherRow.Name] = "No bio available.";
                         }
                     }
                 }
             }
 
-            cmbSubject.SelectedIndexChanged += cmbSubject_SelectedIndexChanged;
+            cmbTeacher.SelectedIndexChanged += cmbTeacher_SelectedIndexChanged;
         }
         #endregion
 
         #region ComboBox_SelectedTe
-        private void cmbSubject_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbTeacher_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedTeacher = cmbSubject.SelectedItem?.ToString();
+            string selectedTeacher = cmbTeacher.SelectedItem?.ToString();
 
             //show image
             if (!string.IsNullOrEmpty(selectedTeacher) && teacherImages.ContainsKey(selectedTeacher))
@@ -128,16 +146,52 @@ namespace JEM
             {
                 txbStTeInfoandBio.Text = "No bio available.";
             }
+
+            LoadBio();
         }
         #endregion
 
         #region Notifications
         private void btnSendMessage_Click(object sender, EventArgs e)
         {
+
+            if (txbMessageHeader.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Please fill in the message header field");
+            }
+            else if (txbMessageBody.Text.Equals(string.Empty))
+            {
+                MessageBox.Show("Please fill in the message body field");
+            } else
+            {
+                if (cmbTeacher.SelectedIndex < 0)
+                {
+                    MessageBox.Show("Please select a teacher");
+                } else
+                {
+                    Teacher selectedTeacher = cmbTeacher.SelectedItem as Teacher;
+                    CreateNotifications(1, selectedTeacher.Id, loggedInStudent.Id, txbMessageHeader.Text, txbMessageBody.Text + "\r\n Message sent from " + loggedInStudent.Name);
+
+                    MessageBox.Show("Message has been Sent");
+
+                    txbMessageHeader.Text = "";
+                    txbMessageBody.Text = "";
+                }
+            }
+
         }
 
         #endregion
 
+        private void LoadBio()
+        {
+            if (cmbTeacher.SelectedIndex >= 0)
+            {
+                Teacher selectedTeacher = cmbTeacher.SelectedItem as Teacher;
+                txbStTeInfoandBio.Text = selectedTeacher.Bio;
+            }
+
+        }
 
     }
 }

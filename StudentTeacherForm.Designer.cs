@@ -40,11 +40,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblStTeWelcome = new System.Windows.Forms.Label();
             this.grbTeacherInfo = new System.Windows.Forms.GroupBox();
+            this.txbMessageHeader = new System.Windows.Forms.TextBox();
             this.btnSendMessage = new System.Windows.Forms.Button();
-            this.txbMessageTeacher = new System.Windows.Forms.TextBox();
+            this.txbMessageBody = new System.Windows.Forms.TextBox();
             this.picStTeTeacherPicture = new System.Windows.Forms.PictureBox();
             this.txbStTeInfoandBio = new System.Windows.Forms.TextBox();
-            this.cmbSubject = new System.Windows.Forms.ComboBox();
+            this.cmbTeacher = new System.Windows.Forms.ComboBox();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -192,17 +193,27 @@
             // 
             // grbTeacherInfo
             // 
+            this.grbTeacherInfo.Controls.Add(this.txbMessageHeader);
             this.grbTeacherInfo.Controls.Add(this.btnSendMessage);
-            this.grbTeacherInfo.Controls.Add(this.txbMessageTeacher);
+            this.grbTeacherInfo.Controls.Add(this.txbMessageBody);
             this.grbTeacherInfo.Controls.Add(this.picStTeTeacherPicture);
             this.grbTeacherInfo.Controls.Add(this.txbStTeInfoandBio);
-            this.grbTeacherInfo.Controls.Add(this.cmbSubject);
+            this.grbTeacherInfo.Controls.Add(this.cmbTeacher);
             this.grbTeacherInfo.Location = new System.Drawing.Point(232, 88);
             this.grbTeacherInfo.Name = "grbTeacherInfo";
             this.grbTeacherInfo.Size = new System.Drawing.Size(626, 500);
             this.grbTeacherInfo.TabIndex = 13;
             this.grbTeacherInfo.TabStop = false;
             this.grbTeacherInfo.Text = "Teacher Info";
+            // 
+            // txbMessageHeader
+            // 
+            this.txbMessageHeader.Location = new System.Drawing.Point(301, 210);
+            this.txbMessageHeader.Multiline = true;
+            this.txbMessageHeader.Name = "txbMessageHeader";
+            this.txbMessageHeader.Size = new System.Drawing.Size(274, 33);
+            this.txbMessageHeader.TabIndex = 9;
+            this.txbMessageHeader.Text = "Message Teacher Header";
             // 
             // btnSendMessage
             // 
@@ -214,18 +225,18 @@
             this.btnSendMessage.UseVisualStyleBackColor = true;
             this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
             // 
-            // txbMessageTeacher
+            // txbMessageBody
             // 
-            this.txbMessageTeacher.Location = new System.Drawing.Point(301, 238);
-            this.txbMessageTeacher.Multiline = true;
-            this.txbMessageTeacher.Name = "txbMessageTeacher";
-            this.txbMessageTeacher.Size = new System.Drawing.Size(274, 150);
-            this.txbMessageTeacher.TabIndex = 7;
-            this.txbMessageTeacher.Text = "Message Teacher";
+            this.txbMessageBody.Location = new System.Drawing.Point(301, 249);
+            this.txbMessageBody.Multiline = true;
+            this.txbMessageBody.Name = "txbMessageBody";
+            this.txbMessageBody.Size = new System.Drawing.Size(274, 139);
+            this.txbMessageBody.TabIndex = 7;
+            this.txbMessageBody.Text = "Message Teacher Body";
             // 
             // picStTeTeacherPicture
             // 
-            this.picStTeTeacherPicture.Location = new System.Drawing.Point(352, 47);
+            this.picStTeTeacherPicture.Location = new System.Drawing.Point(358, 21);
             this.picStTeTeacherPicture.Name = "picStTeTeacherPicture";
             this.picStTeTeacherPicture.Size = new System.Drawing.Size(173, 157);
             this.picStTeTeacherPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -241,14 +252,15 @@
             this.txbStTeInfoandBio.TabIndex = 5;
             this.txbStTeInfoandBio.Text = "Teacher\'s Info and Bio";
             // 
-            // cmbSubject
+            // cmbTeacher
             // 
-            this.cmbSubject.FormattingEnabled = true;
-            this.cmbSubject.Location = new System.Drawing.Point(38, 47);
-            this.cmbSubject.Name = "cmbSubject";
-            this.cmbSubject.Size = new System.Drawing.Size(201, 24);
-            this.cmbSubject.TabIndex = 4;
-            this.cmbSubject.Text = "Subject";
+            this.cmbTeacher.FormattingEnabled = true;
+            this.cmbTeacher.Location = new System.Drawing.Point(38, 47);
+            this.cmbTeacher.Name = "cmbTeacher";
+            this.cmbTeacher.Size = new System.Drawing.Size(201, 24);
+            this.cmbTeacher.TabIndex = 4;
+            this.cmbTeacher.Text = "Teachers";
+            this.cmbTeacher.SelectedIndexChanged += new System.EventHandler(this.cmbTeacher_SelectedIndexChanged);
             // 
             // StudentTeacherForm
             // 
@@ -281,15 +293,16 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox grbTeacherInfo;
-        private System.Windows.Forms.ComboBox cmbSubject;
+        private System.Windows.Forms.ComboBox cmbTeacher;
         private System.Windows.Forms.TextBox txbStTeInfoandBio;
         private System.Windows.Forms.PictureBox picStTeTeacherPicture;
         private System.Windows.Forms.Button btnSendMessage;
-        private System.Windows.Forms.TextBox txbMessageTeacher;
+        private System.Windows.Forms.TextBox txbMessageBody;
         private System.Windows.Forms.Button btnSTDashboard;
         private System.Windows.Forms.Button btnSTNotifications;
         private System.Windows.Forms.Button btnSTPayment;
         private System.Windows.Forms.Button btnSTMyInfo;
         private System.Windows.Forms.Label lblStTeWelcome;
+        private System.Windows.Forms.TextBox txbMessageHeader;
     }
 }
