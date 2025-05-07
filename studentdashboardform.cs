@@ -240,8 +240,6 @@ namespace JEM
                             Name = reader["Name"].ToString()
                         };
 
-                        teachers.Add(teacherRow);
-
                         // may need to add the teacherRow instead and set displaymember to name
                         cmbStDaTeacher.Items.Add(teacherRow);
                         cmbStDaTeacher.DisplayMember = "Name";
@@ -331,37 +329,37 @@ namespace JEM
             using (MySqlConnection conn = ConnectToDb())
             {
                 // prevent double-booking
-                var chkStu = new MySqlCommand(@"
-                    SELECT COUNT(*) FROM session
-                     WHERE StudentId   = @sid
-                       AND SessionDate = @dt
-                       AND TimeSlot    = @ts", conn);
-                chkStu.Parameters.AddWithValue("@sid", loggedInStudent.Id);
-                chkStu.Parameters.AddWithValue("@dt", date);
-                chkStu.Parameters.AddWithValue("@ts", timeslot);
+                //var chkStu = new MySqlCommand(@"
+                //    SELECT COUNT(*) FROM session
+                //     WHERE TeacherId   = @sid
+                //       AND SessionDate = @dt
+                //       AND TimeSlot    = @ts", conn);
+                //chkStu.Parameters.AddWithValue("@sid", loggedInStudent.Id);
+                //chkStu.Parameters.AddWithValue("@dt", date);
+                //chkStu.Parameters.AddWithValue("@ts", timeslot);
 
-                if (Convert.ToInt32(chkStu.ExecuteScalar()) > 0)
-                {
-                    MessageBox.Show(
-                        "You already have a session at that time.",
-                        "Conflict",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning
-                    );
-                    return;
-                }
+                //if (Convert.ToInt32(chkStu.ExecuteScalar()) > 0)
+                //{
+                //    MessageBox.Show(
+                //        "You already have a session at that time.",
+                //        "Conflict",
+                //        MessageBoxButtons.OK,
+                //        MessageBoxIcon.Warning
+                //    );
+                //    return;
+                //}
 
                 // get a reference to the currently selected teacher in the cmbTeachersBox
 
                 Teacher selectedTeacher = cmbStDaTeacher.SelectedItem as Teacher;
 
                 CreateNotifications(1, selectedTeacher.Id, loggedInStudent.Id,
-                    loggedInStudent.Name + " Has requested a tutoring Session on " + date.ToString("M/d/yyyy"),
-                    "Requested session detials: \r\n" +
-                    "Subject: " + subject + "\r\n" +
+                    loggedInStudent.Name + " Has requested a tutoring Session on " + dtpStDaSessionDate.Value.ToString("M/d/yyyy"),
+                    "Requested session details: \r\n" +
+                    "Subject: " + cmbStDaSubject.SelectedItem.ToString() + "\r\n" +
                     "Student: " + loggedInStudent.Name + "\r\n" +
-                    "Date: " + date.ToString("M/d/yyyy") + "\r\n" +
-                    "Time: " + timeslot + "\r\n" );
+                    "Date: " + dtpStDaSessionDate.Value.ToString("M/d/yyyy") + "\r\n" +
+                    "Time: " + cmbStDaTime.SelectedItem.ToString() + "\r\n" );
 
                 MessageBox.Show("Message has been created");
                 
