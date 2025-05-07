@@ -29,76 +29,92 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblUserName
+            // panel15
             // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(362, 161);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(98, 22);
-            this.lblUserName.TabIndex = 0;
-            this.lblUserName.Text = "User Name";
+            this.panel15.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel15.Location = new System.Drawing.Point(149, 37);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(821, 52);
+            this.panel15.TabIndex = 16;
             // 
-            // lblPassword
+            // panel13
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(362, 242);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(88, 22);
-            this.lblPassword.TabIndex = 1;
-            this.lblPassword.Text = "Password";
+            this.panel13.BackColor = System.Drawing.Color.Red;
+            this.panel13.Location = new System.Drawing.Point(723, 524);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(80, 100);
+            this.panel13.TabIndex = 17;
             // 
-            // btnLogin
+            // panel12
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(455, 310);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(156, 41);
-            this.btnLogin.TabIndex = 2;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel12.Location = new System.Drawing.Point(319, 524);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(398, 100);
+            this.panel12.TabIndex = 11;
             // 
-            // txtUserName
+            // panel10
             // 
-            this.txtUserName.Location = new System.Drawing.Point(569, 162);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(140, 22);
-            this.txtUserName.TabIndex = 0;
+            this.panel10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel10.Location = new System.Drawing.Point(195, 103);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(87, 100);
+            this.panel10.TabIndex = 15;
             // 
-            // txtPassword
+            // panel9
             // 
-            this.txtPassword.Location = new System.Drawing.Point(569, 243);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(140, 22);
-            this.txtPassword.TabIndex = 1;
-            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
+            this.panel9.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel9.Location = new System.Drawing.Point(195, 394);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(87, 100);
+            this.panel9.TabIndex = 14;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel7.Location = new System.Drawing.Point(195, 266);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(87, 100);
+            this.panel7.TabIndex = 12;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel5.Location = new System.Drawing.Point(195, 524);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(87, 100);
+            this.panel5.TabIndex = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(135, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(847, 31);
+            this.panel2.TabIndex = 8;
             // 
             // panel1
             // 
@@ -141,95 +157,59 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
+            // txtPassword
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(135, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(847, 31);
-            this.panel2.TabIndex = 8;
+            this.txtPassword.Location = new System.Drawing.Point(569, 243);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(140, 22);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
-            // panel5
+            // txtUserName
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel5.Location = new System.Drawing.Point(195, 524);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(87, 100);
-            this.panel5.TabIndex = 10;
+            this.txtUserName.Location = new System.Drawing.Point(569, 162);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(140, 22);
+            this.txtUserName.TabIndex = 0;
             // 
-            // panel7
+            // btnLogin
             // 
-            this.panel7.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel7.Location = new System.Drawing.Point(195, 266);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(87, 100);
-            this.panel7.TabIndex = 12;
+            this.btnLogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(455, 310);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(156, 41);
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // panel9
+            // lblPassword
             // 
-            this.panel9.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.panel9.Location = new System.Drawing.Point(195, 394);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(87, 100);
-            this.panel9.TabIndex = 14;
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(362, 242);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(88, 22);
+            this.lblPassword.TabIndex = 1;
+            this.lblPassword.Text = "Password";
             // 
-            // panel10
+            // lblUserName
             // 
-            this.panel10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel10.Location = new System.Drawing.Point(195, 103);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(87, 100);
-            this.panel10.TabIndex = 15;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel12.Location = new System.Drawing.Point(319, 524);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(398, 100);
-            this.panel12.TabIndex = 11;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.Red;
-            this.panel13.Location = new System.Drawing.Point(723, 524);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(80, 100);
-            this.panel13.TabIndex = 17;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.Violet;
-            this.panel14.Location = new System.Drawing.Point(319, 394);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(484, 100);
-            this.panel14.TabIndex = 18;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel15.Location = new System.Drawing.Point(149, 37);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(821, 52);
-            this.panel15.TabIndex = 16;
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.Yellow;
-            this.panel16.Location = new System.Drawing.Point(491, 162);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(52, 81);
-            this.panel16.TabIndex = 19;
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(362, 161);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(98, 22);
+            this.lblUserName.TabIndex = 0;
+            this.lblUserName.Text = "User Name";
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 653);
-            this.Controls.Add(this.panel16);
             this.Controls.Add(this.panel15);
-            this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel10);
@@ -273,9 +253,7 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panel16;
     }
 }
 

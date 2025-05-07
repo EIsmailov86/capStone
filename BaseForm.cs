@@ -46,10 +46,16 @@ namespace JEM
         #region ConnectToDb
         public MySqlConnection ConnectToDb()
         {
+            // testing connections to the remote server
 
-            //string connectionString = $"Server=127.0.0.1;Database=jem_jed;Uid=root;Pwd=mysql;";
-
+            // this is the original connection string to the mysql workbench version, no touchy
             string connectionString = $"Server=127.0.0.1;Database=jem_jed;Uid=root;Pwd=mysql;";
+
+
+            //string connectionString = $"Server=jem.infinityfreeapp.com;Database=jem_capstonedb;Uid=admin;Pwd=mysqlmysqlmysql;";
+            //string connectionString = $"Server=127.0.0.1;Database=if0_38768518_XXX;Uid=if0_38768518;Pwd=JEMCapStone2025;";
+
+            //string connectionString = $"Server=jem.infinityfreeapp.com;Database=jem_capstonedb;Uid=admin;Pwd=mysqlmysqlmysql;";
             MySqlConnection dbConnection = new MySqlConnection(connectionString);
             dbConnection.Open();
             return dbConnection;

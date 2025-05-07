@@ -307,7 +307,7 @@ namespace JEM
         }
         #endregion
 
-        #region btnStDaScheduleSession_Click
+        #region btnStDaRequestSession_Click
         // private void btnStDaScheduleSession_Click(object sender, EventArgs e)
         private void btnStDaRequestSession_Click(object sender, EventArgs e)
         {
@@ -356,81 +356,15 @@ namespace JEM
                 Teacher selectedTeacher = cmbStDaTeacher.SelectedItem as Teacher;
 
                 CreateNotifications(1, selectedTeacher.Id, loggedInStudent.Id,
-                    loggedInStudent.Name + "Has requested a tutoring Session on " + date.ToString("M/d/yyyy"),
+                    loggedInStudent.Name + " Has requested a tutoring Session on " + date.ToString("M/d/yyyy"),
                     "Requested session detials: \r\n" +
-                    "Subject:" + subject + "\r\n" +
+                    "Subject: " + subject + "\r\n" +
                     "Student: " + loggedInStudent.Name + "\r\n" +
                     "Date: " + date.ToString("M/d/yyyy") + "\r\n" +
                     "Time: " + timeslot + "\r\n" );
 
-                // pick any teacher assigned to student's class
-                int chosenTeacherId;
-                using (var tcmd = new MySqlCommand(
-                    "SELECT Id FROM teacher WHERE TeClassId = @cid LIMIT 1", conn))
-                {
-                    tcmd.Parameters.AddWithValue("@cid", loggedInStudent.ClassId);
-                    var t = tcmd.ExecuteScalar();
-                    if (t == null)
-                    {
-                        MessageBox.Show(
-                            "No teacher assigned to your class!",
-                            "Error",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error
-                        );
-                        return;
-                    }
-                    chosenTeacherId = Convert.ToInt32(t);
-                }
-
-                // lookup SubjectId
-                var subCmd = new MySqlCommand(
-                    "SELECT SubjectId FROM subject WHERE SubjectName = @sub", conn);
-                subCmd.Parameters.AddWithValue("@sub", subject);
-                int subjectId = Convert.ToInt32(subCmd.ExecuteScalar());
-
-                // insert
-                var ins = new MySqlCommand(@"
-                    INSERT INTO session
-                      (StudentId, TeacherId, SessionDate, SubjectId, TimeSlot, Cost)
-                    VALUES
-                      (@sid, @tid, @dt, @subj, @ts, @cost)", conn);
-                ins.Parameters.AddWithValue("@sid", loggedInStudent.Id);
-                ins.Parameters.AddWithValue("@tid", chosenTeacherId);
-                ins.Parameters.AddWithValue("@dt", date);
-                ins.Parameters.AddWithValue("@subj", subjectId);
-                ins.Parameters.AddWithValue("@ts", timeslot);
-                ins.Parameters.AddWithValue("@cost", 0m);
-
-                if (ins.ExecuteNonQuery() > 0)
-                {
-                    MessageBox.Show(
-                        "Session scheduled successfully!",
-                        "Success",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information
-                    );
-                    InitializeStudentSchedule();
-                    LoadAvailableTimeSlots();
-                    UpdateBalanceProgressBar();
-
-                    CreateNotifications(1, chosenTeacherId, loggedInStudent.Id,
-                        "Tutoring Session on " + date.ToString("M/d/yyyy"),
-                        "You have been scheduled for a tutoring session\r\n" +
-                        "Subject:" + subject + "\r\n" +
-                        "Student: " + loggedInStudent.Name + "\r\n" +
-                        "Date: " + date.ToString("M/d/yyyy") + "\r\n" +
-                        "Time: " + timeslot + "\r\n");
-                }
-                else
-                {
-                    MessageBox.Show(
-                        "Failed to schedule session. Please try again.",
-                        "Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error
-                    );
-                }
+                MessageBox.Show("Message has been created");
+                
             }
         }
         #endregion
