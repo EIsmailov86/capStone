@@ -31,6 +31,13 @@
             this.grbScheduleApp = new System.Windows.Forms.GroupBox();
             this.btnTeShDeleteSession = new System.Windows.Forms.Button();
             this.dgvTeShSchedule = new System.Windows.Forms.DataGridView();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbsTeShStudents = new System.Windows.Forms.ListBox();
             this.btnTeShUpdateCost = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,13 +67,6 @@
             this.btnMyStudent = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbScheduleApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeShSchedule)).BeginInit();
             this.panel2.SuspendLayout();
@@ -80,6 +80,8 @@
             // 
             // grbScheduleApp
             // 
+            this.grbScheduleApp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grbScheduleApp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.grbScheduleApp.Controls.Add(this.btnTeShDeleteSession);
             this.grbScheduleApp.Controls.Add(this.dgvTeShSchedule);
             this.grbScheduleApp.Controls.Add(this.lbsTeShStudents);
@@ -94,6 +96,7 @@
             this.grbScheduleApp.Controls.Add(this.lblDate);
             this.grbScheduleApp.Controls.Add(this.cmbTeShTScheduleSubject);
             this.grbScheduleApp.Location = new System.Drawing.Point(168, 65);
+            this.grbScheduleApp.MaximumSize = new System.Drawing.Size(800, 600);
             this.grbScheduleApp.Name = "grbScheduleApp";
             this.grbScheduleApp.Size = new System.Drawing.Size(793, 560);
             this.grbScheduleApp.TabIndex = 19;
@@ -132,6 +135,55 @@
             this.dgvTeShSchedule.RowTemplate.Height = 24;
             this.dgvTeShSchedule.Size = new System.Drawing.Size(775, 226);
             this.dgvTeShSchedule.TabIndex = 20;
+            // 
+            // Subject
+            // 
+            this.Subject.HeaderText = "Subject";
+            this.Subject.MinimumWidth = 6;
+            this.Subject.Name = "Subject";
+            this.Subject.Width = 120;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Date";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 120;
+            // 
+            // Time
+            // 
+            this.Time.HeaderText = "Time";
+            this.Time.MinimumWidth = 6;
+            this.Time.Name = "Time";
+            this.Time.Width = 110;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Teacher Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Grade
+            // 
+            this.Grade.HeaderText = "Grade";
+            this.Grade.MinimumWidth = 6;
+            this.Grade.Name = "Grade";
+            this.Grade.Width = 55;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Session Cost";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 115;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Balance";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
             // 
             // lbsTeShStudents
             // 
@@ -456,55 +508,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // Subject
-            // 
-            this.Subject.HeaderText = "Subject";
-            this.Subject.MinimumWidth = 6;
-            this.Subject.Name = "Subject";
-            this.Subject.Width = 120;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Date";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 120;
-            // 
-            // Time
-            // 
-            this.Time.HeaderText = "Time";
-            this.Time.MinimumWidth = 6;
-            this.Time.Name = "Time";
-            this.Time.Width = 110;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Teacher Name";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Grade
-            // 
-            this.Grade.HeaderText = "Grade";
-            this.Grade.MinimumWidth = 6;
-            this.Grade.Name = "Grade";
-            this.Grade.Width = 55;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Session Cost";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 115;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Balance";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
             // 
             // TeacherSchedule
             // 

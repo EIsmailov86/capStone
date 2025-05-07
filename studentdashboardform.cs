@@ -357,11 +357,11 @@ namespace JEM
 
                 CreateNotifications(1, selectedTeacher.Id, loggedInStudent.Id,
                     loggedInStudent.Name + " Has requested a tutoring Session on " + date.ToString("M/d/yyyy"),
-                    "Requested session detials: \r\n" +
-                    "Subject: " + subject + "\r\n" +
+                    "Requested session details: \r\n" +
+                    "Subject: " + cmbStDaSubject.SelectedItem.ToString() + "\r\n" +
                     "Student: " + loggedInStudent.Name + "\r\n" +
-                    "Date: " + date.ToString("M/d/yyyy") + "\r\n" +
-                    "Time: " + timeslot + "\r\n" );
+                    "Date: " + dtpStDaSessionDate.Value.ToString("M/d/yyyy") + "\r\n" +
+                    "Time: " + cmbStDaTime.SelectedItem.ToString() + "\r\n");
 
                 MessageBox.Show("Message has been created");
                 

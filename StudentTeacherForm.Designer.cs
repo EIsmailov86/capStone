@@ -193,6 +193,7 @@
             // 
             // grbTeacherInfo
             // 
+            this.grbTeacherInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.grbTeacherInfo.Controls.Add(this.txbMessageHeader);
             this.grbTeacherInfo.Controls.Add(this.btnSendMessage);
             this.grbTeacherInfo.Controls.Add(this.txbMessageBody);

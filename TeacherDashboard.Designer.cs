@@ -308,13 +308,12 @@
             // dgvSchedule
             // 
             this.dgvSchedule.AllowUserToOrderColumns = true;
-            this.dgvSchedule.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvSchedule.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvSchedule.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSchedule.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSchedule.ColumnHeadersHeight = 29;
             this.dgvSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Subject,
             this.Column2,
@@ -323,8 +322,10 @@
             this.Grade,
             this.Column3,
             this.Column4});
+            this.dgvSchedule.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dgvSchedule.Location = new System.Drawing.Point(144, 54);
             this.dgvSchedule.Name = "dgvSchedule";
+            this.dgvSchedule.ReadOnly = true;
             this.dgvSchedule.RowHeadersWidth = 51;
             this.dgvSchedule.RowTemplate.Height = 24;
             this.dgvSchedule.Size = new System.Drawing.Size(826, 226);
@@ -383,6 +384,7 @@
             // grbTeDaSearchBox
             // 
             this.grbTeDaSearchBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grbTeDaSearchBox.AutoSize = true;
             this.grbTeDaSearchBox.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.grbTeDaSearchBox.Controls.Add(this.btnTeDaFilterbySubject);
             this.grbTeDaSearchBox.Controls.Add(this.btnTeDaFilterbyStudent);
@@ -392,7 +394,7 @@
             this.grbTeDaSearchBox.Controls.Add(this.cmbTeDaDate);
             this.grbTeDaSearchBox.Location = new System.Drawing.Point(171, 343);
             this.grbTeDaSearchBox.Name = "grbTeDaSearchBox";
-            this.grbTeDaSearchBox.Size = new System.Drawing.Size(270, 285);
+            this.grbTeDaSearchBox.Size = new System.Drawing.Size(326, 276);
             this.grbTeDaSearchBox.TabIndex = 16;
             this.grbTeDaSearchBox.TabStop = false;
             this.grbTeDaSearchBox.Text = "Search";
@@ -460,7 +462,7 @@
             // 
             this.cmbTeDaDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbTeDaDate.FormattingEnabled = true;
-            this.cmbTeDaDate.Location = new System.Drawing.Point(6, 39);
+            this.cmbTeDaDate.Location = new System.Drawing.Point(34, 34);
             this.cmbTeDaDate.Name = "cmbTeDaDate";
             this.cmbTeDaDate.Size = new System.Drawing.Size(200, 24);
             this.cmbTeDaDate.TabIndex = 9;
@@ -470,12 +472,13 @@
             // grbStudentInfo
             // 
             this.grbStudentInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grbStudentInfo.AutoSize = true;
             this.grbStudentInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.grbStudentInfo.Controls.Add(this.txbTeDaBio);
             this.grbStudentInfo.Controls.Add(this.picTeDaStudentPicture);
             this.grbStudentInfo.Location = new System.Drawing.Point(615, 302);
             this.grbStudentInfo.Name = "grbStudentInfo";
-            this.grbStudentInfo.Size = new System.Drawing.Size(299, 334);
+            this.grbStudentInfo.Size = new System.Drawing.Size(353, 414);
             this.grbStudentInfo.TabIndex = 22;
             this.grbStudentInfo.TabStop = false;
             this.grbStudentInfo.Text = "Student Info";
@@ -529,6 +532,7 @@
             this.grbStudentInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTeDaStudentPicture)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

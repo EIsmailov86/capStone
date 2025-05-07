@@ -283,6 +283,8 @@
             // 
             // grbNotifications
             // 
+            this.grbNotifications.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grbNotifications.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.grbNotifications.Controls.Add(this.btnDelete);
             this.grbNotifications.Controls.Add(this.txbNotifications);
             this.grbNotifications.Controls.Add(this.cmbHeading);
