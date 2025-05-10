@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace JEM
@@ -52,10 +53,14 @@ namespace JEM
             string connectionString = $"Server=127.0.0.1;Database=jem_jed;Uid=root;Pwd=mysql;";
 
 
-            //string connectionString = $"Server=jem.infinityfreeapp.com;Database=jem_capstonedb;Uid=admin;Pwd=mysqlmysqlmysql;";
-            //string connectionString = $"Server=127.0.0.1;Database=if0_38768518_XXX;Uid=if0_38768518;Pwd=JEMCapStone2025;";
+            // New logic for connecting remotely
+            // We will need to whitelist the ip for each groupmember and especially for eric
+            string server = "82.163.176.124";
+            string database = "jem_capstonedb";
+            string uid = "jem_admin";
+            string password = "U=)IZKf-aWzj";
+            //string connectionString = "SERVER=" + server + "; PORT = 3306 ;" + "DATABASE=" + database + ";" + "Uid=" + uid + ";" + "PASSWORD=" + password + ";";
 
-            //string connectionString = $"Server=jem.infinityfreeapp.com;Database=jem_capstonedb;Uid=admin;Pwd=mysqlmysqlmysql;";
             MySqlConnection dbConnection = new MySqlConnection(connectionString);
             dbConnection.Open();
             return dbConnection;

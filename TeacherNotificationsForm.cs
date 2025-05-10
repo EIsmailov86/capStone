@@ -85,7 +85,7 @@ namespace JEM
                 "WHERE TeacherId = @TeacherId AND SenderRoleId = @SenderId";
 
                 MySqlCommand notificationData = new MySqlCommand(newSessionQuery, conn);
-                notificationData.Parameters.AddWithValue("@TeacherId", teachers.First().Id);
+                notificationData.Parameters.AddWithValue("@TeacherId", loggedInTeacher.Id);
                 notificationData.Parameters.AddWithValue("@SenderId", 1);
 
                 using (MySqlDataReader reader = notificationData.ExecuteReader())
@@ -106,6 +106,7 @@ namespace JEM
             }
 
         }
+
         private void InitializeNotifications()
         {
             notifications.Clear();

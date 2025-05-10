@@ -27,6 +27,7 @@ namespace JEM
             // ————— Scheduling UI setup —————
             LoadAllSubjects();
             LoadAvailableTimeSlots();
+            LoadAllTimeSlots();
             //dtpStDaSessionDate.ValueChanged += dtpStDaSessionDate_ValueChanged;
             //btnStDaScheduleSession.Click += btnStDaScheduleSession_Click;
 
@@ -123,6 +124,7 @@ namespace JEM
                         );
                     }
                 }
+
             }
 
             // update budget
@@ -253,26 +255,56 @@ namespace JEM
         #endregion
 
         #region LoadAvailableTimeSlots
+        // obsolete method, refactored code to check for both student and currently selected teacher taken time slots to prevent double booking
         private void LoadAvailableTimeSlots()
         {
+            //cmbStDaTime.Items.Clear();
+
+            //// gather slots already taken on selected date
+            //var taken = new List<string>();
+            //using (var conn = ConnectToDb())
+            //{
+            //    var chk = new MySqlCommand(@"
+            //        SELECT TimeSlot
+            //          FROM session
+            //         WHERE StudentId   = @sid
+            //           AND SessionDate = @dt", conn);
+            //    chk.Parameters.AddWithValue("@sid", loggedInStudent.Id);
+            //    chk.Parameters.AddWithValue("@dt", dtpStDaSessionDate.Value.Date);
+
+            //    using (var rdr = chk.ExecuteReader())
+            //        while (rdr.Read())
+            //            taken.Add(rdr.GetString("TimeSlot"));
+            //}
+
+            //// master list
+            //var allSlots = new[]
+            //{
+            //    "08:00 - 09:00","09:00 - 10:00","10:00 - 11:00",
+            //    "11:00 - 12:00","12:00 - 13:00","13:00 - 14:00",
+            //    "14:00 - 15:00","15:00 - 16:00","16:00 - 17:00"
+            //};
+
+            //foreach (var s in allSlots)
+            //    if (!taken.Contains(s))
+            //        cmbStDaTime.Items.Add(s);
+
+            //if (cmbStDaTime.Items.Count > 0)
+            //    cmbStDaTime.SelectedIndex = 0;
+            //else
+            //    MessageBox.Show(
+            //        "No available time slots on that date.",
+            //        "Unavailable",
+            //        MessageBoxButtons.OK,
+            //        MessageBoxIcon.Warning
+            //    );
+        }
+        #endregion
+
+        #region LoadAllTimeSlots 
+        private void LoadAllTimeSlots()
+        {
             cmbStDaTime.Items.Clear();
-
-            // gather slots already taken on selected date
-            var taken = new List<string>();
-            using (var conn = ConnectToDb())
-            {
-                var chk = new MySqlCommand(@"
-                    SELECT TimeSlot
-                      FROM session
-                     WHERE StudentId   = @sid
-                       AND SessionDate = @dt", conn);
-                chk.Parameters.AddWithValue("@sid", loggedInStudent.Id);
-                chk.Parameters.AddWithValue("@dt", dtpStDaSessionDate.Value.Date);
-
-                using (var rdr = chk.ExecuteReader())
-                    while (rdr.Read())
-                        taken.Add(rdr.GetString("TimeSlot"));
-            }
 
             // master list
             var allSlots = new[]
@@ -282,26 +314,15 @@ namespace JEM
                 "14:00 - 15:00","15:00 - 16:00","16:00 - 17:00"
             };
 
-            foreach (var s in allSlots)
-                if (!taken.Contains(s))
-                    cmbStDaTime.Items.Add(s);
-
-            if (cmbStDaTime.Items.Count > 0)
-                cmbStDaTime.SelectedIndex = 0;
-            else
-                MessageBox.Show(
-                    "No available time slots on that date.",
-                    "Unavailable",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
+            cmbStDaTime.Items.AddRange(allSlots);
         }
         #endregion
 
         #region dtpStDaSessionDate_ValueChanged
         private void dtpStDaSessionDate_ValueChanged(object sender, EventArgs e)
         {
-            LoadAvailableTimeSlots();
+            //LoadAvailableTimeSlots();
+            FilterTakenTimeSlots();
         }
         #endregion
 
@@ -328,6 +349,8 @@ namespace JEM
 
             using (MySqlConnection conn = ConnectToDb())
             {
+                // need to update this to check the cmb box values instead for now we will ignore it
+
                 // prevent double-booking
                 //var chkStu = new MySqlCommand(@"
                 //    SELECT COUNT(*) FROM session
@@ -501,5 +524,95 @@ namespace JEM
             }
         }
         #endregion
+
+        private void SelectedRequestDateChanged(object sender, EventArgs e)
+        {
+            if (cmbStDaTeacher.SelectedIndex < 0)
+            {
+                cmbStDaTeacher.SelectedIndex = 0;
+            }
+            FilterTakenTimeSlots();
+        }
+
+
+        private void FilterTakenTimeSlots()
+        {
+            LoadAllTimeSlots();
+
+            GetTakenTimeSlots();
+
+            // filter taken time slots
+            for (int i = 0; i < sessions.Count; i++)
+            {
+
+                if (dtpStDaSessionDate.Value.ToString("M/d/yyyy").Equals(sessions[i].SessionDate.ToString("M/d/yyyy")))
+                {
+
+                    for (int j = 0; j < cmbStDaTime.Items.Count; j++)
+                    {
+                        if (cmbStDaTime.Items[j].ToString().Equals(sessions[i].TimeSlot))
+                        {
+                            cmbStDaTime.Items.RemoveAt(j);
+                        }
+                    }
+                }
+
+            }
+
+            sessions.Clear();
+        }
+
+        private void GetTakenTimeSlots()
+        {
+
+            using (MySqlConnection conn = ConnectToDb())
+            {
+
+                string takenSlotsQuery = "SELECT se.SessionId, se.SessionDate, se.Timeslot, te.Id, st.Id, se.StudentId, se.TeacherId " +
+                    "FROM session AS se " +
+                    "LEFT JOIN subject AS su ON se.SubjectId=su.subjectId " +
+                    "LEFT JOIN teacher AS te ON se.TeacherId=te.Id " +
+                    "LEFT JOIN gradeyear AS gr ON su.SubjectId=gr.GradeId " +
+                    "LEFT JOIN student AS st ON se.StudentId=st.Id " +
+                    "WHERE @TeacherId = se.TeacherId OR @StudentId = se.StudentId";
+
+
+
+                var cmd = new MySqlCommand(takenSlotsQuery, conn);
+                cmd.Parameters.AddWithValue("@StudentId", loggedInStudent.Id);
+
+                Teacher selectedTeacher = cmbStDaTeacher.SelectedItem as Teacher;
+                cmd.Parameters.AddWithValue("@TeacherId", selectedTeacher.Id);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Session newSession = new Session
+                        {
+                            SessionId = Convert.ToInt32(reader["SessionId"]),
+                            SessionDate = Convert.ToDateTime(reader["SessionDate"]),
+                            TimeSlot = reader["Timeslot"].ToString(),
+                        };
+                        // populate sessions array by taken time slot
+                        sessions.Add(newSession);
+
+                    }
+                }
+            }
+
+        }
+
+        private void SelectedTeacherChanged(object sender, EventArgs e)
+        {
+
+            cmbStDaTime.Text = "";
+
+            if (cmbStDaTeacher.SelectedIndex > -1)
+            {
+                FilterTakenTimeSlots();
+            }
+
+        }
     }
 }

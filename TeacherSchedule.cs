@@ -20,12 +20,12 @@ namespace JEM
             }
             loggedInTeacher = teacher;
             lblWelcome.Text = $"Welcome, {loggedInTeacher.Name}!";
-            LoadAllStudents(); 
-            LoadSchedule();
+            LoadAllStudents();
+            //LoadSchedule();
             LoadAvailableTimeSlots();
             LoadAllSubjects();
             LoadTeacherPicture();
-            ValidateTimeSlot();
+            ValidateTimeSlot();   
         }
 
         #region LoadSchedule
@@ -275,36 +275,38 @@ namespace JEM
                     MessageBox.Show("Failed to schedule session.");
                 }
 
+
+                // Refactored logic this code may be obsolete
                 // Issue: teachers cannot see if a student is already scheduled with another teacher
-                string newSessionQuery = "SELECT se.SessionId, su.subjectName, se.SessionDate, se.Timeslot, te.Name AS teacherName, st.Name AS StudentName, gr.GradeYear, se.Cost " +
-                    "FROM session AS se " +
-                    "LEFT JOIN subject AS su ON se.SubjectId=su.subjectId " +
-                    "LEFT JOIN teacher AS te ON se.TeacherId=te.Id " +
-                    "LEFT JOIN gradeyear AS gr ON su.SubjectId=gr.GradeId " +
-                    "LEFT JOIN student AS st ON se.StudentId=st.Id " +
-                    "WHERE @TeacherId = se.TeacherId";
+                //string newSessionQuery = "SELECT se.SessionId, su.subjectName, se.SessionDate, se.Timeslot, te.Name AS teacherName, st.Name AS StudentName, gr.GradeYear, se.Cost " +
+                //    "FROM session AS se " +
+                //    "LEFT JOIN subject AS su ON se.SubjectId=su.subjectId " +
+                //    "LEFT JOIN teacher AS te ON se.TeacherId=te.Id " +
+                //    "LEFT JOIN gradeyear AS gr ON su.SubjectId=gr.GradeId " +
+                //    "LEFT JOIN student AS st ON se.StudentId=st.Id " +
+                //    "WHERE @TeacherId = se.TeacherId";
 
-                MySqlCommand sessiondata = new MySqlCommand(newSessionQuery, conn);
-                sessiondata.Parameters.AddWithValue("@TeacherId", loggedInTeacher.Id);
+                //MySqlCommand sessiondata = new MySqlCommand(newSessionQuery, conn);
+                //sessiondata.Parameters.AddWithValue("@TeacherId", loggedInTeacher.Id);
 
-                using (MySqlDataReader reader = sessiondata.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Session sessionRow = new Session
-                        {
-                            SessionId = Convert.ToInt32(reader["SessionId"]),
-                            SubjectName = reader["SubjectName"].ToString(),
-                            StudentName = reader["StudentName"].ToString(),
-                            TeacherName = reader["TeacherName"].ToString(),
-                            SessionDate = (DateTime)reader["SessionDate"],
-                            TimeSlot = reader["Timeslot"].ToString(),
-                            GradeYear = reader["GradeYear"].ToString(),
-                            Cost = Convert.ToInt32(reader["Cost"]),
-                        };
-                        sessions.Add(sessionRow);
-                    }
-                }
+                //using (MySqlDataReader reader = sessiondata.ExecuteReader())
+                //{
+                //    while (reader.Read())
+                //    {
+                //        Session sessionRow = new Session
+                //        {
+                //            SessionId = Convert.ToInt32(reader["SessionId"]),
+                //            SubjectName = reader["SubjectName"].ToString(),
+                //            StudentName = reader["StudentName"].ToString(),
+                //            TeacherName = reader["TeacherName"].ToString(),
+                //            SessionDate = (DateTime)reader["SessionDate"],
+                //            TimeSlot = reader["Timeslot"].ToString(),
+                //            GradeYear = reader["GradeYear"].ToString(),
+                //            Cost = Convert.ToInt32(reader["Cost"]),
+                //        };
+                //        sessions.Add(sessionRow);
+                //    }
+                //}
             }
             cmbTeShTime.Text = "";
             ValidateTimeSlot();
@@ -478,15 +480,47 @@ namespace JEM
         #region ValidateTime/SelectedDate
         private void ValidateTimeSlot()
         {
+            FilterTakenTimeSlots();
+        }
 
+        //private void SelectedDateChange(object sender, EventArgs e)
+        //{
+        //    ValidateTimeSlot();
+        //}
+
+        private void SelectedDateChange(object sender, EventArgs e)
+        {
+            if (lbsTeShStudents.SelectedIndex < 0)
+            {
+                lbsTeShStudents.SelectedIndex = 0;
+            }
+            FilterTakenTimeSlots();
+        }
+
+        private void StudentSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            LoadSchedule();
+
+            if (lbsTeShStudents.SelectedIndex > -1)
+            {
+                FilterTakenTimeSlots();
+            }
+        }
+
+        private void FilterTakenTimeSlots()
+        {
             LoadAvailableTimeSlots();
 
-            //Check if timselot is taken
+            GetTakenTimeSlots();
+
+            // filter taken time slots
             for (int i = 0; i < sessions.Count; i++)
             {
 
                 if (dtpTeShDateTime.Value.ToString("M/d/yyyy").Equals(sessions[i].SessionDate.ToString("M/d/yyyy")))
                 {
+
                     for (int j = 0; j < cmbTeShTime.Items.Count; j++)
                     {
                         if (cmbTeShTime.Items[j].ToString().Equals(sessions[i].TimeSlot))
@@ -495,17 +529,59 @@ namespace JEM
                         }
                     }
                 }
+
             }
+
+            sessions.Clear();
         }
 
-        private void SelectedDateChange(object sender, EventArgs e)
+        private void GetTakenTimeSlots()
         {
-            ValidateTimeSlot();
-        }
 
-        private void StudentSelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoadSchedule();
+            using (MySqlConnection conn = ConnectToDb())
+            {
+
+                string takenSlotsQuery = "SELECT se.SessionId, se.SessionDate, se.Timeslot, te.Id, st.Id, se.StudentId, se.TeacherId " +
+                    "FROM session AS se " +
+                    "LEFT JOIN subject AS su ON se.SubjectId=su.subjectId " +
+                    "LEFT JOIN teacher AS te ON se.TeacherId=te.Id " +
+                    "LEFT JOIN gradeyear AS gr ON su.SubjectId=gr.GradeId " +
+                    "LEFT JOIN student AS st ON se.StudentId=st.Id " +
+                    "WHERE @TeacherId = se.TeacherId OR @StudentId = se.StudentId";
+
+
+                // populate sessions array by taken time slots
+                // iterate by teacher? need to find a way to filter every sing teacher as well
+
+                var cmd = new MySqlCommand(takenSlotsQuery, conn);
+                cmd.Parameters.AddWithValue("@TeacherId", loggedInTeacher.Id);
+
+                if (lbsTeShStudents.SelectedIndex < 0)
+                {
+                    lbsTeShStudents.SelectedIndex = 0;
+
+                }
+
+                ListItem selectedStudent = lbsTeShStudents.SelectedItem as ListItem;
+                cmd.Parameters.AddWithValue("@StudentId", selectedStudent.Value);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Session newSession = new Session
+                        {
+                            SessionId = Convert.ToInt32(reader["SessionId"]),
+                            SessionDate = Convert.ToDateTime(reader["SessionDate"]),
+                            TimeSlot = reader["Timeslot"].ToString(),
+                        };
+
+                        sessions.Add(newSession);
+
+                    }
+                }
+            }
+
         }
     }
 

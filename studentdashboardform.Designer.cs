@@ -44,6 +44,8 @@
             this.cmbStDaTime = new System.Windows.Forms.ComboBox();
             this.cmbStDaSubject = new System.Windows.Forms.ComboBox();
             this.grbScheduleApp = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbStDaTeacher = new System.Windows.Forms.ComboBox();
             this.btnStDaRequestSession = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblStDaWelcome = new System.Windows.Forms.Label();
@@ -66,8 +68,6 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnMyTeacher = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbStDaTeacher = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).BeginInit();
             this.grbScheduleApp.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -180,6 +180,7 @@
             this.dtpStDaSessionDate.Name = "dtpStDaSessionDate";
             this.dtpStDaSessionDate.Size = new System.Drawing.Size(200, 22);
             this.dtpStDaSessionDate.TabIndex = 5;
+            this.dtpStDaSessionDate.ValueChanged += new System.EventHandler(this.SelectedRequestDateChanged);
             // 
             // cmbStDaTime
             // 
@@ -217,6 +218,24 @@
             this.grbScheduleApp.TabIndex = 10;
             this.grbScheduleApp.TabStop = false;
             this.grbScheduleApp.Text = "Request Session";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Teacher";
+            // 
+            // cmbStDaTeacher
+            // 
+            this.cmbStDaTeacher.FormattingEnabled = true;
+            this.cmbStDaTeacher.Location = new System.Drawing.Point(132, 35);
+            this.cmbStDaTeacher.Name = "cmbStDaTeacher";
+            this.cmbStDaTeacher.Size = new System.Drawing.Size(200, 24);
+            this.cmbStDaTeacher.TabIndex = 10;
+            this.cmbStDaTeacher.SelectedIndexChanged += new System.EventHandler(this.SelectedTeacherChanged);
             // 
             // btnStDaRequestSession
             // 
@@ -486,23 +505,6 @@
             this.btnMyTeacher.TabIndex = 20;
             this.btnMyTeacher.Text = "My Teacher";
             this.btnMyTeacher.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Teacher";
-            // 
-            // cmbStDaTeacher
-            // 
-            this.cmbStDaTeacher.FormattingEnabled = true;
-            this.cmbStDaTeacher.Location = new System.Drawing.Point(132, 35);
-            this.cmbStDaTeacher.Name = "cmbStDaTeacher";
-            this.cmbStDaTeacher.Size = new System.Drawing.Size(200, 24);
-            this.cmbStDaTeacher.TabIndex = 10;
             // 
             // studentdashboardform
             // 
