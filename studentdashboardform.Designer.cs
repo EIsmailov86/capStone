@@ -191,6 +191,7 @@
             this.dtpStDaSessionDate.Name = "dtpStDaSessionDate";
             this.dtpStDaSessionDate.Size = new System.Drawing.Size(200, 22);
             this.dtpStDaSessionDate.TabIndex = 5;
+            this.dtpStDaSessionDate.ValueChanged += new System.EventHandler(this.SelectedRequestDateChanged);
             // 
             // cmbStDaTime
             // 
@@ -245,6 +246,9 @@
             this.cmbStDaTeacher.Name = "cmbStDaTeacher";
             this.cmbStDaTeacher.Size = new System.Drawing.Size(200, 24);
             this.cmbStDaTeacher.TabIndex = 10;
+
+            this.cmbStDaTeacher.SelectedIndexChanged += new System.EventHandler(this.SelectedTeacherChanged);
+
             // 
             // btnStDaRequestSession
             // 
