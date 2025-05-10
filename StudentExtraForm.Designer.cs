@@ -48,6 +48,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblStExWelcome = new System.Windows.Forms.Label();
             this.grbPayment = new System.Windows.Forms.GroupBox();
+            this.btnStExPayment = new System.Windows.Forms.Button();
             this.rbtAgree = new System.Windows.Forms.RadioButton();
             this.lblAgreewithTerms = new System.Windows.Forms.Label();
             this.txbAmount = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@
             this.rbtCheckingAccount = new System.Windows.Forms.RadioButton();
             this.rbtCreditCard = new System.Windows.Forms.RadioButton();
             this.cmbPay = new System.Windows.Forms.ComboBox();
-            this.btnStExPayment = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnlMenu.SuspendLayout();
@@ -293,6 +293,7 @@
             // 
             // grbPayment
             // 
+            this.grbPayment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbPayment.Controls.Add(this.btnStExPayment);
             this.grbPayment.Controls.Add(this.rbtAgree);
             this.grbPayment.Controls.Add(this.lblAgreewithTerms);
@@ -307,6 +308,15 @@
             this.grbPayment.TabIndex = 3;
             this.grbPayment.TabStop = false;
             this.grbPayment.Text = "Payment";
+            // 
+            // btnStExPayment
+            // 
+            this.btnStExPayment.Location = new System.Drawing.Point(82, 370);
+            this.btnStExPayment.Name = "btnStExPayment";
+            this.btnStExPayment.Size = new System.Drawing.Size(133, 39);
+            this.btnStExPayment.TabIndex = 11;
+            this.btnStExPayment.Text = "Submit Payment";
+            this.btnStExPayment.UseVisualStyleBackColor = true;
             // 
             // rbtAgree
             // 
@@ -377,15 +387,6 @@
             this.cmbPay.Size = new System.Drawing.Size(198, 24);
             this.cmbPay.TabIndex = 4;
             this.cmbPay.Text = "Pay for Class OR Semester";
-            // 
-            // btnStExPayment
-            // 
-            this.btnStExPayment.Location = new System.Drawing.Point(82, 370);
-            this.btnStExPayment.Name = "btnStExPayment";
-            this.btnStExPayment.Size = new System.Drawing.Size(133, 39);
-            this.btnStExPayment.TabIndex = 11;
-            this.btnStExPayment.Text = "Submit Payment";
-            this.btnStExPayment.UseVisualStyleBackColor = true;
             // 
             // StudentExtraForm
             // 

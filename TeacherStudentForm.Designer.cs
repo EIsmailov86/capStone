@@ -538,7 +538,6 @@
             // TeacherStudentForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(982, 653);
             this.Controls.Add(this.grbStudentInfo);
             this.Controls.Add(this.panel2);

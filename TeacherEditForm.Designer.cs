@@ -60,6 +60,8 @@
             this.txbName = new System.Windows.Forms.TextBox();
             this.picTeEdTeacherPicture = new System.Windows.Forms.PictureBox();
             this.btnTeEdUploadPicture = new System.Windows.Forms.Button();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.grbPhoto = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -69,6 +71,11 @@
             this.panel2.SuspendLayout();
             this.grbStudentEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTeEdTeacherPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.grbPhoto.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -293,6 +300,9 @@
             // 
             // grbStudentEdit
             // 
+            this.grbStudentEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grbStudentEdit.Controls.Add(this.btnClear);
             this.grbStudentEdit.Controls.Add(this.btnUpdate);
             this.grbStudentEdit.Controls.Add(this.txbMyBio);
@@ -304,9 +314,9 @@
             this.grbStudentEdit.Controls.Add(this.txbAddress);
             this.grbStudentEdit.Controls.Add(this.txbEmail);
             this.grbStudentEdit.Controls.Add(this.txbName);
-            this.grbStudentEdit.Location = new System.Drawing.Point(197, 128);
+            this.grbStudentEdit.Location = new System.Drawing.Point(19, 73);
             this.grbStudentEdit.Name = "grbStudentEdit";
-            this.grbStudentEdit.Size = new System.Drawing.Size(511, 356);
+            this.grbStudentEdit.Size = new System.Drawing.Size(484, 365);
             this.grbStudentEdit.TabIndex = 7;
             this.grbStudentEdit.TabStop = false;
             this.grbStudentEdit.Text = "Edit My Info";
@@ -337,7 +347,8 @@
             // 
             // txbMyBio
             // 
-            this.txbMyBio.Location = new System.Drawing.Point(306, 71);
+            this.txbMyBio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbMyBio.Location = new System.Drawing.Point(288, 71);
             this.txbMyBio.Multiline = true;
             this.txbMyBio.Name = "txbMyBio";
             this.txbMyBio.Size = new System.Drawing.Size(179, 154);
@@ -410,7 +421,8 @@
             // 
             // picTeEdTeacherPicture
             // 
-            this.picTeEdTeacherPicture.Location = new System.Drawing.Point(789, 128);
+            this.picTeEdTeacherPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picTeEdTeacherPicture.Location = new System.Drawing.Point(26, 26);
             this.picTeEdTeacherPicture.Name = "picTeEdTeacherPicture";
             this.picTeEdTeacherPicture.Size = new System.Drawing.Size(132, 126);
             this.picTeEdTeacherPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -419,9 +431,10 @@
             // 
             // btnTeEdUploadPicture
             // 
+            this.btnTeEdUploadPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTeEdUploadPicture.Image = global::JEM.Properties.Resources._34px_uploadPic;
             this.btnTeEdUploadPicture.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeEdUploadPicture.Location = new System.Drawing.Point(789, 340);
+            this.btnTeEdUploadPicture.Location = new System.Drawing.Point(58, 220);
             this.btnTeEdUploadPicture.Name = "btnTeEdUploadPicture";
             this.btnTeEdUploadPicture.Size = new System.Drawing.Size(87, 76);
             this.btnTeEdUploadPicture.TabIndex = 6;
@@ -431,14 +444,44 @@
             this.btnTeEdUploadPicture.UseVisualStyleBackColor = true;
             this.btnTeEdUploadPicture.Click += new System.EventHandler(this.btnTeEdUploadPicture_Click);
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(135, 31);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.grbStudentEdit);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.grbPhoto);
+            this.splitContainer1.Size = new System.Drawing.Size(847, 622);
+            this.splitContainer1.SplitterDistance = 546;
+            this.splitContainer1.TabIndex = 10;
+            // 
+            // grbPhoto
+            // 
+            this.grbPhoto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbPhoto.Controls.Add(this.btnTeEdUploadPicture);
+            this.grbPhoto.Controls.Add(this.picTeEdTeacherPicture);
+            this.grbPhoto.Location = new System.Drawing.Point(43, 73);
+            this.grbPhoto.Name = "grbPhoto";
+            this.grbPhoto.Size = new System.Drawing.Size(200, 365);
+            this.grbPhoto.TabIndex = 10;
+            this.grbPhoto.TabStop = false;
+            this.grbPhoto.Text = "Photo";
+            // 
             // TeacherEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 653);
-            this.Controls.Add(this.picTeEdTeacherPicture);
-            this.Controls.Add(this.btnTeEdUploadPicture);
-            this.Controls.Add(this.grbStudentEdit);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "TeacherEditForm";
@@ -456,6 +499,11 @@
             this.grbStudentEdit.ResumeLayout(false);
             this.grbStudentEdit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTeEdTeacherPicture)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.grbPhoto.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -494,5 +542,7 @@
         private System.Windows.Forms.Label lblTeEdWelcome;
         private System.Windows.Forms.Button btnTeEdUploadPicture;
         private System.Windows.Forms.PictureBox picTeEdTeacherPicture;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.GroupBox grbPhoto;
     }
 }

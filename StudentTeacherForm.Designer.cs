@@ -193,7 +193,10 @@
             // 
             // grbTeacherInfo
             // 
+            this.grbTeacherInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grbTeacherInfo.AutoSize = true;
             this.grbTeacherInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.grbTeacherInfo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.grbTeacherInfo.Controls.Add(this.txbMessageHeader);
             this.grbTeacherInfo.Controls.Add(this.btnSendMessage);
             this.grbTeacherInfo.Controls.Add(this.txbMessageBody);
@@ -202,7 +205,7 @@
             this.grbTeacherInfo.Controls.Add(this.cmbTeacher);
             this.grbTeacherInfo.Location = new System.Drawing.Point(232, 88);
             this.grbTeacherInfo.Name = "grbTeacherInfo";
-            this.grbTeacherInfo.Size = new System.Drawing.Size(626, 500);
+            this.grbTeacherInfo.Size = new System.Drawing.Size(581, 462);
             this.grbTeacherInfo.TabIndex = 13;
             this.grbTeacherInfo.TabStop = false;
             this.grbTeacherInfo.Text = "Teacher Info";
@@ -283,6 +286,7 @@
             this.grbTeacherInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picStTeTeacherPicture)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -44,6 +44,8 @@
             this.cmbStDaTime = new System.Windows.Forms.ComboBox();
             this.cmbStDaSubject = new System.Windows.Forms.ComboBox();
             this.grbScheduleApp = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbStDaTeacher = new System.Windows.Forms.ComboBox();
             this.btnStDaRequestSession = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblStDaWelcome = new System.Windows.Forms.Label();
@@ -66,8 +68,6 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnMyTeacher = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbStDaTeacher = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).BeginInit();
             this.grbScheduleApp.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -80,9 +80,12 @@
             // 
             // dgvSchedule
             // 
+            this.dgvSchedule.AllowUserToAddRows = false;
+            this.dgvSchedule.AllowUserToDeleteRows = false;
             this.dgvSchedule.AllowUserToOrderColumns = true;
-            this.dgvSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSchedule.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSchedule.ColumnHeadersHeight = 29;
             this.dgvSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Subject,
             this.Column2,
@@ -93,6 +96,7 @@
             this.Column4});
             this.dgvSchedule.Location = new System.Drawing.Point(180, 72);
             this.dgvSchedule.Name = "dgvSchedule";
+            this.dgvSchedule.ReadOnly = true;
             this.dgvSchedule.RowHeadersWidth = 51;
             this.dgvSchedule.RowTemplate.Height = 24;
             this.dgvSchedule.Size = new System.Drawing.Size(787, 226);
@@ -103,6 +107,7 @@
             this.Subject.HeaderText = "Subject";
             this.Subject.MinimumWidth = 6;
             this.Subject.Name = "Subject";
+            this.Subject.ReadOnly = true;
             this.Subject.Width = 81;
             // 
             // Column2
@@ -110,6 +115,7 @@
             this.Column2.HeaderText = "Date";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 65;
             // 
             // Time
@@ -117,6 +123,7 @@
             this.Time.HeaderText = "Time";
             this.Time.MinimumWidth = 6;
             this.Time.Name = "Time";
+            this.Time.ReadOnly = true;
             this.Time.Width = 67;
             // 
             // Column1
@@ -124,6 +131,7 @@
             this.Column1.HeaderText = "Teacher Name";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 117;
             // 
             // Grade
@@ -131,6 +139,7 @@
             this.Grade.HeaderText = "Grade";
             this.Grade.MinimumWidth = 6;
             this.Grade.Name = "Grade";
+            this.Grade.ReadOnly = true;
             this.Grade.Width = 74;
             // 
             // Column3
@@ -138,6 +147,7 @@
             this.Column3.HeaderText = "Session Cost";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 106;
             // 
             // Column4
@@ -145,6 +155,7 @@
             this.Column4.HeaderText = "Balance";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 86;
             // 
             // lblDate
@@ -217,6 +228,23 @@
             this.grbScheduleApp.TabIndex = 10;
             this.grbScheduleApp.TabStop = false;
             this.grbScheduleApp.Text = "Request Session";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Teacher";
+            // 
+            // cmbStDaTeacher
+            // 
+            this.cmbStDaTeacher.FormattingEnabled = true;
+            this.cmbStDaTeacher.Location = new System.Drawing.Point(132, 35);
+            this.cmbStDaTeacher.Name = "cmbStDaTeacher";
+            this.cmbStDaTeacher.Size = new System.Drawing.Size(200, 24);
+            this.cmbStDaTeacher.TabIndex = 10;
             // 
             // btnStDaRequestSession
             // 
@@ -487,29 +515,11 @@
             this.btnMyTeacher.Text = "My Teacher";
             this.btnMyTeacher.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Teacher";
-            // 
-            // cmbStDaTeacher
-            // 
-            this.cmbStDaTeacher.FormattingEnabled = true;
-            this.cmbStDaTeacher.Location = new System.Drawing.Point(132, 35);
-            this.cmbStDaTeacher.Name = "cmbStDaTeacher";
-            this.cmbStDaTeacher.Size = new System.Drawing.Size(200, 24);
-            this.cmbStDaTeacher.TabIndex = 10;
-            // 
             // studentdashboardform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(982, 653);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblStDaRemainingBalance);

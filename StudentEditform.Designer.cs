@@ -71,6 +71,7 @@
             // 
             // grbStudentEdit
             // 
+            this.grbStudentEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbStudentEdit.Controls.Add(this.btnClear);
             this.grbStudentEdit.Controls.Add(this.btnUpdate);
             this.grbStudentEdit.Controls.Add(this.txbMyBio);
@@ -405,6 +406,7 @@
             // 
             // picStEdStudentPicture
             // 
+            this.picStEdStudentPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picStEdStudentPicture.Location = new System.Drawing.Point(763, 85);
             this.picStEdStudentPicture.Name = "picStEdStudentPicture";
             this.picStEdStudentPicture.Size = new System.Drawing.Size(180, 136);
@@ -414,6 +416,7 @@
             // 
             // btnStEdUploadPicture
             // 
+            this.btnStEdUploadPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnStEdUploadPicture.Location = new System.Drawing.Point(783, 251);
             this.btnStEdUploadPicture.Name = "btnStEdUploadPicture";
             this.btnStEdUploadPicture.Size = new System.Drawing.Size(130, 23);

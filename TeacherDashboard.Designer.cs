@@ -47,14 +47,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTeDaWelcome = new System.Windows.Forms.Label();
-            this.dgvSchedule = new System.Windows.Forms.DataGridView();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbTeDaSearchBox = new System.Windows.Forms.GroupBox();
             this.btnTeDaFilterbySubject = new System.Windows.Forms.Button();
             this.btnTeDaFilterbyStudent = new System.Windows.Forms.Button();
@@ -65,6 +57,14 @@
             this.grbStudentInfo = new System.Windows.Forms.GroupBox();
             this.txbTeDaBio = new System.Windows.Forms.TextBox();
             this.picTeDaStudentPicture = new System.Windows.Forms.PictureBox();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSchedule = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -72,10 +72,10 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).BeginInit();
             this.grbTeDaSearchBox.SuspendLayout();
             this.grbStudentInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTeDaStudentPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -305,86 +305,9 @@
             this.lblTeDaWelcome.TabIndex = 23;
             this.lblTeDaWelcome.Text = "label2";
             // 
-            // dgvSchedule
-            // 
-            this.dgvSchedule.AllowUserToOrderColumns = true;
-            this.dgvSchedule.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvSchedule.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvSchedule.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvSchedule.ColumnHeadersHeight = 29;
-            this.dgvSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Subject,
-            this.Column2,
-            this.Time,
-            this.Column1,
-            this.Grade,
-            this.Column3,
-            this.Column4});
-            this.dgvSchedule.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.dgvSchedule.Location = new System.Drawing.Point(144, 54);
-            this.dgvSchedule.Name = "dgvSchedule";
-            this.dgvSchedule.ReadOnly = true;
-            this.dgvSchedule.RowHeadersWidth = 51;
-            this.dgvSchedule.RowTemplate.Height = 24;
-            this.dgvSchedule.Size = new System.Drawing.Size(826, 226);
-            this.dgvSchedule.TabIndex = 4;
-            this.dgvSchedule.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSchedule_CellContentClick);
-            // 
-            // Subject
-            // 
-            this.Subject.HeaderText = "Subject";
-            this.Subject.MinimumWidth = 6;
-            this.Subject.Name = "Subject";
-            this.Subject.Width = 81;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Date";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 65;
-            // 
-            // Time
-            // 
-            this.Time.HeaderText = "Time";
-            this.Time.MinimumWidth = 6;
-            this.Time.Name = "Time";
-            this.Time.Width = 67;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Student Name";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 121;
-            // 
-            // Grade
-            // 
-            this.Grade.HeaderText = "Grade";
-            this.Grade.MinimumWidth = 6;
-            this.Grade.Name = "Grade";
-            this.Grade.Width = 74;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Session Cost";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 115;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Balance";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 86;
-            // 
             // grbTeDaSearchBox
             // 
-            this.grbTeDaSearchBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.grbTeDaSearchBox.AutoSize = true;
+            this.grbTeDaSearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.grbTeDaSearchBox.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.grbTeDaSearchBox.Controls.Add(this.btnTeDaFilterbySubject);
             this.grbTeDaSearchBox.Controls.Add(this.btnTeDaFilterbyStudent);
@@ -392,7 +315,7 @@
             this.grbTeDaSearchBox.Controls.Add(this.btnTeDaFilterbyDate);
             this.grbTeDaSearchBox.Controls.Add(this.cmbTeDaSubject);
             this.grbTeDaSearchBox.Controls.Add(this.cmbTeDaDate);
-            this.grbTeDaSearchBox.Location = new System.Drawing.Point(171, 343);
+            this.grbTeDaSearchBox.Location = new System.Drawing.Point(162, 326);
             this.grbTeDaSearchBox.Name = "grbTeDaSearchBox";
             this.grbTeDaSearchBox.Size = new System.Drawing.Size(326, 276);
             this.grbTeDaSearchBox.TabIndex = 16;
@@ -462,7 +385,7 @@
             // 
             this.cmbTeDaDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbTeDaDate.FormattingEnabled = true;
-            this.cmbTeDaDate.Location = new System.Drawing.Point(34, 34);
+            this.cmbTeDaDate.Location = new System.Drawing.Point(6, 35);
             this.cmbTeDaDate.Name = "cmbTeDaDate";
             this.cmbTeDaDate.Size = new System.Drawing.Size(200, 24);
             this.cmbTeDaDate.TabIndex = 9;
@@ -471,14 +394,13 @@
             // 
             // grbStudentInfo
             // 
-            this.grbStudentInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.grbStudentInfo.AutoSize = true;
+            this.grbStudentInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.grbStudentInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.grbStudentInfo.Controls.Add(this.txbTeDaBio);
             this.grbStudentInfo.Controls.Add(this.picTeDaStudentPicture);
-            this.grbStudentInfo.Location = new System.Drawing.Point(615, 302);
+            this.grbStudentInfo.Location = new System.Drawing.Point(566, 297);
             this.grbStudentInfo.Name = "grbStudentInfo";
-            this.grbStudentInfo.Size = new System.Drawing.Size(353, 414);
+            this.grbStudentInfo.Size = new System.Drawing.Size(353, 344);
             this.grbStudentInfo.TabIndex = 22;
             this.grbStudentInfo.TabStop = false;
             this.grbStudentInfo.Text = "Student Info";
@@ -494,6 +416,7 @@
             // 
             // picTeDaStudentPicture
             // 
+            this.picTeDaStudentPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.picTeDaStudentPicture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.picTeDaStudentPicture.Location = new System.Drawing.Point(20, 21);
             this.picTeDaStudentPicture.Name = "picTeDaStudentPicture";
@@ -501,6 +424,88 @@
             this.picTeDaStudentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picTeDaStudentPicture.TabIndex = 0;
             this.picTeDaStudentPicture.TabStop = false;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Balance";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 86;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Session Cost";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 115;
+            // 
+            // Grade
+            // 
+            this.Grade.HeaderText = "Grade";
+            this.Grade.MinimumWidth = 6;
+            this.Grade.Name = "Grade";
+            this.Grade.ReadOnly = true;
+            this.Grade.Width = 74;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Student Name";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 121;
+            // 
+            // Time
+            // 
+            this.Time.HeaderText = "Time";
+            this.Time.MinimumWidth = 6;
+            this.Time.Name = "Time";
+            this.Time.ReadOnly = true;
+            this.Time.Width = 67;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Date";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 65;
+            // 
+            // Subject
+            // 
+            this.Subject.HeaderText = "Subject";
+            this.Subject.MinimumWidth = 6;
+            this.Subject.Name = "Subject";
+            this.Subject.ReadOnly = true;
+            this.Subject.Width = 81;
+            // 
+            // dgvSchedule
+            // 
+            this.dgvSchedule.AllowUserToDeleteRows = false;
+            this.dgvSchedule.AllowUserToOrderColumns = true;
+            this.dgvSchedule.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSchedule.ColumnHeadersHeight = 29;
+            this.dgvSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Subject,
+            this.Column2,
+            this.Time,
+            this.Column1,
+            this.Grade,
+            this.Column3,
+            this.Column4});
+            this.dgvSchedule.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.dgvSchedule.Location = new System.Drawing.Point(144, 54);
+            this.dgvSchedule.Name = "dgvSchedule";
+            this.dgvSchedule.ReadOnly = true;
+            this.dgvSchedule.RowHeadersWidth = 51;
+            this.dgvSchedule.RowTemplate.Height = 24;
+            this.dgvSchedule.Size = new System.Drawing.Size(826, 226);
+            this.dgvSchedule.TabIndex = 4;
+            this.dgvSchedule.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSchedule_CellContentClick);
             // 
             // TeacherDashboard
             // 
@@ -525,14 +530,13 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).EndInit();
             this.grbTeDaSearchBox.ResumeLayout(false);
             this.grbTeDaSearchBox.PerformLayout();
             this.grbStudentInfo.ResumeLayout(false);
             this.grbStudentInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTeDaStudentPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -546,7 +550,6 @@
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dgvSchedule;
         private System.Windows.Forms.GroupBox grbTeDaSearchBox;
         private System.Windows.Forms.Button btnTeDaFilterbyStudent;
         private System.Windows.Forms.ComboBox cmbTeDaStudent;
@@ -554,13 +557,6 @@
         private System.Windows.Forms.Button btnTeDaFilterbyDate;
         private System.Windows.Forms.ComboBox cmbTeDaSubject;
         private System.Windows.Forms.ComboBox cmbTeDaDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.GroupBox grbStudentInfo;
         private System.Windows.Forms.PictureBox picTeDaStudentPicture;
         private System.Windows.Forms.TextBox txbTeDaBio;
@@ -574,5 +570,13 @@
         private System.Windows.Forms.PictureBox pibTeDaTeacherPicture;
         private System.Windows.Forms.Button btnTDNotifications;
         private System.Windows.Forms.Label lblTeDaWelcome;
+        private System.Windows.Forms.DataGridView dgvSchedule;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
