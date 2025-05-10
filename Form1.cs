@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Microsoft.Win32;
 using MySql.Data.MySqlClient;
 
 namespace JEM
@@ -14,91 +15,104 @@ namespace JEM
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var loggedIn = false;
+            bool loggedIn = false;
+            string enteredUser = txtUserName.Text;
+            string enteredPass = txtPassword.Text;
 
-            using (MySqlConnection dbConnection = ConnectToDb())
+            using (var dbConnection = ConnectToDb())
             {
-                #region Student
-                string studentQuery = "SELECT * FROM student WHERE UserName = @UserName AND Password = @Password";
-                MySqlCommand studentCmd = new MySqlCommand(studentQuery, dbConnection);
-                studentCmd.Parameters.AddWithValue("@UserName", txtUserName.Text);
-                studentCmd.Parameters.AddWithValue("@Password", txtPassword.Text);
-
-                using (MySqlDataReader reader = studentCmd.ExecuteReader())
+                // ── STUDENT LOGIN ──────────────────────────────────────────────
+                using (var cmd = new MySqlCommand(
+                    "SELECT * FROM student WHERE UserName = @UserName LIMIT 1",
+                    dbConnection))
                 {
-                    if (reader.Read())
-                    {
-                        Student loggedInStudent = new Student
-                        {
-                            Id = Convert.ToInt32(reader["Id"]),
-                            GradeId = Convert.ToInt32(reader["GradeId"]),
-                            Name = reader["Name"].ToString(),
-                            Email = reader["Email"].ToString(),
-                            Phone = reader["Phone"].ToString(),
-                            Address = reader["Address"].ToString(),
-                            Bio = reader["Bio"].ToString(),
-                            Budget = new BudgetManager(Convert.ToDecimal(reader["TotalBudget"])),
-                            SubjectName = reader["SubjectName"].ToString(),
-                            UserName = reader["UserName"].ToString(),
-                            Password = reader["Password"].ToString(),
-                            ClassId = Convert.ToInt32(reader["ClassId"]),
-                            ImageStudent = reader["ImageStudent"] != DBNull.Value ? (byte[])reader["ImageStudent"] : null
-                        };
-
-                        students.Add(loggedInStudent);
-
-                        var myForm = new studentdashboardform(loggedInStudent);
-                        myForm.Show();
-                        loggedIn = true;
-                    }
-                }
-                #endregion
-
-                #region Teacher
-                if (!loggedIn)
-                {
-                    string teacherQuery = "SELECT * FROM teacher WHERE UserName = @UserName AND Password = @Password";
-                    MySqlCommand teacherCmd = new MySqlCommand(teacherQuery, dbConnection);
-                    teacherCmd.Parameters.AddWithValue("@UserName", txtUserName.Text);
-                    teacherCmd.Parameters.AddWithValue("@Password", txtPassword.Text);
-
-                    using (MySqlDataReader reader = teacherCmd.ExecuteReader())
+                    cmd.Parameters.AddWithValue("@UserName", enteredUser);
+                    using (var reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            Teacher loggedInTeacher = new Teacher
+                            string storedHash = reader.GetString(reader.GetOrdinal("Password"));
+                            if (SecurityHelper.VerifyPassword(enteredPass, storedHash))
                             {
-                                Id = Convert.ToInt32(reader["Id"]),
-                                AdminId = Convert.ToInt32(reader["AdminId"]),
-                                Name = reader["Name"].ToString(),
-                                Email = reader["Email"].ToString(),
-                                Phone = reader["Phone"].ToString(),
-                                Address = reader["Address"].ToString(),
-                                UserName = reader["UserName"].ToString(),
-                                Password = reader["Password"].ToString(),
-                                TeClassId = Convert.ToInt32(reader["TeClassId"]),
-                                Bio = reader["Bio"].ToString(),
-                                ImageTeacher = reader["ImageTeacher"] != DBNull.Value ? (byte[])reader["ImageTeacher"] : null // ✅ CORRECT
-                            };
+                                // successful login
+                                var loggedInStudent = new Student
+                                {
+                                    Id = reader.GetInt32("Id"),
+                                    GradeId = reader.GetInt32("GradeId"),
+                                    Name = reader.GetString("Name"),
+                                    Email = reader.GetString("Email"),
+                                    Phone = reader.GetString("Phone"),
+                                    Address = reader.GetString("Address"),
+                                    Bio = reader.GetString("Bio"),
+                                    Budget = new BudgetManager(reader.GetDecimal("TotalBudget")),
+                                    SubjectName = reader.GetString("SubjectName"),
+                                    UserName = reader.GetString("UserName"),
+                                    Password = storedHash,
+                                    ClassId = reader.GetInt32("ClassId"),
+                                    ImageStudent = reader["ImageStudent"] != DBNull.Value
+                                                    ? (byte[])reader["ImageStudent"]
+                                                    : null
+                                };
 
-                            teachers.Add(loggedInTeacher);
-
-                            var myForm = new TeacherDashboard(loggedInTeacher);
-                            myForm.Show();
-                            loggedIn = true;
+                                students.Add(loggedInStudent);
+                                var dashboard = new studentdashboardform(loggedInStudent);
+                                dashboard.Show();
+                                loggedIn = true;
+                            }
                         }
-                        #endregion
+                    }
+                }
+
+                // ── TEACHER LOGIN ─────────────────────────────────────────────
+                if (!loggedIn)
+                {
+                    using (var cmd = new MySqlCommand(
+                        "SELECT * FROM teacher WHERE UserName = @UserName LIMIT 1",
+                        dbConnection))
+                    {
+                        cmd.Parameters.AddWithValue("@UserName", enteredUser);
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string storedHash = reader.GetString(reader.GetOrdinal("Password"));
+                                if (SecurityHelper.VerifyPassword(enteredPass, storedHash))
+                                {
+                                    var loggedInTeacher = new Teacher
+                                    {
+                                        Id = reader.GetInt32("Id"),
+                                        AdminId = reader.GetInt32("AdminId"),
+                                        Name = reader.GetString("Name"),
+                                        Email = reader.GetString("Email"),
+                                        Phone = reader.GetString("Phone"),
+                                        Address = reader.GetString("Address"),
+                                        UserName = reader.GetString("UserName"),
+                                        Password = storedHash,
+                                        TeClassId = reader.GetInt32("TeClassId"),
+                                        Bio = reader.GetString("Bio"),
+                                        ImageTeacher = reader["ImageTeacher"] != DBNull.Value
+                                                       ? (byte[])reader["ImageTeacher"]
+                                                       : null
+                                    };
+
+                                    teachers.Add(loggedInTeacher);
+                                    var dashboard = new TeacherDashboard(loggedInTeacher);
+                                    dashboard.Show();
+                                    loggedIn = true;
+                                }
+                            }
+                        }
                     }
                 }
             }
+
             txtUserName.Clear();
             txtPassword.Clear();
 
             if (!loggedIn)
-            {
                 MessageBox.Show("Invalid Login Credentials");
-            }
         }
+
 
         #region Password_KeyDown
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
@@ -114,6 +128,18 @@ namespace JEM
         private void LoginForm_Load(object sender, EventArgs e)
         {
             txtUserName.Focus();
+        }
+
+        private void btnRegisterStudent_Click(object sender, EventArgs e)
+        {
+            RegisterStudentForm register = new RegisterStudentForm();
+            register.ShowDialog();
+        }
+
+        private void btnRegisterTeacher_Click(object sender, EventArgs e)
+        {
+            RegisterTeacherForm register = new RegisterTeacherForm();
+            register.ShowDialog();
         }
     }
 }

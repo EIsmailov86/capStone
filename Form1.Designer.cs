@@ -46,6 +46,8 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
+            this.btnRegisterStudent = new System.Windows.Forms.Button();
+            this.btnRegisterTeacher = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -204,11 +206,37 @@
             this.lblUserName.TabIndex = 0;
             this.lblUserName.Text = "User Name";
             // 
+            // btnRegisterStudent
+            // 
+            this.btnRegisterStudent.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRegisterStudent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterStudent.Location = new System.Drawing.Point(455, 378);
+            this.btnRegisterStudent.Name = "btnRegisterStudent";
+            this.btnRegisterStudent.Size = new System.Drawing.Size(156, 41);
+            this.btnRegisterStudent.TabIndex = 18;
+            this.btnRegisterStudent.Text = "Register Student";
+            this.btnRegisterStudent.UseVisualStyleBackColor = false;
+            this.btnRegisterStudent.Click += new System.EventHandler(this.btnRegisterStudent_Click);
+            // 
+            // btnRegisterTeacher
+            // 
+            this.btnRegisterTeacher.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRegisterTeacher.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterTeacher.Location = new System.Drawing.Point(455, 453);
+            this.btnRegisterTeacher.Name = "btnRegisterTeacher";
+            this.btnRegisterTeacher.Size = new System.Drawing.Size(178, 41);
+            this.btnRegisterTeacher.TabIndex = 19;
+            this.btnRegisterTeacher.Text = "Register Teacher";
+            this.btnRegisterTeacher.UseVisualStyleBackColor = false;
+            this.btnRegisterTeacher.Click += new System.EventHandler(this.btnRegisterTeacher_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.btnRegisterTeacher);
+            this.Controls.Add(this.btnRegisterStudent);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel12);
@@ -254,6 +282,8 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Button btnRegisterStudent;
+        private System.Windows.Forms.Button btnRegisterTeacher;
     }
 }
 
