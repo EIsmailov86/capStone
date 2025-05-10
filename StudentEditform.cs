@@ -81,6 +81,46 @@ namespace JEM
         {
             using (MySqlConnection dbConnection = ConnectToDb())
             {
+                string name = txbName.Text.Trim();
+                string phone = txbPhone.Text.Trim();
+                string address = txbAddress.Text.Trim();
+                string email = txbEmail.Text.Trim();
+                string bio = txbMyBio.Text.Trim();
+                int gradeId = Convert.ToInt32(cmbGrade.SelectedItem);
+
+                // 2) Validate each field
+                if (!InputValidator.IsValidName(name))
+                {
+                    MessageBox.Show("Please enter a valid name (letters, spaces, hyphens).");
+                    return;
+                }
+                if (!InputValidator.IsValidEmail(email))
+                {
+                    MessageBox.Show("Please enter a valid email address.");
+                    return;
+                }
+                if (!InputValidator.IsValidPhone(phone))
+                {
+                    MessageBox.Show("Please enter a valid phone number.");
+                    return;
+                }
+                if (!InputValidator.IsValidAddress(address))
+                {
+                    MessageBox.Show("Please enter a valid address (max 100 chars).");
+                    return;
+                }
+                if (!InputValidator.IsValidBio(bio))
+                {
+                    MessageBox.Show("Please keep your bio to 500 characters and avoid angle brackets.");
+                    return;
+                }
+                if (gradeId < 1 || gradeId > 12)
+                {
+                    MessageBox.Show("Please select a valid grade between 1 and 12.");
+                    return;
+                }
+
+
                 string updateQuery = @"
             UPDATE student
             SET Name = @Name,
@@ -137,31 +177,55 @@ namespace JEM
         #region btnUploadPic
         private void btnStEdUploadPicture_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            using (var openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
+                openFileDialog.Filter = "Image files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
 
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                if (openFileDialog.ShowDialog() != DialogResult.OK)
+                    return;
+
+                string path = openFileDialog.FileName;
+
+                //(max 2 MB
+                const long MAX_BYTES = 2L * 1024 * 1024;
+                var info = new System.IO.FileInfo(path);
+                if (info.Length > MAX_BYTES)
                 {
-                    string selectedImagePath = openFileDialog.FileName;
-                    picStEdStudentPicture.Image = Image.FromFile(selectedImagePath);
-
-                    // ✅ Read image file into byte array
-                    byte[] imageBytes = File.ReadAllBytes(selectedImagePath);
-
-                    using (MySqlConnection conn = ConnectToDb())
-                    {
-                        string query = "UPDATE student SET ImageStudent = @ImageStudent WHERE Id = @Id";
-                        MySqlCommand cmd = new MySqlCommand(query, conn);
-                        cmd.Parameters.AddWithValue("@ImageStudent", imageBytes);
-                        cmd.Parameters.AddWithValue("@Id", loggedInStudent.Id);
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    MessageBox.Show("Picture uploaded successfully!");
+                    MessageBox.Show("Please select an image under 2 MB.", "File Too Large", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
+
+                //real image
+                Image img;
+                try
+                {
+                    img = Image.FromFile(path);
+                }
+                catch
+                {
+                    MessageBox.Show("The selected file is not a valid image.", "Invalid Image", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // dimension check
+                // if (img.Width > 2000 || img.Height > 2000) { /* warn/return */ }
+
+                // 4) Read bytes & update database
+                byte[] imageBytes = System.IO.File.ReadAllBytes(path);
+                using (var conn = ConnectToDb())
+                using (var cmd = new MySqlCommand(
+                       "UPDATE student SET ImageStudent = @Image WHERE Id = @Id", conn))
+                {
+                    cmd.Parameters.AddWithValue("@Image", imageBytes);
+                    cmd.Parameters.AddWithValue("@Id", loggedInStudent.Id);
+                    cmd.ExecuteNonQuery();
+                }
+                MessageBox.Show("Picture uploaded successfully!");
+                picStEdStudentPicture.Image = img;
             }
         }
+
+
         #endregion
 
         #region LoadStPic
