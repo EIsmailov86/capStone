@@ -34,14 +34,7 @@ namespace JEM
         }
         private void btnStTeNotifications_Click(object sender, EventArgs e)
         {
-            var form = new StudentExtraForm(loggedInStudent);
-            form.Show();
-            this.SuppressCloseConfirmation = true;
-            this.Close();
-        }
-        private void btnStTePayment_Click(object sender, EventArgs e)
-        {
-            var form = new StudentExtraForm(loggedInStudent);
+            var form = new StudentNotifications(loggedInStudent);
             form.Show();
             this.SuppressCloseConfirmation = true;
             this.Close();

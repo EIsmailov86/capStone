@@ -314,6 +314,7 @@
             this.txbNotifications.Location = new System.Drawing.Point(123, 106);
             this.txbNotifications.Multiline = true;
             this.txbNotifications.Name = "txbNotifications";
+            this.txbNotifications.ReadOnly = true;
             this.txbNotifications.Size = new System.Drawing.Size(198, 199);
             this.txbNotifications.TabIndex = 2;
             // 

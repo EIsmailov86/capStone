@@ -48,14 +48,6 @@ namespace JEM
             this.Close();
         }
 
-        private void btnStEdPayment_Click(object sender, EventArgs e)
-        {
-            var paymentForm = new StudentExtraForm(loggedInStudent);
-            paymentForm.Show();
-            this.SuppressCloseConfirmation = true;
-            this.Close();
-        }
-
         private void btnMyInfo_Click(object sender, EventArgs e)
         {
             //fix Designer errors

@@ -46,7 +46,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnSEDMyInfo = new System.Windows.Forms.Button();
-            this.btnSEDPayment = new System.Windows.Forms.Button();
             this.btnSEDNotifications = new System.Windows.Forms.Button();
             this.btnSEDMyTeacher = new System.Windows.Forms.Button();
             this.btnSEDDashboard = new System.Windows.Forms.Button();
@@ -223,7 +222,6 @@
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.pnlMenu.Controls.Add(this.btnSEDMyInfo);
-            this.pnlMenu.Controls.Add(this.btnSEDPayment);
             this.pnlMenu.Controls.Add(this.btnSEDNotifications);
             this.pnlMenu.Controls.Add(this.btnSEDMyTeacher);
             this.pnlMenu.Controls.Add(this.btnSEDDashboard);
@@ -251,24 +249,6 @@
             this.btnSEDMyInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSEDMyInfo.UseVisualStyleBackColor = true;
             this.btnSEDMyInfo.Click += new System.EventHandler(this.btnMyInfo_Click);
-            // 
-            // btnSEDPayment
-            // 
-            this.btnSEDPayment.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSEDPayment.FlatAppearance.BorderSize = 0;
-            this.btnSEDPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSEDPayment.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSEDPayment.Image = global::JEM.Properties.Resources.xxsmallpayment;
-            this.btnSEDPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSEDPayment.Location = new System.Drawing.Point(0, 254);
-            this.btnSEDPayment.Name = "btnSEDPayment";
-            this.btnSEDPayment.Size = new System.Drawing.Size(135, 42);
-            this.btnSEDPayment.TabIndex = 22;
-            this.btnSEDPayment.Text = "   Payment";
-            this.btnSEDPayment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSEDPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSEDPayment.UseVisualStyleBackColor = true;
-            this.btnSEDPayment.Click += new System.EventHandler(this.btnStEdPayment_Click);
             // 
             // btnSEDNotifications
             // 
@@ -473,7 +453,6 @@
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel pnlMenu;
-        private System.Windows.Forms.Button btnSEDPayment;
         private System.Windows.Forms.Button btnSEDNotifications;
         private System.Windows.Forms.Button btnSEDMyTeacher;
         private System.Windows.Forms.Button btnSEDDashboard;

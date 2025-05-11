@@ -30,14 +30,6 @@ namespace JEM
             this.Close();
         }
 
-        private void btnStNoPayment_Click(object sender, EventArgs e)
-        {
-            var payment = new StudentExtraForm(loggedInStudent);
-            payment.Show();
-            this.SuppressCloseConfirmation = true;
-            this.Close();
-        }
-
         private void btnStNoDashboard_Click(object sender, EventArgs e)
         {
             var dashboard = new studentdashboardform(loggedInStudent);

@@ -33,7 +33,6 @@
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnStNoDashboard = new System.Windows.Forms.Button();
             this.btnStNoMyInfo = new System.Windows.Forms.Button();
-            this.btnStNoPayment = new System.Windows.Forms.Button();
             this.btnStNoMyTeacher = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -73,7 +72,6 @@
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.pnlMenu.Controls.Add(this.btnStNoDashboard);
             this.pnlMenu.Controls.Add(this.btnStNoMyInfo);
-            this.pnlMenu.Controls.Add(this.btnStNoPayment);
             this.pnlMenu.Controls.Add(this.btnStNoMyTeacher);
             this.pnlMenu.Controls.Add(this.pnlLogo);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -90,7 +88,7 @@
             this.btnStNoDashboard.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnStNoDashboard.Image = global::JEM.Properties.Resources.xxsmall_home_black_square;
             this.btnStNoDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStNoDashboard.Location = new System.Drawing.Point(0, 212);
+            this.btnStNoDashboard.Location = new System.Drawing.Point(0, 170);
             this.btnStNoDashboard.Name = "btnStNoDashboard";
             this.btnStNoDashboard.Size = new System.Drawing.Size(135, 42);
             this.btnStNoDashboard.TabIndex = 23;
@@ -117,24 +115,6 @@
             this.btnStNoMyInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStNoMyInfo.UseVisualStyleBackColor = true;
             this.btnStNoMyInfo.Click += new System.EventHandler(this.btnStNoMyInfo_Click);
-            // 
-            // btnStNoPayment
-            // 
-            this.btnStNoPayment.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStNoPayment.FlatAppearance.BorderSize = 0;
-            this.btnStNoPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStNoPayment.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnStNoPayment.Image = global::JEM.Properties.Resources.xxsmallpayment;
-            this.btnStNoPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStNoPayment.Location = new System.Drawing.Point(0, 170);
-            this.btnStNoPayment.Name = "btnStNoPayment";
-            this.btnStNoPayment.Size = new System.Drawing.Size(135, 42);
-            this.btnStNoPayment.TabIndex = 22;
-            this.btnStNoPayment.Text = "   Payment";
-            this.btnStNoPayment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnStNoPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnStNoPayment.UseVisualStyleBackColor = true;
-            this.btnStNoPayment.Click += new System.EventHandler(this.btnStNoPayment_Click);
             // 
             // btnStNoMyTeacher
             // 
@@ -260,6 +240,7 @@
             this.txbNotifications.Location = new System.Drawing.Point(69, 113);
             this.txbNotifications.Multiline = true;
             this.txbNotifications.Name = "txbNotifications";
+            this.txbNotifications.ReadOnly = true;
             this.txbNotifications.Size = new System.Drawing.Size(198, 199);
             this.txbNotifications.TabIndex = 2;
             // 
@@ -301,7 +282,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnStNoMyInfo;
-        private System.Windows.Forms.Button btnStNoPayment;
         private System.Windows.Forms.Button btnStNoMyTeacher;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Label label2;

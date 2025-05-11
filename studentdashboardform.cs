@@ -126,15 +126,6 @@ namespace JEM
 
             UpdateBalanceProgressBar();
 
-            // show us the counts
-            MessageBox.Show(
-                $"SQL returned {sqlCount} rows.\n" +
-                $"Grid now has {gridCount} rows.",
-                "Debug: Session Load",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
-
             if (loggedInStudent.Budget.RemainingBudget < 0)
             {
                 MessageBox.Show(
@@ -190,13 +181,7 @@ namespace JEM
             SuppressCloseConfirmation = true;
             Close();
         }
-        private void btnStDaPayment_Click(object sender, EventArgs e)
-        {
-            var f = new StudentExtraForm(loggedInStudent);
-            f.Show();
-            SuppressCloseConfirmation = true;
-            Close();
-        }
+
         private void btnStDaMyInfo_Click(object sender, EventArgs e)
         {
             var f = new StudentEditForm(loggedInStudent);

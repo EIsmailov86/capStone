@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentTeacherForm));
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnSTMyInfo = new System.Windows.Forms.Button();
-            this.btnSTPayment = new System.Windows.Forms.Button();
             this.btnSTNotifications = new System.Windows.Forms.Button();
             this.btnSTDashboard = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
@@ -58,7 +57,6 @@
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.pnlMenu.Controls.Add(this.btnSTMyInfo);
-            this.pnlMenu.Controls.Add(this.btnSTPayment);
             this.pnlMenu.Controls.Add(this.btnSTNotifications);
             this.pnlMenu.Controls.Add(this.btnSTDashboard);
             this.pnlMenu.Controls.Add(this.pnlLogo);
@@ -85,24 +83,6 @@
             this.btnSTMyInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSTMyInfo.UseVisualStyleBackColor = true;
             this.btnSTMyInfo.Click += new System.EventHandler(this.btnStTeMyInfo_Click);
-            // 
-            // btnSTPayment
-            // 
-            this.btnSTPayment.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSTPayment.FlatAppearance.BorderSize = 0;
-            this.btnSTPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSTPayment.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSTPayment.Image = global::JEM.Properties.Resources.xxsmallpayment;
-            this.btnSTPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSTPayment.Location = new System.Drawing.Point(0, 212);
-            this.btnSTPayment.Name = "btnSTPayment";
-            this.btnSTPayment.Size = new System.Drawing.Size(135, 42);
-            this.btnSTPayment.TabIndex = 22;
-            this.btnSTPayment.Text = "   Payment";
-            this.btnSTPayment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSTPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSTPayment.UseVisualStyleBackColor = true;
-            this.btnSTPayment.Click += new System.EventHandler(this.btnStTePayment_Click);
             // 
             // btnSTNotifications
             // 
@@ -306,7 +286,6 @@
         private System.Windows.Forms.TextBox txbMessageBody;
         private System.Windows.Forms.Button btnSTDashboard;
         private System.Windows.Forms.Button btnSTNotifications;
-        private System.Windows.Forms.Button btnSTPayment;
         private System.Windows.Forms.Button btnSTMyInfo;
         private System.Windows.Forms.Label lblStTeWelcome;
         private System.Windows.Forms.TextBox txbMessageHeader;
