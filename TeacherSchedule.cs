@@ -54,7 +54,6 @@ namespace JEM
                 if (lbsTeShStudents.SelectedIndex < 0)
                 {
                     lbsTeShStudents.SelectedIndex = 0;
-
                 }
 
                 ListItem listboxStudent = lbsTeShStudents.SelectedItem as ListItem;
@@ -180,10 +179,10 @@ namespace JEM
             }
         }
         #endregion
-        private void dtpTeShDateTime_ValueChanged(object sender, EventArgs e)
-        {
-            LoadAvailableTimeSlots();
-        }
+        //private void dtpTeShDateTime_ValueChanged(object sender, EventArgs e)
+        //{
+        //    LoadAvailableTimeSlots();
+        //}
 
         #region LoadAllSubjects
         private void LoadAllSubjects()
@@ -253,7 +252,6 @@ namespace JEM
                 insertCmd.Parameters.AddWithValue("@TimeSlot", timeslot);
                 insertCmd.Parameters.AddWithValue("@Cost", cost);
 
-
                 int newSessionId = Convert.ToInt32(insertCmd.ExecuteScalar());
 
                 if (newSessionId > 0)
@@ -274,39 +272,6 @@ namespace JEM
                 {
                     MessageBox.Show("Failed to schedule session.");
                 }
-
-
-                // Refactored logic this code may be obsolete
-                // Issue: teachers cannot see if a student is already scheduled with another teacher
-                //string newSessionQuery = "SELECT se.SessionId, su.subjectName, se.SessionDate, se.Timeslot, te.Name AS teacherName, st.Name AS StudentName, gr.GradeYear, se.Cost " +
-                //    "FROM session AS se " +
-                //    "LEFT JOIN subject AS su ON se.SubjectId=su.subjectId " +
-                //    "LEFT JOIN teacher AS te ON se.TeacherId=te.Id " +
-                //    "LEFT JOIN gradeyear AS gr ON su.SubjectId=gr.GradeId " +
-                //    "LEFT JOIN student AS st ON se.StudentId=st.Id " +
-                //    "WHERE @TeacherId = se.TeacherId";
-
-                //MySqlCommand sessiondata = new MySqlCommand(newSessionQuery, conn);
-                //sessiondata.Parameters.AddWithValue("@TeacherId", loggedInTeacher.Id);
-
-                //using (MySqlDataReader reader = sessiondata.ExecuteReader())
-                //{
-                //    while (reader.Read())
-                //    {
-                //        Session sessionRow = new Session
-                //        {
-                //            SessionId = Convert.ToInt32(reader["SessionId"]),
-                //            SubjectName = reader["SubjectName"].ToString(),
-                //            StudentName = reader["StudentName"].ToString(),
-                //            TeacherName = reader["TeacherName"].ToString(),
-                //            SessionDate = (DateTime)reader["SessionDate"],
-                //            TimeSlot = reader["Timeslot"].ToString(),
-                //            GradeYear = reader["GradeYear"].ToString(),
-                //            Cost = Convert.ToInt32(reader["Cost"]),
-                //        };
-                //        sessions.Add(sessionRow);
-                //    }
-                //}
             }
             cmbTeShTime.Text = "";
             ValidateTimeSlot();
@@ -409,7 +374,6 @@ namespace JEM
                                     "Date: " + sessionRow.SessionDate.ToString("M/d/yyyy") + "\r\n" +
                                     "Time: " + sessionRow.TimeSlot + "\r\n" +
                                     "Cost: " + sessionRow.Cost);
-
                             }
                         }
 
@@ -429,7 +393,6 @@ namespace JEM
                         }
                     }
                 }
-
                 // finds the removed session, there may be an easier way to search for session with a specific id
                 for (int i = 0; i < sessions.Count; i++)
                 {
@@ -456,7 +419,6 @@ namespace JEM
             this.SuppressCloseConfirmation = true;
             this.Close();
         }
-
         private void btnTeScMyStudent_Click(object sender, EventArgs e)
         {
             var studentForm = new TeacherStudentForm(loggedInTeacher);
@@ -488,11 +450,6 @@ namespace JEM
             FilterTakenTimeSlots();
         }
 
-        //private void SelectedDateChange(object sender, EventArgs e)
-        //{
-        //    ValidateTimeSlot();
-        //}
-
         private void SelectedDateChange(object sender, EventArgs e)
         {
             if (lbsTeShStudents.SelectedIndex < 0)
@@ -504,9 +461,7 @@ namespace JEM
 
         private void StudentSelectedIndexChanged(object sender, EventArgs e)
         {
-
             LoadSchedule();
-
             if (lbsTeShStudents.SelectedIndex > -1)
             {
                 FilterTakenTimeSlots();
@@ -516,16 +471,13 @@ namespace JEM
         private void FilterTakenTimeSlots()
         {
             LoadAvailableTimeSlots();
-
             GetTakenTimeSlots();
 
             // filter taken time slots
             for (int i = 0; i < sessions.Count; i++)
             {
-
                 if (dtpTeShDateTime.Value.ToString("M/d/yyyy").Equals(sessions[i].SessionDate.ToString("M/d/yyyy")))
                 {
-
                     for (int j = 0; j < cmbTeShTime.Items.Count; j++)
                     {
                         if (cmbTeShTime.Items[j].ToString().Equals(sessions[i].TimeSlot))
@@ -534,9 +486,7 @@ namespace JEM
                         }
                     }
                 }
-
             }
-
             sessions.Clear();
         }
 
@@ -545,7 +495,6 @@ namespace JEM
 
             using (MySqlConnection conn = ConnectToDb())
             {
-
                 string takenSlotsQuery = "SELECT se.SessionId, se.SessionDate, se.Timeslot, te.Id, st.Id, se.StudentId, se.TeacherId " +
                     "FROM session AS se " +
                     "LEFT JOIN subject AS su ON se.SubjectId=su.subjectId " +
@@ -554,17 +503,12 @@ namespace JEM
                     "LEFT JOIN student AS st ON se.StudentId=st.Id " +
                     "WHERE @TeacherId = se.TeacherId OR @StudentId = se.StudentId";
 
-
-                // populate sessions array by taken time slots
-                // iterate by teacher? need to find a way to filter every sing teacher as well
-
                 var cmd = new MySqlCommand(takenSlotsQuery, conn);
                 cmd.Parameters.AddWithValue("@TeacherId", loggedInTeacher.Id);
 
                 if (lbsTeShStudents.SelectedIndex < 0)
                 {
                     lbsTeShStudents.SelectedIndex = 0;
-
                 }
 
                 ListItem selectedStudent = lbsTeShStudents.SelectedItem as ListItem;
@@ -580,9 +524,7 @@ namespace JEM
                             SessionDate = Convert.ToDateTime(reader["SessionDate"]),
                             TimeSlot = reader["Timeslot"].ToString(),
                         };
-
                         sessions.Add(newSession);
-
                     }
                 }
             }

@@ -20,7 +20,6 @@ namespace JEM
             loggedInStudent = student;
             lblStTeWelcome.Text = $"Welcome, {loggedInStudent.Name}!";
             LoadTeachersForStudent();
-
             LoadBio();
             LoadStudentPicture();
         }
@@ -33,7 +32,6 @@ namespace JEM
             this.SuppressCloseConfirmation = true;
             this.Close();
         }
-
         private void btnStTeNotifications_Click(object sender, EventArgs e)
         {
             var form = new StudentExtraForm(loggedInStudent);
@@ -41,7 +39,6 @@ namespace JEM
             this.SuppressCloseConfirmation = true;
             this.Close();
         }
-
         private void btnStTePayment_Click(object sender, EventArgs e)
         {
             var form = new StudentExtraForm(loggedInStudent);
@@ -57,8 +54,6 @@ namespace JEM
             this.SuppressCloseConfirmation = true;
             this.Close();
         }
-
-
         #endregion
 
         #region LoadTeachers
@@ -87,11 +82,6 @@ namespace JEM
                         };
 
                         teachers.Add(teacherRow);
-
-                        //string name = reader["Name"].ToString();
-                        //cmbSubject.Items.Add(name);
-
-                        // may need to add the teacherRow instead and set displaymember to name
                         cmbTeacher.Items.Add(teacherRow);
                         cmbTeacher.DisplayMember = "Name";
 
@@ -102,7 +92,6 @@ namespace JEM
                             //teacherImages[name] = imageData;
                             teacherImages[teacherRow.Name] = imageData;
                         }
-
                         //save bio
                         if (reader["Bio"] != DBNull.Value)
                         {
@@ -115,15 +104,13 @@ namespace JEM
                     }
                 }
             }
-
             cmbTeacher.SelectedIndexChanged += cmbTeacher_SelectedIndexChanged;
         }
         #endregion
-
         #region ComboBox_SelectedTe
         private void cmbTeacher_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // 1) cast to your Teacher model
+            //cast to Teacher
             if (!(cmbTeacher.SelectedItem is Teacher selectedTeacher))
             {
                 picStTeTeacherPicture.Image = null;
@@ -131,7 +118,7 @@ namespace JEM
                 return;
             }
 
-            // 2) lookup by Name in your image dictionary
+            //by Name in image dictionary
             if (teacherImages.TryGetValue(selectedTeacher.Name, out var imageBytes))
             {
                 using (var ms = new MemoryStream(imageBytes))
@@ -141,16 +128,12 @@ namespace JEM
             {
                 picStTeTeacherPicture.Image = null;
             }
-
-            // 3) you already have the bio on the object, or fallback to dictionary
             txbStTeInfoandBio.Text =
                 !string.IsNullOrEmpty(selectedTeacher.Bio)
                 ? selectedTeacher.Bio
                 : (teacherBios.TryGetValue(selectedTeacher.Name, out var bioDict)
                    ? bioDict
                    : "No bio available.");
-
-            // no need to call LoadBio here anymore
         }
 
         #endregion
@@ -158,7 +141,6 @@ namespace JEM
         #region Notifications
         private void btnSendMessage_Click(object sender, EventArgs e)
         {
-
             if (txbMessageHeader.Text.Equals(string.Empty))
             {
                 MessageBox.Show("Please fill in the message header field");
@@ -175,18 +157,13 @@ namespace JEM
                 {
                     Teacher selectedTeacher = cmbTeacher.SelectedItem as Teacher;
                     CreateNotifications(1, selectedTeacher.Id, loggedInStudent.Id, txbMessageHeader.Text, txbMessageBody.Text + "\r\n Message sent from " + loggedInStudent.Name);
-
                     MessageBox.Show("Message has been Sent");
-
                     txbMessageHeader.Text = "";
                     txbMessageBody.Text = "";
                 }
             }
-
         }
-
         #endregion
-
         private void LoadBio()
         {
             if (cmbTeacher.SelectedIndex >= 0)
@@ -194,9 +171,7 @@ namespace JEM
                 Teacher selectedTeacher = cmbTeacher.SelectedItem as Teacher;
                 txbStTeInfoandBio.Text = selectedTeacher.Bio;
             }
-
         }
-
         private void LoadStudentPicture()
         {
             if (loggedInStudent.ImageStudent != null)
@@ -210,8 +185,6 @@ namespace JEM
             {
                 pibStTeStudentPicture.Image = null;
             }
-
         }
-
     }
 }

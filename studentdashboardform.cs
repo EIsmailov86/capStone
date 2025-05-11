@@ -16,30 +16,17 @@ namespace JEM
         {
             InitializeComponent();
 
-
             if (student == null) throw new ArgumentNullException(nameof(student));
-
             loggedInStudent = student;
             lblStDaWelcome.Text = $"Welcome, {loggedInStudent.Name}!";
 
-            // ————— Core setup —————
             RefreshStudentBudget();
             InitializeStudentSchedule();
             UpdateBalanceProgressBar();
-
-            // ————— Scheduling UI setup —————
             LoadAllSubjects();
-            LoadAvailableTimeSlots();
             LoadAllTimeSlots();
-            //dtpStDaSessionDate.ValueChanged += dtpStDaSessionDate_ValueChanged;
-            //btnStDaScheduleSession.Click += btnStDaScheduleSession_Click;
-
-            // ————— Filter UI setup —————
             LoadFilterDates();
             LoadFilterSubjects();
-            //btnStDaFilterByDate.Click += btnStDaFilterByDate_Click;
-            //btnStDaFilterBySubject.Click += btnStDaFilterBySubject_Click;
-
             LoadTeacher();
             LoadStudentPicture();
         }
@@ -77,10 +64,7 @@ namespace JEM
         #region InitializeStudentSchedule
         private void InitializeStudentSchedule()
         {
-            // rebuild the columns exactly as the teacher version does
             InitializeStudentScheduleColumns();
-
-            // clear any existing rows
             dgvSchedule.Rows.Clear();
 
             int sqlCount = 0, gridCount = 0;
@@ -121,7 +105,6 @@ namespace JEM
                         string teacherName = reader["TeacherName"].ToString();
                         string gradeYear = reader["GradeYear"].ToString();
                         decimal cost = Convert.ToDecimal(reader["Cost"]);
-
                         totalCost += cost;
 
                         dgvSchedule.Rows.Add(
@@ -136,9 +119,6 @@ namespace JEM
                     }
                 }
             }
-
-            // count how many rows actually ended up in the grid
-            gridCount = dgvSchedule.Rows.Count;
 
             // update budget
             loggedInStudent.Budget.RemainingBudget =
@@ -166,10 +146,6 @@ namespace JEM
             }
         }
         #endregion
-
-
-
-
 
         #region UpdateBalanceProgressBar
         private void UpdateBalanceProgressBar()
@@ -252,11 +228,9 @@ namespace JEM
         {
             using (MySqlConnection conn = ConnectToDb())
             {
-                // loads all teachers for now, grouping specific teachers and students by a 'region' or districtId is out of scope for our project
                 string query = @"
                     SELECT DISTINCT t.Name, t.ImageTeacher, t.Bio, t.Id
                     FROM teacher t";
-
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
                 using (MySqlDataReader reader = cmd.ExecuteReader())
@@ -268,63 +242,11 @@ namespace JEM
                             Id = Convert.ToInt32(reader["Id"]),
                             Name = reader["Name"].ToString()
                         };
-
-                        // may need to add the teacherRow instead and set displaymember to name
                         cmbStDaTeacher.Items.Add(teacherRow);
                         cmbStDaTeacher.DisplayMember = "Name";
                     }
                 }
             }
-
-
-        }
-
-        #endregion
-
-        #region LoadAvailableTimeSlots
-        // obsolete method, refactored code to check for both student and currently selected teacher taken time slots to prevent double booking
-        private void LoadAvailableTimeSlots()
-        {
-            //cmbStDaTime.Items.Clear();
-
-            //// gather slots already taken on selected date
-            //var taken = new List<string>();
-            //using (var conn = ConnectToDb())
-            //{
-            //    var chk = new MySqlCommand(@"
-            //        SELECT TimeSlot
-            //          FROM session
-            //         WHERE StudentId   = @sid
-            //           AND SessionDate = @dt", conn);
-            //    chk.Parameters.AddWithValue("@sid", loggedInStudent.Id);
-            //    chk.Parameters.AddWithValue("@dt", dtpStDaSessionDate.Value.Date);
-
-            //    using (var rdr = chk.ExecuteReader())
-            //        while (rdr.Read())
-            //            taken.Add(rdr.GetString("TimeSlot"));
-            //}
-
-            //// master list
-            //var allSlots = new[]
-            //{
-            //    "08:00 - 09:00","09:00 - 10:00","10:00 - 11:00",
-            //    "11:00 - 12:00","12:00 - 13:00","13:00 - 14:00",
-            //    "14:00 - 15:00","15:00 - 16:00","16:00 - 17:00"
-            //};
-
-            //foreach (var s in allSlots)
-            //    if (!taken.Contains(s))
-            //        cmbStDaTime.Items.Add(s);
-
-            //if (cmbStDaTime.Items.Count > 0)
-            //    cmbStDaTime.SelectedIndex = 0;
-            //else
-            //    MessageBox.Show(
-            //        "No available time slots on that date.",
-            //        "Unavailable",
-            //        MessageBoxButtons.OK,
-            //        MessageBoxIcon.Warning
-            //    );
         }
         #endregion
 
@@ -332,7 +254,6 @@ namespace JEM
         private void LoadAllTimeSlots()
         {
             cmbStDaTime.Items.Clear();
-
             // master list
             var allSlots = new[]
             {
@@ -348,13 +269,11 @@ namespace JEM
         #region dtpStDaSessionDate_ValueChanged
         private void dtpStDaSessionDate_ValueChanged(object sender, EventArgs e)
         {
-            //LoadAvailableTimeSlots();
             FilterTakenTimeSlots();
         }
         #endregion
 
         #region btnStDaRequestSession_Click
-        // private void btnStDaScheduleSession_Click(object sender, EventArgs e)
         private void btnStDaRequestSession_Click(object sender, EventArgs e)
         {
             if (cmbStDaSubject.SelectedItem == null ||
@@ -376,35 +295,9 @@ namespace JEM
 
             using (MySqlConnection conn = ConnectToDb())
             {
-                // need to update this to check the cmb box values instead for now we will ignore it
-
-                // prevent double-booking
-                //var chkStu = new MySqlCommand(@"
-                //    SELECT COUNT(*) FROM session
-                //     WHERE TeacherId   = @sid
-                //       AND SessionDate = @dt
-                //       AND TimeSlot    = @ts", conn);
-                //chkStu.Parameters.AddWithValue("@sid", loggedInStudent.Id);
-                //chkStu.Parameters.AddWithValue("@dt", date);
-                //chkStu.Parameters.AddWithValue("@ts", timeslot);
-
-                //if (Convert.ToInt32(chkStu.ExecuteScalar()) > 0)
-                //{
-                //    MessageBox.Show(
-                //        "You already have a session at that time.",
-                //        "Conflict",
-                //        MessageBoxButtons.OK,
-                //        MessageBoxIcon.Warning
-                //    );
-                //    return;
-                //}
-
-                // get a reference to the currently selected teacher in the cmbTeachersBox
-
                 Teacher selectedTeacher = cmbStDaTeacher.SelectedItem as Teacher;
 
                 CreateNotifications(1, selectedTeacher.Id, loggedInStudent.Id,
-
 
                     loggedInStudent.Name + " Has requested a tutoring Session on " + dtpStDaSessionDate.Value.ToString("M/d/yyyy"),
 
@@ -412,12 +305,8 @@ namespace JEM
                     "Subject: " + cmbStDaSubject.SelectedItem.ToString() + "\r\n" +
                     "Student: " + loggedInStudent.Name + "\r\n" +
                     "Date: " + dtpStDaSessionDate.Value.ToString("M/d/yyyy") + "\r\n" +
-
                     "Time: " + cmbStDaTime.SelectedItem.ToString() + "\r\n");
-
-
                 MessageBox.Show("Message has been created");
-                
             }
         }
         #endregion
@@ -570,16 +459,13 @@ namespace JEM
         private void FilterTakenTimeSlots()
         {
             LoadAllTimeSlots();
-
             GetTakenTimeSlots();
 
             // filter taken time slots
             for (int i = 0; i < sessions.Count; i++)
             {
-
                 if (dtpStDaSessionDate.Value.ToString("M/d/yyyy").Equals(sessions[i].SessionDate.ToString("M/d/yyyy")))
                 {
-
                     for (int j = 0; j < cmbStDaTime.Items.Count; j++)
                     {
                         if (cmbStDaTime.Items[j].ToString().Equals(sessions[i].TimeSlot))
@@ -588,18 +474,14 @@ namespace JEM
                         }
                     }
                 }
-
             }
-
             sessions.Clear();
         }
 
         private void GetTakenTimeSlots()
         {
-
             using (MySqlConnection conn = ConnectToDb())
             {
-
                 string takenSlotsQuery = "SELECT se.SessionId, se.SessionDate, se.Timeslot, te.Id, st.Id, se.StudentId, se.TeacherId " +
                     "FROM session AS se " +
                     "LEFT JOIN subject AS su ON se.SubjectId=su.subjectId " +
@@ -628,11 +510,9 @@ namespace JEM
                         };
                         // populate sessions array by taken time slot
                         sessions.Add(newSession);
-
                     }
                 }
             }
-
         }
 
         private void SelectedTeacherChanged(object sender, EventArgs e)
@@ -644,7 +524,6 @@ namespace JEM
             {
                 FilterTakenTimeSlots();
             }
-
         }
 
         private void LoadStudentPicture()
@@ -660,7 +539,6 @@ namespace JEM
             {
                 pibStDaStudentPicture.Image = null;
             }
-
         }
     }
 }

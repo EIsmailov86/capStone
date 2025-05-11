@@ -167,13 +167,13 @@ namespace JEM
                         }
                     }
 
-                    // 2) sum up session costs
+                    //sum up session costs
                     string sumQuery = "SELECT IFNULL(SUM(Cost),0) FROM session WHERE StudentId = @Id";
                     MySqlCommand sumCmd = new MySqlCommand(sumQuery, conn);
                     sumCmd.Parameters.AddWithValue("@Id", studentId);
                     decimal spent = Convert.ToDecimal(sumCmd.ExecuteScalar());
 
-                    // 3) compute remaining and update UI
+                    //compute remaining and update UI
                     decimal remaining = totalBudget - spent;
                     lblTeStRemainingBalance.Text = $"${remaining:0.00}";
 
@@ -498,7 +498,7 @@ namespace JEM
 
             using (var conn = ConnectToDb())
             {
-                // 1) add the deposit to their TotalBudget
+                //add the deposit to their TotalBudget
                 using (var cmd = new MySqlCommand(
                     @"UPDATE student 
                  SET TotalBudget = TotalBudget + @Deposit 
@@ -514,7 +514,7 @@ namespace JEM
                     }
                 }
 
-                // 2) fetch the new TotalBudget and total spent
+                //fetch the new TotalBudget and total spent
                 decimal newTotalBudget, totalSpent;
                 using (var cmd2 = new MySqlCommand(
                     @"
@@ -537,10 +537,10 @@ namespace JEM
                     }
                 }
 
-                // 3) compute remaining
+                //compute remaining
                 decimal remaining = newTotalBudget - totalSpent;
 
-                // 4) update the UI
+                //update the UI
                 lblTeStRemainingBalance.Text = $"${remaining:0.00}";
                 int pct = newTotalBudget > 0
                     ? (int)((remaining / newTotalBudget) * 100)
@@ -549,65 +549,16 @@ namespace JEM
 
                 MessageBox.Show("Balance updated successfully!");
 
-                // 5) refresh TeacherDashboard if it’s open
+                //refresh TeacherDashboard if it’s open
                 if (Application.OpenForms["TeacherDashboard"] is TeacherDashboard dash)
                     dash.InitializeTeacherSchedule();
             }
-
             // clear the deposit box
             txbTeStStartingBalance.Clear();
         }
-
         #endregion
 
-        //#region LoadStudentDetails
-        //private void LoadStudentDetails(int studentId)
-        //{
-        //    using (MySqlConnection conn = ConnectToDb())
-        //    {
-        //        string query = "SELECT * FROM student WHERE Id = @Id";
-        //        MySqlCommand cmd = new MySqlCommand(query, conn);
-        //        cmd.Parameters.AddWithValue("@Id", studentId);
-
-        //        using (MySqlDataReader reader = cmd.ExecuteReader())
-        //        {
-        //            if (reader.Read())
-        //            {
-        //                // populate your textboxes, picture box, progress bar, etc.
-        //                txbTeStName.Text = reader["Name"].ToString();
-        //                cmbTeStGrade.SelectedItem = reader["GradeId"].ToString();
-        //                cmbTeStSubject.SelectedItem = reader["SubjectName"].ToString();
-        //                txbTeStPhone.Text = reader["Phone"].ToString();
-        //                txbTeStAddress.Text = reader["Address"].ToString();
-        //                txbTeStEmail.Text = reader["Email"].ToString();
-        //                txbTeStTeStBio.Text = reader["Bio"].ToString();
-
-        //                if (reader["ImageStudent"] != DBNull.Value)
-        //                {
-        //                    byte[] imageBytes = (byte[])reader["ImageStudent"];
-        //                    using (var ms = new MemoryStream(imageBytes))
-        //                        pibTeStStudentPicture.Image = Image.FromStream(ms);
-        //                }
-        //                else
-        //                {
-        //                    pibTeStStudentPicture.Image = null;
-        //                }
-
-        //                decimal totalBudget = reader["TotalBudget"] != DBNull.Value
-        //                                    ? Convert.ToDecimal(reader["TotalBudget"])
-        //                                    : 0m;
-        //                lblTeStRemainingBalance.Text = $"${totalBudget:0.00}";
-
-        //                int progressValue = Math.Max(0, Math.Min(100, (int)totalBudget));
-        //                pgbTeStBalance.Value = progressValue;
-        //            }
-        //        }
-        //    }
-        //}
-        //#endregion
-
         #region Notifications
-
         private void btnSendMessage_Click(object sender, EventArgs e)
         {
             if (txbMessageHeader.Text.Equals(string.Empty))
@@ -636,7 +587,6 @@ namespace JEM
                 }
             }
         }
-
         #endregion
     }
 }
