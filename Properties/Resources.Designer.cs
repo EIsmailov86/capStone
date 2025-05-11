@@ -83,6 +83,16 @@ namespace JEM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _34px_resetpassword {
+            get {
+                object obj = ResourceManager.GetObject("34px_resetpassword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _34px_searchsubject {
             get {
                 object obj = ResourceManager.GetObject("34px_searchsubject", resourceCulture);

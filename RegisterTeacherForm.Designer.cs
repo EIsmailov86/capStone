@@ -35,6 +35,7 @@
             this.pibReStPicture = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblReTeWelcome = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnReTeRegister = new System.Windows.Forms.Button();
             this.txtReTeConfirmPassword = new System.Windows.Forms.TextBox();
             this.lblReTeConfirmPassword = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibReStPicture)).BeginInit();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -117,159 +119,166 @@
             this.lblReTeWelcome.TabIndex = 23;
             this.lblReTeWelcome.Text = "Welcome To The Team.";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.btnReTeRegister);
+            this.groupBox1.Controls.Add(this.txtReTeConfirmPassword);
+            this.groupBox1.Controls.Add(this.lblReTeConfirmPassword);
+            this.groupBox1.Controls.Add(this.lblReTePassword);
+            this.groupBox1.Controls.Add(this.lblReTeUserName);
+            this.groupBox1.Controls.Add(this.lblReTeAddress);
+            this.groupBox1.Controls.Add(this.lblReTePhone);
+            this.groupBox1.Controls.Add(this.lblReTeEmail);
+            this.groupBox1.Controls.Add(this.lblReTeName);
+            this.groupBox1.Controls.Add(this.txtReTePassword);
+            this.groupBox1.Controls.Add(this.txtReTeUsername);
+            this.groupBox1.Controls.Add(this.txtReTeAddress);
+            this.groupBox1.Controls.Add(this.txtReTePhone);
+            this.groupBox1.Controls.Add(this.txtReTeEmail);
+            this.groupBox1.Controls.Add(this.txtReTeName);
+            this.groupBox1.Location = new System.Drawing.Point(178, 66);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(588, 333);
+            this.groupBox1.TabIndex = 59;
+            this.groupBox1.TabStop = false;
+            // 
             // btnReTeRegister
             // 
             this.btnReTeRegister.BackColor = System.Drawing.Color.MintCream;
             this.btnReTeRegister.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReTeRegister.Location = new System.Drawing.Point(296, 311);
+            this.btnReTeRegister.Location = new System.Drawing.Point(190, 252);
             this.btnReTeRegister.Name = "btnReTeRegister";
             this.btnReTeRegister.Size = new System.Drawing.Size(219, 41);
-            this.btnReTeRegister.TabIndex = 58;
+            this.btnReTeRegister.TabIndex = 73;
             this.btnReTeRegister.Text = "Register Teacher";
             this.btnReTeRegister.UseVisualStyleBackColor = false;
-            this.btnReTeRegister.Click += new System.EventHandler(this.btnReTeRegister_Click);
             // 
             // txtReTeConfirmPassword
             // 
-            this.txtReTeConfirmPassword.Location = new System.Drawing.Point(434, 264);
+            this.txtReTeConfirmPassword.Location = new System.Drawing.Point(328, 205);
             this.txtReTeConfirmPassword.Name = "txtReTeConfirmPassword";
             this.txtReTeConfirmPassword.Size = new System.Drawing.Size(140, 22);
-            this.txtReTeConfirmPassword.TabIndex = 57;
+            this.txtReTeConfirmPassword.TabIndex = 72;
             // 
             // lblReTeConfirmPassword
             // 
             this.lblReTeConfirmPassword.AutoSize = true;
             this.lblReTeConfirmPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReTeConfirmPassword.Location = new System.Drawing.Point(227, 262);
+            this.lblReTeConfirmPassword.Location = new System.Drawing.Point(121, 203);
             this.lblReTeConfirmPassword.Name = "lblReTeConfirmPassword";
             this.lblReTeConfirmPassword.Size = new System.Drawing.Size(158, 22);
-            this.lblReTeConfirmPassword.TabIndex = 56;
+            this.lblReTeConfirmPassword.TabIndex = 71;
             this.lblReTeConfirmPassword.Text = "Confirm Password";
             // 
             // lblReTePassword
             // 
             this.lblReTePassword.AutoSize = true;
             this.lblReTePassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReTePassword.Location = new System.Drawing.Point(227, 235);
+            this.lblReTePassword.Location = new System.Drawing.Point(121, 176);
             this.lblReTePassword.Name = "lblReTePassword";
             this.lblReTePassword.Size = new System.Drawing.Size(88, 22);
-            this.lblReTePassword.TabIndex = 55;
+            this.lblReTePassword.TabIndex = 70;
             this.lblReTePassword.Text = "Password";
             // 
             // lblReTeUserName
             // 
             this.lblReTeUserName.AutoSize = true;
             this.lblReTeUserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReTeUserName.Location = new System.Drawing.Point(227, 208);
+            this.lblReTeUserName.Location = new System.Drawing.Point(121, 149);
             this.lblReTeUserName.Name = "lblReTeUserName";
             this.lblReTeUserName.Size = new System.Drawing.Size(98, 22);
-            this.lblReTeUserName.TabIndex = 54;
+            this.lblReTeUserName.TabIndex = 69;
             this.lblReTeUserName.Text = "User Name";
             // 
             // lblReTeAddress
             // 
             this.lblReTeAddress.AutoSize = true;
             this.lblReTeAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReTeAddress.Location = new System.Drawing.Point(227, 181);
+            this.lblReTeAddress.Location = new System.Drawing.Point(121, 122);
             this.lblReTeAddress.Name = "lblReTeAddress";
             this.lblReTeAddress.Size = new System.Drawing.Size(76, 22);
-            this.lblReTeAddress.TabIndex = 53;
+            this.lblReTeAddress.TabIndex = 68;
             this.lblReTeAddress.Text = "Address";
             // 
             // lblReTePhone
             // 
             this.lblReTePhone.AutoSize = true;
             this.lblReTePhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReTePhone.Location = new System.Drawing.Point(227, 153);
+            this.lblReTePhone.Location = new System.Drawing.Point(121, 94);
             this.lblReTePhone.Name = "lblReTePhone";
             this.lblReTePhone.Size = new System.Drawing.Size(58, 22);
-            this.lblReTePhone.TabIndex = 52;
+            this.lblReTePhone.TabIndex = 67;
             this.lblReTePhone.Text = "Phone";
             // 
             // lblReTeEmail
             // 
             this.lblReTeEmail.AutoSize = true;
             this.lblReTeEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReTeEmail.Location = new System.Drawing.Point(227, 126);
+            this.lblReTeEmail.Location = new System.Drawing.Point(121, 67);
             this.lblReTeEmail.Name = "lblReTeEmail";
             this.lblReTeEmail.Size = new System.Drawing.Size(57, 22);
-            this.lblReTeEmail.TabIndex = 51;
+            this.lblReTeEmail.TabIndex = 66;
             this.lblReTeEmail.Text = "Email";
             // 
             // lblReTeName
             // 
             this.lblReTeName.AutoSize = true;
             this.lblReTeName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReTeName.Location = new System.Drawing.Point(227, 99);
+            this.lblReTeName.Location = new System.Drawing.Point(121, 40);
             this.lblReTeName.Name = "lblReTeName";
             this.lblReTeName.Size = new System.Drawing.Size(56, 22);
-            this.lblReTeName.TabIndex = 50;
+            this.lblReTeName.TabIndex = 65;
             this.lblReTeName.Text = "Name";
             // 
             // txtReTePassword
             // 
-            this.txtReTePassword.Location = new System.Drawing.Point(434, 237);
+            this.txtReTePassword.Location = new System.Drawing.Point(328, 178);
             this.txtReTePassword.Name = "txtReTePassword";
             this.txtReTePassword.Size = new System.Drawing.Size(140, 22);
-            this.txtReTePassword.TabIndex = 49;
-            this.txtReTePassword.TextChanged += new System.EventHandler(this.txtReTePassword_TextChanged);
+            this.txtReTePassword.TabIndex = 64;
             // 
             // txtReTeUsername
             // 
-            this.txtReTeUsername.Location = new System.Drawing.Point(434, 209);
+            this.txtReTeUsername.Location = new System.Drawing.Point(328, 150);
             this.txtReTeUsername.Name = "txtReTeUsername";
             this.txtReTeUsername.Size = new System.Drawing.Size(140, 22);
-            this.txtReTeUsername.TabIndex = 48;
-            this.txtReTeUsername.TextChanged += new System.EventHandler(this.txtReTeUsername_TextChanged);
+            this.txtReTeUsername.TabIndex = 63;
             // 
             // txtReTeAddress
             // 
-            this.txtReTeAddress.Location = new System.Drawing.Point(434, 182);
+            this.txtReTeAddress.Location = new System.Drawing.Point(328, 123);
             this.txtReTeAddress.Name = "txtReTeAddress";
             this.txtReTeAddress.Size = new System.Drawing.Size(140, 22);
-            this.txtReTeAddress.TabIndex = 47;
+            this.txtReTeAddress.TabIndex = 62;
             // 
             // txtReTePhone
             // 
-            this.txtReTePhone.Location = new System.Drawing.Point(434, 155);
+            this.txtReTePhone.Location = new System.Drawing.Point(328, 96);
             this.txtReTePhone.Name = "txtReTePhone";
             this.txtReTePhone.Size = new System.Drawing.Size(140, 22);
-            this.txtReTePhone.TabIndex = 46;
+            this.txtReTePhone.TabIndex = 61;
             // 
             // txtReTeEmail
             // 
-            this.txtReTeEmail.Location = new System.Drawing.Point(434, 128);
+            this.txtReTeEmail.Location = new System.Drawing.Point(328, 69);
             this.txtReTeEmail.Name = "txtReTeEmail";
             this.txtReTeEmail.Size = new System.Drawing.Size(140, 22);
-            this.txtReTeEmail.TabIndex = 45;
+            this.txtReTeEmail.TabIndex = 60;
             // 
             // txtReTeName
             // 
-            this.txtReTeName.Location = new System.Drawing.Point(434, 101);
+            this.txtReTeName.Location = new System.Drawing.Point(328, 42);
             this.txtReTeName.Name = "txtReTeName";
             this.txtReTeName.Size = new System.Drawing.Size(140, 22);
-            this.txtReTeName.TabIndex = 44;
+            this.txtReTeName.TabIndex = 59;
             // 
             // RegisterTeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnReTeRegister);
-            this.Controls.Add(this.txtReTeConfirmPassword);
-            this.Controls.Add(this.lblReTeConfirmPassword);
-            this.Controls.Add(this.lblReTePassword);
-            this.Controls.Add(this.lblReTeUserName);
-            this.Controls.Add(this.lblReTeAddress);
-            this.Controls.Add(this.lblReTePhone);
-            this.Controls.Add(this.lblReTeEmail);
-            this.Controls.Add(this.lblReTeName);
-            this.Controls.Add(this.txtReTePassword);
-            this.Controls.Add(this.txtReTeUsername);
-            this.Controls.Add(this.txtReTeAddress);
-            this.Controls.Add(this.txtReTePhone);
-            this.Controls.Add(this.txtReTeEmail);
-            this.Controls.Add(this.txtReTeName);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "RegisterTeacherForm";
@@ -279,8 +288,9 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibReStPicture)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -292,6 +302,7 @@
         private System.Windows.Forms.PictureBox pibReStPicture;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblReTeWelcome;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnReTeRegister;
         private System.Windows.Forms.TextBox txtReTeConfirmPassword;
         private System.Windows.Forms.Label lblReTeConfirmPassword;

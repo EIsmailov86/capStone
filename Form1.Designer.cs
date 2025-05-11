@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.btnRegisterTeacher = new System.Windows.Forms.Button();
-            this.btnRegisterStudent = new System.Windows.Forms.Button();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRegisterTeacher = new System.Windows.Forms.Button();
+            this.btnRegisterStudent = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -46,47 +45,8 @@
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnRegisterTeacher
-            // 
-            this.btnRegisterTeacher.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnRegisterTeacher.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterTeacher.Location = new System.Drawing.Point(569, 393);
-            this.btnRegisterTeacher.Name = "btnRegisterTeacher";
-            this.btnRegisterTeacher.Size = new System.Drawing.Size(156, 41);
-            this.btnRegisterTeacher.TabIndex = 19;
-            this.btnRegisterTeacher.Text = "Register Teacher";
-            this.btnRegisterTeacher.UseVisualStyleBackColor = false;
-            this.btnRegisterTeacher.Click += new System.EventHandler(this.btnRegisterTeacher_Click);
-            // 
-            // btnRegisterStudent
-            // 
-            this.btnRegisterStudent.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnRegisterStudent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterStudent.Location = new System.Drawing.Point(366, 393);
-            this.btnRegisterStudent.Name = "btnRegisterStudent";
-            this.btnRegisterStudent.Size = new System.Drawing.Size(156, 41);
-            this.btnRegisterStudent.TabIndex = 18;
-            this.btnRegisterStudent.Text = "Register Student";
-            this.btnRegisterStudent.UseVisualStyleBackColor = false;
-            this.btnRegisterStudent.Click += new System.EventHandler(this.btnRegisterStudent_Click);
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel15.Location = new System.Drawing.Point(149, 37);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(821, 52);
-            this.panel15.TabIndex = 16;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.panel12.Location = new System.Drawing.Point(319, 524);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(398, 100);
-            this.panel12.TabIndex = 11;
             // 
             // panel2
             // 
@@ -138,51 +98,87 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.btnRegisterTeacher);
+            this.groupBox1.Controls.Add(this.btnRegisterStudent);
+            this.groupBox1.Controls.Add(this.txtPassword);
+            this.groupBox1.Controls.Add(this.txtUserName);
+            this.groupBox1.Controls.Add(this.btnLogin);
+            this.groupBox1.Controls.Add(this.lblPassword);
+            this.groupBox1.Controls.Add(this.lblUserName);
+            this.groupBox1.Location = new System.Drawing.Point(248, 139);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(580, 314);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            // 
+            // btnRegisterTeacher
+            // 
+            this.btnRegisterTeacher.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRegisterTeacher.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterTeacher.Location = new System.Drawing.Point(316, 244);
+            this.btnRegisterTeacher.Name = "btnRegisterTeacher";
+            this.btnRegisterTeacher.Size = new System.Drawing.Size(156, 59);
+            this.btnRegisterTeacher.TabIndex = 26;
+            this.btnRegisterTeacher.Text = "Register Teacher";
+            this.btnRegisterTeacher.UseVisualStyleBackColor = false;
+            // 
+            // btnRegisterStudent
+            // 
+            this.btnRegisterStudent.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRegisterStudent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterStudent.Location = new System.Drawing.Point(113, 244);
+            this.btnRegisterStudent.Name = "btnRegisterStudent";
+            this.btnRegisterStudent.Size = new System.Drawing.Size(156, 59);
+            this.btnRegisterStudent.TabIndex = 25;
+            this.btnRegisterStudent.Text = "Register Student";
+            this.btnRegisterStudent.UseVisualStyleBackColor = false;
+            // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(569, 243);
+            this.txtPassword.Location = new System.Drawing.Point(316, 94);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(140, 22);
-            this.txtPassword.TabIndex = 1;
-            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
+            this.txtPassword.TabIndex = 22;
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(569, 162);
+            this.txtUserName.Location = new System.Drawing.Point(316, 13);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(140, 22);
-            this.txtUserName.TabIndex = 0;
+            this.txtUserName.TabIndex = 20;
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(455, 310);
+            this.btnLogin.Location = new System.Drawing.Point(213, 157);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(156, 41);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Size = new System.Drawing.Size(156, 59);
+            this.btnLogin.TabIndex = 24;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(362, 242);
+            this.lblPassword.Location = new System.Drawing.Point(109, 93);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(88, 22);
-            this.lblPassword.TabIndex = 1;
+            this.lblPassword.TabIndex = 23;
             this.lblPassword.Text = "Password";
             // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(362, 161);
+            this.lblUserName.Location = new System.Drawing.Point(109, 12);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(98, 22);
-            this.lblUserName.TabIndex = 0;
+            this.lblUserName.TabIndex = 21;
             this.lblUserName.Text = "User Name";
             // 
             // LoginForm
@@ -190,17 +186,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 653);
-            this.Controls.Add(this.btnRegisterTeacher);
-            this.Controls.Add(this.btnRegisterStudent);
-            this.Controls.Add(this.panel15);
-            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblUserName);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -208,27 +196,26 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblUserName;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txtUserName;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Button btnRegisterStudent;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnRegisterTeacher;
+        private System.Windows.Forms.Button btnRegisterStudent;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblUserName;
     }
 }
 
