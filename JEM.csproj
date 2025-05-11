@@ -130,6 +130,7 @@
     <Compile Include="RegisterTeacherForm.Designer.cs">
       <DependentUpon>RegisterTeacherForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResetPassword.cs" />
     <Compile Include="SecurityHelper.cs" />
     <Compile Include="Session.cs" />
     <Compile Include="Student.cs" />

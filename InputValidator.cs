@@ -79,6 +79,15 @@ namespace JEM
             // return Regex.IsMatch(password, @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{3,}$");
             return true;
         }
+
+        public static bool IsValidPasswordRequirement(string password)
+        {
+            // at least 6 chars, and only letters, digits, or underscore
+            if (string.IsNullOrEmpty(password) || password.Length < 6)
+                return false;
+
+            return Regex.IsMatch(password, @"^[A-Za-z0-9_]+$");
+        }
     }
 }
 

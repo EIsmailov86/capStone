@@ -41,6 +41,7 @@
             this.lblTeStWelcome = new System.Windows.Forms.Label();
             this.lbsTeStStudents = new System.Windows.Forms.ListBox();
             this.grbStudentInfo = new System.Windows.Forms.GroupBox();
+            this.btnTeStResetPassword = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txbMessageHeader = new System.Windows.Forms.TextBox();
@@ -229,6 +230,7 @@
             // 
             this.grbStudentInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbStudentInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.grbStudentInfo.Controls.Add(this.btnTeStResetPassword);
             this.grbStudentInfo.Controls.Add(this.label3);
             this.grbStudentInfo.Controls.Add(this.label2);
             this.grbStudentInfo.Controls.Add(this.txbMessageHeader);
@@ -258,12 +260,22 @@
             this.grbStudentInfo.Controls.Add(this.txbTeStEmail);
             this.grbStudentInfo.Controls.Add(this.txbTeStName);
             this.grbStudentInfo.Controls.Add(this.lbsTeStStudents);
-            this.grbStudentInfo.Location = new System.Drawing.Point(171, 71);
+            this.grbStudentInfo.Location = new System.Drawing.Point(171, 72);
             this.grbStudentInfo.Name = "grbStudentInfo";
             this.grbStudentInfo.Size = new System.Drawing.Size(751, 559);
             this.grbStudentInfo.TabIndex = 6;
             this.grbStudentInfo.TabStop = false;
             this.grbStudentInfo.Text = "Student Info";
+            // 
+            // btnTeStResetPassword
+            // 
+            this.btnTeStResetPassword.Location = new System.Drawing.Point(37, 530);
+            this.btnTeStResetPassword.Name = "btnTeStResetPassword";
+            this.btnTeStResetPassword.Size = new System.Drawing.Size(210, 23);
+            this.btnTeStResetPassword.TabIndex = 45;
+            this.btnTeStResetPassword.Text = "Reset Student\'s Password";
+            this.btnTeStResetPassword.UseVisualStyleBackColor = true;
+            this.btnTeStResetPassword.Click += new System.EventHandler(this.btnTeStResetPassword_Click);
             // 
             // label3
             // 
@@ -339,7 +351,7 @@
             // 
             this.btnTeStDeleteStudent.Image = global::JEM.Properties.Resources.smallDelete_trash;
             this.btnTeStDeleteStudent.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStDeleteStudent.Location = new System.Drawing.Point(174, 459);
+            this.btnTeStDeleteStudent.Location = new System.Drawing.Point(174, 437);
             this.btnTeStDeleteStudent.Name = "btnTeStDeleteStudent";
             this.btnTeStDeleteStudent.Size = new System.Drawing.Size(73, 67);
             this.btnTeStDeleteStudent.TabIndex = 12;
@@ -358,7 +370,7 @@
             this.btnTeStCreateStudent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTeStCreateStudent.Image = global::JEM.Properties.Resources.smallcreateUser;
             this.btnTeStCreateStudent.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStCreateStudent.Location = new System.Drawing.Point(37, 349);
+            this.btnTeStCreateStudent.Location = new System.Drawing.Point(37, 351);
             this.btnTeStCreateStudent.Name = "btnTeStCreateStudent";
             this.btnTeStCreateStudent.Size = new System.Drawing.Size(73, 67);
             this.btnTeStCreateStudent.TabIndex = 9;
@@ -403,7 +415,7 @@
             // 
             this.btnTeStClear.Image = global::JEM.Properties.Resources.smallClearPic;
             this.btnTeStClear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStClear.Location = new System.Drawing.Point(37, 459);
+            this.btnTeStClear.Location = new System.Drawing.Point(37, 437);
             this.btnTeStClear.Name = "btnTeStClear";
             this.btnTeStClear.Size = new System.Drawing.Size(73, 67);
             this.btnTeStClear.TabIndex = 11;
@@ -418,7 +430,7 @@
             // 
             this.btnTeStUpdateStudent.Image = global::JEM.Properties.Resources.xxx38pxUpdate;
             this.btnTeStUpdateStudent.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStUpdateStudent.Location = new System.Drawing.Point(174, 349);
+            this.btnTeStUpdateStudent.Location = new System.Drawing.Point(174, 351);
             this.btnTeStUpdateStudent.Name = "btnTeStUpdateStudent";
             this.btnTeStUpdateStudent.Size = new System.Drawing.Size(73, 67);
             this.btnTeStUpdateStudent.TabIndex = 10;
@@ -599,5 +611,6 @@
         private System.Windows.Forms.TextBox txbMessageBody;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnTeStResetPassword;
     }
 }

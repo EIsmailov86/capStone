@@ -3,6 +3,7 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace JEM
 {
@@ -303,7 +304,10 @@ namespace JEM
                 cmd.Parameters.AddWithValue("@Bio", string.IsNullOrWhiteSpace(txbTeStTeStBio.Text) ? "" : txbTeStTeStBio.Text.Trim());
                 cmd.Parameters.AddWithValue("@TotalBudget", startingBalance);
                 cmd.Parameters.AddWithValue("@UserName", txbTeStEmail.Text.Trim());
-                cmd.Parameters.AddWithValue("@Password", "12345");
+                // hash the default password before inserting
+                string initialPlain = "12345";
+                string initialHash = SecurityHelper.HashPassword(initialPlain);
+                cmd.Parameters.AddWithValue("@Password", initialHash);
                 cmd.Parameters.AddWithValue("@ClassId", 1);
 
                 try
@@ -588,5 +592,74 @@ namespace JEM
             }
         }
         #endregion
+
+        #region btnResetPassword
+        private void btnTeStResetPassword_Click(object sender, EventArgs e)
+        {
+            if (!(lbsTeStStudents.SelectedItem is ListBoxItem selectedStudent))
+            {
+                MessageBox.Show(
+                    "Please select a student to reset the password for.",
+                    "No Student Selected",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            const string defaultPwd = "123456";
+            string tempPwd = Prompt.ShowDialog(
+                $"Enter a new temporary password for {selectedStudent.Display}:",
+                "Reset Student Password",
+                defaultPwd
+            ).Trim();
+
+            // 2) allow cancel
+            if (string.IsNullOrEmpty(tempPwd))
+                return;
+
+            //validate InputValidator
+            if (!InputValidator.IsValidPasswordRequirement(tempPwd))
+            {
+                MessageBox.Show(
+                    "Passwords must be at least 6 characters long AND no symbols.",
+                    "Invalid Password",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            //hash & update
+            string hashed = SecurityHelper.HashPassword(tempPwd);
+            using (var conn = ConnectToDb())
+            using (var cmd = new MySqlCommand(
+                "UPDATE student SET Password = @Password WHERE Id = @Id", conn))
+            {
+                cmd.Parameters.AddWithValue("@Password", hashed);
+                cmd.Parameters.AddWithValue("@Id", selectedStudent.Id);
+                if (cmd.ExecuteNonQuery() == 0)
+                {
+                    MessageBox.Show(
+                        "Failed to reset password. Please try again.",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                    return;
+                }
+            }
+
+            MessageBox.Show(
+                $"Password for {selectedStudent.Display} has been reset to:\n\n    {tempPwd}\n\n" +
+                "Make sure the student changes it on their first login.",
+                "Password Reset",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+        #endregion
+
+
     }
 }
