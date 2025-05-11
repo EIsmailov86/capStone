@@ -327,6 +327,11 @@ namespace JEM
                 MessageBox.Show("Please enter a valid numeric cost.");
                 return;
             }
+            if (newCost < 0)
+            {
+                MessageBox.Show("Cost cannot be negative.", "Invalid Cost", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             DataGridViewRow selectedRow = dgvTeShSchedule.SelectedRows[0];
             int sessionId = Convert.ToInt32(selectedRow.Cells[0].Value);

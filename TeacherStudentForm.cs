@@ -482,76 +482,80 @@ namespace JEM
         #region btnUpdateBalance
         private void btnTeStUpdateBalance_Click(object sender, EventArgs e)
         {
-            if (lbsTeStStudents.SelectedItem is ListBoxItem selectedItem)
+            if (!(lbsTeStStudents.SelectedItem is ListBoxItem selectedItem))
             {
-                int studentId = selectedItem.Id;
-                decimal newBudget;
+                MessageBox.Show("Please select a student.");
+                return;
+            }
 
-                if (decimal.TryParse(txbTeStStartingBalance.Text.Trim(), out newBudget))
+            int studentId = selectedItem.Id;
+
+            if (!decimal.TryParse(txbTeStStartingBalance.Text.Trim(), out decimal deposit))
+            {
+                MessageBox.Show("Please enter a valid number for the amount to add.");
+                return;
+            }
+
+            using (var conn = ConnectToDb())
+            {
+                // 1) add the deposit to their TotalBudget
+                using (var cmd = new MySqlCommand(
+                    @"UPDATE student 
+                 SET TotalBudget = TotalBudget + @Deposit 
+               WHERE Id = @StudentId", conn))
                 {
-                    using (MySqlConnection conn = ConnectToDb())
+                    cmd.Parameters.AddWithValue("@Deposit", deposit);
+                    cmd.Parameters.AddWithValue("@StudentId", studentId);
+                    int rows = cmd.ExecuteNonQuery();
+                    if (rows == 0)
                     {
-                        // 1) Update TotalBudget in the database
-                        string updateQuery = "UPDATE student SET TotalBudget = @TotalBudget WHERE Id = @StudentId";
-                        MySqlCommand cmd = new MySqlCommand(updateQuery, conn);
-                        cmd.Parameters.AddWithValue("@TotalBudget", newBudget);
-                        cmd.Parameters.AddWithValue("@StudentId", studentId);
-
-                        int rows = cmd.ExecuteNonQuery();
-                        if (rows > 0)
-                        {
-                            MessageBox.Show("Balance updated successfully!");
-
-                            // refresh TeacherDashboard if open
-                            if (Application.OpenForms["TeacherDashboard"] is TeacherDashboard dashboardForm)
-                                dashboardForm.InitializeTeacherSchedule();
-
-                            // 2) Re‐compute remaining balance
-                            decimal spent = 0m;
-                            string sumQuery = "SELECT IFNULL(SUM(Cost),0) FROM session WHERE StudentId = @StudentId";
-                            MySqlCommand sumCmd = new MySqlCommand(sumQuery, conn);
-                            sumCmd.Parameters.AddWithValue("@StudentId", studentId);
-                            spent = Convert.ToDecimal(sumCmd.ExecuteScalar());
-
-                            decimal remaining = newBudget - spent;
-                            lblTeStRemainingBalance.Text = $"${remaining:0.00}";
-
-                            // 3) Update progress bar
-                            if (newBudget > 0)
-                            {
-                                int pct = (int)((remaining / newBudget) * 100);
-                                pgbTeStBalance.Value = Math.Max(0, Math.Min(100, pct));
-                            }
-                            else
-                            {
-                                pgbTeStBalance.Value = 0;
-                            }
-
-                            // 4) Color‐code if overdue
-                            if (remaining < 0)
-                            {
-                                lblTeStRemainingBalance.ForeColor = Color.Red;
-                                pgbTeStBalance.ForeColor = Color.Red;
-                                pgbTeStBalance.BackColor = Color.Red;
-                            }
-                            else
-                            {
-                                lblTeStRemainingBalance.ForeColor = Color.Black;
-                                pgbTeStBalance.ForeColor = Color.Green;
-                                pgbTeStBalance.BackColor = SystemColors.Control;
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Failed to update balance. Please try again.");
-                        }
+                        MessageBox.Show("Failed to update balance. Please try again.");
+                        return;
                     }
                 }
-                else
+
+                // 2) fetch the new TotalBudget and total spent
+                decimal newTotalBudget, totalSpent;
+                using (var cmd2 = new MySqlCommand(
+                    @"
+            SELECT 
+              TotalBudget,
+              IFNULL((SELECT SUM(Cost) FROM session WHERE StudentId = @Id), 0) AS TotalSpent
+            FROM student
+            WHERE Id = @Id", conn))
                 {
-                    MessageBox.Show("Please enter a valid number for the new balance.");
+                    cmd2.Parameters.AddWithValue("@Id", studentId);
+                    using (var reader = cmd2.ExecuteReader())
+                    {
+                        if (!reader.Read())
+                        {
+                            MessageBox.Show("Failed to refresh balance data.");
+                            return;
+                        }
+                        newTotalBudget = Convert.ToDecimal(reader["TotalBudget"]);
+                        totalSpent = Convert.ToDecimal(reader["TotalSpent"]);
+                    }
                 }
+
+                // 3) compute remaining
+                decimal remaining = newTotalBudget - totalSpent;
+
+                // 4) update the UI
+                lblTeStRemainingBalance.Text = $"${remaining:0.00}";
+                int pct = newTotalBudget > 0
+                    ? (int)((remaining / newTotalBudget) * 100)
+                    : 0;
+                pgbTeStBalance.Value = Math.Max(0, Math.Min(100, pct));
+
+                MessageBox.Show("Balance updated successfully!");
+
+                // 5) refresh TeacherDashboard if it’s open
+                if (Application.OpenForms["TeacherDashboard"] is TeacherDashboard dash)
+                    dash.InitializeTeacherSchedule();
             }
+
+            // clear the deposit box
+            txbTeStStartingBalance.Clear();
         }
 
         #endregion
