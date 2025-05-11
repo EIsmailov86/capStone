@@ -3,6 +3,7 @@ using MySqlX.XDevAPI;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace JEM
@@ -38,6 +39,7 @@ namespace JEM
             //btnStDaFilterBySubject.Click += btnStDaFilterBySubject_Click;
 
             LoadTeacher();
+            LoadStudentPicture();
         }
 
         #region RefreshStudentBudget
@@ -616,6 +618,22 @@ namespace JEM
             if (cmbStDaTeacher.SelectedIndex > -1)
             {
                 FilterTakenTimeSlots();
+            }
+
+        }
+
+        private void LoadStudentPicture()
+        {
+            if (loggedInStudent.ImageStudent != null)
+            {
+                using (MemoryStream ms = new MemoryStream(loggedInStudent.ImageStudent))
+                {
+                    pibStDaStudentPicture.Image = Image.FromStream(ms);
+                }
+            }
+            else
+            {
+                pibStDaStudentPicture.Image = null;
             }
 
         }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using System.IO;
 
 namespace JEM
 {
@@ -11,6 +13,7 @@ namespace JEM
             InitializeComponent();
             loggedInStudent = student;
             lblStExWelcome.Text = $"Welcome, {loggedInStudent.Name}!";
+            LoadStudentPhoto();
         }
 
         #region Nav Buttons
@@ -46,5 +49,24 @@ namespace JEM
             this.Close();
         }
         #endregion
+
+        private void LoadStudentPhoto()
+        {
+            if (loggedInStudent.ImageStudent != null)
+            {
+                using (MemoryStream ms = new MemoryStream(loggedInStudent.ImageStudent))
+                {
+                    pibStExStudentPicture.Image = Image.FromStream(ms);
+                }
+            }
+            else
+            {
+                pibStExStudentPicture.Image = null;
+            }
+        }
+
+        
+
+
     }
 }

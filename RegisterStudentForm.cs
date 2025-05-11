@@ -18,10 +18,9 @@ namespace JEM
         {
             InitializeComponent();
         }
-
+        #region btnRegister
         private void btnReStRegister_Click(object sender, EventArgs e)
         {
-            // 1) Pull & trim inputs
             string name = txtReStName.Text.Trim();
             string email = txtReStEmail.Text.Trim();
             string phone = txtReStPhone.Text.Trim();
@@ -29,8 +28,7 @@ namespace JEM
             string userName = txtReStUsername.Text.Trim();
             string password = txtReStPassword.Text;
             string confirmPass = txtReStConfirmPassword.Text;
-
-            // 2) Validate each field
+            #region Validate Input
             if (!InputValidator.IsValidName(name))
             {
                 MessageBox.Show("Please enter a valid name (letters, spaces, hyphens).");
@@ -48,7 +46,7 @@ namespace JEM
             }
             if (!InputValidator.IsValidAddress(address))
             {
-                MessageBox.Show("Please enter a valid address (max 200 chars).");
+                MessageBox.Show("Please enter a valid address (max 100 characters).");
                 return;
             }
             if (!InputValidator.IsValidUserName(userName))
@@ -58,7 +56,7 @@ namespace JEM
             }
             if (!InputValidator.IsValidPassword(password))
             {
-                MessageBox.Show("Passwords must be at least 6 characters long.");
+                MessageBox.Show("Passwords must be at least 3 characters long.");
                 return;
             }
             if (password != confirmPass)
@@ -66,15 +64,17 @@ namespace JEM
                 MessageBox.Show("Passwords do not match!");
                 return;
             }
+            #endregion
 
-            // 3) Everything’s valid—now proceed with hashing, duplicate‐checks, INSERT…
+            #region Duplicate Check
+            //hashing, duplicate‐checks, INSERT…
             string hashedPassword = SecurityHelper.HashPassword(password);
 
             using (var dbConnection = ConnectToDb())
             {
                 try
                 {
-                    // Duplicate‐username check in student table
+                    //student check
                     using (var checkUser = new MySqlCommand(
                         "SELECT COUNT(*) FROM student WHERE UserName = @UserName", dbConnection))
                     {
@@ -90,7 +90,7 @@ namespace JEM
                         }
                     }
 
-                    // Duplicate‐username check in teacher table
+                    //teacher check
                     using (var checkTeacher = new MySqlCommand(
                         "SELECT COUNT(*) FROM teacher WHERE UserName = @UserName", dbConnection))
                     {
@@ -106,7 +106,7 @@ namespace JEM
                         }
                     }
 
-                    // Duplicate‐email check in student table
+                    //email check
                     using (var checkEmail = new MySqlCommand(
                         "SELECT COUNT(*) FROM student WHERE Email = @Email", dbConnection))
                     {
@@ -122,7 +122,10 @@ namespace JEM
                         }
                     }
 
-                    // INSERT new student
+                    #endregion
+
+                    #region INSERT
+                    //INSERT new student
                     string insertQuery = @"
                         INSERT INTO student
                           (Name, Email, Phone, Address, UserName, Password, GradeId, ClassId, Bio, TotalBudget, SubjectName)
@@ -150,7 +153,10 @@ namespace JEM
                 }
             }
         }
+        #endregion
+        #endregion
 
+        #region DB Connection
         public MySqlConnection ConnectToDb()
         {
             // testing connections to the remote server
@@ -168,7 +174,7 @@ namespace JEM
             dbConnection.Open();
             return dbConnection;
         }
-
+        #endregion
         private void txtReStPassword_TextChanged(object sender, EventArgs e)
         {
             // no-op

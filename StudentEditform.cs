@@ -19,6 +19,7 @@ namespace JEM
             cmbGrade.DataSource = gradeArray;
             IntializeStudentInfo();
             LoadStudentPicture();
+            LoadStudentPhoto();
 
         }
         #region Nav Buttons
@@ -254,6 +255,22 @@ namespace JEM
                 }
             }
         }
+
+        private void LoadStudentPhoto()
+        {
+            if (loggedInStudent.ImageStudent != null)
+            {
+                using (MemoryStream ms = new MemoryStream(loggedInStudent.ImageStudent))
+                {
+                    pibStEdStudentPicture.Image = Image.FromStream(ms);
+                }
+            }
+            else
+            {
+                pibStEdStudentPicture.Image = null;
+            }
+        }
         #endregion
+
     }
 }

@@ -1,5 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -16,6 +18,7 @@ namespace JEM
             lblStNoWelcome.Text = $"Welcome, {loggedInStudent.Name}!";
 
             InitializeNotifications();
+            LoadStudentPhoto();
         }
 
         #region Nav Buttons
@@ -142,5 +145,20 @@ namespace JEM
         }
 
         #endregion
+
+        private void LoadStudentPhoto()
+        {
+            if (loggedInStudent.ImageStudent != null)
+            {
+                using (MemoryStream ms = new MemoryStream(loggedInStudent.ImageStudent))
+                {
+                    pibStNoStudentPIcture.Image = Image.FromStream(ms);
+                }
+            }
+            else
+            {
+                pibStNoStudentPIcture.Image = null;
+            }
+        }
     }
 }

@@ -22,6 +22,7 @@ namespace JEM
             LoadTeachersForStudent();
 
             LoadBio();
+            LoadStudentPicture();
         }
 
         #region Nav Buttons
@@ -189,6 +190,22 @@ namespace JEM
             {
                 Teacher selectedTeacher = cmbTeacher.SelectedItem as Teacher;
                 txbStTeInfoandBio.Text = selectedTeacher.Bio;
+            }
+
+        }
+
+        private void LoadStudentPicture()
+        {
+            if (loggedInStudent.ImageStudent != null)
+            {
+                using (MemoryStream ms = new MemoryStream(loggedInStudent.ImageStudent))
+                {
+                    pibStTeStudentPicture.Image = Image.FromStream(ms);
+                }
+            }
+            else
+            {
+                pibStTeStudentPicture.Image = null;
             }
 
         }

@@ -36,7 +36,7 @@
             this.btnSTDashboard = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pibStTeStudentPicture = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblStTeWelcome = new System.Windows.Forms.Label();
             this.grbTeacherInfo = new System.Windows.Forms.GroupBox();
@@ -48,7 +48,7 @@
             this.cmbTeacher = new System.Windows.Forms.ComboBox();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibStTeStudentPicture)).BeginInit();
             this.panel2.SuspendLayout();
             this.grbTeacherInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picStTeTeacherPicture)).BeginInit();
@@ -143,7 +143,7 @@
             // pnlLogo
             // 
             this.pnlLogo.Controls.Add(this.label1);
-            this.pnlLogo.Controls.Add(this.pictureBox1);
+            this.pnlLogo.Controls.Add(this.pibStTeStudentPicture);
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
@@ -161,15 +161,15 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "JEM";
             // 
-            // pictureBox1
+            // pibStTeStudentPicture
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pibStTeStudentPicture.Image = ((System.Drawing.Image)(resources.GetObject("pibStTeStudentPicture.Image")));
+            this.pibStTeStudentPicture.Location = new System.Drawing.Point(32, 19);
+            this.pibStTeStudentPicture.Name = "pibStTeStudentPicture";
+            this.pibStTeStudentPicture.Size = new System.Drawing.Size(63, 63);
+            this.pibStTeStudentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibStTeStudentPicture.TabIndex = 2;
+            this.pibStTeStudentPicture.TabStop = false;
             // 
             // panel2
             // 
@@ -252,6 +252,7 @@
             this.txbStTeInfoandBio.Location = new System.Drawing.Point(38, 103);
             this.txbStTeInfoandBio.Multiline = true;
             this.txbStTeInfoandBio.Name = "txbStTeInfoandBio";
+            this.txbStTeInfoandBio.ReadOnly = true;
             this.txbStTeInfoandBio.Size = new System.Drawing.Size(201, 338);
             this.txbStTeInfoandBio.TabIndex = 5;
             this.txbStTeInfoandBio.Text = "Teacher\'s Info and Bio";
@@ -280,7 +281,7 @@
             this.pnlMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibStTeStudentPicture)).EndInit();
             this.panel2.ResumeLayout(false);
             this.grbTeacherInfo.ResumeLayout(false);
             this.grbTeacherInfo.PerformLayout();
@@ -295,7 +296,7 @@
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pibStTeStudentPicture;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox grbTeacherInfo;
         private System.Windows.Forms.ComboBox cmbTeacher;

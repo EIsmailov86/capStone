@@ -37,7 +37,7 @@
             this.btnStNoMyTeacher = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pibStNoStudentPIcture = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnMyTeacher = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             this.panel2.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibStNoStudentPIcture)).BeginInit();
             this.panel1.SuspendLayout();
             this.grbNotifications.SuspendLayout();
             this.SuspendLayout();
@@ -157,7 +157,7 @@
             // pnlLogo
             // 
             this.pnlLogo.Controls.Add(this.label2);
-            this.pnlLogo.Controls.Add(this.pictureBox2);
+            this.pnlLogo.Controls.Add(this.pibStNoStudentPIcture);
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
@@ -175,15 +175,15 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "JEM";
             // 
-            // pictureBox2
+            // pibStNoStudentPIcture
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(32, 19);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.pibStNoStudentPIcture.Image = ((System.Drawing.Image)(resources.GetObject("pibStNoStudentPIcture.Image")));
+            this.pibStNoStudentPIcture.Location = new System.Drawing.Point(32, 19);
+            this.pibStNoStudentPIcture.Name = "pibStNoStudentPIcture";
+            this.pibStNoStudentPIcture.Size = new System.Drawing.Size(63, 63);
+            this.pibStNoStudentPIcture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibStNoStudentPIcture.TabIndex = 2;
+            this.pibStNoStudentPIcture.TabStop = false;
             // 
             // btnDashboard
             // 
@@ -288,7 +288,7 @@
             this.pnlMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibStNoStudentPIcture)).EndInit();
             this.panel1.ResumeLayout(false);
             this.grbNotifications.ResumeLayout(false);
             this.grbNotifications.PerformLayout();
@@ -305,7 +305,7 @@
         private System.Windows.Forms.Button btnStNoMyTeacher;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pibStNoStudentPIcture;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Button btnMyTeacher;
