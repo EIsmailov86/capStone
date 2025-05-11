@@ -123,33 +123,36 @@ namespace JEM
         #region ComboBox_SelectedTe
         private void cmbTeacher_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedTeacher = cmbTeacher.SelectedItem?.ToString();
-
-            //show image
-            if (!string.IsNullOrEmpty(selectedTeacher) && teacherImages.ContainsKey(selectedTeacher))
+            // 1) cast to your Teacher model
+            if (!(cmbTeacher.SelectedItem is Teacher selectedTeacher))
             {
-                using (var ms = new MemoryStream(teacherImages[selectedTeacher]))
-                {
+                picStTeTeacherPicture.Image = null;
+                txbStTeInfoandBio.Text = "No bio available.";
+                return;
+            }
+
+            // 2) lookup by Name in your image dictionary
+            if (teacherImages.TryGetValue(selectedTeacher.Name, out var imageBytes))
+            {
+                using (var ms = new MemoryStream(imageBytes))
                     picStTeTeacherPicture.Image = Image.FromStream(ms);
-                }
             }
             else
             {
                 picStTeTeacherPicture.Image = null;
             }
 
-            //show bio
-            if (!string.IsNullOrEmpty(selectedTeacher) && teacherBios.ContainsKey(selectedTeacher))
-            {
-                txbStTeInfoandBio.Text = teacherBios[selectedTeacher];
-            }
-            else
-            {
-                txbStTeInfoandBio.Text = "No bio available.";
-            }
+            // 3) you already have the bio on the object, or fallback to dictionary
+            txbStTeInfoandBio.Text =
+                !string.IsNullOrEmpty(selectedTeacher.Bio)
+                ? selectedTeacher.Bio
+                : (teacherBios.TryGetValue(selectedTeacher.Name, out var bioDict)
+                   ? bioDict
+                   : "No bio available.");
 
-            LoadBio();
+            // no need to call LoadBio here anymore
         }
+
         #endregion
 
         #region Notifications

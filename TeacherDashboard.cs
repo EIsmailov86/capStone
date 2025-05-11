@@ -64,15 +64,20 @@ namespace JEM
                 su.SubjectName, 
                 se.SessionDate, 
                 se.Timeslot, 
-                te.Name AS TeacherName, 
-                st.Name AS StudentName, 
+                te.Name       AS TeacherName, 
+                st.Name       AS StudentName, 
                 gr.GradeYear, 
-                se.Cost,
-                st.TotalBudget
+                se.Cost, 
+                st.TotalBudget,
+                (st.TotalBudget 
+                   - IFNULL((SELECT SUM(Cost) 
+                                FROM session 
+                               WHERE StudentId = st.Id), 0)
+                )             AS RemainingBalance
             FROM session AS se
-            LEFT JOIN subject AS su ON se.SubjectId = su.SubjectId
-            LEFT JOIN teacher AS te ON se.TeacherId = te.Id
-            LEFT JOIN student AS st ON se.StudentId = st.Id
+            LEFT JOIN subject  AS su ON se.SubjectId = su.SubjectId
+            LEFT JOIN teacher  AS te ON se.TeacherId = te.Id
+            LEFT JOIN student  AS st ON se.StudentId = st.Id
             LEFT JOIN gradeyear AS gr ON st.GradeId = gr.GradeId
             WHERE se.TeacherId = @TeacherId";
 
@@ -87,29 +92,25 @@ namespace JEM
                     {
                         int sessionId = Convert.ToInt32(reader["SessionId"]);
                         string subjectName = reader["SubjectName"].ToString();
-                        DateTime sessionDate = Convert.ToDateTime(reader["SessionDate"]);
+                        string dateString = Convert.ToDateTime(reader["SessionDate"]).ToShortDateString();
                         string timeSlot = reader["Timeslot"].ToString();
                         string studentName = reader["StudentName"].ToString();
                         string gradeYear = reader["GradeYear"].ToString();
                         decimal cost = Convert.ToDecimal(reader["Cost"]);
-                        decimal totalBudget = Convert.ToDecimal(reader["TotalBudget"]);
-
-                        //remaining balance
-                        decimal remainingBalance = totalBudget - cost;
+                        decimal remainingBal = Convert.ToDecimal(reader["RemainingBalance"]);
 
                         int rowIndex = dgvSchedule.Rows.Add(
                             sessionId,
                             subjectName,
-                            sessionDate.ToShortDateString(),
+                            dateString,
                             timeSlot,
                             studentName,
                             gradeYear,
                             cost,
-                            remainingBalance
+                            remainingBal
                         );
 
-                        //negative balance
-                        if (remainingBalance < 0)
+                        if (remainingBal < 0)
                         {
                             dgvSchedule.Rows[rowIndex].DefaultCellStyle.BackColor = Color.LightCoral;
                         }
@@ -117,6 +118,7 @@ namespace JEM
                 }
             }
         }
+
         #endregion
 
         #region InitTeScColumns
@@ -253,35 +255,59 @@ namespace JEM
 
             using (MySqlConnection conn = ConnectToDb())
             {
-                string query = @"SELECT se.SessionId, su.SubjectName, se.SessionDate, se.Timeslot,
-                                st.Name AS StudentName, gr.GradeYear, se.Cost
-                         FROM session se
-                         LEFT JOIN subject su ON se.SubjectId = su.SubjectId
-                         LEFT JOIN student st ON se.StudentId = st.Id
-                         LEFT JOIN gradeyear gr ON su.SubjectId = gr.GradeId
-                         WHERE se.TeacherId = @TeacherId AND DATE(se.SessionDate) = @SelectedDate";
+                string query = @"
+            SELECT 
+                se.SessionId,
+                su.SubjectName,
+                se.SessionDate,
+                se.Timeslot,
+                st.Name        AS StudentName,
+                gr.GradeYear,
+                se.Cost,
+                st.TotalBudget
+            FROM session se
+            LEFT JOIN subject su  ON se.SubjectId = su.SubjectId
+            LEFT JOIN student st  ON se.StudentId = st.Id
+            LEFT JOIN gradeyear gr ON st.GradeId = gr.GradeId
+            WHERE se.TeacherId = @TeacherId 
+              AND DATE(se.SessionDate) = @SelectedDate";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@TeacherId", loggedInTeacher.Id);
                 cmd.Parameters.AddWithValue("@SelectedDate", Convert.ToDateTime(selectedDate).ToString("yyyy-MM-dd"));
 
-                using (MySqlDataReader reader = cmd.ExecuteReader())
+                using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        dgvSchedule.Rows.Add(
-                            reader["SessionId"],
-                            reader["SubjectName"].ToString(),
-                            Convert.ToDateTime(reader["SessionDate"]).ToShortDateString(),
-                            reader["Timeslot"].ToString(),
-                            reader["StudentName"].ToString(),
-                            reader["GradeYear"].ToString(),
-                            reader["Cost"].ToString()
+                        int sessionId = reader.GetInt32("SessionId");
+                        string subjectName = reader.GetString("SubjectName");
+                        string dateString = reader.GetDateTime("SessionDate").ToShortDateString();
+                        string timeSlot = reader.GetString("Timeslot");
+                        string studentName = reader.GetString("StudentName");
+                        string gradeYear = reader.GetString("GradeYear");
+                        decimal cost = reader.GetDecimal("Cost");
+                        decimal totalBudget = reader.GetDecimal("TotalBudget");
+                        decimal remainingBudget = totalBudget - cost;
+
+                        int rowIndex = dgvSchedule.Rows.Add(
+                            sessionId,
+                            subjectName,
+                            dateString,
+                            timeSlot,
+                            studentName,
+                            gradeYear,
+                            cost,
+                            remainingBudget
                         );
+
+                        if (remainingBudget < 0)
+                            dgvSchedule.Rows[rowIndex].DefaultCellStyle.BackColor = Color.LightCoral;
                     }
                 }
             }
         }
+
         private void btnTeDaFilterbySubject_Click(object sender, EventArgs e)
         {
             if (cmbTeDaSubject.SelectedItem == null)
@@ -297,35 +323,59 @@ namespace JEM
 
             using (MySqlConnection conn = ConnectToDb())
             {
-                string query = @"SELECT se.SessionId, su.SubjectName, se.SessionDate, se.Timeslot,
-                                st.Name AS StudentName, gr.GradeYear, se.Cost
-                         FROM session se
-                         LEFT JOIN subject su ON se.SubjectId = su.SubjectId
-                         LEFT JOIN student st ON se.StudentId = st.Id
-                         LEFT JOIN gradeyear gr ON su.SubjectId = gr.GradeId
-                         WHERE se.TeacherId = @TeacherId AND su.SubjectName = @SubjectName";
+                string query = @"
+            SELECT 
+                se.SessionId,
+                su.SubjectName,
+                se.SessionDate,
+                se.Timeslot,
+                st.Name        AS StudentName,
+                gr.GradeYear,
+                se.Cost,
+                st.TotalBudget
+            FROM session se
+            LEFT JOIN subject su  ON se.SubjectId = su.SubjectId
+            LEFT JOIN student st  ON se.StudentId = st.Id
+            LEFT JOIN gradeyear gr ON st.GradeId = gr.GradeId
+            WHERE se.TeacherId = @TeacherId 
+              AND su.SubjectName = @SubjectName";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@TeacherId", loggedInTeacher.Id);
                 cmd.Parameters.AddWithValue("@SubjectName", selectedSubject);
 
-                using (MySqlDataReader reader = cmd.ExecuteReader())
+                using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        dgvSchedule.Rows.Add(
-                            reader["SessionId"],
-                            reader["SubjectName"].ToString(),
-                            Convert.ToDateTime(reader["SessionDate"]).ToShortDateString(),
-                            reader["Timeslot"].ToString(),
-                            reader["StudentName"].ToString(),
-                            reader["GradeYear"].ToString(),
-                            reader["Cost"].ToString()
+                        int sessionId = reader.GetInt32("SessionId");
+                        string subjectName = reader.GetString("SubjectName");
+                        string dateString = reader.GetDateTime("SessionDate").ToShortDateString();
+                        string timeSlot = reader.GetString("Timeslot");
+                        string studentName = reader.GetString("StudentName");
+                        string gradeYear = reader.GetString("GradeYear");
+                        decimal cost = reader.GetDecimal("Cost");
+                        decimal totalBudget = reader.GetDecimal("TotalBudget");
+                        decimal remainingBudget = totalBudget - cost;
+
+                        int rowIndex = dgvSchedule.Rows.Add(
+                            sessionId,
+                            subjectName,
+                            dateString,
+                            timeSlot,
+                            studentName,
+                            gradeYear,
+                            cost,
+                            remainingBudget
                         );
+
+                        if (remainingBudget < 0)
+                            dgvSchedule.Rows[rowIndex].DefaultCellStyle.BackColor = Color.LightCoral;
                     }
                 }
             }
         }
+
 
         private void btnTeDaFilterbyStudent_Click(object sender, EventArgs e)
         {
@@ -342,31 +392,54 @@ namespace JEM
 
             using (MySqlConnection conn = ConnectToDb())
             {
-                string query = @"SELECT se.SessionId, su.SubjectName, se.SessionDate, se.Timeslot,
-                                st.Name AS StudentName, gr.GradeYear, se.Cost
-                         FROM session se
-                         LEFT JOIN subject su ON se.SubjectId = su.SubjectId
-                         LEFT JOIN student st ON se.StudentId = st.Id
-                         LEFT JOIN gradeyear gr ON su.SubjectId = gr.GradeId
-                         WHERE se.TeacherId = @TeacherId AND st.Name = @StudentName";
+                string query = @"
+            SELECT 
+                se.SessionId,
+                su.SubjectName,
+                se.SessionDate,
+                se.Timeslot,
+                st.Name        AS StudentName,
+                gr.GradeYear,
+                se.Cost,
+                st.TotalBudget
+            FROM session se
+            LEFT JOIN subject su  ON se.SubjectId = su.SubjectId
+            LEFT JOIN student st  ON se.StudentId = st.Id
+            LEFT JOIN gradeyear gr ON st.GradeId = gr.GradeId
+            WHERE se.TeacherId = @TeacherId 
+              AND st.Name = @StudentName";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@TeacherId", loggedInTeacher.Id);
                 cmd.Parameters.AddWithValue("@StudentName", selectedStudent);
 
-                using (MySqlDataReader reader = cmd.ExecuteReader())
+                using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        dgvSchedule.Rows.Add(
-                            reader["SessionId"],
-                            reader["SubjectName"].ToString(),
-                            Convert.ToDateTime(reader["SessionDate"]).ToShortDateString(),
-                            reader["Timeslot"].ToString(),
-                            reader["StudentName"].ToString(),
-                            reader["GradeYear"].ToString(),
-                            reader["Cost"].ToString()
+                        int sessionId = reader.GetInt32("SessionId");
+                        string subjectName = reader.GetString("SubjectName");
+                        string dateString = reader.GetDateTime("SessionDate").ToShortDateString();
+                        string timeSlot = reader.GetString("Timeslot");
+                        string studentName = reader.GetString("StudentName");
+                        string gradeYear = reader.GetString("GradeYear");
+                        decimal cost = reader.GetDecimal("Cost");
+                        decimal totalBudget = reader.GetDecimal("TotalBudget");
+                        decimal remainingBudget = totalBudget - cost;
+
+                        int rowIndex = dgvSchedule.Rows.Add(
+                            sessionId,
+                            subjectName,
+                            dateString,
+                            timeSlot,
+                            studentName,
+                            gradeYear,
+                            cost,
+                            remainingBudget
                         );
+
+                        if (remainingBudget < 0)
+                            dgvSchedule.Rows[rowIndex].DefaultCellStyle.BackColor = Color.LightCoral;
                     }
                 }
             }

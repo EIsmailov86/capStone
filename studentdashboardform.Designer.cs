@@ -246,9 +246,7 @@
             this.cmbStDaTeacher.Name = "cmbStDaTeacher";
             this.cmbStDaTeacher.Size = new System.Drawing.Size(200, 24);
             this.cmbStDaTeacher.TabIndex = 10;
-
             this.cmbStDaTeacher.SelectedIndexChanged += new System.EventHandler(this.SelectedTeacherChanged);
-
             // 
             // btnStDaRequestSession
             // 
@@ -311,6 +309,7 @@
             this.btnStDaFilterBySubject.Size = new System.Drawing.Size(40, 46);
             this.btnStDaFilterBySubject.TabIndex = 12;
             this.btnStDaFilterBySubject.UseVisualStyleBackColor = true;
+            this.btnStDaFilterBySubject.Click += new System.EventHandler(this.btnStDaFilterBySubject_Click);
             // 
             // btnStDaFilterByDate
             // 
@@ -322,6 +321,7 @@
             this.btnStDaFilterByDate.Size = new System.Drawing.Size(46, 46);
             this.btnStDaFilterByDate.TabIndex = 11;
             this.btnStDaFilterByDate.UseVisualStyleBackColor = true;
+            this.btnStDaFilterByDate.Click += new System.EventHandler(this.btnStDaFilterByDate_Click);
             // 
             // cmbStDaFilterSubject
             // 
@@ -331,7 +331,6 @@
             this.cmbStDaFilterSubject.Size = new System.Drawing.Size(200, 24);
             this.cmbStDaFilterSubject.TabIndex = 10;
             this.cmbStDaFilterSubject.Text = "Filter by Subject";
-            this.cmbStDaFilterSubject.SelectedIndexChanged += new System.EventHandler(this.btnStDaFilterBySubject_Click);
             // 
             // cmbStDaFilterDate
             // 
@@ -341,7 +340,6 @@
             this.cmbStDaFilterDate.Size = new System.Drawing.Size(200, 24);
             this.cmbStDaFilterDate.TabIndex = 9;
             this.cmbStDaFilterDate.Text = "Filter by Date";
-            this.cmbStDaFilterDate.SelectedIndexChanged += new System.EventHandler(this.btnStDaFilterByDate_Click);
             // 
             // pgbStDaBalance
             // 

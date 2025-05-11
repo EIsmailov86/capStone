@@ -15,6 +15,8 @@ namespace JEM
         public studentdashboardform(Student student)
         {
             InitializeComponent();
+
+
             if (student == null) throw new ArgumentNullException(nameof(student));
 
             loggedInStudent = student;
@@ -75,64 +77,83 @@ namespace JEM
         #region InitializeStudentSchedule
         private void InitializeStudentSchedule()
         {
-            // 1) define columns
+            // rebuild the columns exactly as the teacher version does
             InitializeStudentScheduleColumns();
-            // 2) clear any existing rows
+
+            // clear any existing rows
             dgvSchedule.Rows.Clear();
 
+            int sqlCount = 0, gridCount = 0;
             decimal totalCost = 0m;
-            using (var conn = ConnectToDb())
-            {
-                var cmd = new MySqlCommand(@"
-                    SELECT 
-                        se.SessionId,
-                        su.SubjectName,
-                        se.SessionDate,
-                        se.TimeSlot,
-                        te.Name       AS TeacherName,
-                        gr.GradeYear,
-                        se.Cost
-                      FROM session se
-                      JOIN subject   su ON se.SubjectId = su.SubjectId
-                      JOIN teacher   te ON se.TeacherId = te.Id
-                      JOIN student   st ON se.StudentId = st.Id
-                      JOIN gradeyear gr ON st.GradeId   = gr.GradeId
-                     WHERE se.StudentId = @StuId
-                     ORDER BY se.SessionDate", conn);
 
-                cmd.Parameters.AddWithValue("@StuId", loggedInStudent.Id);
-                using (var rdr = cmd.ExecuteReader())
+            using (MySqlConnection dbConnection = ConnectToDb())
+            {
+                string sessionDataQuery = @"
+            SELECT 
+                se.SessionId,
+                su.SubjectName,
+                se.SessionDate,
+                se.TimeSlot,
+                te.Name       AS TeacherName,
+                gr.GradeYear,
+                se.Cost
+              FROM session   AS se
+         LEFT JOIN subject   AS su ON se.SubjectId  = su.SubjectId
+         LEFT JOIN teacher   AS te ON se.TeacherId  = te.Id
+         LEFT JOIN student   AS st ON se.StudentId  = st.Id
+         LEFT JOIN gradeyear AS gr ON st.GradeId    = gr.GradeId
+             WHERE se.StudentId = @StudentId
+          ORDER BY se.SessionDate, su.SubjectName";
+
+                MySqlCommand cmd = new MySqlCommand(sessionDataQuery, dbConnection);
+                cmd.Parameters.AddWithValue("@StudentId", loggedInStudent.Id);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
-                    while (rdr.Read())
+                    while (reader.Read())
                     {
-                        int sessId = rdr.GetInt32("SessionId");
-                        string subj = rdr.GetString("SubjectName");
-                        string date = rdr.GetDateTime("SessionDate").ToShortDateString();
-                        string slot = rdr.GetString("TimeSlot");
-                        string teacher = rdr.GetString("TeacherName");
-                        string gradeYear = rdr.GetString("GradeYear");
-                        decimal cost = rdr.GetDecimal("Cost");
+                        sqlCount++;
+
+                        int sessionId = Convert.ToInt32(reader["SessionId"]);
+                        string subject = reader["SubjectName"].ToString();
+                        DateTime date = Convert.ToDateTime(reader["SessionDate"]);
+                        string timeslot = reader["TimeSlot"].ToString();
+                        string teacherName = reader["TeacherName"].ToString();
+                        string gradeYear = reader["GradeYear"].ToString();
+                        decimal cost = Convert.ToDecimal(reader["Cost"]);
 
                         totalCost += cost;
 
                         dgvSchedule.Rows.Add(
-                            sessId,
-                            subj,
-                            date,
-                            slot,
-                            teacher,
+                            sessionId,
+                            subject,
+                            date.ToShortDateString(),
+                            timeslot,
+                            teacherName,
                             gradeYear,
                             cost
                         );
                     }
                 }
-
             }
+
+            // count how many rows actually ended up in the grid
+            gridCount = dgvSchedule.Rows.Count;
 
             // update budget
             loggedInStudent.Budget.RemainingBudget =
                 loggedInStudent.Budget.TotalBudget - totalCost;
+
             UpdateBalanceProgressBar();
+
+            // show us the counts
+            MessageBox.Show(
+                $"SQL returned {sqlCount} rows.\n" +
+                $"Grid now has {gridCount} rows.",
+                "Debug: Session Load",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
 
             if (loggedInStudent.Budget.RemainingBudget < 0)
             {
@@ -145,6 +166,10 @@ namespace JEM
             }
         }
         #endregion
+
+
+
+
 
         #region UpdateBalanceProgressBar
         private void UpdateBalanceProgressBar()
