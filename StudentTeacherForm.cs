@@ -56,9 +56,7 @@ namespace JEM
             {
                 string query = @"
                     SELECT DISTINCT t.Name, t.ImageTeacher, t.Bio, t.Id
-                    FROM teacher t
-                    JOIN session s ON s.TeacherId = t.Id
-                    WHERE s.StudentId = @StudentId";
+                    FROM teacher t";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@StudentId", loggedInStudent.Id);

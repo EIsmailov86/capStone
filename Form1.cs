@@ -11,6 +11,8 @@ namespace JEM
         {
             InitializeComponent();
             this.Load += LoginForm_Load;
+            this.AcceptButton = btnLogin;
+            txtPassword.KeyDown += txtPassword_KeyDown;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
