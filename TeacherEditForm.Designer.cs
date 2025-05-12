@@ -323,24 +323,30 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(306, 277);
+            this.btnClear.Image = global::JEM.Properties.Resources.smallClearPic;
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(30, 271);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(140, 23);
+            this.btnClear.Size = new System.Drawing.Size(146, 50);
             this.btnClear.TabIndex = 8;
-            this.btnClear.Text = "Clear";
+            this.btnClear.Text = "Clear Info";
+            this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClear.UseCompatibleTextRendering = true;
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.Image = global::JEM.Properties.Resources._34px_updateInfo;
-            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUpdate.Location = new System.Drawing.Point(103, 257);
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(321, 271);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(76, 74);
+            this.btnUpdate.Size = new System.Drawing.Size(146, 50);
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Update Info";
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUpdate.UseCompatibleTextRendering = true;
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -433,13 +439,14 @@
             // 
             this.btnTeEdUploadPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTeEdUploadPicture.Image = global::JEM.Properties.Resources._34px_uploadPic;
-            this.btnTeEdUploadPicture.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeEdUploadPicture.Location = new System.Drawing.Point(58, 220);
+            this.btnTeEdUploadPicture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeEdUploadPicture.Location = new System.Drawing.Point(6, 271);
             this.btnTeEdUploadPicture.Name = "btnTeEdUploadPicture";
-            this.btnTeEdUploadPicture.Size = new System.Drawing.Size(87, 76);
+            this.btnTeEdUploadPicture.Size = new System.Drawing.Size(168, 50);
             this.btnTeEdUploadPicture.TabIndex = 6;
             this.btnTeEdUploadPicture.Text = "Upload Picture";
-            this.btnTeEdUploadPicture.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTeEdUploadPicture.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeEdUploadPicture.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTeEdUploadPicture.UseCompatibleTextRendering = true;
             this.btnTeEdUploadPicture.UseVisualStyleBackColor = true;
             this.btnTeEdUploadPicture.Click += new System.EventHandler(this.btnTeEdUploadPicture_Click);

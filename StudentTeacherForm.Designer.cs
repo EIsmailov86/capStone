@@ -201,11 +201,15 @@
             // 
             // btnSendMessage
             // 
-            this.btnSendMessage.Location = new System.Drawing.Point(301, 418);
+            this.btnSendMessage.Image = global::JEM.Properties.Resources._34px_sendMessage;
+            this.btnSendMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSendMessage.Location = new System.Drawing.Point(335, 394);
             this.btnSendMessage.Name = "btnSendMessage";
-            this.btnSendMessage.Size = new System.Drawing.Size(274, 23);
+            this.btnSendMessage.Size = new System.Drawing.Size(180, 47);
             this.btnSendMessage.TabIndex = 8;
             this.btnSendMessage.Text = "Send Message";
+            this.btnSendMessage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSendMessage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSendMessage.UseVisualStyleBackColor = true;
             this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
             // 

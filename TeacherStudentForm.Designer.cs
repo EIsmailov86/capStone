@@ -30,13 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherStudentForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnTeStNotifications = new System.Windows.Forms.Button();
-            this.btnTeStMyInfo = new System.Windows.Forms.Button();
-            this.btnTeStSchedule = new System.Windows.Forms.Button();
-            this.btnTeStDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pibTeStTeacherPicture = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTeStWelcome = new System.Windows.Forms.Label();
             this.lbsTeStStudents = new System.Windows.Forms.ListBox();
@@ -44,11 +39,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txbMessageHeader = new System.Windows.Forms.TextBox();
-            this.btnSendMessage = new System.Windows.Forms.Button();
             this.txbMessageBody = new System.Windows.Forms.TextBox();
             this.txbTeStStartingBalance = new System.Windows.Forms.TextBox();
             this.lblTeStStartingBalance = new System.Windows.Forms.Label();
-            this.pibTeStStudentPicture = new System.Windows.Forms.PictureBox();
             this.lblTeStRemainingBalance = new System.Windows.Forms.Label();
             this.pgbTeStBalance = new System.Windows.Forms.ProgressBar();
             this.txbTeStTeStBio = new System.Windows.Forms.TextBox();
@@ -69,13 +62,20 @@
             this.btnTeStClear = new System.Windows.Forms.Button();
             this.btnTeStDeleteStudent = new System.Windows.Forms.Button();
             this.btnTeStUpdateBalance = new System.Windows.Forms.Button();
+            this.btnSendMessage = new System.Windows.Forms.Button();
+            this.pibTeStStudentPicture = new System.Windows.Forms.PictureBox();
+            this.btnTeStNotifications = new System.Windows.Forms.Button();
+            this.btnTeStMyInfo = new System.Windows.Forms.Button();
+            this.btnTeStSchedule = new System.Windows.Forms.Button();
+            this.btnTeStDashboard = new System.Windows.Forms.Button();
+            this.pibTeStTeacherPicture = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibTeStTeacherPicture)).BeginInit();
             this.panel2.SuspendLayout();
             this.grbStudentInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibTeStStudentPicture)).BeginInit();
             this.grpButtons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibTeStStudentPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibTeStTeacherPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,78 +91,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(135, 793);
             this.panel1.TabIndex = 2;
-            // 
-            // btnTeStNotifications
-            // 
-            this.btnTeStNotifications.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTeStNotifications.FlatAppearance.BorderSize = 0;
-            this.btnTeStNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeStNotifications.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnTeStNotifications.Image = global::JEM.Properties.Resources.xxsmallnotification;
-            this.btnTeStNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeStNotifications.Location = new System.Drawing.Point(0, 212);
-            this.btnTeStNotifications.Name = "btnTeStNotifications";
-            this.btnTeStNotifications.Size = new System.Drawing.Size(135, 42);
-            this.btnTeStNotifications.TabIndex = 23;
-            this.btnTeStNotifications.Text = "   Notifications";
-            this.btnTeStNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeStNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeStNotifications.UseVisualStyleBackColor = true;
-            this.btnTeStNotifications.Click += new System.EventHandler(this.btnTeStNotifications_Click);
-            // 
-            // btnTeStMyInfo
-            // 
-            this.btnTeStMyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnTeStMyInfo.FlatAppearance.BorderSize = 0;
-            this.btnTeStMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeStMyInfo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnTeStMyInfo.Image = global::JEM.Properties.Resources.xxsmallsettings_black;
-            this.btnTeStMyInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeStMyInfo.Location = new System.Drawing.Point(0, 751);
-            this.btnTeStMyInfo.Name = "btnTeStMyInfo";
-            this.btnTeStMyInfo.Size = new System.Drawing.Size(135, 42);
-            this.btnTeStMyInfo.TabIndex = 21;
-            this.btnTeStMyInfo.Text = "   My Info";
-            this.btnTeStMyInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeStMyInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeStMyInfo.UseVisualStyleBackColor = true;
-            this.btnTeStMyInfo.Click += new System.EventHandler(this.btnTeStMyInfo_Click);
-            // 
-            // btnTeStSchedule
-            // 
-            this.btnTeStSchedule.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTeStSchedule.FlatAppearance.BorderSize = 0;
-            this.btnTeStSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeStSchedule.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnTeStSchedule.Image = global::JEM.Properties.Resources.xxsmallcalendar_checkmark_schedule;
-            this.btnTeStSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeStSchedule.Location = new System.Drawing.Point(0, 170);
-            this.btnTeStSchedule.Name = "btnTeStSchedule";
-            this.btnTeStSchedule.Size = new System.Drawing.Size(135, 42);
-            this.btnTeStSchedule.TabIndex = 21;
-            this.btnTeStSchedule.Text = "   Schedule";
-            this.btnTeStSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeStSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeStSchedule.UseVisualStyleBackColor = true;
-            this.btnTeStSchedule.Click += new System.EventHandler(this.btnTeStSchedule_Click);
-            // 
-            // btnTeStDashboard
-            // 
-            this.btnTeStDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTeStDashboard.FlatAppearance.BorderSize = 0;
-            this.btnTeStDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeStDashboard.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnTeStDashboard.Image = global::JEM.Properties.Resources.xxsmall_home_black_square;
-            this.btnTeStDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeStDashboard.Location = new System.Drawing.Point(0, 128);
-            this.btnTeStDashboard.Name = "btnTeStDashboard";
-            this.btnTeStDashboard.Size = new System.Drawing.Size(135, 42);
-            this.btnTeStDashboard.TabIndex = 21;
-            this.btnTeStDashboard.Text = "   Dashboard";
-            this.btnTeStDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeStDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeStDashboard.UseVisualStyleBackColor = true;
-            this.btnTeStDashboard.Click += new System.EventHandler(this.btnTeStDashboard_Click);
             // 
             // panel3
             // 
@@ -185,16 +113,6 @@
             this.label1.Size = new System.Drawing.Size(45, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "JEM";
-            // 
-            // pibTeStTeacherPicture
-            // 
-            this.pibTeStTeacherPicture.Image = ((System.Drawing.Image)(resources.GetObject("pibTeStTeacherPicture.Image")));
-            this.pibTeStTeacherPicture.Location = new System.Drawing.Point(32, 19);
-            this.pibTeStTeacherPicture.Name = "pibTeStTeacherPicture";
-            this.pibTeStTeacherPicture.Size = new System.Drawing.Size(63, 63);
-            this.pibTeStTeacherPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pibTeStTeacherPicture.TabIndex = 2;
-            this.pibTeStTeacherPicture.TabStop = false;
             // 
             // panel2
             // 
@@ -220,10 +138,11 @@
             // 
             this.lbsTeStStudents.FormattingEnabled = true;
             this.lbsTeStStudents.ItemHeight = 16;
-            this.lbsTeStStudents.Location = new System.Drawing.Point(509, 46);
+            this.lbsTeStStudents.Location = new System.Drawing.Point(28, 352);
             this.lbsTeStStudents.Name = "lbsTeStStudents";
             this.lbsTeStStudents.Size = new System.Drawing.Size(236, 148);
             this.lbsTeStStudents.TabIndex = 14;
+            this.lbsTeStStudents.Tag = "";
             this.lbsTeStStudents.Click += new System.EventHandler(this.lbsTeStStudents_SelectedIndexChanged);
             // 
             // grbStudentInfo
@@ -262,7 +181,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(573, 18);
+            this.label3.Location = new System.Drawing.Point(92, 327);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 16);
             this.label3.TabIndex = 44;
@@ -285,16 +204,6 @@
             this.txbMessageHeader.Size = new System.Drawing.Size(236, 48);
             this.txbMessageHeader.TabIndex = 42;
             // 
-            // btnSendMessage
-            // 
-            this.btnSendMessage.Location = new System.Drawing.Point(525, 506);
-            this.btnSendMessage.Name = "btnSendMessage";
-            this.btnSendMessage.Size = new System.Drawing.Size(203, 23);
-            this.btnSendMessage.TabIndex = 41;
-            this.btnSendMessage.Text = "Send Message";
-            this.btnSendMessage.UseVisualStyleBackColor = true;
-            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
-            // 
             // txbMessageBody
             // 
             this.txbMessageBody.Location = new System.Drawing.Point(509, 327);
@@ -305,7 +214,7 @@
             // 
             // txbTeStStartingBalance
             // 
-            this.txbTeStStartingBalance.Location = new System.Drawing.Point(136, 263);
+            this.txbTeStStartingBalance.Location = new System.Drawing.Point(617, 28);
             this.txbTeStStartingBalance.Name = "txbTeStStartingBalance";
             this.txbTeStStartingBalance.Size = new System.Drawing.Size(111, 22);
             this.txbTeStStartingBalance.TabIndex = 7;
@@ -314,20 +223,11 @@
             // lblTeStStartingBalance
             // 
             this.lblTeStStartingBalance.AutoSize = true;
-            this.lblTeStStartingBalance.Location = new System.Drawing.Point(25, 269);
+            this.lblTeStStartingBalance.Location = new System.Drawing.Point(512, 31);
             this.lblTeStStartingBalance.Name = "lblTeStStartingBalance";
-            this.lblTeStStartingBalance.Size = new System.Drawing.Size(105, 16);
+            this.lblTeStStartingBalance.Size = new System.Drawing.Size(99, 16);
             this.lblTeStStartingBalance.TabIndex = 39;
-            this.lblTeStStartingBalance.Text = "Starting Balance";
-            // 
-            // pibTeStStudentPicture
-            // 
-            this.pibTeStStudentPicture.Location = new System.Drawing.Point(310, 45);
-            this.pibTeStStudentPicture.Name = "pibTeStStudentPicture";
-            this.pibTeStStudentPicture.Size = new System.Drawing.Size(139, 124);
-            this.pibTeStStudentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pibTeStStudentPicture.TabIndex = 38;
-            this.pibTeStStudentPicture.TabStop = false;
+            this.lblTeStStartingBalance.Text = "Add to Balance";
             // 
             // lblTeStRemainingBalance
             // 
@@ -547,6 +447,112 @@
             this.btnTeStUpdateBalance.UseVisualStyleBackColor = true;
             this.btnTeStUpdateBalance.Click += new System.EventHandler(this.btnTeStUpdateBalance_Click);
             // 
+            // btnSendMessage
+            // 
+            this.btnSendMessage.Image = global::JEM.Properties.Resources._34px_sendMessage;
+            this.btnSendMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSendMessage.Location = new System.Drawing.Point(553, 503);
+            this.btnSendMessage.Name = "btnSendMessage";
+            this.btnSendMessage.Size = new System.Drawing.Size(148, 32);
+            this.btnSendMessage.TabIndex = 41;
+            this.btnSendMessage.Text = "Send Message";
+            this.btnSendMessage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSendMessage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSendMessage.UseCompatibleTextRendering = true;
+            this.btnSendMessage.UseVisualStyleBackColor = true;
+            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
+            // 
+            // pibTeStStudentPicture
+            // 
+            this.pibTeStStudentPicture.Location = new System.Drawing.Point(310, 45);
+            this.pibTeStStudentPicture.Name = "pibTeStStudentPicture";
+            this.pibTeStStudentPicture.Size = new System.Drawing.Size(139, 124);
+            this.pibTeStStudentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibTeStStudentPicture.TabIndex = 38;
+            this.pibTeStStudentPicture.TabStop = false;
+            // 
+            // btnTeStNotifications
+            // 
+            this.btnTeStNotifications.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTeStNotifications.FlatAppearance.BorderSize = 0;
+            this.btnTeStNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeStNotifications.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnTeStNotifications.Image = global::JEM.Properties.Resources.xxsmallnotification;
+            this.btnTeStNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeStNotifications.Location = new System.Drawing.Point(0, 212);
+            this.btnTeStNotifications.Name = "btnTeStNotifications";
+            this.btnTeStNotifications.Size = new System.Drawing.Size(135, 42);
+            this.btnTeStNotifications.TabIndex = 23;
+            this.btnTeStNotifications.Text = "   Notifications";
+            this.btnTeStNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeStNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeStNotifications.UseVisualStyleBackColor = true;
+            this.btnTeStNotifications.Click += new System.EventHandler(this.btnTeStNotifications_Click);
+            // 
+            // btnTeStMyInfo
+            // 
+            this.btnTeStMyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnTeStMyInfo.FlatAppearance.BorderSize = 0;
+            this.btnTeStMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeStMyInfo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnTeStMyInfo.Image = global::JEM.Properties.Resources.xxsmallsettings_black;
+            this.btnTeStMyInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeStMyInfo.Location = new System.Drawing.Point(0, 751);
+            this.btnTeStMyInfo.Name = "btnTeStMyInfo";
+            this.btnTeStMyInfo.Size = new System.Drawing.Size(135, 42);
+            this.btnTeStMyInfo.TabIndex = 21;
+            this.btnTeStMyInfo.Text = "   My Info";
+            this.btnTeStMyInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeStMyInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeStMyInfo.UseVisualStyleBackColor = true;
+            this.btnTeStMyInfo.Click += new System.EventHandler(this.btnTeStMyInfo_Click);
+            // 
+            // btnTeStSchedule
+            // 
+            this.btnTeStSchedule.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTeStSchedule.FlatAppearance.BorderSize = 0;
+            this.btnTeStSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeStSchedule.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnTeStSchedule.Image = global::JEM.Properties.Resources.xxsmallcalendar_checkmark_schedule;
+            this.btnTeStSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeStSchedule.Location = new System.Drawing.Point(0, 170);
+            this.btnTeStSchedule.Name = "btnTeStSchedule";
+            this.btnTeStSchedule.Size = new System.Drawing.Size(135, 42);
+            this.btnTeStSchedule.TabIndex = 21;
+            this.btnTeStSchedule.Text = "   Schedule";
+            this.btnTeStSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeStSchedule.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeStSchedule.UseVisualStyleBackColor = true;
+            this.btnTeStSchedule.Click += new System.EventHandler(this.btnTeStSchedule_Click);
+            // 
+            // btnTeStDashboard
+            // 
+            this.btnTeStDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTeStDashboard.FlatAppearance.BorderSize = 0;
+            this.btnTeStDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeStDashboard.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnTeStDashboard.Image = global::JEM.Properties.Resources.xxsmall_home_black_square;
+            this.btnTeStDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeStDashboard.Location = new System.Drawing.Point(0, 128);
+            this.btnTeStDashboard.Name = "btnTeStDashboard";
+            this.btnTeStDashboard.Size = new System.Drawing.Size(135, 42);
+            this.btnTeStDashboard.TabIndex = 21;
+            this.btnTeStDashboard.Text = "   Dashboard";
+            this.btnTeStDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeStDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeStDashboard.UseVisualStyleBackColor = true;
+            this.btnTeStDashboard.Click += new System.EventHandler(this.btnTeStDashboard_Click);
+            // 
+            // pibTeStTeacherPicture
+            // 
+            this.pibTeStTeacherPicture.Image = ((System.Drawing.Image)(resources.GetObject("pibTeStTeacherPicture.Image")));
+            this.pibTeStTeacherPicture.Location = new System.Drawing.Point(32, 19);
+            this.pibTeStTeacherPicture.Name = "pibTeStTeacherPicture";
+            this.pibTeStTeacherPicture.Size = new System.Drawing.Size(63, 63);
+            this.pibTeStTeacherPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibTeStTeacherPicture.TabIndex = 2;
+            this.pibTeStTeacherPicture.TabStop = false;
+            // 
             // TeacherStudentForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -561,12 +567,12 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibTeStTeacherPicture)).EndInit();
             this.panel2.ResumeLayout(false);
             this.grbStudentInfo.ResumeLayout(false);
             this.grbStudentInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibTeStStudentPicture)).EndInit();
             this.grpButtons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pibTeStStudentPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibTeStTeacherPicture)).EndInit();
             this.ResumeLayout(false);
 
         }

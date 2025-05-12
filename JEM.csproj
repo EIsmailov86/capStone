@@ -361,5 +361,11 @@
   <ItemGroup>
     <None Include="Resources\34px_resetpassword.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34px_updateStudent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34px_sendMessage.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

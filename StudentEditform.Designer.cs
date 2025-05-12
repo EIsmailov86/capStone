@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentEditForm));
             this.grbStudentEdit = new System.Windows.Forms.GroupBox();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.txbMyBio = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -45,27 +43,29 @@
             this.txbName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnSEDMyInfo = new System.Windows.Forms.Button();
-            this.btnSEDNotifications = new System.Windows.Forms.Button();
-            this.btnSEDMyTeacher = new System.Windows.Forms.Button();
-            this.btnSEDDashboard = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pibStEdStudentPicture = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnMyTeacher = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblStEdWelcome = new System.Windows.Forms.Label();
-            this.picStEdStudentPicture = new System.Windows.Forms.PictureBox();
             this.btnStEdUploadPicture = new System.Windows.Forms.Button();
+            this.picStEdStudentPicture = new System.Windows.Forms.PictureBox();
+            this.btnSEDMyInfo = new System.Windows.Forms.Button();
+            this.btnSEDNotifications = new System.Windows.Forms.Button();
+            this.btnSEDMyTeacher = new System.Windows.Forms.Button();
+            this.btnSEDDashboard = new System.Windows.Forms.Button();
+            this.pibStEdStudentPicture = new System.Windows.Forms.PictureBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.grbStudentEdit.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibStEdStudentPicture)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picStEdStudentPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibStEdStudentPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // grbStudentEdit
@@ -90,30 +90,6 @@
             this.grbStudentEdit.TabIndex = 0;
             this.grbStudentEdit.TabStop = false;
             this.grbStudentEdit.Text = "Edit My Info";
-            // 
-            // btnClear
-            // 
-            this.btnClear.Image = global::JEM.Properties.Resources.smallClearPic;
-            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnClear.Location = new System.Drawing.Point(309, 295);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 53);
-            this.btnClear.TabIndex = 17;
-            this.btnClear.Text = "Clear";
-            this.btnClear.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(108, 325);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(144, 23);
-            this.btnUpdate.TabIndex = 16;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txbMyBio
             // 
@@ -232,6 +208,102 @@
             this.pnlMenu.Size = new System.Drawing.Size(135, 653);
             this.pnlMenu.TabIndex = 21;
             // 
+            // pnlLogo
+            // 
+            this.pnlLogo.Controls.Add(this.label2);
+            this.pnlLogo.Controls.Add(this.pibStEdStudentPicture);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(135, 128);
+            this.pnlLogo.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
+            this.label2.Location = new System.Drawing.Point(40, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "JEM";
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Location = new System.Drawing.Point(18, 450);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(114, 42);
+            this.btnDashboard.TabIndex = 18;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnMyInfo_Click);
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.Location = new System.Drawing.Point(21, 546);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(114, 69);
+            this.btnPayment.TabIndex = 19;
+            this.btnPayment.Text = "Payment/\r\nNotifications";
+            this.btnPayment.UseVisualStyleBackColor = true;
+            // 
+            // btnMyTeacher
+            // 
+            this.btnMyTeacher.Location = new System.Drawing.Point(0, 498);
+            this.btnMyTeacher.Name = "btnMyTeacher";
+            this.btnMyTeacher.Size = new System.Drawing.Size(114, 42);
+            this.btnMyTeacher.TabIndex = 20;
+            this.btnMyTeacher.Text = "My Teacher";
+            this.btnMyTeacher.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel2.Controls.Add(this.lblStEdWelcome);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(135, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(847, 31);
+            this.panel2.TabIndex = 0;
+            // 
+            // lblStEdWelcome
+            // 
+            this.lblStEdWelcome.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStEdWelcome.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblStEdWelcome.Location = new System.Drawing.Point(268, 8);
+            this.lblStEdWelcome.Name = "lblStEdWelcome";
+            this.lblStEdWelcome.Size = new System.Drawing.Size(281, 23);
+            this.lblStEdWelcome.TabIndex = 20;
+            this.lblStEdWelcome.Text = "label1";
+            // 
+            // btnStEdUploadPicture
+            // 
+            this.btnStEdUploadPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnStEdUploadPicture.Image = global::JEM.Properties.Resources._34px_uploadPic;
+            this.btnStEdUploadPicture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStEdUploadPicture.Location = new System.Drawing.Point(763, 255);
+            this.btnStEdUploadPicture.Name = "btnStEdUploadPicture";
+            this.btnStEdUploadPicture.Size = new System.Drawing.Size(180, 50);
+            this.btnStEdUploadPicture.TabIndex = 3;
+            this.btnStEdUploadPicture.Text = "Upload Picture";
+            this.btnStEdUploadPicture.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnStEdUploadPicture.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStEdUploadPicture.UseCompatibleTextRendering = true;
+            this.btnStEdUploadPicture.UseVisualStyleBackColor = true;
+            this.btnStEdUploadPicture.Click += new System.EventHandler(this.btnStEdUploadPicture_Click);
+            // 
+            // picStEdStudentPicture
+            // 
+            this.picStEdStudentPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picStEdStudentPicture.Location = new System.Drawing.Point(763, 85);
+            this.picStEdStudentPicture.Name = "picStEdStudentPicture";
+            this.picStEdStudentPicture.Size = new System.Drawing.Size(180, 136);
+            this.picStEdStudentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picStEdStudentPicture.TabIndex = 2;
+            this.picStEdStudentPicture.TabStop = false;
+            // 
             // btnSEDMyInfo
             // 
             this.btnSEDMyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -304,27 +376,6 @@
             this.btnSEDDashboard.UseVisualStyleBackColor = true;
             this.btnSEDDashboard.Click += new System.EventHandler(this.btnStEdDashboard_Click);
             // 
-            // pnlLogo
-            // 
-            this.pnlLogo.Controls.Add(this.label2);
-            this.pnlLogo.Controls.Add(this.pibStEdStudentPicture);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(135, 128);
-            this.pnlLogo.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
-            this.label2.Location = new System.Drawing.Point(40, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "JEM";
-            // 
             // pibStEdStudentPicture
             // 
             this.pibStEdStudentPicture.Image = ((System.Drawing.Image)(resources.GetObject("pibStEdStudentPicture.Image")));
@@ -335,75 +386,34 @@
             this.pibStEdStudentPicture.TabIndex = 2;
             this.pibStEdStudentPicture.TabStop = false;
             // 
-            // btnDashboard
+            // btnClear
             // 
-            this.btnDashboard.Location = new System.Drawing.Point(18, 450);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(114, 42);
-            this.btnDashboard.TabIndex = 18;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.btnMyInfo_Click);
+            this.btnClear.Image = global::JEM.Properties.Resources.smallClearPic;
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(309, 295);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(179, 50);
+            this.btnClear.TabIndex = 17;
+            this.btnClear.Text = "Clear Fields";
+            this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClear.UseCompatibleTextRendering = true;
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // btnPayment
+            // btnUpdate
             // 
-            this.btnPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayment.Location = new System.Drawing.Point(21, 546);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(114, 69);
-            this.btnPayment.TabIndex = 19;
-            this.btnPayment.Text = "Payment/\r\nNotifications";
-            this.btnPayment.UseVisualStyleBackColor = true;
-            // 
-            // btnMyTeacher
-            // 
-            this.btnMyTeacher.Location = new System.Drawing.Point(0, 498);
-            this.btnMyTeacher.Name = "btnMyTeacher";
-            this.btnMyTeacher.Size = new System.Drawing.Size(114, 42);
-            this.btnMyTeacher.TabIndex = 20;
-            this.btnMyTeacher.Text = "My Teacher";
-            this.btnMyTeacher.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel2.Controls.Add(this.lblStEdWelcome);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(135, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(847, 31);
-            this.panel2.TabIndex = 0;
-            // 
-            // lblStEdWelcome
-            // 
-            this.lblStEdWelcome.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStEdWelcome.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblStEdWelcome.Location = new System.Drawing.Point(268, 8);
-            this.lblStEdWelcome.Name = "lblStEdWelcome";
-            this.lblStEdWelcome.Size = new System.Drawing.Size(281, 23);
-            this.lblStEdWelcome.TabIndex = 20;
-            this.lblStEdWelcome.Text = "label1";
-            // 
-            // picStEdStudentPicture
-            // 
-            this.picStEdStudentPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picStEdStudentPicture.Location = new System.Drawing.Point(763, 85);
-            this.picStEdStudentPicture.Name = "picStEdStudentPicture";
-            this.picStEdStudentPicture.Size = new System.Drawing.Size(180, 136);
-            this.picStEdStudentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picStEdStudentPicture.TabIndex = 2;
-            this.picStEdStudentPicture.TabStop = false;
-            // 
-            // btnStEdUploadPicture
-            // 
-            this.btnStEdUploadPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnStEdUploadPicture.Location = new System.Drawing.Point(783, 251);
-            this.btnStEdUploadPicture.Name = "btnStEdUploadPicture";
-            this.btnStEdUploadPicture.Size = new System.Drawing.Size(130, 23);
-            this.btnStEdUploadPicture.TabIndex = 3;
-            this.btnStEdUploadPicture.Text = "Upload PIcture";
-            this.btnStEdUploadPicture.UseVisualStyleBackColor = true;
-            this.btnStEdUploadPicture.Click += new System.EventHandler(this.btnStEdUploadPicture_Click);
+            this.btnUpdate.Image = global::JEM.Properties.Resources._34px_updateStudent;
+            this.btnUpdate.Location = new System.Drawing.Point(33, 295);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(219, 50);
+            this.btnUpdate.TabIndex = 16;
+            this.btnUpdate.Text = "Update Student Info";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdate.UseCompatibleTextRendering = true;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // StudentEditForm
             // 
@@ -424,9 +434,9 @@
             this.pnlMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibStEdStudentPicture)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picStEdStudentPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibStEdStudentPicture)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -224,7 +224,7 @@
             this.grbScheduleApp.Controls.Add(this.cmbStDaSubject);
             this.grbScheduleApp.Location = new System.Drawing.Point(180, 342);
             this.grbScheduleApp.Name = "grbScheduleApp";
-            this.grbScheduleApp.Size = new System.Drawing.Size(338, 305);
+            this.grbScheduleApp.Size = new System.Drawing.Size(338, 294);
             this.grbScheduleApp.TabIndex = 10;
             this.grbScheduleApp.TabStop = false;
             this.grbScheduleApp.Text = "Request Session";
@@ -252,9 +252,9 @@
             this.btnStDaRequestSession.AutoSize = true;
             this.btnStDaRequestSession.Image = global::JEM.Properties.Resources.xxx40px_person_clock_calendar;
             this.btnStDaRequestSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStDaRequestSession.Location = new System.Drawing.Point(147, 234);
+            this.btnStDaRequestSession.Location = new System.Drawing.Point(132, 234);
             this.btnStDaRequestSession.Name = "btnStDaRequestSession";
-            this.btnStDaRequestSession.Size = new System.Drawing.Size(173, 50);
+            this.btnStDaRequestSession.Size = new System.Drawing.Size(200, 39);
             this.btnStDaRequestSession.TabIndex = 8;
             this.btnStDaRequestSession.Text = "Request Session";
             this.btnStDaRequestSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -307,6 +307,7 @@
             this.btnStDaFilterBySubject.Name = "btnStDaFilterBySubject";
             this.btnStDaFilterBySubject.Size = new System.Drawing.Size(40, 46);
             this.btnStDaFilterBySubject.TabIndex = 12;
+            this.btnStDaFilterBySubject.UseCompatibleTextRendering = true;
             this.btnStDaFilterBySubject.UseVisualStyleBackColor = true;
             this.btnStDaFilterBySubject.Click += new System.EventHandler(this.btnStDaFilterBySubject_Click);
             // 

@@ -264,11 +264,37 @@ namespace JEM
                 return;
             }
 
-            //Starting Balance
-            decimal startingBalance = 0.00m;
-            if (!decimal.TryParse(txbTeStStartingBalance.Text.Trim(), out startingBalance))
+            if (!InputValidator.IsValidName(txbTeStName.Text))
             {
-                MessageBox.Show("Please enter a valid numeric Starting Balance (or leave blank for $0.00).");
+                MessageBox.Show("Please enter a valid name (letters, spaces, hyphens).");
+                return;
+            }
+            if (!InputValidator.IsValidEmail(txbTeStEmail.Text))
+            {
+                MessageBox.Show("Please enter a valid email address.");
+                return;
+            }
+            if (!InputValidator.IsValidPhone(txbTeStPhone.Text))
+            {
+                MessageBox.Show("Please enter a valid phone number.");
+                return;
+            }
+            if (!InputValidator.IsValidAddress(txbTeStAddress.Text))
+            {
+                MessageBox.Show("Please enter a valid address (max 100 characters).");
+                return;
+            }
+
+            //Starting Balance
+            //decimal startingBalance = 0.00m;
+            //if (!decimal.TryParse(txbTeStStartingBalance.Text.Trim(), out startingBalance))
+            //{
+            //    MessageBox.Show("Please enter a valid numeric Starting Balance (or leave blank for $0.00).");
+            //    return;
+            //}
+            if (!InputValidator.IsValidBio(txbTeStTeStBio.Text))
+            {
+                MessageBox.Show("Please enter a valid Bio without special characters (Excluding ?,.!)");
                 return;
             }
 
@@ -287,7 +313,7 @@ namespace JEM
                 cmd.Parameters.AddWithValue("@Email", txbTeStEmail.Text.Trim());
 
                 cmd.Parameters.AddWithValue("@Bio", string.IsNullOrWhiteSpace(txbTeStTeStBio.Text) ? "" : txbTeStTeStBio.Text.Trim());
-                cmd.Parameters.AddWithValue("@TotalBudget", startingBalance);
+                cmd.Parameters.AddWithValue("@TotalBudget", 0);
                 cmd.Parameters.AddWithValue("@UserName", txbTeStEmail.Text.Trim());
                 // hash the default password before inserting
                 string initialPlain = "12345";
@@ -344,6 +370,39 @@ namespace JEM
             if (lbsTeStStudents.SelectedItem == null)
             {
                 MessageBox.Show("Please select a student to update.");
+                return;
+            }
+
+            if (!InputValidator.IsValidName(txbTeStName.Text))
+            {
+                MessageBox.Show("Please enter a valid name (letters, spaces, hyphens).");
+                return;
+            }
+            if (!InputValidator.IsValidEmail(txbTeStEmail.Text))
+            {
+                MessageBox.Show("Please enter a valid email address.");
+                return;
+            }
+            if (!InputValidator.IsValidPhone(txbTeStPhone.Text))
+            {
+                MessageBox.Show("Please enter a valid phone number.");
+                return;
+            }
+            if (!InputValidator.IsValidAddress(txbTeStAddress.Text))
+            {
+                MessageBox.Show("Please enter a valid address (max 100 characters).");
+                return;
+            }
+            //Starting Balance
+            //decimal startingBalance = 0.00m;
+            //if (!decimal.TryParse(txbTeStStartingBalance.Text.Trim(), out startingBalance))
+            //{
+            //    MessageBox.Show("Please enter a valid numeric Starting Balance (or leave blank for $0.00).");
+            //    return;
+            //}
+            if (!InputValidator.IsValidBio(txbTeStTeStBio.Text))
+            {
+                MessageBox.Show("Please enter a valid Bio without special characters (Excluding ?,.!)");
                 return;
             }
 

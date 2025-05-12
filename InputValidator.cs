@@ -71,15 +71,6 @@ namespace JEM
         }
 
         //password strength
-        public static bool IsValidPassword(string password)
-        {
-            if (string.IsNullOrEmpty(password) || password.Length < 3)
-                return false;
-            //uppercase, digits
-            // return Regex.IsMatch(password, @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{3,}$");
-            return true;
-        }
-
         public static bool IsValidPasswordRequirement(string password)
         {
             // at least 6 chars, and only letters, digits, or underscore

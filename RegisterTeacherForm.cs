@@ -48,9 +48,9 @@ namespace JEM
                 MessageBox.Show("Usernames must be 3–50 chars, letters/numbers/underscore only.");
                 return;
             }
-            if (!InputValidator.IsValidPassword(password))
+            if (!InputValidator.IsValidPasswordRequirement(password))
             {
-                MessageBox.Show("Passwords must be at least 3 characters long.");
+                MessageBox.Show("Passwords must be at least 6 characters long.");
                 return;
             }
             if (password != confirmPass)

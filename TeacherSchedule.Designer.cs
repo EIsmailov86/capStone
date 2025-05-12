@@ -108,13 +108,15 @@
             this.btnTeShDeleteSession.BackColor = System.Drawing.Color.Red;
             this.btnTeShDeleteSession.Image = global::JEM.Properties.Resources.smallDelete_trash;
             this.btnTeShDeleteSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeShDeleteSession.Location = new System.Drawing.Point(627, 257);
+            this.btnTeShDeleteSession.Location = new System.Drawing.Point(612, 233);
             this.btnTeShDeleteSession.Name = "btnTeShDeleteSession";
-            this.btnTeShDeleteSession.Size = new System.Drawing.Size(154, 42);
+            this.btnTeShDeleteSession.Size = new System.Drawing.Size(169, 50);
             this.btnTeShDeleteSession.TabIndex = 21;
             this.btnTeShDeleteSession.Text = "Delete Session";
             this.btnTeShDeleteSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeShDeleteSession.UseVisualStyleBackColor = false;
+            this.btnTeShDeleteSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeShDeleteSession.UseCompatibleTextRendering = true;
+            this.btnTeShDeleteSession.UseVisualStyleBackColor = true;
             this.btnTeShDeleteSession.Click += new System.EventHandler(this.btnTeShDeleteSession_Click);
             // 
             // dgvTeShSchedule
@@ -198,13 +200,15 @@
             // btnTeShUpdateCost
             // 
             this.btnTeShUpdateCost.Image = global::JEM.Properties.Resources._34px_updateCost;
-            this.btnTeShUpdateCost.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeShUpdateCost.Location = new System.Drawing.Point(239, 233);
+            this.btnTeShUpdateCost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeShUpdateCost.Location = new System.Drawing.Point(209, 233);
             this.btnTeShUpdateCost.Name = "btnTeShUpdateCost";
-            this.btnTeShUpdateCost.Size = new System.Drawing.Size(80, 69);
+            this.btnTeShUpdateCost.Size = new System.Drawing.Size(155, 50);
             this.btnTeShUpdateCost.TabIndex = 11;
             this.btnTeShUpdateCost.Text = "Update Cost";
-            this.btnTeShUpdateCost.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTeShUpdateCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeShUpdateCost.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeShUpdateCost.UseCompatibleTextRendering = true;
             this.btnTeShUpdateCost.UseVisualStyleBackColor = true;
             this.btnTeShUpdateCost.Click += new System.EventHandler(this.btnTeShUpdateCost_Click);
             // 
@@ -244,13 +248,14 @@
             // btnTeShScheduleSession
             // 
             this.btnTeShScheduleSession.Image = global::JEM.Properties.Resources._34px_person_clock_calendar;
-            this.btnTeShScheduleSession.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeShScheduleSession.Location = new System.Drawing.Point(144, 233);
+            this.btnTeShScheduleSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeShScheduleSession.Location = new System.Drawing.Point(19, 233);
             this.btnTeShScheduleSession.Name = "btnTeShScheduleSession";
-            this.btnTeShScheduleSession.Size = new System.Drawing.Size(80, 69);
+            this.btnTeShScheduleSession.Size = new System.Drawing.Size(184, 50);
             this.btnTeShScheduleSession.TabIndex = 8;
             this.btnTeShScheduleSession.Text = "Schedule Session";
-            this.btnTeShScheduleSession.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTeShScheduleSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeShScheduleSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTeShScheduleSession.UseVisualStyleBackColor = true;
             this.btnTeShScheduleSession.Click += new System.EventHandler(this.btnTeShScheduleSession_Click);
             // 

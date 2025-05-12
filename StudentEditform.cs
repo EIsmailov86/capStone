@@ -81,7 +81,7 @@ namespace JEM
                 string bio = txbMyBio.Text.Trim();
                 int gradeId = Convert.ToInt32(cmbGrade.SelectedItem);
 
-                // 2) Validate each field
+                // Validate each field
                 if (!InputValidator.IsValidName(name))
                 {
                     MessageBox.Show("Please enter a valid name (letters, spaces, hyphens).");

@@ -132,6 +132,17 @@ namespace JEM
         #region Notifications
         private void btnSendMessage_Click(object sender, EventArgs e)
         {
+            if (!InputValidator.IsValidBio(txbMessageHeader.Text))
+            {
+                MessageBox.Show("Please enter a valid message without special characters (Excluding ?,.!)");
+                return;
+            }
+
+            else if (!InputValidator.IsValidBio(txbMessageBody.Text))
+            {
+                MessageBox.Show("Please enter a valid message without special characters (Excluding ?,.!)");
+                return;
+            }
             if (txbMessageHeader.Text.Equals(string.Empty))
             {
                 MessageBox.Show("Please fill in the message header field");
@@ -139,12 +150,14 @@ namespace JEM
             else if (txbMessageBody.Text.Equals(string.Empty))
             {
                 MessageBox.Show("Please fill in the message body field");
-            } else
+            }
+            else
             {
                 if (cmbTeacher.SelectedIndex < 0)
                 {
                     MessageBox.Show("Please select a teacher");
-                } else
+                }
+                else
                 {
                     Teacher selectedTeacher = cmbTeacher.SelectedItem as Teacher;
                     CreateNotifications(1, selectedTeacher.Id, loggedInStudent.Id, txbMessageHeader.Text, txbMessageBody.Text + "\r\n Message sent from " + loggedInStudent.Name);

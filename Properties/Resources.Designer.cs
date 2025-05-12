@@ -103,6 +103,16 @@ namespace JEM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _34px_sendMessage {
+            get {
+                object obj = ResourceManager.GetObject("34px_sendMessage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _34px_studentsearch {
             get {
                 object obj = ResourceManager.GetObject("34px_studentsearch", resourceCulture);
@@ -136,6 +146,16 @@ namespace JEM.Properties {
         internal static System.Drawing.Bitmap _34px_updateInfo {
             get {
                 object obj = ResourceManager.GetObject("34px_updateInfo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _34px_updateStudent {
+            get {
+                object obj = ResourceManager.GetObject("34px_updateStudent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

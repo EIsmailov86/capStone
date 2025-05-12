@@ -227,11 +227,14 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(110, 335);
+            this.btnDelete.Image = global::JEM.Properties.Resources.smallDelete_trash;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(69, 318);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(129, 23);
+            this.btnDelete.Size = new System.Drawing.Size(183, 65);
             this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.Text = "Delete Message";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 

@@ -64,14 +64,14 @@ namespace JEM
         #region btnUpdate
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            // 1) Pull & trim inputs
+            //Pull & trim inputs
             string name = txbName.Text.Trim();
             string phone = txbPhone.Text.Trim();
             string address = txbAddress.Text.Trim();
             string email = txbEmail.Text.Trim();
             string bio = txbMyBio.Text.Trim();
 
-            // 2) Validate each field
+ 
             if (!InputValidator.IsValidName(name))
             {
                 MessageBox.Show("Please enter a valid name (letters, spaces, hyphens).");
@@ -98,7 +98,7 @@ namespace JEM
                 return;
             }
 
-            // 3) Everything’s valid—now proceed with the UPDATE
+            //proceed with the UPDATE
             using (MySqlConnection dbConnection = ConnectToDb())
             {
                 string updateQuery = @"
@@ -108,7 +108,7 @@ namespace JEM
                    Address = @Address,
                    Email   = @Email,
                    Bio     = @Bio
-             WHERE Id = @Id";  // fixed: removed invalid GradeId line
+             WHERE Id = @Id";  
 
                 using (MySqlCommand updateCommand = new MySqlCommand(updateQuery, dbConnection))
                 {
