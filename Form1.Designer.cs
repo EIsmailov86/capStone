@@ -124,6 +124,7 @@
             this.btnRegisterTeacher.TabIndex = 26;
             this.btnRegisterTeacher.Text = "Register Teacher";
             this.btnRegisterTeacher.UseVisualStyleBackColor = false;
+            this.btnRegisterTeacher.Click += new System.EventHandler(this.btnRegisterTeacher_Click);
             // 
             // btnRegisterStudent
             // 
@@ -135,6 +136,7 @@
             this.btnRegisterStudent.TabIndex = 25;
             this.btnRegisterStudent.Text = "Register Student";
             this.btnRegisterStudent.UseVisualStyleBackColor = false;
+            this.btnRegisterStudent.Click += new System.EventHandler(this.btnRegisterStudent_Click);
             // 
             // txtPassword
             // 
@@ -160,6 +162,7 @@
             this.btnLogin.TabIndex = 24;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblPassword
             // 
