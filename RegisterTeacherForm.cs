@@ -121,9 +121,9 @@ namespace JEM
                     //INSERT new teacher
                     string insertQuery = @"
                         INSERT INTO teacher
-                          (AdminId, Name, Email, Phone, Address, UserName, Password, TeClassId, Bio)
+                          (Name, Email, Phone, Address, UserName, Password, TeClassId, Bio)
                         VALUES
-                          (1, @Name, @Email, @Phone, @Address, @UserName, @Password, 1, '')";
+                          (@Name, @Email, @Phone, @Address, @UserName, @Password, 1, '')";
 
                     using (var cmd = new MySqlCommand(insertQuery, dbConnection))
                     {

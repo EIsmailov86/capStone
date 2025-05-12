@@ -80,7 +80,6 @@ namespace JEM
                                     var loggedInTeacher = new Teacher
                                     {
                                         Id = reader.GetInt32("Id"),
-                                        AdminId = reader.GetInt32("AdminId"),
                                         Name = reader.GetString("Name"),
                                         Email = reader.GetString("Email"),
                                         Phone = reader.GetString("Phone"),
