@@ -92,18 +92,6 @@ namespace JEM
                 cmbTeStGrade.Items.Add(i.ToString());
             }
 
-            cmbTeStSubject.Items.Clear();
-            cmbTeStSubject.Items.AddRange(new string[]
-            {
-        "Mathematics",
-        "Algebra",
-        "Geometry",
-        "Economy",
-        "Science",
-        "Social",
-        "Calculus",
-        "Trigonometry"
-            });
         }
         #endregion
 
@@ -132,7 +120,7 @@ namespace JEM
                 {
                     // 1) load basic student info
                     string studentQuery = @"
-                SELECT Name, GradeId, SubjectName, Phone, Address, Email, Bio, TotalBudget, ImageStudent
+                SELECT Name, GradeId, Phone, Address, Email, Bio, TotalBudget, ImageStudent
                   FROM student
                  WHERE Id = @Id";
                     MySqlCommand cmd = new MySqlCommand(studentQuery, conn);
@@ -143,7 +131,6 @@ namespace JEM
                         {
                             txbTeStName.Text = reader["Name"].ToString();
                             cmbTeStGrade.SelectedItem = reader["GradeId"].ToString();
-                            cmbTeStSubject.SelectedItem = reader["SubjectName"].ToString();
                             txbTeStPhone.Text = reader["Phone"].ToString();
                             txbTeStAddress.Text = reader["Address"].ToString();
                             txbTeStEmail.Text = reader["Email"].ToString();
@@ -269,7 +256,6 @@ namespace JEM
         {
             if (string.IsNullOrWhiteSpace(txbTeStName.Text) ||
                 cmbTeStGrade.SelectedIndex == -1 ||
-                cmbTeStSubject.SelectedIndex == -1 ||
                 string.IsNullOrWhiteSpace(txbTeStPhone.Text) ||
                 string.IsNullOrWhiteSpace(txbTeStAddress.Text) ||
                 string.IsNullOrWhiteSpace(txbTeStEmail.Text))
@@ -289,14 +275,13 @@ namespace JEM
             using (MySqlConnection conn = ConnectToDb())
             {
                 string query = @"INSERT INTO student 
-                (Name, GradeId, SubjectName, Phone, Address, Email, Bio, TotalBudget, UserName, Password, ClassId)
+                (Name, GradeId, Phone, Address, Email, Bio, TotalBudget, UserName, Password, ClassId)
                  VALUES 
-                (@Name, @GradeId, @SubjectName, @Phone, @Address, @Email, @Bio, @TotalBudget, @UserName, @Password, @ClassId)";
+                (@Name, @GradeId, @Phone, @Address, @Email, @Bio, @TotalBudget, @UserName, @Password, @ClassId)";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Name", txbTeStName.Text.Trim());
                 cmd.Parameters.AddWithValue("@GradeId", cmbTeStGrade.SelectedIndex + 1);
-                cmd.Parameters.AddWithValue("@SubjectName", cmbTeStSubject.SelectedItem.ToString());
                 cmd.Parameters.AddWithValue("@Phone", txbTeStPhone.Text.Trim());
                 cmd.Parameters.AddWithValue("@Address", txbTeStAddress.Text.Trim());
                 cmd.Parameters.AddWithValue("@Email", txbTeStEmail.Text.Trim());
@@ -345,7 +330,6 @@ namespace JEM
         {
             txbTeStName.Clear();
             cmbTeStGrade.SelectedIndex = -1;
-            cmbTeStSubject.SelectedIndex = -1;
             txbTeStPhone.Clear();
             txbTeStAddress.Clear();
             txbTeStEmail.Clear();
@@ -365,7 +349,6 @@ namespace JEM
 
             if (string.IsNullOrWhiteSpace(txbTeStName.Text) ||
                 cmbTeStGrade.SelectedItem == null ||
-                cmbTeStSubject.SelectedItem == null ||
                 string.IsNullOrWhiteSpace(txbTeStPhone.Text) ||
                 string.IsNullOrWhiteSpace(txbTeStAddress.Text) ||
                 string.IsNullOrWhiteSpace(txbTeStEmail.Text))
@@ -382,7 +365,6 @@ namespace JEM
                 string query = @"UPDATE student SET 
                             Name = @Name, 
                             GradeId = @GradeId, 
-                            SubjectName = @SubjectName,
                             Phone = @Phone, 
                             Address = @Address, 
                             Email = @Email, 
@@ -394,7 +376,6 @@ namespace JEM
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@Name", txbTeStName.Text.Trim());
                 cmd.Parameters.AddWithValue("@GradeId", cmbTeStGrade.SelectedIndex + 1);
-                cmd.Parameters.AddWithValue("@SubjectName", cmbTeStSubject.SelectedItem.ToString());
                 cmd.Parameters.AddWithValue("@Phone", txbTeStPhone.Text.Trim());
                 cmd.Parameters.AddWithValue("@Address", txbTeStAddress.Text.Trim());
                 cmd.Parameters.AddWithValue("@Email", txbTeStEmail.Text.Trim());

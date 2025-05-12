@@ -153,6 +153,7 @@
             this.btnReStRegister.TabIndex = 58;
             this.btnReStRegister.Text = "Register";
             this.btnReStRegister.UseVisualStyleBackColor = false;
+            this.btnReStRegister.Click += new System.EventHandler(this.btnReStRegister_Click);
             // 
             // txtReStConfirmPassword
             // 

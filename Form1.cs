@@ -45,7 +45,6 @@ namespace JEM
                                     Address = reader.GetString("Address"),
                                     Bio = reader.GetString("Bio"),
                                     Budget = new BudgetManager(reader.GetDecimal("TotalBudget")),
-                                    SubjectName = reader.GetString("SubjectName"),
                                     UserName = reader.GetString("UserName"),
                                     Password = storedHash,
                                     ClassId = reader.GetInt32("ClassId"),

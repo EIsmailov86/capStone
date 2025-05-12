@@ -30,8 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherStudentForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnTeStNotifications = new System.Windows.Forms.Button();
+            this.btnTeStMyInfo = new System.Windows.Forms.Button();
+            this.btnTeStSchedule = new System.Windows.Forms.Button();
+            this.btnTeStDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pibTeStTeacherPicture = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTeStWelcome = new System.Windows.Forms.Label();
             this.lbsTeStStudents = new System.Windows.Forms.ListBox();
@@ -43,41 +48,34 @@
             this.txbMessageBody = new System.Windows.Forms.TextBox();
             this.txbTeStStartingBalance = new System.Windows.Forms.TextBox();
             this.lblTeStStartingBalance = new System.Windows.Forms.Label();
+            this.pibTeStStudentPicture = new System.Windows.Forms.PictureBox();
             this.lblTeStRemainingBalance = new System.Windows.Forms.Label();
             this.pgbTeStBalance = new System.Windows.Forms.ProgressBar();
             this.txbTeStTeStBio = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
-            this.lblSubject = new System.Windows.Forms.Label();
             this.lblGrade = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.txbTeStPhone = new System.Windows.Forms.TextBox();
-            this.cmbTeStSubject = new System.Windows.Forms.ComboBox();
             this.cmbTeStGrade = new System.Windows.Forms.ComboBox();
             this.txbTeStAddress = new System.Windows.Forms.TextBox();
             this.txbTeStEmail = new System.Windows.Forms.TextBox();
             this.txbTeStName = new System.Windows.Forms.TextBox();
             this.grpButtons = new System.Windows.Forms.GroupBox();
+            this.btnTeStResetPassword = new System.Windows.Forms.Button();
             this.btnTeStCreateStudent = new System.Windows.Forms.Button();
             this.btnTeStUpdateStudent = new System.Windows.Forms.Button();
             this.btnTeStClear = new System.Windows.Forms.Button();
             this.btnTeStDeleteStudent = new System.Windows.Forms.Button();
-            this.btnTeStResetPassword = new System.Windows.Forms.Button();
-            this.pibTeStStudentPicture = new System.Windows.Forms.PictureBox();
             this.btnTeStUpdateBalance = new System.Windows.Forms.Button();
-            this.btnTeStNotifications = new System.Windows.Forms.Button();
-            this.btnTeStMyInfo = new System.Windows.Forms.Button();
-            this.btnTeStSchedule = new System.Windows.Forms.Button();
-            this.btnTeStDashboard = new System.Windows.Forms.Button();
-            this.pibTeStTeacherPicture = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibTeStTeacherPicture)).BeginInit();
             this.panel2.SuspendLayout();
             this.grbStudentInfo.SuspendLayout();
-            this.grpButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibTeStStudentPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pibTeStTeacherPicture)).BeginInit();
+            this.grpButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -93,398 +91,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(135, 793);
             this.panel1.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.pibTeStTeacherPicture);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(135, 128);
-            this.panel3.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
-            this.label1.Location = new System.Drawing.Point(40, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "JEM";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel2.Controls.Add(this.lblTeStWelcome);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(135, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(970, 31);
-            this.panel2.TabIndex = 4;
-            // 
-            // lblTeStWelcome
-            // 
-            this.lblTeStWelcome.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTeStWelcome.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblTeStWelcome.Location = new System.Drawing.Point(281, 8);
-            this.lblTeStWelcome.Name = "lblTeStWelcome";
-            this.lblTeStWelcome.Size = new System.Drawing.Size(282, 23);
-            this.lblTeStWelcome.TabIndex = 7;
-            this.lblTeStWelcome.Text = "label2";
-            // 
-            // lbsTeStStudents
-            // 
-            this.lbsTeStStudents.FormattingEnabled = true;
-            this.lbsTeStStudents.ItemHeight = 16;
-            this.lbsTeStStudents.Location = new System.Drawing.Point(509, 46);
-            this.lbsTeStStudents.Name = "lbsTeStStudents";
-            this.lbsTeStStudents.Size = new System.Drawing.Size(236, 148);
-            this.lbsTeStStudents.TabIndex = 14;
-            this.lbsTeStStudents.Click += new System.EventHandler(this.lbsTeStStudents_SelectedIndexChanged);
-            // 
-            // grbStudentInfo
-            // 
-            this.grbStudentInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.grbStudentInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.grbStudentInfo.Controls.Add(this.label3);
-            this.grbStudentInfo.Controls.Add(this.label2);
-            this.grbStudentInfo.Controls.Add(this.txbMessageHeader);
-            this.grbStudentInfo.Controls.Add(this.btnSendMessage);
-            this.grbStudentInfo.Controls.Add(this.txbMessageBody);
-            this.grbStudentInfo.Controls.Add(this.txbTeStStartingBalance);
-            this.grbStudentInfo.Controls.Add(this.lblTeStStartingBalance);
-            this.grbStudentInfo.Controls.Add(this.pibTeStStudentPicture);
-            this.grbStudentInfo.Controls.Add(this.lblTeStRemainingBalance);
-            this.grbStudentInfo.Controls.Add(this.pgbTeStBalance);
-            this.grbStudentInfo.Controls.Add(this.txbTeStTeStBio);
-            this.grbStudentInfo.Controls.Add(this.lblEmail);
-            this.grbStudentInfo.Controls.Add(this.lblAddress);
-            this.grbStudentInfo.Controls.Add(this.lblPhone);
-            this.grbStudentInfo.Controls.Add(this.lblSubject);
-            this.grbStudentInfo.Controls.Add(this.lblGrade);
-            this.grbStudentInfo.Controls.Add(this.lblName);
-            this.grbStudentInfo.Controls.Add(this.txbTeStPhone);
-            this.grbStudentInfo.Controls.Add(this.cmbTeStSubject);
-            this.grbStudentInfo.Controls.Add(this.cmbTeStGrade);
-            this.grbStudentInfo.Controls.Add(this.txbTeStAddress);
-            this.grbStudentInfo.Controls.Add(this.txbTeStEmail);
-            this.grbStudentInfo.Controls.Add(this.txbTeStName);
-            this.grbStudentInfo.Controls.Add(this.lbsTeStStudents);
-            this.grbStudentInfo.Location = new System.Drawing.Point(232, 142);
-            this.grbStudentInfo.Name = "grbStudentInfo";
-            this.grbStudentInfo.Size = new System.Drawing.Size(751, 559);
-            this.grbStudentInfo.TabIndex = 6;
-            this.grbStudentInfo.TabStop = false;
-            this.grbStudentInfo.Text = "Student Info";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(573, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 16);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "List of Students";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(573, 236);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 16);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Message Student";
-            // 
-            // txbMessageHeader
-            // 
-            this.txbMessageHeader.Location = new System.Drawing.Point(509, 265);
-            this.txbMessageHeader.Multiline = true;
-            this.txbMessageHeader.Name = "txbMessageHeader";
-            this.txbMessageHeader.Size = new System.Drawing.Size(236, 48);
-            this.txbMessageHeader.TabIndex = 42;
-            // 
-            // btnSendMessage
-            // 
-            this.btnSendMessage.Location = new System.Drawing.Point(525, 506);
-            this.btnSendMessage.Name = "btnSendMessage";
-            this.btnSendMessage.Size = new System.Drawing.Size(203, 23);
-            this.btnSendMessage.TabIndex = 41;
-            this.btnSendMessage.Text = "Send Message";
-            this.btnSendMessage.UseVisualStyleBackColor = true;
-            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
-            // 
-            // txbMessageBody
-            // 
-            this.txbMessageBody.Location = new System.Drawing.Point(509, 327);
-            this.txbMessageBody.Multiline = true;
-            this.txbMessageBody.Name = "txbMessageBody";
-            this.txbMessageBody.Size = new System.Drawing.Size(236, 159);
-            this.txbMessageBody.TabIndex = 40;
-            // 
-            // txbTeStStartingBalance
-            // 
-            this.txbTeStStartingBalance.Location = new System.Drawing.Point(136, 305);
-            this.txbTeStStartingBalance.Name = "txbTeStStartingBalance";
-            this.txbTeStStartingBalance.Size = new System.Drawing.Size(111, 22);
-            this.txbTeStStartingBalance.TabIndex = 7;
-            this.txbTeStStartingBalance.TextChanged += new System.EventHandler(this.txbTeStStartingBalance_TextChanged);
-            // 
-            // lblTeStStartingBalance
-            // 
-            this.lblTeStStartingBalance.AutoSize = true;
-            this.lblTeStStartingBalance.Location = new System.Drawing.Point(25, 311);
-            this.lblTeStStartingBalance.Name = "lblTeStStartingBalance";
-            this.lblTeStStartingBalance.Size = new System.Drawing.Size(105, 16);
-            this.lblTeStStartingBalance.TabIndex = 39;
-            this.lblTeStStartingBalance.Text = "Starting Balance";
-            // 
-            // lblTeStRemainingBalance
-            // 
-            this.lblTeStRemainingBalance.AutoSize = true;
-            this.lblTeStRemainingBalance.Location = new System.Drawing.Point(352, 376);
-            this.lblTeStRemainingBalance.Name = "lblTeStRemainingBalance";
-            this.lblTeStRemainingBalance.Size = new System.Drawing.Size(53, 20);
-            this.lblTeStRemainingBalance.TabIndex = 34;
-            this.lblTeStRemainingBalance.Text = "Balance";
-            this.lblTeStRemainingBalance.UseCompatibleTextRendering = true;
-            // 
-            // pgbTeStBalance
-            // 
-            this.pgbTeStBalance.Location = new System.Drawing.Point(289, 414);
-            this.pgbTeStBalance.Name = "pgbTeStBalance";
-            this.pgbTeStBalance.Size = new System.Drawing.Size(174, 36);
-            this.pgbTeStBalance.TabIndex = 33;
-            // 
-            // txbTeStTeStBio
-            // 
-            this.txbTeStTeStBio.Location = new System.Drawing.Point(289, 212);
-            this.txbTeStTeStBio.Multiline = true;
-            this.txbTeStTeStBio.Name = "txbTeStTeStBio";
-            this.txbTeStTeStBio.Size = new System.Drawing.Size(179, 138);
-            this.txbTeStTeStBio.TabIndex = 8;
-            this.txbTeStTeStBio.Text = "Bio";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(25, 271);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(41, 16);
-            this.lblEmail.TabIndex = 29;
-            this.lblEmail.Text = "Email";
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(25, 226);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(58, 16);
-            this.lblAddress.TabIndex = 28;
-            this.lblAddress.Text = "Address";
-            // 
-            // lblPhone
-            // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(25, 177);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(46, 16);
-            this.lblPhone.TabIndex = 27;
-            this.lblPhone.Text = "Phone";
-            // 
-            // lblSubject
-            // 
-            this.lblSubject.AutoSize = true;
-            this.lblSubject.Location = new System.Drawing.Point(25, 131);
-            this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(52, 16);
-            this.lblSubject.TabIndex = 26;
-            this.lblSubject.Text = "Subject";
-            // 
-            // lblGrade
-            // 
-            this.lblGrade.AutoSize = true;
-            this.lblGrade.Location = new System.Drawing.Point(25, 91);
-            this.lblGrade.Name = "lblGrade";
-            this.lblGrade.Size = new System.Drawing.Size(45, 16);
-            this.lblGrade.TabIndex = 25;
-            this.lblGrade.Text = "Grade";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(25, 51);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(44, 16);
-            this.lblName.TabIndex = 24;
-            this.lblName.Text = "Name";
-            // 
-            // txbTeStPhone
-            // 
-            this.txbTeStPhone.Location = new System.Drawing.Point(126, 174);
-            this.txbTeStPhone.Name = "txbTeStPhone";
-            this.txbTeStPhone.Size = new System.Drawing.Size(121, 22);
-            this.txbTeStPhone.TabIndex = 4;
-            // 
-            // cmbTeStSubject
-            // 
-            this.cmbTeStSubject.FormattingEnabled = true;
-            this.cmbTeStSubject.Location = new System.Drawing.Point(126, 123);
-            this.cmbTeStSubject.Name = "cmbTeStSubject";
-            this.cmbTeStSubject.Size = new System.Drawing.Size(121, 24);
-            this.cmbTeStSubject.TabIndex = 3;
-            // 
-            // cmbTeStGrade
-            // 
-            this.cmbTeStGrade.FormattingEnabled = true;
-            this.cmbTeStGrade.Location = new System.Drawing.Point(126, 83);
-            this.cmbTeStGrade.Name = "cmbTeStGrade";
-            this.cmbTeStGrade.Size = new System.Drawing.Size(121, 24);
-            this.cmbTeStGrade.TabIndex = 2;
-            // 
-            // txbTeStAddress
-            // 
-            this.txbTeStAddress.Location = new System.Drawing.Point(126, 220);
-            this.txbTeStAddress.Name = "txbTeStAddress";
-            this.txbTeStAddress.Size = new System.Drawing.Size(121, 22);
-            this.txbTeStAddress.TabIndex = 5;
-            // 
-            // txbTeStEmail
-            // 
-            this.txbTeStEmail.Location = new System.Drawing.Point(126, 265);
-            this.txbTeStEmail.Name = "txbTeStEmail";
-            this.txbTeStEmail.Size = new System.Drawing.Size(121, 22);
-            this.txbTeStEmail.TabIndex = 6;
-            // 
-            // txbTeStName
-            // 
-            this.txbTeStName.Location = new System.Drawing.Point(126, 46);
-            this.txbTeStName.Name = "txbTeStName";
-            this.txbTeStName.Size = new System.Drawing.Size(121, 22);
-            this.txbTeStName.TabIndex = 1;
-            // 
-            // grpButtons
-            // 
-            this.grpButtons.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.grpButtons.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.grpButtons.Controls.Add(this.btnTeStResetPassword);
-            this.grpButtons.Controls.Add(this.btnTeStCreateStudent);
-            this.grpButtons.Controls.Add(this.btnTeStUpdateStudent);
-            this.grpButtons.Controls.Add(this.btnTeStClear);
-            this.grpButtons.Controls.Add(this.btnTeStDeleteStudent);
-            this.grpButtons.Controls.Add(this.btnTeStUpdateBalance);
-            this.grpButtons.Location = new System.Drawing.Point(232, 37);
-            this.grpButtons.Name = "grpButtons";
-            this.grpButtons.Size = new System.Drawing.Size(751, 99);
-            this.grpButtons.TabIndex = 7;
-            this.grpButtons.TabStop = false;
-            // 
-            // btnTeStCreateStudent
-            // 
-            this.btnTeStCreateStudent.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTeStCreateStudent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnTeStCreateStudent.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnTeStCreateStudent.FlatAppearance.BorderSize = 0;
-            this.btnTeStCreateStudent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTeStCreateStudent.Image = global::JEM.Properties.Resources.smallcreateUser;
-            this.btnTeStCreateStudent.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStCreateStudent.Location = new System.Drawing.Point(28, 17);
-            this.btnTeStCreateStudent.Name = "btnTeStCreateStudent";
-            this.btnTeStCreateStudent.Size = new System.Drawing.Size(73, 74);
-            this.btnTeStCreateStudent.TabIndex = 9;
-            this.btnTeStCreateStudent.Text = "Create Student";
-            this.btnTeStCreateStudent.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStCreateStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnTeStCreateStudent.UseCompatibleTextRendering = true;
-            this.btnTeStCreateStudent.UseVisualStyleBackColor = true;
-            this.btnTeStCreateStudent.Click += new System.EventHandler(this.btnTeStCreateStudent_Click);
-            // 
-            // btnTeStUpdateStudent
-            // 
-            this.btnTeStUpdateStudent.Image = global::JEM.Properties.Resources.xxx38pxUpdate;
-            this.btnTeStUpdateStudent.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStUpdateStudent.Location = new System.Drawing.Point(147, 17);
-            this.btnTeStUpdateStudent.Name = "btnTeStUpdateStudent";
-            this.btnTeStUpdateStudent.Size = new System.Drawing.Size(73, 74);
-            this.btnTeStUpdateStudent.TabIndex = 10;
-            this.btnTeStUpdateStudent.Text = "Update Student";
-            this.btnTeStUpdateStudent.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStUpdateStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnTeStUpdateStudent.UseCompatibleTextRendering = true;
-            this.btnTeStUpdateStudent.UseVisualStyleBackColor = true;
-            this.btnTeStUpdateStudent.Click += new System.EventHandler(this.btnTeStUpdateStudent_Click);
-            // 
-            // btnTeStClear
-            // 
-            this.btnTeStClear.Image = global::JEM.Properties.Resources.smallClearPic;
-            this.btnTeStClear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStClear.Location = new System.Drawing.Point(272, 17);
-            this.btnTeStClear.Name = "btnTeStClear";
-            this.btnTeStClear.Size = new System.Drawing.Size(73, 74);
-            this.btnTeStClear.TabIndex = 11;
-            this.btnTeStClear.Text = "Clear";
-            this.btnTeStClear.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnTeStClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnTeStClear.UseCompatibleTextRendering = true;
-            this.btnTeStClear.UseVisualStyleBackColor = true;
-            this.btnTeStClear.Click += new System.EventHandler(this.btnTeStClear_Click);
-            // 
-            // btnTeStDeleteStudent
-            // 
-            this.btnTeStDeleteStudent.Image = global::JEM.Properties.Resources.smallDelete_trash;
-            this.btnTeStDeleteStudent.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStDeleteStudent.Location = new System.Drawing.Point(395, 17);
-            this.btnTeStDeleteStudent.Name = "btnTeStDeleteStudent";
-            this.btnTeStDeleteStudent.Size = new System.Drawing.Size(73, 74);
-            this.btnTeStDeleteStudent.TabIndex = 12;
-            this.btnTeStDeleteStudent.Text = "Delete Student";
-            this.btnTeStDeleteStudent.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStDeleteStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnTeStDeleteStudent.UseCompatibleTextRendering = true;
-            this.btnTeStDeleteStudent.UseVisualStyleBackColor = true;
-            this.btnTeStDeleteStudent.Click += new System.EventHandler(this.btnTeStDeleteStudent_Click);
-            // 
-            // btnTeStResetPassword
-            // 
-            this.btnTeStResetPassword.Image = global::JEM.Properties.Resources._34px_resetpassword;
-            this.btnTeStResetPassword.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStResetPassword.Location = new System.Drawing.Point(525, 17);
-            this.btnTeStResetPassword.Name = "btnTeStResetPassword";
-            this.btnTeStResetPassword.Size = new System.Drawing.Size(73, 74);
-            this.btnTeStResetPassword.TabIndex = 45;
-            this.btnTeStResetPassword.Text = "Reset Password";
-            this.btnTeStResetPassword.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStResetPassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnTeStResetPassword.UseCompatibleTextRendering = true;
-            this.btnTeStResetPassword.UseVisualStyleBackColor = true;
-            this.btnTeStResetPassword.Click += new System.EventHandler(this.btnTeStResetPassword_Click);
-            // 
-            // pibTeStStudentPicture
-            // 
-            this.pibTeStStudentPicture.Location = new System.Drawing.Point(310, 45);
-            this.pibTeStStudentPicture.Name = "pibTeStStudentPicture";
-            this.pibTeStStudentPicture.Size = new System.Drawing.Size(139, 124);
-            this.pibTeStStudentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pibTeStStudentPicture.TabIndex = 38;
-            this.pibTeStStudentPicture.TabStop = false;
-            // 
-            // btnTeStUpdateBalance
-            // 
-            this.btnTeStUpdateBalance.Image = global::JEM.Properties.Resources._34px_updateBalance;
-            this.btnTeStUpdateBalance.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStUpdateBalance.Location = new System.Drawing.Point(641, 17);
-            this.btnTeStUpdateBalance.Name = "btnTeStUpdateBalance";
-            this.btnTeStUpdateBalance.Size = new System.Drawing.Size(73, 74);
-            this.btnTeStUpdateBalance.TabIndex = 13;
-            this.btnTeStUpdateBalance.Text = "Update Balance";
-            this.btnTeStUpdateBalance.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTeStUpdateBalance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnTeStUpdateBalance.UseCompatibleTextRendering = true;
-            this.btnTeStUpdateBalance.UseVisualStyleBackColor = true;
-            this.btnTeStUpdateBalance.Click += new System.EventHandler(this.btnTeStUpdateBalance_Click);
             // 
             // btnTeStNotifications
             // 
@@ -558,6 +164,28 @@
             this.btnTeStDashboard.UseVisualStyleBackColor = true;
             this.btnTeStDashboard.Click += new System.EventHandler(this.btnTeStDashboard_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.pibTeStTeacherPicture);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(135, 128);
+            this.panel3.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
+            this.label1.Location = new System.Drawing.Point(40, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 19);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "JEM";
+            // 
             // pibTeStTeacherPicture
             // 
             this.pibTeStTeacherPicture.Image = ((System.Drawing.Image)(resources.GetObject("pibTeStTeacherPicture.Image")));
@@ -567,6 +195,357 @@
             this.pibTeStTeacherPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pibTeStTeacherPicture.TabIndex = 2;
             this.pibTeStTeacherPicture.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel2.Controls.Add(this.lblTeStWelcome);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(135, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(970, 31);
+            this.panel2.TabIndex = 4;
+            // 
+            // lblTeStWelcome
+            // 
+            this.lblTeStWelcome.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTeStWelcome.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblTeStWelcome.Location = new System.Drawing.Point(281, 8);
+            this.lblTeStWelcome.Name = "lblTeStWelcome";
+            this.lblTeStWelcome.Size = new System.Drawing.Size(282, 23);
+            this.lblTeStWelcome.TabIndex = 7;
+            this.lblTeStWelcome.Text = "label2";
+            // 
+            // lbsTeStStudents
+            // 
+            this.lbsTeStStudents.FormattingEnabled = true;
+            this.lbsTeStStudents.ItemHeight = 16;
+            this.lbsTeStStudents.Location = new System.Drawing.Point(509, 46);
+            this.lbsTeStStudents.Name = "lbsTeStStudents";
+            this.lbsTeStStudents.Size = new System.Drawing.Size(236, 148);
+            this.lbsTeStStudents.TabIndex = 14;
+            this.lbsTeStStudents.Click += new System.EventHandler(this.lbsTeStStudents_SelectedIndexChanged);
+            // 
+            // grbStudentInfo
+            // 
+            this.grbStudentInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grbStudentInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.grbStudentInfo.Controls.Add(this.label3);
+            this.grbStudentInfo.Controls.Add(this.label2);
+            this.grbStudentInfo.Controls.Add(this.txbMessageHeader);
+            this.grbStudentInfo.Controls.Add(this.btnSendMessage);
+            this.grbStudentInfo.Controls.Add(this.txbMessageBody);
+            this.grbStudentInfo.Controls.Add(this.txbTeStStartingBalance);
+            this.grbStudentInfo.Controls.Add(this.lblTeStStartingBalance);
+            this.grbStudentInfo.Controls.Add(this.pibTeStStudentPicture);
+            this.grbStudentInfo.Controls.Add(this.lblTeStRemainingBalance);
+            this.grbStudentInfo.Controls.Add(this.pgbTeStBalance);
+            this.grbStudentInfo.Controls.Add(this.txbTeStTeStBio);
+            this.grbStudentInfo.Controls.Add(this.lblEmail);
+            this.grbStudentInfo.Controls.Add(this.lblAddress);
+            this.grbStudentInfo.Controls.Add(this.lblPhone);
+            this.grbStudentInfo.Controls.Add(this.lblGrade);
+            this.grbStudentInfo.Controls.Add(this.lblName);
+            this.grbStudentInfo.Controls.Add(this.txbTeStPhone);
+            this.grbStudentInfo.Controls.Add(this.cmbTeStGrade);
+            this.grbStudentInfo.Controls.Add(this.txbTeStAddress);
+            this.grbStudentInfo.Controls.Add(this.txbTeStEmail);
+            this.grbStudentInfo.Controls.Add(this.txbTeStName);
+            this.grbStudentInfo.Controls.Add(this.lbsTeStStudents);
+            this.grbStudentInfo.Location = new System.Drawing.Point(232, 142);
+            this.grbStudentInfo.Name = "grbStudentInfo";
+            this.grbStudentInfo.Size = new System.Drawing.Size(751, 559);
+            this.grbStudentInfo.TabIndex = 6;
+            this.grbStudentInfo.TabStop = false;
+            this.grbStudentInfo.Text = "Student Info";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(573, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 16);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "List of Students";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(573, 236);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 16);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Message Student";
+            // 
+            // txbMessageHeader
+            // 
+            this.txbMessageHeader.Location = new System.Drawing.Point(509, 265);
+            this.txbMessageHeader.Multiline = true;
+            this.txbMessageHeader.Name = "txbMessageHeader";
+            this.txbMessageHeader.Size = new System.Drawing.Size(236, 48);
+            this.txbMessageHeader.TabIndex = 42;
+            // 
+            // btnSendMessage
+            // 
+            this.btnSendMessage.Location = new System.Drawing.Point(525, 506);
+            this.btnSendMessage.Name = "btnSendMessage";
+            this.btnSendMessage.Size = new System.Drawing.Size(203, 23);
+            this.btnSendMessage.TabIndex = 41;
+            this.btnSendMessage.Text = "Send Message";
+            this.btnSendMessage.UseVisualStyleBackColor = true;
+            this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
+            // 
+            // txbMessageBody
+            // 
+            this.txbMessageBody.Location = new System.Drawing.Point(509, 327);
+            this.txbMessageBody.Multiline = true;
+            this.txbMessageBody.Name = "txbMessageBody";
+            this.txbMessageBody.Size = new System.Drawing.Size(236, 159);
+            this.txbMessageBody.TabIndex = 40;
+            // 
+            // txbTeStStartingBalance
+            // 
+            this.txbTeStStartingBalance.Location = new System.Drawing.Point(136, 263);
+            this.txbTeStStartingBalance.Name = "txbTeStStartingBalance";
+            this.txbTeStStartingBalance.Size = new System.Drawing.Size(111, 22);
+            this.txbTeStStartingBalance.TabIndex = 7;
+            this.txbTeStStartingBalance.TextChanged += new System.EventHandler(this.txbTeStStartingBalance_TextChanged);
+            // 
+            // lblTeStStartingBalance
+            // 
+            this.lblTeStStartingBalance.AutoSize = true;
+            this.lblTeStStartingBalance.Location = new System.Drawing.Point(25, 269);
+            this.lblTeStStartingBalance.Name = "lblTeStStartingBalance";
+            this.lblTeStStartingBalance.Size = new System.Drawing.Size(105, 16);
+            this.lblTeStStartingBalance.TabIndex = 39;
+            this.lblTeStStartingBalance.Text = "Starting Balance";
+            // 
+            // pibTeStStudentPicture
+            // 
+            this.pibTeStStudentPicture.Location = new System.Drawing.Point(310, 45);
+            this.pibTeStStudentPicture.Name = "pibTeStStudentPicture";
+            this.pibTeStStudentPicture.Size = new System.Drawing.Size(139, 124);
+            this.pibTeStStudentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibTeStStudentPicture.TabIndex = 38;
+            this.pibTeStStudentPicture.TabStop = false;
+            // 
+            // lblTeStRemainingBalance
+            // 
+            this.lblTeStRemainingBalance.AutoSize = true;
+            this.lblTeStRemainingBalance.Location = new System.Drawing.Point(352, 376);
+            this.lblTeStRemainingBalance.Name = "lblTeStRemainingBalance";
+            this.lblTeStRemainingBalance.Size = new System.Drawing.Size(53, 20);
+            this.lblTeStRemainingBalance.TabIndex = 34;
+            this.lblTeStRemainingBalance.Text = "Balance";
+            this.lblTeStRemainingBalance.UseCompatibleTextRendering = true;
+            // 
+            // pgbTeStBalance
+            // 
+            this.pgbTeStBalance.Location = new System.Drawing.Point(289, 414);
+            this.pgbTeStBalance.Name = "pgbTeStBalance";
+            this.pgbTeStBalance.Size = new System.Drawing.Size(174, 36);
+            this.pgbTeStBalance.TabIndex = 33;
+            // 
+            // txbTeStTeStBio
+            // 
+            this.txbTeStTeStBio.Location = new System.Drawing.Point(289, 212);
+            this.txbTeStTeStBio.Multiline = true;
+            this.txbTeStTeStBio.Name = "txbTeStTeStBio";
+            this.txbTeStTeStBio.Size = new System.Drawing.Size(179, 138);
+            this.txbTeStTeStBio.TabIndex = 8;
+            this.txbTeStTeStBio.Text = "Bio";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(25, 229);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(41, 16);
+            this.lblEmail.TabIndex = 29;
+            this.lblEmail.Text = "Email";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(25, 184);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(58, 16);
+            this.lblAddress.TabIndex = 28;
+            this.lblAddress.Text = "Address";
+            // 
+            // lblPhone
+            // 
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Location = new System.Drawing.Point(25, 135);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(46, 16);
+            this.lblPhone.TabIndex = 27;
+            this.lblPhone.Text = "Phone";
+            // 
+            // lblGrade
+            // 
+            this.lblGrade.AutoSize = true;
+            this.lblGrade.Location = new System.Drawing.Point(25, 91);
+            this.lblGrade.Name = "lblGrade";
+            this.lblGrade.Size = new System.Drawing.Size(45, 16);
+            this.lblGrade.TabIndex = 25;
+            this.lblGrade.Text = "Grade";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(25, 51);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(44, 16);
+            this.lblName.TabIndex = 24;
+            this.lblName.Text = "Name";
+            // 
+            // txbTeStPhone
+            // 
+            this.txbTeStPhone.Location = new System.Drawing.Point(126, 132);
+            this.txbTeStPhone.Name = "txbTeStPhone";
+            this.txbTeStPhone.Size = new System.Drawing.Size(121, 22);
+            this.txbTeStPhone.TabIndex = 4;
+            // 
+            // cmbTeStGrade
+            // 
+            this.cmbTeStGrade.FormattingEnabled = true;
+            this.cmbTeStGrade.Location = new System.Drawing.Point(126, 83);
+            this.cmbTeStGrade.Name = "cmbTeStGrade";
+            this.cmbTeStGrade.Size = new System.Drawing.Size(121, 24);
+            this.cmbTeStGrade.TabIndex = 2;
+            // 
+            // txbTeStAddress
+            // 
+            this.txbTeStAddress.Location = new System.Drawing.Point(126, 178);
+            this.txbTeStAddress.Name = "txbTeStAddress";
+            this.txbTeStAddress.Size = new System.Drawing.Size(121, 22);
+            this.txbTeStAddress.TabIndex = 5;
+            // 
+            // txbTeStEmail
+            // 
+            this.txbTeStEmail.Location = new System.Drawing.Point(126, 223);
+            this.txbTeStEmail.Name = "txbTeStEmail";
+            this.txbTeStEmail.Size = new System.Drawing.Size(121, 22);
+            this.txbTeStEmail.TabIndex = 6;
+            // 
+            // txbTeStName
+            // 
+            this.txbTeStName.Location = new System.Drawing.Point(126, 46);
+            this.txbTeStName.Name = "txbTeStName";
+            this.txbTeStName.Size = new System.Drawing.Size(121, 22);
+            this.txbTeStName.TabIndex = 1;
+            // 
+            // grpButtons
+            // 
+            this.grpButtons.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grpButtons.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.grpButtons.Controls.Add(this.btnTeStResetPassword);
+            this.grpButtons.Controls.Add(this.btnTeStCreateStudent);
+            this.grpButtons.Controls.Add(this.btnTeStUpdateStudent);
+            this.grpButtons.Controls.Add(this.btnTeStClear);
+            this.grpButtons.Controls.Add(this.btnTeStDeleteStudent);
+            this.grpButtons.Controls.Add(this.btnTeStUpdateBalance);
+            this.grpButtons.Location = new System.Drawing.Point(232, 37);
+            this.grpButtons.Name = "grpButtons";
+            this.grpButtons.Size = new System.Drawing.Size(751, 99);
+            this.grpButtons.TabIndex = 7;
+            this.grpButtons.TabStop = false;
+            // 
+            // btnTeStResetPassword
+            // 
+            this.btnTeStResetPassword.Image = global::JEM.Properties.Resources._34px_resetpassword;
+            this.btnTeStResetPassword.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTeStResetPassword.Location = new System.Drawing.Point(525, 17);
+            this.btnTeStResetPassword.Name = "btnTeStResetPassword";
+            this.btnTeStResetPassword.Size = new System.Drawing.Size(73, 74);
+            this.btnTeStResetPassword.TabIndex = 45;
+            this.btnTeStResetPassword.Text = "Reset Password";
+            this.btnTeStResetPassword.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTeStResetPassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTeStResetPassword.UseCompatibleTextRendering = true;
+            this.btnTeStResetPassword.UseVisualStyleBackColor = true;
+            this.btnTeStResetPassword.Click += new System.EventHandler(this.btnTeStResetPassword_Click);
+            // 
+            // btnTeStCreateStudent
+            // 
+            this.btnTeStCreateStudent.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTeStCreateStudent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTeStCreateStudent.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnTeStCreateStudent.FlatAppearance.BorderSize = 0;
+            this.btnTeStCreateStudent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTeStCreateStudent.Image = global::JEM.Properties.Resources.smallcreateUser;
+            this.btnTeStCreateStudent.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTeStCreateStudent.Location = new System.Drawing.Point(28, 17);
+            this.btnTeStCreateStudent.Name = "btnTeStCreateStudent";
+            this.btnTeStCreateStudent.Size = new System.Drawing.Size(73, 74);
+            this.btnTeStCreateStudent.TabIndex = 9;
+            this.btnTeStCreateStudent.Text = "Create Student";
+            this.btnTeStCreateStudent.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTeStCreateStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTeStCreateStudent.UseCompatibleTextRendering = true;
+            this.btnTeStCreateStudent.UseVisualStyleBackColor = true;
+            this.btnTeStCreateStudent.Click += new System.EventHandler(this.btnTeStCreateStudent_Click);
+            // 
+            // btnTeStUpdateStudent
+            // 
+            this.btnTeStUpdateStudent.Image = global::JEM.Properties.Resources.xxx38pxUpdate;
+            this.btnTeStUpdateStudent.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTeStUpdateStudent.Location = new System.Drawing.Point(147, 17);
+            this.btnTeStUpdateStudent.Name = "btnTeStUpdateStudent";
+            this.btnTeStUpdateStudent.Size = new System.Drawing.Size(73, 74);
+            this.btnTeStUpdateStudent.TabIndex = 10;
+            this.btnTeStUpdateStudent.Text = "Update Student";
+            this.btnTeStUpdateStudent.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTeStUpdateStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTeStUpdateStudent.UseCompatibleTextRendering = true;
+            this.btnTeStUpdateStudent.UseVisualStyleBackColor = true;
+            this.btnTeStUpdateStudent.Click += new System.EventHandler(this.btnTeStUpdateStudent_Click);
+            // 
+            // btnTeStClear
+            // 
+            this.btnTeStClear.Image = global::JEM.Properties.Resources.smallClearPic;
+            this.btnTeStClear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTeStClear.Location = new System.Drawing.Point(272, 17);
+            this.btnTeStClear.Name = "btnTeStClear";
+            this.btnTeStClear.Size = new System.Drawing.Size(73, 74);
+            this.btnTeStClear.TabIndex = 11;
+            this.btnTeStClear.Text = "Clear";
+            this.btnTeStClear.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnTeStClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTeStClear.UseCompatibleTextRendering = true;
+            this.btnTeStClear.UseVisualStyleBackColor = true;
+            this.btnTeStClear.Click += new System.EventHandler(this.btnTeStClear_Click);
+            // 
+            // btnTeStDeleteStudent
+            // 
+            this.btnTeStDeleteStudent.Image = global::JEM.Properties.Resources.smallDelete_trash;
+            this.btnTeStDeleteStudent.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTeStDeleteStudent.Location = new System.Drawing.Point(395, 17);
+            this.btnTeStDeleteStudent.Name = "btnTeStDeleteStudent";
+            this.btnTeStDeleteStudent.Size = new System.Drawing.Size(73, 74);
+            this.btnTeStDeleteStudent.TabIndex = 12;
+            this.btnTeStDeleteStudent.Text = "Delete Student";
+            this.btnTeStDeleteStudent.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTeStDeleteStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTeStDeleteStudent.UseCompatibleTextRendering = true;
+            this.btnTeStDeleteStudent.UseVisualStyleBackColor = true;
+            this.btnTeStDeleteStudent.Click += new System.EventHandler(this.btnTeStDeleteStudent_Click);
+            // 
+            // btnTeStUpdateBalance
+            // 
+            this.btnTeStUpdateBalance.Image = global::JEM.Properties.Resources._34px_updateBalance;
+            this.btnTeStUpdateBalance.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTeStUpdateBalance.Location = new System.Drawing.Point(641, 17);
+            this.btnTeStUpdateBalance.Name = "btnTeStUpdateBalance";
+            this.btnTeStUpdateBalance.Size = new System.Drawing.Size(73, 74);
+            this.btnTeStUpdateBalance.TabIndex = 13;
+            this.btnTeStUpdateBalance.Text = "Update Balance";
+            this.btnTeStUpdateBalance.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnTeStUpdateBalance.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTeStUpdateBalance.UseCompatibleTextRendering = true;
+            this.btnTeStUpdateBalance.UseVisualStyleBackColor = true;
+            this.btnTeStUpdateBalance.Click += new System.EventHandler(this.btnTeStUpdateBalance_Click);
             // 
             // TeacherStudentForm
             // 
@@ -582,12 +561,12 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibTeStTeacherPicture)).EndInit();
             this.panel2.ResumeLayout(false);
             this.grbStudentInfo.ResumeLayout(false);
             this.grbStudentInfo.PerformLayout();
-            this.grpButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pibTeStStudentPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pibTeStTeacherPicture)).EndInit();
+            this.grpButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -608,11 +587,9 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.Label lblSubject;
         private System.Windows.Forms.Label lblGrade;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txbTeStPhone;
-        private System.Windows.Forms.ComboBox cmbTeStSubject;
         private System.Windows.Forms.ComboBox cmbTeStGrade;
         private System.Windows.Forms.TextBox txbTeStAddress;
         private System.Windows.Forms.TextBox txbTeStEmail;

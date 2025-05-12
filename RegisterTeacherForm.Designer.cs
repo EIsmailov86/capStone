@@ -153,6 +153,7 @@
             this.btnReTeRegister.TabIndex = 73;
             this.btnReTeRegister.Text = "Register Teacher";
             this.btnReTeRegister.UseVisualStyleBackColor = false;
+            this.btnReTeRegister.Click += new System.EventHandler(this.btnReTeRegister_Click);
             // 
             // txtReTeConfirmPassword
             // 
