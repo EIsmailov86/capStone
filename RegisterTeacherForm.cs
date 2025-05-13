@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace JEM
 {
-    public partial class RegisterTeacherForm : Form
+    public partial class RegisterTeacherForm : BaseForm
     {
         public RegisterTeacherForm()
         {
@@ -151,13 +151,7 @@ namespace JEM
         #endregion
 
         #region DB Connection
-        public MySqlConnection ConnectToDb()
-        {
-            string connectionString = "Server=127.0.0.1;Database=jem_jed;Uid=root;Pwd=mysql;";
-            var dbConnection = new MySqlConnection(connectionString);
-            dbConnection.Open();
-            return dbConnection;
-        }
+
         #endregion
 
         private void txtReTePassword_TextChanged(object sender, EventArgs e)

@@ -12,7 +12,7 @@ using System.Xml.Linq;
 
 namespace JEM
 {
-    public partial class RegisterStudentForm : Form
+    public partial class RegisterStudentForm : BaseForm
     {
         public RegisterStudentForm()
         {
@@ -157,23 +157,7 @@ namespace JEM
         #endregion
 
         #region DB Connection
-        public MySqlConnection ConnectToDb()
-        {
-            // testing connections to the remote server
-            // LOCAL
-            string connectionString = $"Server=127.0.0.1;Database=jem_jed;Uid=root;Pwd=mysql;";
 
-            // New logic for connecting remotely (commented out)
-            // string server = "82.163.176.124";
-            // string database = "jem_capstonedb";
-            // string uid = "jem_admin";
-            // string password = "U=)IZKf-aWzj";
-            // string connectionString = $"SERVER={server};PORT=3306;DATABASE={database};Uid={uid};PASSWORD={password};";
-
-            MySqlConnection dbConnection = new MySqlConnection(connectionString);
-            dbConnection.Open();
-            return dbConnection;
-        }
         #endregion
         private void txtReStPassword_TextChanged(object sender, EventArgs e)
         {

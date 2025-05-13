@@ -21,6 +21,23 @@ namespace JEM
             string enteredUser = txtUserName.Text;
             string enteredPass = txtPassword.Text;
 
+            if(!InputValidator.IsValidUserName(enteredUser))
+            {
+                MessageBox.Show("Username is not valid, cannot contain special characters or be blank");
+                txtUserName.Text = "";
+                txtPassword.Text = "";
+                return;
+            }
+
+            if (!InputValidator.IsValidUserName(enteredPass))
+            {
+                MessageBox.Show("Password is not valid, cannot contain special characters or be blank");
+                txtUserName.Text = "";
+                txtPassword.Text = "";
+                return;
+            }
+
+
             using (var dbConnection = ConnectToDb())
             {
                 // ── STUDENT LOGIN ──────────────────────────────────────────────
