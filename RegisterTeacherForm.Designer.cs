@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pibReStPicture = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblReTeWelcome = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -51,11 +50,12 @@
             this.txtReTePhone = new System.Windows.Forms.TextBox();
             this.txtReTeEmail = new System.Windows.Forms.TextBox();
             this.txtReTeName = new System.Windows.Forms.TextBox();
+            this.pibReStPicture = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibReStPicture)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibReStPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,16 +88,6 @@
             this.label1.Size = new System.Drawing.Size(45, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "JEM";
-            // 
-            // pibReStPicture
-            // 
-            this.pibReStPicture.Image = ((System.Drawing.Image)(resources.GetObject("pibReStPicture.Image")));
-            this.pibReStPicture.Location = new System.Drawing.Point(35, 26);
-            this.pibReStPicture.Name = "pibReStPicture";
-            this.pibReStPicture.Size = new System.Drawing.Size(63, 63);
-            this.pibReStPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pibReStPicture.TabIndex = 0;
-            this.pibReStPicture.TabStop = false;
             // 
             // panel2
             // 
@@ -146,6 +136,7 @@
             // btnReTeRegister
             // 
             this.btnReTeRegister.BackColor = System.Drawing.Color.MintCream;
+            this.btnReTeRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReTeRegister.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReTeRegister.Location = new System.Drawing.Point(190, 252);
             this.btnReTeRegister.Name = "btnReTeRegister";
@@ -274,6 +265,16 @@
             this.txtReTeName.Size = new System.Drawing.Size(140, 22);
             this.txtReTeName.TabIndex = 59;
             // 
+            // pibReStPicture
+            // 
+            this.pibReStPicture.Image = ((System.Drawing.Image)(resources.GetObject("pibReStPicture.Image")));
+            this.pibReStPicture.Location = new System.Drawing.Point(35, 26);
+            this.pibReStPicture.Name = "pibReStPicture";
+            this.pibReStPicture.Size = new System.Drawing.Size(63, 63);
+            this.pibReStPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibReStPicture.TabIndex = 0;
+            this.pibReStPicture.TabStop = false;
+            // 
             // RegisterTeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -287,10 +288,10 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibReStPicture)).EndInit();
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibReStPicture)).EndInit();
             this.ResumeLayout(false);
 
         }

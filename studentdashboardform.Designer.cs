@@ -250,6 +250,7 @@
             // btnStDaRequestSession
             // 
             this.btnStDaRequestSession.AutoSize = true;
+            this.btnStDaRequestSession.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStDaRequestSession.Image = global::JEM.Properties.Resources.xxx40px_person_clock_calendar;
             this.btnStDaRequestSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStDaRequestSession.Location = new System.Drawing.Point(132, 234);
@@ -302,6 +303,7 @@
             // 
             this.btnStDaFilterBySubject.AutoSize = true;
             this.btnStDaFilterBySubject.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnStDaFilterBySubject.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStDaFilterBySubject.Image = global::JEM.Properties.Resources._34px_searchsubject;
             this.btnStDaFilterBySubject.Location = new System.Drawing.Point(212, 125);
             this.btnStDaFilterBySubject.Name = "btnStDaFilterBySubject";
@@ -315,6 +317,7 @@
             // 
             this.btnStDaFilterByDate.AutoSize = true;
             this.btnStDaFilterByDate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnStDaFilterByDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStDaFilterByDate.Image = global::JEM.Properties.Resources.xxx40px_search_by_Date;
             this.btnStDaFilterByDate.Location = new System.Drawing.Point(212, 41);
             this.btnStDaFilterByDate.Name = "btnStDaFilterByDate";
@@ -387,6 +390,7 @@
             // 
             // btnStDaMyInfo
             // 
+            this.btnStDaMyInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStDaMyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnStDaMyInfo.FlatAppearance.BorderSize = 0;
             this.btnStDaMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -405,6 +409,7 @@
             // 
             // btnStDaNotifications
             // 
+            this.btnStDaNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStDaNotifications.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStDaNotifications.FlatAppearance.BorderSize = 0;
             this.btnStDaNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -423,6 +428,7 @@
             // 
             // btnStDaMyTeacher
             // 
+            this.btnStDaMyTeacher.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStDaMyTeacher.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStDaMyTeacher.FlatAppearance.BorderSize = 0;
             this.btnStDaMyTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

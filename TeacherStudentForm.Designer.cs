@@ -354,6 +354,7 @@
             // 
             // btnTeStResetPassword
             // 
+            this.btnTeStResetPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeStResetPassword.Image = global::JEM.Properties.Resources._34px_resetpassword;
             this.btnTeStResetPassword.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnTeStResetPassword.Location = new System.Drawing.Point(525, 17);
@@ -371,6 +372,7 @@
             // 
             this.btnTeStCreateStudent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTeStCreateStudent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTeStCreateStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeStCreateStudent.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnTeStCreateStudent.FlatAppearance.BorderSize = 0;
             this.btnTeStCreateStudent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -389,6 +391,7 @@
             // 
             // btnTeStUpdateStudent
             // 
+            this.btnTeStUpdateStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeStUpdateStudent.Image = global::JEM.Properties.Resources.xxx38pxUpdate;
             this.btnTeStUpdateStudent.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnTeStUpdateStudent.Location = new System.Drawing.Point(147, 17);
@@ -404,6 +407,7 @@
             // 
             // btnTeStClear
             // 
+            this.btnTeStClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeStClear.Image = global::JEM.Properties.Resources.smallClearPic;
             this.btnTeStClear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnTeStClear.Location = new System.Drawing.Point(272, 17);
@@ -419,6 +423,7 @@
             // 
             // btnTeStDeleteStudent
             // 
+            this.btnTeStDeleteStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeStDeleteStudent.Image = global::JEM.Properties.Resources.smallDelete_trash;
             this.btnTeStDeleteStudent.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnTeStDeleteStudent.Location = new System.Drawing.Point(395, 17);
@@ -434,6 +439,7 @@
             // 
             // btnTeStUpdateBalance
             // 
+            this.btnTeStUpdateBalance.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeStUpdateBalance.Image = global::JEM.Properties.Resources._34px_updateBalance;
             this.btnTeStUpdateBalance.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnTeStUpdateBalance.Location = new System.Drawing.Point(641, 17);
@@ -449,6 +455,7 @@
             // 
             // btnSendMessage
             // 
+            this.btnSendMessage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSendMessage.Image = global::JEM.Properties.Resources._34px_sendMessage;
             this.btnSendMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSendMessage.Location = new System.Drawing.Point(553, 503);
@@ -473,6 +480,7 @@
             // 
             // btnTeStNotifications
             // 
+            this.btnTeStNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeStNotifications.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTeStNotifications.FlatAppearance.BorderSize = 0;
             this.btnTeStNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -491,6 +499,7 @@
             // 
             // btnTeStMyInfo
             // 
+            this.btnTeStMyInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeStMyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnTeStMyInfo.FlatAppearance.BorderSize = 0;
             this.btnTeStMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -509,6 +518,7 @@
             // 
             // btnTeStSchedule
             // 
+            this.btnTeStSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeStSchedule.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTeStSchedule.FlatAppearance.BorderSize = 0;
             this.btnTeStSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -527,6 +537,7 @@
             // 
             // btnTeStDashboard
             // 
+            this.btnTeStDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeStDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTeStDashboard.FlatAppearance.BorderSize = 0;
             this.btnTeStDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

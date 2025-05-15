@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.grbScheduleApp = new System.Windows.Forms.GroupBox();
-            this.btnTeShDeleteSession = new System.Windows.Forms.Button();
             this.dgvTeShSchedule = new System.Windows.Forms.DataGridView();
             this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,12 +38,10 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbsTeShStudents = new System.Windows.Forms.ListBox();
-            this.btnTeShUpdateCost = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txbTeShSessionCost = new System.Windows.Forms.TextBox();
             this.dtpTeShDateTime = new System.Windows.Forms.DateTimePicker();
             this.lblSubject = new System.Windows.Forms.Label();
-            this.btnTeShScheduleSession = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.cmbTeShTime = new System.Windows.Forms.ComboBox();
             this.lblDate = new System.Windows.Forms.Label();
@@ -54,18 +51,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnTeScNotifications = new System.Windows.Forms.Button();
-            this.btnTeScMyStudent = new System.Windows.Forms.Button();
-            this.btnTeScMyInfo = new System.Windows.Forms.Button();
-            this.btnTeScDashboards = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.picTeScTeacherPicture = new System.Windows.Forms.PictureBox();
             this.btnMyInfo = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMyStudent = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnTeShDeleteSession = new System.Windows.Forms.Button();
+            this.btnTeShUpdateCost = new System.Windows.Forms.Button();
+            this.btnTeShScheduleSession = new System.Windows.Forms.Button();
+            this.btnTeScNotifications = new System.Windows.Forms.Button();
+            this.btnTeScMyStudent = new System.Windows.Forms.Button();
+            this.btnTeScMyInfo = new System.Windows.Forms.Button();
+            this.btnTeScDashboards = new System.Windows.Forms.Button();
+            this.picTeScTeacherPicture = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grbScheduleApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeShSchedule)).BeginInit();
@@ -73,8 +73,8 @@
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picTeScTeacherPicture)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTeScTeacherPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,22 +102,6 @@
             this.grbScheduleApp.TabIndex = 19;
             this.grbScheduleApp.TabStop = false;
             this.grbScheduleApp.Text = "Schedule Appointment";
-            // 
-            // btnTeShDeleteSession
-            // 
-            this.btnTeShDeleteSession.BackColor = System.Drawing.Color.Red;
-            this.btnTeShDeleteSession.Image = global::JEM.Properties.Resources.smallDelete_trash;
-            this.btnTeShDeleteSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeShDeleteSession.Location = new System.Drawing.Point(612, 233);
-            this.btnTeShDeleteSession.Name = "btnTeShDeleteSession";
-            this.btnTeShDeleteSession.Size = new System.Drawing.Size(169, 50);
-            this.btnTeShDeleteSession.TabIndex = 21;
-            this.btnTeShDeleteSession.Text = "Delete Session";
-            this.btnTeShDeleteSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeShDeleteSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeShDeleteSession.UseCompatibleTextRendering = true;
-            this.btnTeShDeleteSession.UseVisualStyleBackColor = true;
-            this.btnTeShDeleteSession.Click += new System.EventHandler(this.btnTeShDeleteSession_Click);
             // 
             // dgvTeShSchedule
             // 
@@ -197,21 +181,6 @@
             this.lbsTeShStudents.TabIndex = 20;
             this.lbsTeShStudents.SelectedIndexChanged += new System.EventHandler(this.StudentSelectedIndexChanged);
             // 
-            // btnTeShUpdateCost
-            // 
-            this.btnTeShUpdateCost.Image = global::JEM.Properties.Resources._34px_updateCost;
-            this.btnTeShUpdateCost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeShUpdateCost.Location = new System.Drawing.Point(209, 233);
-            this.btnTeShUpdateCost.Name = "btnTeShUpdateCost";
-            this.btnTeShUpdateCost.Size = new System.Drawing.Size(155, 50);
-            this.btnTeShUpdateCost.TabIndex = 11;
-            this.btnTeShUpdateCost.Text = "Update Cost";
-            this.btnTeShUpdateCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeShUpdateCost.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeShUpdateCost.UseCompatibleTextRendering = true;
-            this.btnTeShUpdateCost.UseVisualStyleBackColor = true;
-            this.btnTeShUpdateCost.Click += new System.EventHandler(this.btnTeShUpdateCost_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -244,20 +213,6 @@
             this.lblSubject.Size = new System.Drawing.Size(52, 16);
             this.lblSubject.TabIndex = 4;
             this.lblSubject.Text = "Subject";
-            // 
-            // btnTeShScheduleSession
-            // 
-            this.btnTeShScheduleSession.Image = global::JEM.Properties.Resources._34px_person_clock_calendar;
-            this.btnTeShScheduleSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeShScheduleSession.Location = new System.Drawing.Point(19, 233);
-            this.btnTeShScheduleSession.Name = "btnTeShScheduleSession";
-            this.btnTeShScheduleSession.Size = new System.Drawing.Size(184, 50);
-            this.btnTeShScheduleSession.TabIndex = 8;
-            this.btnTeShScheduleSession.Text = "Schedule Session";
-            this.btnTeShScheduleSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeShScheduleSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeShScheduleSession.UseVisualStyleBackColor = true;
-            this.btnTeShScheduleSession.Click += new System.EventHandler(this.btnTeShScheduleSession_Click);
             // 
             // lblTime
             // 
@@ -350,78 +305,6 @@
             this.panel5.Size = new System.Drawing.Size(135, 653);
             this.panel5.TabIndex = 23;
             // 
-            // btnTeScNotifications
-            // 
-            this.btnTeScNotifications.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTeScNotifications.FlatAppearance.BorderSize = 0;
-            this.btnTeScNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeScNotifications.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnTeScNotifications.Image = global::JEM.Properties.Resources.xxsmallnotification;
-            this.btnTeScNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeScNotifications.Location = new System.Drawing.Point(0, 212);
-            this.btnTeScNotifications.Name = "btnTeScNotifications";
-            this.btnTeScNotifications.Size = new System.Drawing.Size(135, 42);
-            this.btnTeScNotifications.TabIndex = 23;
-            this.btnTeScNotifications.Text = "   Notifications";
-            this.btnTeScNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeScNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeScNotifications.UseVisualStyleBackColor = true;
-            this.btnTeScNotifications.Click += new System.EventHandler(this.btnTeScNotifications_Click);
-            // 
-            // btnTeScMyStudent
-            // 
-            this.btnTeScMyStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTeScMyStudent.FlatAppearance.BorderSize = 0;
-            this.btnTeScMyStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeScMyStudent.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnTeScMyStudent.Image = global::JEM.Properties.Resources.xxsmalluserONE;
-            this.btnTeScMyStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeScMyStudent.Location = new System.Drawing.Point(0, 170);
-            this.btnTeScMyStudent.Name = "btnTeScMyStudent";
-            this.btnTeScMyStudent.Size = new System.Drawing.Size(135, 42);
-            this.btnTeScMyStudent.TabIndex = 21;
-            this.btnTeScMyStudent.Text = "   My Student";
-            this.btnTeScMyStudent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeScMyStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeScMyStudent.UseVisualStyleBackColor = true;
-            this.btnTeScMyStudent.Click += new System.EventHandler(this.btnTeScMyStudent_Click);
-            // 
-            // btnTeScMyInfo
-            // 
-            this.btnTeScMyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnTeScMyInfo.FlatAppearance.BorderSize = 0;
-            this.btnTeScMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeScMyInfo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnTeScMyInfo.Image = global::JEM.Properties.Resources.xxsmallsettings_black;
-            this.btnTeScMyInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeScMyInfo.Location = new System.Drawing.Point(0, 611);
-            this.btnTeScMyInfo.Name = "btnTeScMyInfo";
-            this.btnTeScMyInfo.Size = new System.Drawing.Size(135, 42);
-            this.btnTeScMyInfo.TabIndex = 21;
-            this.btnTeScMyInfo.Text = "   My Info";
-            this.btnTeScMyInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeScMyInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeScMyInfo.UseVisualStyleBackColor = true;
-            this.btnTeScMyInfo.Click += new System.EventHandler(this.btnTeScMyInfo_Click);
-            // 
-            // btnTeScDashboards
-            // 
-            this.btnTeScDashboards.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTeScDashboards.FlatAppearance.BorderSize = 0;
-            this.btnTeScDashboards.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeScDashboards.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnTeScDashboards.Image = global::JEM.Properties.Resources.xxsmall_home_black_square;
-            this.btnTeScDashboards.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeScDashboards.Location = new System.Drawing.Point(0, 128);
-            this.btnTeScDashboards.Name = "btnTeScDashboards";
-            this.btnTeScDashboards.Size = new System.Drawing.Size(135, 42);
-            this.btnTeScDashboards.TabIndex = 21;
-            this.btnTeScDashboards.Text = "   Dashboard";
-            this.btnTeScDashboards.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeScDashboards.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeScDashboards.UseVisualStyleBackColor = true;
-            this.btnTeScDashboards.Click += new System.EventHandler(this.btnTeScDashboards_Click);
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
@@ -443,16 +326,6 @@
             this.label3.Size = new System.Drawing.Size(45, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "JEM";
-            // 
-            // picTeScTeacherPicture
-            // 
-            this.picTeScTeacherPicture.Image = global::JEM.Properties.Resources.user;
-            this.picTeScTeacherPicture.Location = new System.Drawing.Point(32, 19);
-            this.picTeScTeacherPicture.Name = "picTeScTeacherPicture";
-            this.picTeScTeacherPicture.Size = new System.Drawing.Size(63, 63);
-            this.picTeScTeacherPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picTeScTeacherPicture.TabIndex = 2;
-            this.picTeScTeacherPicture.TabStop = false;
             // 
             // btnMyInfo
             // 
@@ -504,6 +377,140 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "JEM";
             // 
+            // btnTeShDeleteSession
+            // 
+            this.btnTeShDeleteSession.BackColor = System.Drawing.Color.Red;
+            this.btnTeShDeleteSession.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTeShDeleteSession.Image = global::JEM.Properties.Resources.smallDelete_trash;
+            this.btnTeShDeleteSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeShDeleteSession.Location = new System.Drawing.Point(612, 233);
+            this.btnTeShDeleteSession.Name = "btnTeShDeleteSession";
+            this.btnTeShDeleteSession.Size = new System.Drawing.Size(169, 50);
+            this.btnTeShDeleteSession.TabIndex = 21;
+            this.btnTeShDeleteSession.Text = "Delete Session";
+            this.btnTeShDeleteSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeShDeleteSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeShDeleteSession.UseCompatibleTextRendering = true;
+            this.btnTeShDeleteSession.UseVisualStyleBackColor = true;
+            this.btnTeShDeleteSession.Click += new System.EventHandler(this.btnTeShDeleteSession_Click);
+            // 
+            // btnTeShUpdateCost
+            // 
+            this.btnTeShUpdateCost.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTeShUpdateCost.Image = global::JEM.Properties.Resources._34px_updateCost;
+            this.btnTeShUpdateCost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeShUpdateCost.Location = new System.Drawing.Point(209, 233);
+            this.btnTeShUpdateCost.Name = "btnTeShUpdateCost";
+            this.btnTeShUpdateCost.Size = new System.Drawing.Size(155, 50);
+            this.btnTeShUpdateCost.TabIndex = 11;
+            this.btnTeShUpdateCost.Text = "Update Cost";
+            this.btnTeShUpdateCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeShUpdateCost.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeShUpdateCost.UseCompatibleTextRendering = true;
+            this.btnTeShUpdateCost.UseVisualStyleBackColor = true;
+            this.btnTeShUpdateCost.Click += new System.EventHandler(this.btnTeShUpdateCost_Click);
+            // 
+            // btnTeShScheduleSession
+            // 
+            this.btnTeShScheduleSession.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTeShScheduleSession.Image = global::JEM.Properties.Resources._34px_person_clock_calendar;
+            this.btnTeShScheduleSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeShScheduleSession.Location = new System.Drawing.Point(19, 233);
+            this.btnTeShScheduleSession.Name = "btnTeShScheduleSession";
+            this.btnTeShScheduleSession.Size = new System.Drawing.Size(184, 50);
+            this.btnTeShScheduleSession.TabIndex = 8;
+            this.btnTeShScheduleSession.Text = "Schedule Session";
+            this.btnTeShScheduleSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeShScheduleSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeShScheduleSession.UseVisualStyleBackColor = true;
+            this.btnTeShScheduleSession.Click += new System.EventHandler(this.btnTeShScheduleSession_Click);
+            // 
+            // btnTeScNotifications
+            // 
+            this.btnTeScNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTeScNotifications.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTeScNotifications.FlatAppearance.BorderSize = 0;
+            this.btnTeScNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeScNotifications.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnTeScNotifications.Image = global::JEM.Properties.Resources.xxsmallnotification;
+            this.btnTeScNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeScNotifications.Location = new System.Drawing.Point(0, 212);
+            this.btnTeScNotifications.Name = "btnTeScNotifications";
+            this.btnTeScNotifications.Size = new System.Drawing.Size(135, 42);
+            this.btnTeScNotifications.TabIndex = 23;
+            this.btnTeScNotifications.Text = "   Notifications";
+            this.btnTeScNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeScNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeScNotifications.UseVisualStyleBackColor = true;
+            this.btnTeScNotifications.Click += new System.EventHandler(this.btnTeScNotifications_Click);
+            // 
+            // btnTeScMyStudent
+            // 
+            this.btnTeScMyStudent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTeScMyStudent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTeScMyStudent.FlatAppearance.BorderSize = 0;
+            this.btnTeScMyStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeScMyStudent.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnTeScMyStudent.Image = global::JEM.Properties.Resources.xxsmalluserONE;
+            this.btnTeScMyStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeScMyStudent.Location = new System.Drawing.Point(0, 170);
+            this.btnTeScMyStudent.Name = "btnTeScMyStudent";
+            this.btnTeScMyStudent.Size = new System.Drawing.Size(135, 42);
+            this.btnTeScMyStudent.TabIndex = 21;
+            this.btnTeScMyStudent.Text = "   My Student";
+            this.btnTeScMyStudent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeScMyStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeScMyStudent.UseVisualStyleBackColor = true;
+            this.btnTeScMyStudent.Click += new System.EventHandler(this.btnTeScMyStudent_Click);
+            // 
+            // btnTeScMyInfo
+            // 
+            this.btnTeScMyInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTeScMyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnTeScMyInfo.FlatAppearance.BorderSize = 0;
+            this.btnTeScMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeScMyInfo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnTeScMyInfo.Image = global::JEM.Properties.Resources.xxsmallsettings_black;
+            this.btnTeScMyInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeScMyInfo.Location = new System.Drawing.Point(0, 611);
+            this.btnTeScMyInfo.Name = "btnTeScMyInfo";
+            this.btnTeScMyInfo.Size = new System.Drawing.Size(135, 42);
+            this.btnTeScMyInfo.TabIndex = 21;
+            this.btnTeScMyInfo.Text = "   My Info";
+            this.btnTeScMyInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeScMyInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeScMyInfo.UseVisualStyleBackColor = true;
+            this.btnTeScMyInfo.Click += new System.EventHandler(this.btnTeScMyInfo_Click);
+            // 
+            // btnTeScDashboards
+            // 
+            this.btnTeScDashboards.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTeScDashboards.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTeScDashboards.FlatAppearance.BorderSize = 0;
+            this.btnTeScDashboards.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeScDashboards.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnTeScDashboards.Image = global::JEM.Properties.Resources.xxsmall_home_black_square;
+            this.btnTeScDashboards.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeScDashboards.Location = new System.Drawing.Point(0, 128);
+            this.btnTeScDashboards.Name = "btnTeScDashboards";
+            this.btnTeScDashboards.Size = new System.Drawing.Size(135, 42);
+            this.btnTeScDashboards.TabIndex = 21;
+            this.btnTeScDashboards.Text = "   Dashboard";
+            this.btnTeScDashboards.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeScDashboards.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeScDashboards.UseVisualStyleBackColor = true;
+            this.btnTeScDashboards.Click += new System.EventHandler(this.btnTeScDashboards_Click);
+            // 
+            // picTeScTeacherPicture
+            // 
+            this.picTeScTeacherPicture.Image = global::JEM.Properties.Resources.user;
+            this.picTeScTeacherPicture.Location = new System.Drawing.Point(32, 19);
+            this.picTeScTeacherPicture.Name = "picTeScTeacherPicture";
+            this.picTeScTeacherPicture.Size = new System.Drawing.Size(63, 63);
+            this.picTeScTeacherPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picTeScTeacherPicture.TabIndex = 2;
+            this.picTeScTeacherPicture.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::JEM.Properties.Resources.user;
@@ -533,9 +540,9 @@
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picTeScTeacherPicture)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTeScTeacherPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

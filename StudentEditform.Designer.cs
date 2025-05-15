@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentEditForm));
             this.grbStudentEdit = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.txbMyBio = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -43,8 +45,13 @@
             this.txbName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnSEDMyInfo = new System.Windows.Forms.Button();
+            this.btnSEDNotifications = new System.Windows.Forms.Button();
+            this.btnSEDMyTeacher = new System.Windows.Forms.Button();
+            this.btnSEDDashboard = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.pibStEdStudentPicture = new System.Windows.Forms.PictureBox();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnMyTeacher = new System.Windows.Forms.Button();
@@ -52,20 +59,13 @@
             this.lblStEdWelcome = new System.Windows.Forms.Label();
             this.btnStEdUploadPicture = new System.Windows.Forms.Button();
             this.picStEdStudentPicture = new System.Windows.Forms.PictureBox();
-            this.btnSEDMyInfo = new System.Windows.Forms.Button();
-            this.btnSEDNotifications = new System.Windows.Forms.Button();
-            this.btnSEDMyTeacher = new System.Windows.Forms.Button();
-            this.btnSEDDashboard = new System.Windows.Forms.Button();
-            this.pibStEdStudentPicture = new System.Windows.Forms.PictureBox();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.grbStudentEdit.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibStEdStudentPicture)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picStEdStudentPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pibStEdStudentPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // grbStudentEdit
@@ -90,6 +90,37 @@
             this.grbStudentEdit.TabIndex = 0;
             this.grbStudentEdit.TabStop = false;
             this.grbStudentEdit.Text = "Edit My Info";
+            // 
+            // btnClear
+            // 
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.Image = global::JEM.Properties.Resources.smallClearPic;
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(309, 295);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(179, 50);
+            this.btnClear.TabIndex = 17;
+            this.btnClear.Text = "Clear Fields";
+            this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClear.UseCompatibleTextRendering = true;
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.Image = global::JEM.Properties.Resources._34px_updateStudent;
+            this.btnUpdate.Location = new System.Drawing.Point(33, 295);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(219, 50);
+            this.btnUpdate.TabIndex = 16;
+            this.btnUpdate.Text = "Update Student Info";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdate.UseCompatibleTextRendering = true;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txbMyBio
             // 
@@ -208,6 +239,82 @@
             this.pnlMenu.Size = new System.Drawing.Size(135, 653);
             this.pnlMenu.TabIndex = 21;
             // 
+            // btnSEDMyInfo
+            // 
+            this.btnSEDMyInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSEDMyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSEDMyInfo.FlatAppearance.BorderSize = 0;
+            this.btnSEDMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSEDMyInfo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSEDMyInfo.Image = global::JEM.Properties.Resources.xxsmallsettings_black;
+            this.btnSEDMyInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSEDMyInfo.Location = new System.Drawing.Point(0, 611);
+            this.btnSEDMyInfo.Name = "btnSEDMyInfo";
+            this.btnSEDMyInfo.Size = new System.Drawing.Size(135, 42);
+            this.btnSEDMyInfo.TabIndex = 22;
+            this.btnSEDMyInfo.Text = "   My Info";
+            this.btnSEDMyInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSEDMyInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSEDMyInfo.UseVisualStyleBackColor = true;
+            this.btnSEDMyInfo.Click += new System.EventHandler(this.btnMyInfo_Click);
+            // 
+            // btnSEDNotifications
+            // 
+            this.btnSEDNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSEDNotifications.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSEDNotifications.FlatAppearance.BorderSize = 0;
+            this.btnSEDNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSEDNotifications.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSEDNotifications.Image = global::JEM.Properties.Resources.xxsmallnotification;
+            this.btnSEDNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSEDNotifications.Location = new System.Drawing.Point(0, 212);
+            this.btnSEDNotifications.Name = "btnSEDNotifications";
+            this.btnSEDNotifications.Size = new System.Drawing.Size(135, 42);
+            this.btnSEDNotifications.TabIndex = 22;
+            this.btnSEDNotifications.Text = "   Notifications";
+            this.btnSEDNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSEDNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSEDNotifications.UseVisualStyleBackColor = true;
+            this.btnSEDNotifications.Click += new System.EventHandler(this.btnStEdNotifications_Click);
+            // 
+            // btnSEDMyTeacher
+            // 
+            this.btnSEDMyTeacher.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSEDMyTeacher.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSEDMyTeacher.FlatAppearance.BorderSize = 0;
+            this.btnSEDMyTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSEDMyTeacher.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSEDMyTeacher.Image = global::JEM.Properties.Resources.xxsmallteacher;
+            this.btnSEDMyTeacher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSEDMyTeacher.Location = new System.Drawing.Point(0, 170);
+            this.btnSEDMyTeacher.Name = "btnSEDMyTeacher";
+            this.btnSEDMyTeacher.Size = new System.Drawing.Size(135, 42);
+            this.btnSEDMyTeacher.TabIndex = 22;
+            this.btnSEDMyTeacher.Text = "   My Teacher";
+            this.btnSEDMyTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSEDMyTeacher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSEDMyTeacher.UseVisualStyleBackColor = true;
+            this.btnSEDMyTeacher.Click += new System.EventHandler(this.btnStEdMyTeacher_Click);
+            // 
+            // btnSEDDashboard
+            // 
+            this.btnSEDDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSEDDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSEDDashboard.FlatAppearance.BorderSize = 0;
+            this.btnSEDDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSEDDashboard.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSEDDashboard.Image = global::JEM.Properties.Resources.xxsmall_home_black_square;
+            this.btnSEDDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSEDDashboard.Location = new System.Drawing.Point(0, 128);
+            this.btnSEDDashboard.Name = "btnSEDDashboard";
+            this.btnSEDDashboard.Size = new System.Drawing.Size(135, 42);
+            this.btnSEDDashboard.TabIndex = 22;
+            this.btnSEDDashboard.Text = "   Dashboard";
+            this.btnSEDDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSEDDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSEDDashboard.UseVisualStyleBackColor = true;
+            this.btnSEDDashboard.Click += new System.EventHandler(this.btnStEdDashboard_Click);
+            // 
             // pnlLogo
             // 
             this.pnlLogo.Controls.Add(this.label2);
@@ -228,6 +335,16 @@
             this.label2.Size = new System.Drawing.Size(45, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "JEM";
+            // 
+            // pibStEdStudentPicture
+            // 
+            this.pibStEdStudentPicture.Image = ((System.Drawing.Image)(resources.GetObject("pibStEdStudentPicture.Image")));
+            this.pibStEdStudentPicture.Location = new System.Drawing.Point(32, 19);
+            this.pibStEdStudentPicture.Name = "pibStEdStudentPicture";
+            this.pibStEdStudentPicture.Size = new System.Drawing.Size(63, 63);
+            this.pibStEdStudentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibStEdStudentPicture.TabIndex = 2;
+            this.pibStEdStudentPicture.TabStop = false;
             // 
             // btnDashboard
             // 
@@ -281,6 +398,7 @@
             // btnStEdUploadPicture
             // 
             this.btnStEdUploadPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnStEdUploadPicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStEdUploadPicture.Image = global::JEM.Properties.Resources._34px_uploadPic;
             this.btnStEdUploadPicture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStEdUploadPicture.Location = new System.Drawing.Point(763, 255);
@@ -304,117 +422,6 @@
             this.picStEdStudentPicture.TabIndex = 2;
             this.picStEdStudentPicture.TabStop = false;
             // 
-            // btnSEDMyInfo
-            // 
-            this.btnSEDMyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSEDMyInfo.FlatAppearance.BorderSize = 0;
-            this.btnSEDMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSEDMyInfo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSEDMyInfo.Image = global::JEM.Properties.Resources.xxsmallsettings_black;
-            this.btnSEDMyInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSEDMyInfo.Location = new System.Drawing.Point(0, 611);
-            this.btnSEDMyInfo.Name = "btnSEDMyInfo";
-            this.btnSEDMyInfo.Size = new System.Drawing.Size(135, 42);
-            this.btnSEDMyInfo.TabIndex = 22;
-            this.btnSEDMyInfo.Text = "   My Info";
-            this.btnSEDMyInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSEDMyInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSEDMyInfo.UseVisualStyleBackColor = true;
-            this.btnSEDMyInfo.Click += new System.EventHandler(this.btnMyInfo_Click);
-            // 
-            // btnSEDNotifications
-            // 
-            this.btnSEDNotifications.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSEDNotifications.FlatAppearance.BorderSize = 0;
-            this.btnSEDNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSEDNotifications.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSEDNotifications.Image = global::JEM.Properties.Resources.xxsmallnotification;
-            this.btnSEDNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSEDNotifications.Location = new System.Drawing.Point(0, 212);
-            this.btnSEDNotifications.Name = "btnSEDNotifications";
-            this.btnSEDNotifications.Size = new System.Drawing.Size(135, 42);
-            this.btnSEDNotifications.TabIndex = 22;
-            this.btnSEDNotifications.Text = "   Notifications";
-            this.btnSEDNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSEDNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSEDNotifications.UseVisualStyleBackColor = true;
-            this.btnSEDNotifications.Click += new System.EventHandler(this.btnStEdNotifications_Click);
-            // 
-            // btnSEDMyTeacher
-            // 
-            this.btnSEDMyTeacher.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSEDMyTeacher.FlatAppearance.BorderSize = 0;
-            this.btnSEDMyTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSEDMyTeacher.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSEDMyTeacher.Image = global::JEM.Properties.Resources.xxsmallteacher;
-            this.btnSEDMyTeacher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSEDMyTeacher.Location = new System.Drawing.Point(0, 170);
-            this.btnSEDMyTeacher.Name = "btnSEDMyTeacher";
-            this.btnSEDMyTeacher.Size = new System.Drawing.Size(135, 42);
-            this.btnSEDMyTeacher.TabIndex = 22;
-            this.btnSEDMyTeacher.Text = "   My Teacher";
-            this.btnSEDMyTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSEDMyTeacher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSEDMyTeacher.UseVisualStyleBackColor = true;
-            this.btnSEDMyTeacher.Click += new System.EventHandler(this.btnStEdMyTeacher_Click);
-            // 
-            // btnSEDDashboard
-            // 
-            this.btnSEDDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSEDDashboard.FlatAppearance.BorderSize = 0;
-            this.btnSEDDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSEDDashboard.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSEDDashboard.Image = global::JEM.Properties.Resources.xxsmall_home_black_square;
-            this.btnSEDDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSEDDashboard.Location = new System.Drawing.Point(0, 128);
-            this.btnSEDDashboard.Name = "btnSEDDashboard";
-            this.btnSEDDashboard.Size = new System.Drawing.Size(135, 42);
-            this.btnSEDDashboard.TabIndex = 22;
-            this.btnSEDDashboard.Text = "   Dashboard";
-            this.btnSEDDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSEDDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSEDDashboard.UseVisualStyleBackColor = true;
-            this.btnSEDDashboard.Click += new System.EventHandler(this.btnStEdDashboard_Click);
-            // 
-            // pibStEdStudentPicture
-            // 
-            this.pibStEdStudentPicture.Image = ((System.Drawing.Image)(resources.GetObject("pibStEdStudentPicture.Image")));
-            this.pibStEdStudentPicture.Location = new System.Drawing.Point(32, 19);
-            this.pibStEdStudentPicture.Name = "pibStEdStudentPicture";
-            this.pibStEdStudentPicture.Size = new System.Drawing.Size(63, 63);
-            this.pibStEdStudentPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pibStEdStudentPicture.TabIndex = 2;
-            this.pibStEdStudentPicture.TabStop = false;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Image = global::JEM.Properties.Resources.smallClearPic;
-            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(309, 295);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(179, 50);
-            this.btnClear.TabIndex = 17;
-            this.btnClear.Text = "Clear Fields";
-            this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClear.UseCompatibleTextRendering = true;
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Image = global::JEM.Properties.Resources._34px_updateStudent;
-            this.btnUpdate.Location = new System.Drawing.Point(33, 295);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(219, 50);
-            this.btnUpdate.TabIndex = 16;
-            this.btnUpdate.Text = "Update Student Info";
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUpdate.UseCompatibleTextRendering = true;
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
             // StudentEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -434,9 +441,9 @@
             this.pnlMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibStEdStudentPicture)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picStEdStudentPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pibStEdStudentPicture)).EndInit();
             this.ResumeLayout(false);
 
         }

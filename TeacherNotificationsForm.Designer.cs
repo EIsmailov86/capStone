@@ -85,6 +85,7 @@
             // 
             // cmbHeading
             // 
+            this.cmbHeading.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbHeading.FormattingEnabled = true;
             this.cmbHeading.Location = new System.Drawing.Point(123, 64);
             this.cmbHeading.Name = "cmbHeading";
@@ -224,6 +225,7 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Image = global::JEM.Properties.Resources.smallDelete_trash;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(123, 339);
@@ -238,6 +240,7 @@
             // 
             // btnTNSchedule
             // 
+            this.btnTNSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTNSchedule.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTNSchedule.FlatAppearance.BorderSize = 0;
             this.btnTNSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -256,6 +259,7 @@
             // 
             // btnTNMyStudent
             // 
+            this.btnTNMyStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTNMyStudent.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTNMyStudent.FlatAppearance.BorderSize = 0;
             this.btnTNMyStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -274,6 +278,7 @@
             // 
             // btnTNMyInfo
             // 
+            this.btnTNMyInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTNMyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnTNMyInfo.FlatAppearance.BorderSize = 0;
             this.btnTNMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -292,6 +297,7 @@
             // 
             // btnTNDashboard
             // 
+            this.btnTNDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTNDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTNDashboard.FlatAppearance.BorderSize = 0;
             this.btnTNDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

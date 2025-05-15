@@ -10,9 +10,15 @@ namespace JEM
         public LoginForm()
         {
             InitializeComponent();
+            //chkShowPassword.CheckedChanged += chkShowPassword_CheckedChanged;
             this.Load += LoginForm_Load;
             this.AcceptButton = btnLogin;
             txtPassword.KeyDown += txtPassword_KeyDown;
+        }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !chkShowPassword.Checked;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -158,5 +164,21 @@ namespace JEM
             RegisterTeacherForm register = new RegisterTeacherForm();
             register.ShowDialog();
         }
+
+        //private void pibEye_MouseDown(object sender, MouseEventArgs e)
+        //{
+        //    // 1) clear any custom masking char
+        //    txtPassword.PasswordChar = '\0';
+        //    // 2) turn off the system mask
+        //    txtPassword.UseSystemPasswordChar = false;
+        //}
+
+        //private void pibEye_MouseUp(object sender, MouseEventArgs e)
+        //{
+        //    // restore the system mask
+        //    txtPassword.UseSystemPasswordChar = true;
+        //    // (no need to reset PasswordChar manually; UseSystemPasswordChar will override it)
+        //}
+
     }
 }

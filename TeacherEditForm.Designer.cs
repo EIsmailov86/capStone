@@ -117,6 +117,7 @@
             // 
             // btnTeScNotifications
             // 
+            this.btnTeScNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeScNotifications.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTeScNotifications.FlatAppearance.BorderSize = 0;
             this.btnTeScNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -135,6 +136,7 @@
             // 
             // btnTeScMyStudent
             // 
+            this.btnTeScMyStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeScMyStudent.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTeScMyStudent.FlatAppearance.BorderSize = 0;
             this.btnTeScMyStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -153,6 +155,7 @@
             // 
             // btnTeScMyInfo
             // 
+            this.btnTeScMyInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeScMyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnTeScMyInfo.FlatAppearance.BorderSize = 0;
             this.btnTeScMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -170,6 +173,7 @@
             // 
             // btnTeScDashboards
             // 
+            this.btnTeScDashboards.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeScDashboards.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTeScDashboards.FlatAppearance.BorderSize = 0;
             this.btnTeScDashboards.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -323,6 +327,7 @@
             // 
             // btnClear
             // 
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClear.Image = global::JEM.Properties.Resources.smallClearPic;
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClear.Location = new System.Drawing.Point(30, 271);
@@ -338,6 +343,7 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.Image = global::JEM.Properties.Resources._34px_updateInfo;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdate.Location = new System.Drawing.Point(321, 271);
@@ -438,6 +444,7 @@
             // btnTeEdUploadPicture
             // 
             this.btnTeEdUploadPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTeEdUploadPicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTeEdUploadPicture.Image = global::JEM.Properties.Resources._34px_uploadPic;
             this.btnTeEdUploadPicture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTeEdUploadPicture.Location = new System.Drawing.Point(6, 271);

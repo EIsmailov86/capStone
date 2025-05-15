@@ -82,6 +82,7 @@
             // 
             // btnStNoDashboard
             // 
+            this.btnStNoDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStNoDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStNoDashboard.FlatAppearance.BorderSize = 0;
             this.btnStNoDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -100,6 +101,7 @@
             // 
             // btnStNoMyInfo
             // 
+            this.btnStNoMyInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStNoMyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnStNoMyInfo.FlatAppearance.BorderSize = 0;
             this.btnStNoMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -118,6 +120,7 @@
             // 
             // btnStNoMyTeacher
             // 
+            this.btnStNoMyTeacher.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStNoMyTeacher.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStNoMyTeacher.FlatAppearance.BorderSize = 0;
             this.btnStNoMyTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -227,6 +230,7 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Image = global::JEM.Properties.Resources.smallDelete_trash;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(69, 318);
@@ -249,6 +253,7 @@
             // 
             // cmbHeading
             // 
+            this.cmbHeading.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbHeading.FormattingEnabled = true;
             this.cmbHeading.Location = new System.Drawing.Point(69, 68);
             this.cmbHeading.Name = "cmbHeading";

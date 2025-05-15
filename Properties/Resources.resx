@@ -139,12 +139,6 @@
   <data name="xxsmalluser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xxsmalluser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="34px_booksearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\34px_booksearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="34px_searchsubject" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\34px_searchsubject.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="xxx20px_3Dcalendar_search2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xxx20px_3Dcalendar_search2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,8 +151,8 @@
   <data name="smallDelete-trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\smallDelete-trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="34px_updateCost" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\34px_updateCost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clearPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clearPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,14 +175,17 @@
   <data name="34px_person-clock-calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\34px_person-clock-calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="34px_updateCost" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\34px_updateCost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home_black_square" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_black_square.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="xxsmallcalendar-checkmark_schedule" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xxsmallcalendar-checkmark_schedule.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="smallClearPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\smallClearPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="linesUp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\linesUp1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,6 +205,9 @@
   <data name="smallUpdate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\smallUpdate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="xxsmallpayment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xxsmallpayment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="34px_updateBalance" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\34px_updateBalance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -217,11 +217,14 @@
   <data name="smallUpdate1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\smallUpdate1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="xxsmallpayment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\xxsmallpayment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="34px_booksearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\34px_booksearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="smallClearPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\smallClearPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="34px_sendMessage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\34px_sendMessage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="34px_searchsubject" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\34px_searchsubject.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="xxx38pxUpdate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xxx38pxUpdate.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,7 +235,7 @@
   <data name="40px_searchsubject" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\40px_searchsubject.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="34px_sendMessage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\34px_sendMessage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="34px_eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\34px_eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

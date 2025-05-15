@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             this.btnRegisterTeacher = new System.Windows.Forms.Button();
             this.btnRegisterStudent = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -101,6 +102,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.chkShowPassword);
             this.groupBox1.Controls.Add(this.btnRegisterTeacher);
             this.groupBox1.Controls.Add(this.btnRegisterStudent);
             this.groupBox1.Controls.Add(this.txtPassword);
@@ -114,9 +116,28 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             // 
+            // chkShowPassword
+            // 
+            this.chkShowPassword.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkShowPassword.BackgroundImage = global::JEM.Properties.Resources._34px_eye;
+            this.chkShowPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.chkShowPassword.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkShowPassword.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.chkShowPassword.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.chkShowPassword.Location = new System.Drawing.Point(462, 94);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(28, 27);
+            this.chkShowPassword.TabIndex = 27;
+            this.chkShowPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkShowPassword.UseCompatibleTextRendering = true;
+            this.chkShowPassword.UseVisualStyleBackColor = true;
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
+            // 
             // btnRegisterTeacher
             // 
             this.btnRegisterTeacher.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRegisterTeacher.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegisterTeacher.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegisterTeacher.Location = new System.Drawing.Point(316, 244);
             this.btnRegisterTeacher.Name = "btnRegisterTeacher";
@@ -129,6 +150,7 @@
             // btnRegisterStudent
             // 
             this.btnRegisterStudent.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRegisterStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegisterStudent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegisterStudent.Location = new System.Drawing.Point(113, 244);
             this.btnRegisterStudent.Name = "btnRegisterStudent";
@@ -156,6 +178,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(213, 157);
             this.btnLogin.Name = "btnLogin";
@@ -220,6 +243,7 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.CheckBox chkShowPassword;
     }
 }
 

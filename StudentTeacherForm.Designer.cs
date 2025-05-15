@@ -68,6 +68,7 @@
             // 
             // btnSTMyInfo
             // 
+            this.btnSTMyInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSTMyInfo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSTMyInfo.FlatAppearance.BorderSize = 0;
             this.btnSTMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -86,6 +87,7 @@
             // 
             // btnSTNotifications
             // 
+            this.btnSTNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSTNotifications.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSTNotifications.FlatAppearance.BorderSize = 0;
             this.btnSTNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -104,6 +106,7 @@
             // 
             // btnSTDashboard
             // 
+            this.btnSTDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSTDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSTDashboard.FlatAppearance.BorderSize = 0;
             this.btnSTDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -192,6 +195,7 @@
             // 
             // txbMessageHeader
             // 
+            this.txbMessageHeader.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txbMessageHeader.Location = new System.Drawing.Point(301, 210);
             this.txbMessageHeader.Multiline = true;
             this.txbMessageHeader.Name = "txbMessageHeader";
@@ -201,6 +205,7 @@
             // 
             // btnSendMessage
             // 
+            this.btnSendMessage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSendMessage.Image = global::JEM.Properties.Resources._34px_sendMessage;
             this.btnSendMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSendMessage.Location = new System.Drawing.Point(335, 394);
