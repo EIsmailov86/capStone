@@ -69,11 +69,9 @@ namespace JEM
                                         {
                                             e.Graphics.FillRectangle(new SolidBrush(Color.LightCoral), e.Bounds);
                                         }
-
                                         TextRenderer.DrawText(e.Graphics, studentItem.ToString(), e.Font, e.Bounds, Color.Black, TextFormatFlags.Left);
                                     }
                                 }
-
                                 e.DrawFocusRectangle();
                             };
                         }
@@ -91,7 +89,6 @@ namespace JEM
             {
                 cmbTeStGrade.Items.Add(i.ToString());
             }
-
         }
         #endregion
 
@@ -118,7 +115,7 @@ namespace JEM
 
                 using (MySqlConnection conn = ConnectToDb())
                 {
-                    // 1) load basic student info
+                    //student info
                     string studentQuery = @"
                 SELECT Name, GradeId, Phone, Address, Email, Bio, TotalBudget, ImageStudent
                   FROM student
@@ -191,7 +188,7 @@ namespace JEM
             }
             else
             {
-                // no selection
+                //no selection
                 pibTeStStudentPicture.Image = null;
                 lblTeStRemainingBalance.Text = "$0.00";
                 pgbTeStBalance.Value = 0;
@@ -225,7 +222,6 @@ namespace JEM
             this.SuppressCloseConfirmation = true;
             this.Close();
         }
-
         private void btnTeStMyInfo_Click(object sender, EventArgs e)
         {
             var editForm = new TeacherEditForm(loggedInTeacher);
@@ -233,7 +229,6 @@ namespace JEM
             this.SuppressCloseConfirmation = true;
             this.Close();
         }
-
         private void btnTeStNotifications_Click(object sender, EventArgs e)
         {
             var notificationsForm = new TeacherNotificationsForm(loggedInTeacher);
@@ -241,7 +236,6 @@ namespace JEM
             this.SuppressCloseConfirmation = true;
             this.Close();
         }
-
         private void btnTeStSchedule_Click(object sender, EventArgs e)
         {
             var scheduleForm = new TeacherSchedule(loggedInTeacher);
@@ -285,13 +279,6 @@ namespace JEM
                 return;
             }
 
-            //Starting Balance
-            //decimal startingBalance = 0.00m;
-            //if (!decimal.TryParse(txbTeStStartingBalance.Text.Trim(), out startingBalance))
-            //{
-            //    MessageBox.Show("Please enter a valid numeric Starting Balance (or leave blank for $0.00).");
-            //    return;
-            //}
             if (!InputValidator.IsValidBio(txbTeStTeStBio.Text))
             {
                 MessageBox.Show("Please enter a valid Bio without special characters (Excluding ?,.!)");
@@ -315,7 +302,8 @@ namespace JEM
                 cmd.Parameters.AddWithValue("@Bio", string.IsNullOrWhiteSpace(txbTeStTeStBio.Text) ? "" : txbTeStTeStBio.Text.Trim());
                 cmd.Parameters.AddWithValue("@TotalBudget", 0);
                 cmd.Parameters.AddWithValue("@UserName", txbTeStEmail.Text.Trim());
-                // hash the default password before inserting
+
+                //hash the default password before inserting
                 string initialPlain = "12345";
                 string initialHash = SecurityHelper.HashPassword(initialPlain);
                 cmd.Parameters.AddWithValue("@Password", initialHash);
@@ -393,13 +381,6 @@ namespace JEM
                 MessageBox.Show("Please enter a valid address (max 100 characters).");
                 return;
             }
-            //Starting Balance
-            //decimal startingBalance = 0.00m;
-            //if (!decimal.TryParse(txbTeStStartingBalance.Text.Trim(), out startingBalance))
-            //{
-            //    MessageBox.Show("Please enter a valid numeric Starting Balance (or leave blank for $0.00).");
-            //    return;
-            //}
             if (!InputValidator.IsValidBio(txbTeStTeStBio.Text))
             {
                 MessageBox.Show("Please enter a valid Bio without special characters (Excluding ?,.!)");
@@ -485,7 +466,6 @@ namespace JEM
             {
                 using (MySqlConnection conn = ConnectToDb())
                 {
-
                     ListBoxItem listboxStudent = lbsTeStStudents.SelectedItem as ListBoxItem;
 
                     string deleteSessionsQuery = "DELETE FROM session WHERE StudentId = @StudentId";
@@ -654,7 +634,7 @@ namespace JEM
                 defaultPwd
             ).Trim();
 
-            // 2) allow cancel
+            //allow cancel
             if (string.IsNullOrEmpty(tempPwd))
                 return;
 
@@ -699,7 +679,5 @@ namespace JEM
             );
         }
         #endregion
-
-
     }
 }

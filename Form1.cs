@@ -53,7 +53,7 @@ namespace JEM
                             string storedHash = reader.GetString(reader.GetOrdinal("Password"));
                             if (SecurityHelper.VerifyPassword(enteredPass, storedHash))
                             {
-                                // successful login
+                                //successful login
                                 var loggedInStudent = new Student
                                 {
                                     Id = reader.GetInt32("Id"),

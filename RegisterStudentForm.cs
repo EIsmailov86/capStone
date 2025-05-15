@@ -121,7 +121,6 @@ namespace JEM
                             return;
                         }
                     }
-
                     #endregion
 
                     #region INSERT
@@ -140,7 +139,6 @@ namespace JEM
                         cmd.Parameters.AddWithValue("@Address", address);
                         cmd.Parameters.AddWithValue("@UserName", userName);
                         cmd.Parameters.AddWithValue("@Password", hashedPassword);
-
                         cmd.ExecuteNonQuery();
                     }
 

@@ -17,7 +17,6 @@ namespace JEM
             loggedInTeacher = teacher;
             lblTeNoWelcome.Text = $"Welcome, {loggedInTeacher.Name}!";
             LoadTeacherPicture();
-
             InitializeNotifications();
         }
 
@@ -46,7 +45,6 @@ namespace JEM
             this.SuppressCloseConfirmation = true;
             this.Close();
         }
-
         private void btnTNMyStudent_Click(object sender, EventArgs e)
         {
             var studentForm = new TeacherStudentForm(loggedInTeacher);
@@ -54,7 +52,6 @@ namespace JEM
             this.SuppressCloseConfirmation = true;
             this.Close();
         }
-
         private void btnTNMyInfo_Click(object sender, EventArgs e)
         {
             var editForm = new TeacherEditForm(loggedInTeacher);
@@ -106,7 +103,6 @@ namespace JEM
             }
 
         }
-
         private void InitializeNotifications()
         {
             notifications.Clear();
@@ -128,8 +124,6 @@ namespace JEM
                 txbNotifications.Text = "";
             }
         }
-
-
         private void LoadMessageBody(object sender, EventArgs e)
         {
             txbNotifications.Clear();
@@ -137,7 +131,6 @@ namespace JEM
 
             Notifications selectedNotification = cmbHeading.SelectedItem as Notifications;
             txbNotifications.Text = selectedNotification.MessageBody;
-
         }
 
         #endregion
@@ -158,8 +151,6 @@ namespace JEM
             {
                 MessageBox.Show("Please select a Notification");
             }
-
         }
-
     }
     }

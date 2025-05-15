@@ -20,7 +20,7 @@ namespace JEM
         {
             if (string.IsNullOrWhiteSpace(username))
                 return false;
-            return Regex.IsMatch(username, @"^[A-Za-z0-9_]{2,50}$");
+            return Regex.IsMatch(username, @"^[A-Za-z0-9_@.]{2,50}$");
         }
 
         // email address using MailAddress parser and length check.
