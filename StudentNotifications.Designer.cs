@@ -46,6 +46,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.txbNotifications = new System.Windows.Forms.TextBox();
             this.cmbHeading = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
@@ -262,11 +263,25 @@
             this.cmbHeading.Text = "Heading";
             this.cmbHeading.SelectedIndexChanged += new System.EventHandler(this.LoadMessageBody);
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(778, 311);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel1.TabIndex = 22;
+            // 
             // StudentNotifications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.grbNotifications);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -304,5 +319,6 @@
         private System.Windows.Forms.TextBox txbNotifications;
         private System.Windows.Forms.ComboBox cmbHeading;
         private System.Windows.Forms.Button btnStNoDashboard;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
