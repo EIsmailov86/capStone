@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pibReStPicture = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblReTeWelcome = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -50,12 +51,12 @@
             this.txtReTePhone = new System.Windows.Forms.TextBox();
             this.txtReTeEmail = new System.Windows.Forms.TextBox();
             this.txtReTeName = new System.Windows.Forms.TextBox();
-            this.pibReStPicture = new System.Windows.Forms.PictureBox();
+            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibReStPicture)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibReStPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,6 +90,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "JEM";
             // 
+            // pibReStPicture
+            // 
+            this.pibReStPicture.Image = ((System.Drawing.Image)(resources.GetObject("pibReStPicture.Image")));
+            this.pibReStPicture.Location = new System.Drawing.Point(35, 26);
+            this.pibReStPicture.Name = "pibReStPicture";
+            this.pibReStPicture.Size = new System.Drawing.Size(63, 63);
+            this.pibReStPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibReStPicture.TabIndex = 0;
+            this.pibReStPicture.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
@@ -112,6 +123,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.chkShowPassword);
             this.groupBox1.Controls.Add(this.btnReTeRegister);
             this.groupBox1.Controls.Add(this.txtReTeConfirmPassword);
             this.groupBox1.Controls.Add(this.lblReTeConfirmPassword);
@@ -152,6 +164,7 @@
             this.txtReTeConfirmPassword.Name = "txtReTeConfirmPassword";
             this.txtReTeConfirmPassword.Size = new System.Drawing.Size(140, 22);
             this.txtReTeConfirmPassword.TabIndex = 72;
+            this.txtReTeConfirmPassword.UseSystemPasswordChar = true;
             // 
             // lblReTeConfirmPassword
             // 
@@ -229,6 +242,7 @@
             this.txtReTePassword.Name = "txtReTePassword";
             this.txtReTePassword.Size = new System.Drawing.Size(140, 22);
             this.txtReTePassword.TabIndex = 64;
+            this.txtReTePassword.UseSystemPasswordChar = true;
             // 
             // txtReTeUsername
             // 
@@ -265,15 +279,23 @@
             this.txtReTeName.Size = new System.Drawing.Size(140, 22);
             this.txtReTeName.TabIndex = 59;
             // 
-            // pibReStPicture
+            // chkShowPassword
             // 
-            this.pibReStPicture.Image = ((System.Drawing.Image)(resources.GetObject("pibReStPicture.Image")));
-            this.pibReStPicture.Location = new System.Drawing.Point(35, 26);
-            this.pibReStPicture.Name = "pibReStPicture";
-            this.pibReStPicture.Size = new System.Drawing.Size(63, 63);
-            this.pibReStPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pibReStPicture.TabIndex = 0;
-            this.pibReStPicture.TabStop = false;
+            this.chkShowPassword.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkShowPassword.BackgroundImage = global::JEM.Properties.Resources._34px_eye;
+            this.chkShowPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.chkShowPassword.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkShowPassword.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.chkShowPassword.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.chkShowPassword.Location = new System.Drawing.Point(474, 175);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(28, 27);
+            this.chkShowPassword.TabIndex = 74;
+            this.chkShowPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkShowPassword.UseCompatibleTextRendering = true;
+            this.chkShowPassword.UseVisualStyleBackColor = true;
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
             // 
             // RegisterTeacherForm
             // 
@@ -288,10 +310,10 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibReStPicture)).EndInit();
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibReStPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -320,5 +342,6 @@
         private System.Windows.Forms.TextBox txtReTePhone;
         private System.Windows.Forms.TextBox txtReTeEmail;
         private System.Windows.Forms.TextBox txtReTeName;
+        private System.Windows.Forms.CheckBox chkShowPassword;
     }
 }

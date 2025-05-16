@@ -15,12 +15,10 @@ namespace JEM
             this.AcceptButton = btnLogin;
             txtPassword.KeyDown += txtPassword_KeyDown;
         }
-
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = !chkShowPassword.Checked;
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             bool loggedIn = false;
@@ -42,8 +40,6 @@ namespace JEM
                 txtPassword.Text = "";
                 return;
             }
-
-
             using (var dbConnection = ConnectToDb())
             {
                 // ── STUDENT LOGIN ──────────────────────────────────────────────
@@ -77,7 +73,6 @@ namespace JEM
                                                     ? (byte[])reader["ImageStudent"]
                                                     : null
                                 };
-
                                 students.Add(loggedInStudent);
                                 var dashboard = new studentdashboardform(loggedInStudent);
                                 dashboard.Show();
@@ -86,7 +81,6 @@ namespace JEM
                         }
                     }
                 }
-
                 // ── TEACHER LOGIN ─────────────────────────────────────────────
                 if (!loggedIn)
                 {
@@ -128,14 +122,12 @@ namespace JEM
                     }
                 }
             }
-
             txtUserName.Clear();
             txtPassword.Clear();
 
             if (!loggedIn)
                 MessageBox.Show("Invalid Login Credentials");
         }
-
 
         #region Password_KeyDown
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
@@ -164,21 +156,5 @@ namespace JEM
             RegisterTeacherForm register = new RegisterTeacherForm();
             register.ShowDialog();
         }
-
-        //private void pibEye_MouseDown(object sender, MouseEventArgs e)
-        //{
-        //    // 1) clear any custom masking char
-        //    txtPassword.PasswordChar = '\0';
-        //    // 2) turn off the system mask
-        //    txtPassword.UseSystemPasswordChar = false;
-        //}
-
-        //private void pibEye_MouseUp(object sender, MouseEventArgs e)
-        //{
-        //    // restore the system mask
-        //    txtPassword.UseSystemPasswordChar = true;
-        //    // (no need to reset PasswordChar manually; UseSystemPasswordChar will override it)
-        //}
-
     }
 }

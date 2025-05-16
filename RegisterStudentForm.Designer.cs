@@ -51,6 +51,7 @@
             this.txtReStPhone = new System.Windows.Forms.TextBox();
             this.txtReStEmail = new System.Windows.Forms.TextBox();
             this.txtReStName = new System.Windows.Forms.TextBox();
+            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibReStPicture)).BeginInit();
@@ -122,6 +123,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.chkShowPassword);
             this.groupBox1.Controls.Add(this.btnReStRegister);
             this.groupBox1.Controls.Add(this.txtReStConfirmPassword);
             this.groupBox1.Controls.Add(this.lblReStConfirmPassword);
@@ -162,6 +164,7 @@
             this.txtReStConfirmPassword.Name = "txtReStConfirmPassword";
             this.txtReStConfirmPassword.Size = new System.Drawing.Size(140, 22);
             this.txtReStConfirmPassword.TabIndex = 57;
+            this.txtReStConfirmPassword.UseSystemPasswordChar = true;
             // 
             // lblReStConfirmPassword
             // 
@@ -239,6 +242,7 @@
             this.txtReStPassword.Name = "txtReStPassword";
             this.txtReStPassword.Size = new System.Drawing.Size(140, 22);
             this.txtReStPassword.TabIndex = 49;
+            this.txtReStPassword.UseSystemPasswordChar = true;
             // 
             // txtReStUsername
             // 
@@ -274,6 +278,24 @@
             this.txtReStName.Name = "txtReStName";
             this.txtReStName.Size = new System.Drawing.Size(140, 22);
             this.txtReStName.TabIndex = 44;
+            // 
+            // chkShowPassword
+            // 
+            this.chkShowPassword.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkShowPassword.BackgroundImage = global::JEM.Properties.Resources._34px_eye;
+            this.chkShowPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.chkShowPassword.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkShowPassword.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.chkShowPassword.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.chkShowPassword.Location = new System.Drawing.Point(449, 180);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(28, 27);
+            this.chkShowPassword.TabIndex = 59;
+            this.chkShowPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkShowPassword.UseCompatibleTextRendering = true;
+            this.chkShowPassword.UseVisualStyleBackColor = true;
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
             // 
             // RegisterStudentForm
             // 
@@ -320,5 +342,6 @@
         private System.Windows.Forms.TextBox txtReStPhone;
         private System.Windows.Forms.TextBox txtReStEmail;
         private System.Windows.Forms.TextBox txtReStName;
+        private System.Windows.Forms.CheckBox chkShowPassword;
     }
 }

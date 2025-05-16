@@ -67,7 +67,7 @@ namespace JEM
             // disallow HTML-like angle brackets to prevent basic injection
             if (bio.Contains("<") || bio.Contains(">"))
                 return false;
-            return Regex.IsMatch(bio, @"^[\p{L}0-9\s\.,'""!?;:\-()]+$");
+            return Regex.IsMatch(bio, @"^[\p{L}0-9\s\.,'""!?;:\-()$]+$");
         }
 
         //password strength

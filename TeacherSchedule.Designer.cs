@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grbScheduleApp = new System.Windows.Forms.GroupBox();
+            this.btnTeShDeleteSession = new System.Windows.Forms.Button();
             this.dgvTeShSchedule = new System.Windows.Forms.DataGridView();
             this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,10 +39,12 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbsTeShStudents = new System.Windows.Forms.ListBox();
+            this.btnTeShUpdateCost = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txbTeShSessionCost = new System.Windows.Forms.TextBox();
             this.dtpTeShDateTime = new System.Windows.Forms.DateTimePicker();
             this.lblSubject = new System.Windows.Forms.Label();
+            this.btnTeShScheduleSession = new System.Windows.Forms.Button();
             this.lblTime = new System.Windows.Forms.Label();
             this.cmbTeShTime = new System.Windows.Forms.ComboBox();
             this.lblDate = new System.Windows.Forms.Label();
@@ -51,21 +54,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnTeScNotifications = new System.Windows.Forms.Button();
+            this.btnTeScMyStudent = new System.Windows.Forms.Button();
+            this.btnTeScMyInfo = new System.Windows.Forms.Button();
+            this.btnTeScDashboards = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.picTeScTeacherPicture = new System.Windows.Forms.PictureBox();
             this.btnMyInfo = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMyStudent = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnTeShDeleteSession = new System.Windows.Forms.Button();
-            this.btnTeShUpdateCost = new System.Windows.Forms.Button();
-            this.btnTeShScheduleSession = new System.Windows.Forms.Button();
-            this.btnTeScNotifications = new System.Windows.Forms.Button();
-            this.btnTeScMyStudent = new System.Windows.Forms.Button();
-            this.btnTeScMyInfo = new System.Windows.Forms.Button();
-            this.btnTeScDashboards = new System.Windows.Forms.Button();
-            this.picTeScTeacherPicture = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grbScheduleApp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeShSchedule)).BeginInit();
@@ -73,8 +73,8 @@
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTeScTeacherPicture)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,6 +102,23 @@
             this.grbScheduleApp.TabIndex = 19;
             this.grbScheduleApp.TabStop = false;
             this.grbScheduleApp.Text = "Schedule Appointment";
+            // 
+            // btnTeShDeleteSession
+            // 
+            this.btnTeShDeleteSession.BackColor = System.Drawing.Color.Red;
+            this.btnTeShDeleteSession.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTeShDeleteSession.Image = global::JEM.Properties.Resources.smallDelete_trash;
+            this.btnTeShDeleteSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeShDeleteSession.Location = new System.Drawing.Point(612, 233);
+            this.btnTeShDeleteSession.Name = "btnTeShDeleteSession";
+            this.btnTeShDeleteSession.Size = new System.Drawing.Size(169, 50);
+            this.btnTeShDeleteSession.TabIndex = 21;
+            this.btnTeShDeleteSession.Text = "Delete Session";
+            this.btnTeShDeleteSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeShDeleteSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeShDeleteSession.UseCompatibleTextRendering = true;
+            this.btnTeShDeleteSession.UseVisualStyleBackColor = true;
+            this.btnTeShDeleteSession.Click += new System.EventHandler(this.btnTeShDeleteSession_Click);
             // 
             // dgvTeShSchedule
             // 
@@ -181,6 +198,22 @@
             this.lbsTeShStudents.TabIndex = 20;
             this.lbsTeShStudents.SelectedIndexChanged += new System.EventHandler(this.StudentSelectedIndexChanged);
             // 
+            // btnTeShUpdateCost
+            // 
+            this.btnTeShUpdateCost.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTeShUpdateCost.Image = global::JEM.Properties.Resources._34px_updateCost;
+            this.btnTeShUpdateCost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeShUpdateCost.Location = new System.Drawing.Point(209, 233);
+            this.btnTeShUpdateCost.Name = "btnTeShUpdateCost";
+            this.btnTeShUpdateCost.Size = new System.Drawing.Size(155, 50);
+            this.btnTeShUpdateCost.TabIndex = 11;
+            this.btnTeShUpdateCost.Text = "Update Cost";
+            this.btnTeShUpdateCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeShUpdateCost.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeShUpdateCost.UseCompatibleTextRendering = true;
+            this.btnTeShUpdateCost.UseVisualStyleBackColor = true;
+            this.btnTeShUpdateCost.Click += new System.EventHandler(this.btnTeShUpdateCost_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -213,6 +246,21 @@
             this.lblSubject.Size = new System.Drawing.Size(52, 16);
             this.lblSubject.TabIndex = 4;
             this.lblSubject.Text = "Subject";
+            // 
+            // btnTeShScheduleSession
+            // 
+            this.btnTeShScheduleSession.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTeShScheduleSession.Image = global::JEM.Properties.Resources._34px_person_clock_calendar;
+            this.btnTeShScheduleSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeShScheduleSession.Location = new System.Drawing.Point(19, 233);
+            this.btnTeShScheduleSession.Name = "btnTeShScheduleSession";
+            this.btnTeShScheduleSession.Size = new System.Drawing.Size(184, 50);
+            this.btnTeShScheduleSession.TabIndex = 8;
+            this.btnTeShScheduleSession.Text = "Schedule Session";
+            this.btnTeShScheduleSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeShScheduleSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeShScheduleSession.UseVisualStyleBackColor = true;
+            this.btnTeShScheduleSession.Click += new System.EventHandler(this.btnTeShScheduleSession_Click);
             // 
             // lblTime
             // 
@@ -264,7 +312,7 @@
             this.lblWelcome.ForeColor = System.Drawing.Color.Red;
             this.lblWelcome.Location = new System.Drawing.Point(287, 3);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(161, 28);
+            this.lblWelcome.Size = new System.Drawing.Size(223, 28);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "label4";
             // 
@@ -304,126 +352,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(135, 653);
             this.panel5.TabIndex = 23;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.picTeScTeacherPicture);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(135, 128);
-            this.panel6.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
-            this.label3.Location = new System.Drawing.Point(40, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "JEM";
-            // 
-            // btnMyInfo
-            // 
-            this.btnMyInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyInfo.Location = new System.Drawing.Point(12, 259);
-            this.btnMyInfo.Name = "btnMyInfo";
-            this.btnMyInfo.Size = new System.Drawing.Size(114, 43);
-            this.btnMyInfo.TabIndex = 22;
-            this.btnMyInfo.Text = "My Info";
-            this.btnMyInfo.UseVisualStyleBackColor = true;
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Location = new System.Drawing.Point(12, 189);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(114, 42);
-            this.btnDashboard.TabIndex = 21;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel3.Controls.Add(this.btnMyStudent);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(135, 473);
-            this.panel3.TabIndex = 2;
-            // 
-            // btnMyStudent
-            // 
-            this.btnMyStudent.Location = new System.Drawing.Point(9, 337);
-            this.btnMyStudent.Name = "btnMyStudent";
-            this.btnMyStudent.Size = new System.Drawing.Size(114, 42);
-            this.btnMyStudent.TabIndex = 23;
-            this.btnMyStudent.Text = "My Student";
-            this.btnMyStudent.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
-            this.label1.Location = new System.Drawing.Point(40, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "JEM";
-            // 
-            // btnTeShDeleteSession
-            // 
-            this.btnTeShDeleteSession.BackColor = System.Drawing.Color.Red;
-            this.btnTeShDeleteSession.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTeShDeleteSession.Image = global::JEM.Properties.Resources.smallDelete_trash;
-            this.btnTeShDeleteSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeShDeleteSession.Location = new System.Drawing.Point(612, 233);
-            this.btnTeShDeleteSession.Name = "btnTeShDeleteSession";
-            this.btnTeShDeleteSession.Size = new System.Drawing.Size(169, 50);
-            this.btnTeShDeleteSession.TabIndex = 21;
-            this.btnTeShDeleteSession.Text = "Delete Session";
-            this.btnTeShDeleteSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeShDeleteSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeShDeleteSession.UseCompatibleTextRendering = true;
-            this.btnTeShDeleteSession.UseVisualStyleBackColor = true;
-            this.btnTeShDeleteSession.Click += new System.EventHandler(this.btnTeShDeleteSession_Click);
-            // 
-            // btnTeShUpdateCost
-            // 
-            this.btnTeShUpdateCost.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTeShUpdateCost.Image = global::JEM.Properties.Resources._34px_updateCost;
-            this.btnTeShUpdateCost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeShUpdateCost.Location = new System.Drawing.Point(209, 233);
-            this.btnTeShUpdateCost.Name = "btnTeShUpdateCost";
-            this.btnTeShUpdateCost.Size = new System.Drawing.Size(155, 50);
-            this.btnTeShUpdateCost.TabIndex = 11;
-            this.btnTeShUpdateCost.Text = "Update Cost";
-            this.btnTeShUpdateCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeShUpdateCost.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeShUpdateCost.UseCompatibleTextRendering = true;
-            this.btnTeShUpdateCost.UseVisualStyleBackColor = true;
-            this.btnTeShUpdateCost.Click += new System.EventHandler(this.btnTeShUpdateCost_Click);
-            // 
-            // btnTeShScheduleSession
-            // 
-            this.btnTeShScheduleSession.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTeShScheduleSession.Image = global::JEM.Properties.Resources._34px_person_clock_calendar;
-            this.btnTeShScheduleSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeShScheduleSession.Location = new System.Drawing.Point(19, 233);
-            this.btnTeShScheduleSession.Name = "btnTeShScheduleSession";
-            this.btnTeShScheduleSession.Size = new System.Drawing.Size(184, 50);
-            this.btnTeShScheduleSession.TabIndex = 8;
-            this.btnTeShScheduleSession.Text = "Schedule Session";
-            this.btnTeShScheduleSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeShScheduleSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeShScheduleSession.UseVisualStyleBackColor = true;
-            this.btnTeShScheduleSession.Click += new System.EventHandler(this.btnTeShScheduleSession_Click);
             // 
             // btnTeScNotifications
             // 
@@ -501,6 +429,28 @@
             this.btnTeScDashboards.UseVisualStyleBackColor = true;
             this.btnTeScDashboards.Click += new System.EventHandler(this.btnTeScDashboards_Click);
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.picTeScTeacherPicture);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(135, 128);
+            this.panel6.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
+            this.label3.Location = new System.Drawing.Point(40, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 19);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "JEM";
+            // 
             // picTeScTeacherPicture
             // 
             this.picTeScTeacherPicture.Image = global::JEM.Properties.Resources.user;
@@ -510,6 +460,56 @@
             this.picTeScTeacherPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picTeScTeacherPicture.TabIndex = 2;
             this.picTeScTeacherPicture.TabStop = false;
+            // 
+            // btnMyInfo
+            // 
+            this.btnMyInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyInfo.Location = new System.Drawing.Point(12, 259);
+            this.btnMyInfo.Name = "btnMyInfo";
+            this.btnMyInfo.Size = new System.Drawing.Size(114, 43);
+            this.btnMyInfo.TabIndex = 22;
+            this.btnMyInfo.Text = "My Info";
+            this.btnMyInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Location = new System.Drawing.Point(12, 189);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(114, 42);
+            this.btnDashboard.TabIndex = 21;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel3.Controls.Add(this.btnMyStudent);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(135, 473);
+            this.panel3.TabIndex = 2;
+            // 
+            // btnMyStudent
+            // 
+            this.btnMyStudent.Location = new System.Drawing.Point(9, 337);
+            this.btnMyStudent.Name = "btnMyStudent";
+            this.btnMyStudent.Size = new System.Drawing.Size(114, 42);
+            this.btnMyStudent.TabIndex = 23;
+            this.btnMyStudent.Text = "My Student";
+            this.btnMyStudent.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
+            this.label1.Location = new System.Drawing.Point(40, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 19);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "JEM";
             // 
             // pictureBox1
             // 
@@ -540,9 +540,9 @@
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTeScTeacherPicture)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picTeScTeacherPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

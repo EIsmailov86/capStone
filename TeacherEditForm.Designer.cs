@@ -298,7 +298,7 @@
             this.lblTeEdWelcome.ForeColor = System.Drawing.Color.Red;
             this.lblTeEdWelcome.Location = new System.Drawing.Point(288, 0);
             this.lblTeEdWelcome.Name = "lblTeEdWelcome";
-            this.lblTeEdWelcome.Size = new System.Drawing.Size(161, 28);
+            this.lblTeEdWelcome.Size = new System.Drawing.Size(245, 28);
             this.lblTeEdWelcome.TabIndex = 8;
             this.lblTeEdWelcome.Text = "label4";
             // 

@@ -11,6 +11,11 @@ namespace JEM
             InitializeComponent();
         }
 
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtReTePassword.UseSystemPasswordChar = !chkShowPassword.Checked;
+        }
+
         #region btnRegister
         private void btnReTeRegister_Click(object sender, EventArgs e)
         {
