@@ -179,13 +179,15 @@
             this.grbTeacherInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbTeacherInfo.AutoSize = true;
             this.grbTeacherInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.grbTeacherInfo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.grbTeacherInfo.BackColor = System.Drawing.Color.Transparent;
+            this.grbTeacherInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.grbTeacherInfo.Controls.Add(this.txbMessageHeader);
             this.grbTeacherInfo.Controls.Add(this.btnSendMessage);
             this.grbTeacherInfo.Controls.Add(this.txbMessageBody);
             this.grbTeacherInfo.Controls.Add(this.picStTeTeacherPicture);
             this.grbTeacherInfo.Controls.Add(this.txbStTeInfoandBio);
             this.grbTeacherInfo.Controls.Add(this.cmbTeacher);
+            this.grbTeacherInfo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grbTeacherInfo.Location = new System.Drawing.Point(232, 88);
             this.grbTeacherInfo.Name = "grbTeacherInfo";
             this.grbTeacherInfo.Size = new System.Drawing.Size(581, 462);
@@ -206,6 +208,7 @@
             // btnSendMessage
             // 
             this.btnSendMessage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSendMessage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSendMessage.Image = global::JEM.Properties.Resources._34px_sendMessage;
             this.btnSendMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSendMessage.Location = new System.Drawing.Point(335, 394);
@@ -260,6 +263,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::JEM.Properties.Resources.abstract_wallpaper;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 653);
             this.Controls.Add(this.grbTeacherInfo);
             this.Controls.Add(this.panel2);

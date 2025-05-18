@@ -36,6 +36,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblReTeWelcome = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             this.btnReTeRegister = new System.Windows.Forms.Button();
             this.txtReTeConfirmPassword = new System.Windows.Forms.TextBox();
             this.lblReTeConfirmPassword = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.txtReTePhone = new System.Windows.Forms.TextBox();
             this.txtReTeEmail = new System.Windows.Forms.TextBox();
             this.txtReTeName = new System.Windows.Forms.TextBox();
-            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibReStPicture)).BeginInit();
@@ -114,15 +114,16 @@
             // 
             this.lblReTeWelcome.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReTeWelcome.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lblReTeWelcome.Location = new System.Drawing.Point(243, 8);
+            this.lblReTeWelcome.Location = new System.Drawing.Point(163, 9);
             this.lblReTeWelcome.Name = "lblReTeWelcome";
-            this.lblReTeWelcome.Size = new System.Drawing.Size(243, 23);
+            this.lblReTeWelcome.Size = new System.Drawing.Size(302, 23);
             this.lblReTeWelcome.TabIndex = 23;
             this.lblReTeWelcome.Text = "Welcome To The Team.";
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.chkShowPassword);
             this.groupBox1.Controls.Add(this.btnReTeRegister);
             this.groupBox1.Controls.Add(this.txtReTeConfirmPassword);
@@ -144,6 +145,24 @@
             this.groupBox1.Size = new System.Drawing.Size(588, 333);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
+            // 
+            // chkShowPassword
+            // 
+            this.chkShowPassword.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkShowPassword.BackgroundImage = global::JEM.Properties.Resources._34px_eye;
+            this.chkShowPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.chkShowPassword.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkShowPassword.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.chkShowPassword.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.chkShowPassword.Location = new System.Drawing.Point(474, 175);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(28, 27);
+            this.chkShowPassword.TabIndex = 74;
+            this.chkShowPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkShowPassword.UseCompatibleTextRendering = true;
+            this.chkShowPassword.UseVisualStyleBackColor = true;
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
             // 
             // btnReTeRegister
             // 
@@ -279,28 +298,12 @@
             this.txtReTeName.Size = new System.Drawing.Size(140, 22);
             this.txtReTeName.TabIndex = 59;
             // 
-            // chkShowPassword
-            // 
-            this.chkShowPassword.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkShowPassword.BackgroundImage = global::JEM.Properties.Resources._34px_eye;
-            this.chkShowPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.chkShowPassword.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkShowPassword.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.chkShowPassword.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.chkShowPassword.Location = new System.Drawing.Point(474, 175);
-            this.chkShowPassword.Name = "chkShowPassword";
-            this.chkShowPassword.Size = new System.Drawing.Size(28, 27);
-            this.chkShowPassword.TabIndex = 74;
-            this.chkShowPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chkShowPassword.UseCompatibleTextRendering = true;
-            this.chkShowPassword.UseVisualStyleBackColor = true;
-            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
-            // 
             // RegisterTeacherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::JEM.Properties.Resources.abstract_wallpaper;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);

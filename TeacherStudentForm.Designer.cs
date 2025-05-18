@@ -224,7 +224,7 @@
             // 
             this.lbsTeStStudents.FormattingEnabled = true;
             this.lbsTeStStudents.ItemHeight = 16;
-            this.lbsTeStStudents.Location = new System.Drawing.Point(28, 352);
+            this.lbsTeStStudents.Location = new System.Drawing.Point(28, 302);
             this.lbsTeStStudents.Name = "lbsTeStStudents";
             this.lbsTeStStudents.Size = new System.Drawing.Size(236, 148);
             this.lbsTeStStudents.TabIndex = 14;
@@ -235,6 +235,7 @@
             // 
             this.grbStudentInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbStudentInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.grbStudentInfo.BackColor = System.Drawing.Color.Transparent;
             this.grbStudentInfo.Controls.Add(this.label3);
             this.grbStudentInfo.Controls.Add(this.label2);
             this.grbStudentInfo.Controls.Add(this.txbMessageHeader);
@@ -267,24 +268,26 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(92, 327);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(72, 277);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 16);
+            this.label3.Size = new System.Drawing.Size(132, 22);
             this.label3.TabIndex = 44;
             this.label3.Text = "List of Students";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(573, 236);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(571, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 16);
+            this.label2.Size = new System.Drawing.Size(142, 22);
             this.label2.TabIndex = 43;
             this.label2.Text = "Message Student";
             // 
             // txbMessageHeader
             // 
-            this.txbMessageHeader.Location = new System.Drawing.Point(509, 265);
+            this.txbMessageHeader.Location = new System.Drawing.Point(509, 106);
             this.txbMessageHeader.Multiline = true;
             this.txbMessageHeader.Name = "txbMessageHeader";
             this.txbMessageHeader.Size = new System.Drawing.Size(236, 48);
@@ -295,9 +298,9 @@
             this.btnSendMessage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSendMessage.Image = global::JEM.Properties.Resources._34px_sendMessage;
             this.btnSendMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSendMessage.Location = new System.Drawing.Point(553, 503);
+            this.btnSendMessage.Location = new System.Drawing.Point(540, 414);
             this.btnSendMessage.Name = "btnSendMessage";
-            this.btnSendMessage.Size = new System.Drawing.Size(148, 32);
+            this.btnSendMessage.Size = new System.Drawing.Size(174, 36);
             this.btnSendMessage.TabIndex = 41;
             this.btnSendMessage.Text = "Send Message";
             this.btnSendMessage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -308,7 +311,7 @@
             // 
             // txbMessageBody
             // 
-            this.txbMessageBody.Location = new System.Drawing.Point(509, 327);
+            this.txbMessageBody.Location = new System.Drawing.Point(509, 212);
             this.txbMessageBody.Multiline = true;
             this.txbMessageBody.Name = "txbMessageBody";
             this.txbMessageBody.Size = new System.Drawing.Size(236, 159);
@@ -325,9 +328,11 @@
             // lblTeStStartingBalance
             // 
             this.lblTeStStartingBalance.AutoSize = true;
+            this.lblTeStStartingBalance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTeStStartingBalance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblTeStStartingBalance.Location = new System.Drawing.Point(512, 31);
             this.lblTeStStartingBalance.Name = "lblTeStStartingBalance";
-            this.lblTeStStartingBalance.Size = new System.Drawing.Size(99, 16);
+            this.lblTeStStartingBalance.Size = new System.Drawing.Size(133, 22);
             this.lblTeStStartingBalance.TabIndex = 39;
             this.lblTeStStartingBalance.Text = "Add to Balance";
             // 
@@ -343,9 +348,11 @@
             // lblTeStRemainingBalance
             // 
             this.lblTeStRemainingBalance.AutoSize = true;
+            this.lblTeStRemainingBalance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTeStRemainingBalance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblTeStRemainingBalance.Location = new System.Drawing.Point(352, 376);
             this.lblTeStRemainingBalance.Name = "lblTeStRemainingBalance";
-            this.lblTeStRemainingBalance.Size = new System.Drawing.Size(53, 20);
+            this.lblTeStRemainingBalance.Size = new System.Drawing.Size(73, 28);
             this.lblTeStRemainingBalance.TabIndex = 34;
             this.lblTeStRemainingBalance.Text = "Balance";
             this.lblTeStRemainingBalance.UseCompatibleTextRendering = true;
@@ -369,45 +376,55 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblEmail.Location = new System.Drawing.Point(25, 229);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(41, 16);
+            this.lblEmail.Size = new System.Drawing.Size(57, 22);
             this.lblEmail.TabIndex = 29;
             this.lblEmail.Text = "Email";
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblAddress.Location = new System.Drawing.Point(25, 184);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(58, 16);
+            this.lblAddress.Size = new System.Drawing.Size(76, 22);
             this.lblAddress.TabIndex = 28;
             this.lblAddress.Text = "Address";
             // 
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
+            this.lblPhone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhone.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblPhone.Location = new System.Drawing.Point(25, 135);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(46, 16);
+            this.lblPhone.Size = new System.Drawing.Size(58, 22);
             this.lblPhone.TabIndex = 27;
             this.lblPhone.Text = "Phone";
             // 
             // lblGrade
             // 
             this.lblGrade.AutoSize = true;
+            this.lblGrade.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrade.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblGrade.Location = new System.Drawing.Point(25, 91);
             this.lblGrade.Name = "lblGrade";
-            this.lblGrade.Size = new System.Drawing.Size(45, 16);
+            this.lblGrade.Size = new System.Drawing.Size(59, 22);
             this.lblGrade.TabIndex = 25;
             this.lblGrade.Text = "Grade";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblName.Location = new System.Drawing.Point(25, 51);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(44, 16);
+            this.lblName.Size = new System.Drawing.Size(56, 22);
             this.lblName.TabIndex = 24;
             this.lblName.Text = "Name";
             // 
@@ -451,6 +468,7 @@
             // 
             this.grpButtons.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grpButtons.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.grpButtons.BackColor = System.Drawing.Color.Transparent;
             this.grpButtons.Controls.Add(this.btnTeStResetPassword);
             this.grpButtons.Controls.Add(this.btnTeStCreateStudent);
             this.grpButtons.Controls.Add(this.btnTeStUpdateStudent);
@@ -567,6 +585,8 @@
             // TeacherStudentForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.BackgroundImage = global::JEM.Properties.Resources.abstract_wallpaper;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1105, 793);
             this.Controls.Add(this.grpButtons);
             this.Controls.Add(this.grbStudentInfo);

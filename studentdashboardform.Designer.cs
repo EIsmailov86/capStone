@@ -213,6 +213,7 @@
             this.grbScheduleApp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbScheduleApp.AutoSize = true;
             this.grbScheduleApp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.grbScheduleApp.BackColor = System.Drawing.Color.Transparent;
             this.grbScheduleApp.Controls.Add(this.label1);
             this.grbScheduleApp.Controls.Add(this.cmbStDaTeacher);
             this.grbScheduleApp.Controls.Add(this.dtpStDaSessionDate);
@@ -288,6 +289,7 @@
             this.grbSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbSearch.AutoSize = true;
             this.grbSearch.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.grbSearch.BackColor = System.Drawing.Color.Transparent;
             this.grbSearch.Controls.Add(this.btnStDaFilterBySubject);
             this.grbSearch.Controls.Add(this.btnStDaFilterByDate);
             this.grbSearch.Controls.Add(this.cmbStDaFilterSubject);
@@ -508,6 +510,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::JEM.Properties.Resources.abstract_wallpaper;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 653);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblStDaRemainingBalance);

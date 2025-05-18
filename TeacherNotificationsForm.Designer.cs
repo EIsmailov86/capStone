@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grbNotifications = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.txbNotifications = new System.Windows.Forms.TextBox();
             this.cmbHeading = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -36,27 +37,26 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnTNSchedule = new System.Windows.Forms.Button();
+            this.btnTNMyStudent = new System.Windows.Forms.Button();
+            this.btnTNMyInfo = new System.Windows.Forms.Button();
+            this.btnTNDashboard = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pibTeNoTeacherPicture = new System.Windows.Forms.PictureBox();
             this.btnMyInfo = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnMyStudent = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnTNSchedule = new System.Windows.Forms.Button();
-            this.btnTNMyStudent = new System.Windows.Forms.Button();
-            this.btnTNMyInfo = new System.Windows.Forms.Button();
-            this.btnTNDashboard = new System.Windows.Forms.Button();
-            this.pibTeNoTeacherPicture = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grbNotifications.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibTeNoTeacherPicture)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,15 +64,33 @@
             // 
             this.grbNotifications.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.grbNotifications.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.grbNotifications.BackColor = System.Drawing.Color.Transparent;
             this.grbNotifications.Controls.Add(this.btnDelete);
             this.grbNotifications.Controls.Add(this.txbNotifications);
             this.grbNotifications.Controls.Add(this.cmbHeading);
+            this.grbNotifications.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grbNotifications.Location = new System.Drawing.Point(310, 111);
             this.grbNotifications.Name = "grbNotifications";
             this.grbNotifications.Size = new System.Drawing.Size(433, 410);
             this.grbNotifications.TabIndex = 7;
             this.grbNotifications.TabStop = false;
             this.grbNotifications.Text = "Notifications";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDelete.Image = global::JEM.Properties.Resources.smallDelete_trash;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(123, 339);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(198, 50);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete Message";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txbNotifications
             // 
@@ -151,93 +169,6 @@
             this.panel5.Size = new System.Drawing.Size(135, 653);
             this.panel5.TabIndex = 23;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.pibTeNoTeacherPicture);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(135, 128);
-            this.panel6.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
-            this.label3.Location = new System.Drawing.Point(40, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "JEM";
-            // 
-            // btnMyInfo
-            // 
-            this.btnMyInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyInfo.Location = new System.Drawing.Point(12, 259);
-            this.btnMyInfo.Name = "btnMyInfo";
-            this.btnMyInfo.Size = new System.Drawing.Size(114, 43);
-            this.btnMyInfo.TabIndex = 22;
-            this.btnMyInfo.Text = "My Info";
-            this.btnMyInfo.UseVisualStyleBackColor = true;
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.Location = new System.Drawing.Point(12, 189);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(114, 42);
-            this.btnDashboard.TabIndex = 21;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel3.Controls.Add(this.btnMyStudent);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(135, 473);
-            this.panel3.TabIndex = 2;
-            // 
-            // btnMyStudent
-            // 
-            this.btnMyStudent.Location = new System.Drawing.Point(9, 337);
-            this.btnMyStudent.Name = "btnMyStudent";
-            this.btnMyStudent.Size = new System.Drawing.Size(114, 42);
-            this.btnMyStudent.TabIndex = 23;
-            this.btnMyStudent.Text = "My Student";
-            this.btnMyStudent.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
-            this.label1.Location = new System.Drawing.Point(40, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "JEM";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Image = global::JEM.Properties.Resources.smallDelete_trash;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(123, 339);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(198, 50);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Delete Message";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // btnTNSchedule
             // 
             this.btnTNSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -314,6 +245,28 @@
             this.btnTNDashboard.UseVisualStyleBackColor = true;
             this.btnTNDashboard.Click += new System.EventHandler(this.btnTNDashboard_Click);
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.pibTeNoTeacherPicture);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(135, 128);
+            this.panel6.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
+            this.label3.Location = new System.Drawing.Point(40, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 19);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "JEM";
+            // 
             // pibTeNoTeacherPicture
             // 
             this.pibTeNoTeacherPicture.Image = global::JEM.Properties.Resources.user;
@@ -323,6 +276,56 @@
             this.pibTeNoTeacherPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pibTeNoTeacherPicture.TabIndex = 2;
             this.pibTeNoTeacherPicture.TabStop = false;
+            // 
+            // btnMyInfo
+            // 
+            this.btnMyInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyInfo.Location = new System.Drawing.Point(12, 259);
+            this.btnMyInfo.Name = "btnMyInfo";
+            this.btnMyInfo.Size = new System.Drawing.Size(114, 43);
+            this.btnMyInfo.TabIndex = 22;
+            this.btnMyInfo.Text = "My Info";
+            this.btnMyInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.Location = new System.Drawing.Point(12, 189);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(114, 42);
+            this.btnDashboard.TabIndex = 21;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel3.Controls.Add(this.btnMyStudent);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(135, 473);
+            this.panel3.TabIndex = 2;
+            // 
+            // btnMyStudent
+            // 
+            this.btnMyStudent.Location = new System.Drawing.Point(9, 337);
+            this.btnMyStudent.Name = "btnMyStudent";
+            this.btnMyStudent.Size = new System.Drawing.Size(114, 42);
+            this.btnMyStudent.TabIndex = 23;
+            this.btnMyStudent.Text = "My Student";
+            this.btnMyStudent.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(156)))), ((int)(((byte)(149)))));
+            this.label1.Location = new System.Drawing.Point(40, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 19);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "JEM";
             // 
             // pictureBox1
             // 
@@ -338,6 +341,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::JEM.Properties.Resources.abstract_wallpaper;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 653);
             this.Controls.Add(this.grbNotifications);
             this.Controls.Add(this.panel2);
@@ -352,9 +357,9 @@
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibTeNoTeacherPicture)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pibTeNoTeacherPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

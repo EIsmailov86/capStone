@@ -218,6 +218,7 @@
             // grbNotifications
             // 
             this.grbNotifications.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grbNotifications.BackColor = System.Drawing.Color.Transparent;
             this.grbNotifications.Controls.Add(this.btnDelete);
             this.grbNotifications.Controls.Add(this.txbNotifications);
             this.grbNotifications.Controls.Add(this.cmbHeading);
@@ -232,13 +233,14 @@
             // 
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Image = global::JEM.Properties.Resources.smallDelete_trash;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(69, 318);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(183, 65);
+            this.btnDelete.Size = new System.Drawing.Size(198, 65);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete Message";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseCompatibleTextRendering = true;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -266,6 +268,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::JEM.Properties.Resources.abstract_wallpaper;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 653);
             this.Controls.Add(this.grbNotifications);
             this.Controls.Add(this.panel1);

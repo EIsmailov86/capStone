@@ -102,6 +102,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.chkShowPassword);
             this.groupBox1.Controls.Add(this.btnRegisterTeacher);
             this.groupBox1.Controls.Add(this.btnRegisterStudent);
@@ -136,22 +137,27 @@
             // 
             // btnRegisterTeacher
             // 
-            this.btnRegisterTeacher.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRegisterTeacher.BackColor = System.Drawing.Color.Transparent;
             this.btnRegisterTeacher.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegisterTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegisterTeacher.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterTeacher.ForeColor = System.Drawing.Color.LightGoldenrodYellow;
             this.btnRegisterTeacher.Location = new System.Drawing.Point(316, 244);
             this.btnRegisterTeacher.Name = "btnRegisterTeacher";
             this.btnRegisterTeacher.Size = new System.Drawing.Size(156, 59);
             this.btnRegisterTeacher.TabIndex = 26;
             this.btnRegisterTeacher.Text = "Register Teacher";
+            this.btnRegisterTeacher.UseCompatibleTextRendering = true;
             this.btnRegisterTeacher.UseVisualStyleBackColor = false;
             this.btnRegisterTeacher.Click += new System.EventHandler(this.btnRegisterTeacher_Click);
             // 
             // btnRegisterStudent
             // 
-            this.btnRegisterStudent.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRegisterStudent.BackColor = System.Drawing.Color.Transparent;
             this.btnRegisterStudent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegisterStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegisterStudent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterStudent.ForeColor = System.Drawing.Color.LightGoldenrodYellow;
             this.btnRegisterStudent.Location = new System.Drawing.Point(113, 244);
             this.btnRegisterStudent.Name = "btnRegisterStudent";
             this.btnRegisterStudent.Size = new System.Drawing.Size(156, 59);
@@ -177,9 +183,12 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.LightGoldenrodYellow;
             this.btnLogin.Location = new System.Drawing.Point(213, 157);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(156, 59);
@@ -192,6 +201,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.ForeColor = System.Drawing.Color.LightGoldenrodYellow;
             this.lblPassword.Location = new System.Drawing.Point(109, 93);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(88, 22);
@@ -202,6 +212,7 @@
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.LightGoldenrodYellow;
             this.lblUserName.Location = new System.Drawing.Point(109, 12);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(98, 22);
@@ -212,6 +223,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::JEM.Properties.Resources.world_at_night;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 653);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);

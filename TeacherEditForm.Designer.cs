@@ -307,6 +307,7 @@
             this.grbStudentEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbStudentEdit.BackColor = System.Drawing.Color.Transparent;
             this.grbStudentEdit.Controls.Add(this.btnClear);
             this.grbStudentEdit.Controls.Add(this.btnUpdate);
             this.grbStudentEdit.Controls.Add(this.txbMyBio);
@@ -445,6 +446,7 @@
             // 
             this.btnTeEdUploadPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTeEdUploadPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTeEdUploadPicture.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnTeEdUploadPicture.Image = global::JEM.Properties.Resources._34px_uploadPic;
             this.btnTeEdUploadPicture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTeEdUploadPicture.Location = new System.Drawing.Point(6, 271);
@@ -467,10 +469,12 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.splitContainer1.Panel1.Controls.Add(this.grbStudentEdit);
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.splitContainer1.Panel2.Controls.Add(this.grbPhoto);
             this.splitContainer1.Size = new System.Drawing.Size(847, 622);
             this.splitContainer1.SplitterDistance = 546;
@@ -481,8 +485,10 @@
             this.grbPhoto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grbPhoto.BackColor = System.Drawing.Color.Transparent;
             this.grbPhoto.Controls.Add(this.btnTeEdUploadPicture);
             this.grbPhoto.Controls.Add(this.picTeEdTeacherPicture);
+            this.grbPhoto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.grbPhoto.Location = new System.Drawing.Point(43, 73);
             this.grbPhoto.Name = "grbPhoto";
             this.grbPhoto.Size = new System.Drawing.Size(200, 365);
@@ -494,6 +500,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::JEM.Properties.Resources.black_rock_stone_wall;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 653);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel2);
