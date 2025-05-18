@@ -176,7 +176,7 @@
             this.btnTDSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTDSchedule.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTDSchedule.FlatAppearance.BorderSize = 0;
-            this.btnTDSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTDSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTDSchedule.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnTDSchedule.Image = global::JEM.Properties.Resources.xxsmallcalendar_checkmark_schedule;
             this.btnTDSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -320,6 +320,7 @@
             this.grbTeDaSearchBox.Controls.Add(this.btnTeDaFilterbyDate);
             this.grbTeDaSearchBox.Controls.Add(this.cmbTeDaSubject);
             this.grbTeDaSearchBox.Controls.Add(this.cmbTeDaDate);
+            this.grbTeDaSearchBox.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbTeDaSearchBox.Location = new System.Drawing.Point(162, 326);
             this.grbTeDaSearchBox.Name = "grbTeDaSearchBox";
             this.grbTeDaSearchBox.Size = new System.Drawing.Size(326, 276);
@@ -331,10 +332,11 @@
             // 
             this.btnTeDaFilterbySubject.AutoSize = true;
             this.btnTeDaFilterbySubject.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTeDaFilterbySubject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTeDaFilterbySubject.Image = global::JEM.Properties.Resources._34px_searchsubject;
             this.btnTeDaFilterbySubject.Location = new System.Drawing.Point(209, 93);
             this.btnTeDaFilterbySubject.Name = "btnTeDaFilterbySubject";
-            this.btnTeDaFilterbySubject.Size = new System.Drawing.Size(40, 46);
+            this.btnTeDaFilterbySubject.Size = new System.Drawing.Size(42, 48);
             this.btnTeDaFilterbySubject.TabIndex = 12;
             this.btnTeDaFilterbySubject.UseCompatibleTextRendering = true;
             this.btnTeDaFilterbySubject.UseVisualStyleBackColor = true;
@@ -344,10 +346,11 @@
             // 
             this.btnTeDaFilterbyStudent.AutoSize = true;
             this.btnTeDaFilterbyStudent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTeDaFilterbyStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTeDaFilterbyStudent.Image = global::JEM.Properties.Resources._34px_studentsearch;
             this.btnTeDaFilterbyStudent.Location = new System.Drawing.Point(209, 160);
             this.btnTeDaFilterbyStudent.Name = "btnTeDaFilterbyStudent";
-            this.btnTeDaFilterbyStudent.Size = new System.Drawing.Size(40, 40);
+            this.btnTeDaFilterbyStudent.Size = new System.Drawing.Size(42, 42);
             this.btnTeDaFilterbyStudent.TabIndex = 14;
             this.btnTeDaFilterbyStudent.UseCompatibleTextRendering = true;
             this.btnTeDaFilterbyStudent.UseVisualStyleBackColor = true;
@@ -358,7 +361,7 @@
             this.cmbTeDaStudent.FormattingEnabled = true;
             this.cmbTeDaStudent.Location = new System.Drawing.Point(6, 174);
             this.cmbTeDaStudent.Name = "cmbTeDaStudent";
-            this.cmbTeDaStudent.Size = new System.Drawing.Size(200, 24);
+            this.cmbTeDaStudent.Size = new System.Drawing.Size(200, 27);
             this.cmbTeDaStudent.TabIndex = 13;
             this.cmbTeDaStudent.Text = "Filter by Student";
             this.cmbTeDaStudent.SelectedIndexChanged += new System.EventHandler(this.btnTeDaFilterbyStudent_Click);
@@ -367,10 +370,11 @@
             // 
             this.btnTeDaFilterbyDate.AutoSize = true;
             this.btnTeDaFilterbyDate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnTeDaFilterbyDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTeDaFilterbyDate.Image = global::JEM.Properties.Resources.xxx40px_search_by_Date;
             this.btnTeDaFilterbyDate.Location = new System.Drawing.Point(209, 25);
             this.btnTeDaFilterbyDate.Name = "btnTeDaFilterbyDate";
-            this.btnTeDaFilterbyDate.Size = new System.Drawing.Size(46, 46);
+            this.btnTeDaFilterbyDate.Size = new System.Drawing.Size(48, 48);
             this.btnTeDaFilterbyDate.TabIndex = 11;
             this.btnTeDaFilterbyDate.UseCompatibleTextRendering = true;
             this.btnTeDaFilterbyDate.UseVisualStyleBackColor = true;
@@ -381,7 +385,7 @@
             this.cmbTeDaSubject.FormattingEnabled = true;
             this.cmbTeDaSubject.Location = new System.Drawing.Point(6, 107);
             this.cmbTeDaSubject.Name = "cmbTeDaSubject";
-            this.cmbTeDaSubject.Size = new System.Drawing.Size(200, 24);
+            this.cmbTeDaSubject.Size = new System.Drawing.Size(200, 27);
             this.cmbTeDaSubject.TabIndex = 10;
             this.cmbTeDaSubject.Text = "Search by Subject";
             this.cmbTeDaSubject.SelectedIndexChanged += new System.EventHandler(this.btnTeDaFilterbySubject_Click);
@@ -392,7 +396,7 @@
             this.cmbTeDaDate.FormattingEnabled = true;
             this.cmbTeDaDate.Location = new System.Drawing.Point(6, 35);
             this.cmbTeDaDate.Name = "cmbTeDaDate";
-            this.cmbTeDaDate.Size = new System.Drawing.Size(200, 24);
+            this.cmbTeDaDate.Size = new System.Drawing.Size(200, 27);
             this.cmbTeDaDate.TabIndex = 9;
             this.cmbTeDaDate.Text = "Search by Date";
             this.cmbTeDaDate.SelectedIndexChanged += new System.EventHandler(this.btnTeDaFilterbyDate_Click);
@@ -404,6 +408,7 @@
             this.grbStudentInfo.BackColor = System.Drawing.Color.Transparent;
             this.grbStudentInfo.Controls.Add(this.txbTeDaBio);
             this.grbStudentInfo.Controls.Add(this.picTeDaStudentPicture);
+            this.grbStudentInfo.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbStudentInfo.Location = new System.Drawing.Point(566, 297);
             this.grbStudentInfo.Name = "grbStudentInfo";
             this.grbStudentInfo.Size = new System.Drawing.Size(353, 344);

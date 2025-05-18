@@ -160,27 +160,30 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.Location = new System.Drawing.Point(37, 90);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(36, 16);
+            this.lblDate.Size = new System.Drawing.Size(47, 22);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "Date";
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.Location = new System.Drawing.Point(35, 140);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(38, 16);
+            this.lblTime.Size = new System.Drawing.Size(50, 22);
             this.lblTime.TabIndex = 3;
             this.lblTime.Text = "Time";
             // 
             // lblSubject
             // 
             this.lblSubject.AutoSize = true;
+            this.lblSubject.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubject.Location = new System.Drawing.Point(35, 198);
             this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(52, 16);
+            this.lblSubject.Size = new System.Drawing.Size(69, 22);
             this.lblSubject.TabIndex = 4;
             this.lblSubject.Text = "Subject";
             // 
@@ -188,7 +191,7 @@
             // 
             this.dtpStDaSessionDate.Location = new System.Drawing.Point(132, 84);
             this.dtpStDaSessionDate.Name = "dtpStDaSessionDate";
-            this.dtpStDaSessionDate.Size = new System.Drawing.Size(200, 22);
+            this.dtpStDaSessionDate.Size = new System.Drawing.Size(200, 30);
             this.dtpStDaSessionDate.TabIndex = 5;
             this.dtpStDaSessionDate.ValueChanged += new System.EventHandler(this.SelectedRequestDateChanged);
             // 
@@ -197,7 +200,7 @@
             this.cmbStDaTime.FormattingEnabled = true;
             this.cmbStDaTime.Location = new System.Drawing.Point(132, 137);
             this.cmbStDaTime.Name = "cmbStDaTime";
-            this.cmbStDaTime.Size = new System.Drawing.Size(200, 24);
+            this.cmbStDaTime.Size = new System.Drawing.Size(200, 30);
             this.cmbStDaTime.TabIndex = 6;
             // 
             // cmbStDaSubject
@@ -205,7 +208,7 @@
             this.cmbStDaSubject.FormattingEnabled = true;
             this.cmbStDaSubject.Location = new System.Drawing.Point(132, 195);
             this.cmbStDaSubject.Name = "cmbStDaSubject";
-            this.cmbStDaSubject.Size = new System.Drawing.Size(200, 24);
+            this.cmbStDaSubject.Size = new System.Drawing.Size(200, 30);
             this.cmbStDaSubject.TabIndex = 7;
             // 
             // grbScheduleApp
@@ -223,9 +226,10 @@
             this.grbScheduleApp.Controls.Add(this.cmbStDaTime);
             this.grbScheduleApp.Controls.Add(this.lblDate);
             this.grbScheduleApp.Controls.Add(this.cmbStDaSubject);
+            this.grbScheduleApp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbScheduleApp.Location = new System.Drawing.Point(180, 342);
             this.grbScheduleApp.Name = "grbScheduleApp";
-            this.grbScheduleApp.Size = new System.Drawing.Size(338, 294);
+            this.grbScheduleApp.Size = new System.Drawing.Size(338, 302);
             this.grbScheduleApp.TabIndex = 10;
             this.grbScheduleApp.TabStop = false;
             this.grbScheduleApp.Text = "Request Session";
@@ -233,9 +237,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(35, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.Size = new System.Drawing.Size(73, 22);
             this.label1.TabIndex = 9;
             this.label1.Text = "Teacher";
             // 
@@ -244,7 +249,7 @@
             this.cmbStDaTeacher.FormattingEnabled = true;
             this.cmbStDaTeacher.Location = new System.Drawing.Point(132, 35);
             this.cmbStDaTeacher.Name = "cmbStDaTeacher";
-            this.cmbStDaTeacher.Size = new System.Drawing.Size(200, 24);
+            this.cmbStDaTeacher.Size = new System.Drawing.Size(200, 30);
             this.cmbStDaTeacher.TabIndex = 10;
             this.cmbStDaTeacher.SelectedIndexChanged += new System.EventHandler(this.SelectedTeacherChanged);
             // 
@@ -294,9 +299,10 @@
             this.grbSearch.Controls.Add(this.btnStDaFilterByDate);
             this.grbSearch.Controls.Add(this.cmbStDaFilterSubject);
             this.grbSearch.Controls.Add(this.cmbStDaFilterDate);
-            this.grbSearch.Location = new System.Drawing.Point(648, 455);
+            this.grbSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbSearch.Location = new System.Drawing.Point(649, 444);
             this.grbSearch.Name = "grbSearch";
-            this.grbSearch.Size = new System.Drawing.Size(264, 192);
+            this.grbSearch.Size = new System.Drawing.Size(264, 200);
             this.grbSearch.TabIndex = 15;
             this.grbSearch.TabStop = false;
             this.grbSearch.Text = "Search";
@@ -333,7 +339,7 @@
             this.cmbStDaFilterSubject.FormattingEnabled = true;
             this.cmbStDaFilterSubject.Location = new System.Drawing.Point(6, 136);
             this.cmbStDaFilterSubject.Name = "cmbStDaFilterSubject";
-            this.cmbStDaFilterSubject.Size = new System.Drawing.Size(200, 24);
+            this.cmbStDaFilterSubject.Size = new System.Drawing.Size(200, 30);
             this.cmbStDaFilterSubject.TabIndex = 10;
             this.cmbStDaFilterSubject.Text = "Filter by Subject";
             // 
@@ -342,7 +348,7 @@
             this.cmbStDaFilterDate.FormattingEnabled = true;
             this.cmbStDaFilterDate.Location = new System.Drawing.Point(6, 52);
             this.cmbStDaFilterDate.Name = "cmbStDaFilterDate";
-            this.cmbStDaFilterDate.Size = new System.Drawing.Size(200, 24);
+            this.cmbStDaFilterDate.Size = new System.Drawing.Size(200, 30);
             this.cmbStDaFilterDate.TabIndex = 9;
             this.cmbStDaFilterDate.Text = "Filter by Date";
             // 
@@ -358,9 +364,11 @@
             // 
             this.lblStDaRemainingBalance.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblStDaRemainingBalance.AutoSize = true;
-            this.lblStDaRemainingBalance.Location = new System.Drawing.Point(692, 358);
+            this.lblStDaRemainingBalance.BackColor = System.Drawing.Color.Transparent;
+            this.lblStDaRemainingBalance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStDaRemainingBalance.Location = new System.Drawing.Point(691, 342);
             this.lblStDaRemainingBalance.Name = "lblStDaRemainingBalance";
-            this.lblStDaRemainingBalance.Size = new System.Drawing.Size(125, 16);
+            this.lblStDaRemainingBalance.Size = new System.Drawing.Size(163, 22);
             this.lblStDaRemainingBalance.TabIndex = 17;
             this.lblStDaRemainingBalance.Text = "Remaining Balance";
             // 

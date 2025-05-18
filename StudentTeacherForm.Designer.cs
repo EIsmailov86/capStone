@@ -187,10 +187,11 @@
             this.grbTeacherInfo.Controls.Add(this.picStTeTeacherPicture);
             this.grbTeacherInfo.Controls.Add(this.txbStTeInfoandBio);
             this.grbTeacherInfo.Controls.Add(this.cmbTeacher);
+            this.grbTeacherInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbTeacherInfo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grbTeacherInfo.Location = new System.Drawing.Point(232, 88);
             this.grbTeacherInfo.Name = "grbTeacherInfo";
-            this.grbTeacherInfo.Size = new System.Drawing.Size(581, 462);
+            this.grbTeacherInfo.Size = new System.Drawing.Size(581, 470);
             this.grbTeacherInfo.TabIndex = 13;
             this.grbTeacherInfo.TabStop = false;
             this.grbTeacherInfo.Text = "Teacher Info";
@@ -203,21 +204,22 @@
             this.txbMessageHeader.Name = "txbMessageHeader";
             this.txbMessageHeader.Size = new System.Drawing.Size(274, 33);
             this.txbMessageHeader.TabIndex = 9;
-            this.txbMessageHeader.Text = "Message Teacher Header";
             // 
             // btnSendMessage
             // 
             this.btnSendMessage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSendMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendMessage.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendMessage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSendMessage.Image = global::JEM.Properties.Resources._34px_sendMessage;
-            this.btnSendMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSendMessage.Location = new System.Drawing.Point(335, 394);
+            this.btnSendMessage.Location = new System.Drawing.Point(301, 394);
             this.btnSendMessage.Name = "btnSendMessage";
-            this.btnSendMessage.Size = new System.Drawing.Size(180, 47);
+            this.btnSendMessage.Size = new System.Drawing.Size(274, 47);
             this.btnSendMessage.TabIndex = 8;
             this.btnSendMessage.Text = "Send Message";
             this.btnSendMessage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSendMessage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSendMessage.UseCompatibleTextRendering = true;
             this.btnSendMessage.UseVisualStyleBackColor = true;
             this.btnSendMessage.Click += new System.EventHandler(this.btnSendMessage_Click);
             // 
@@ -228,7 +230,6 @@
             this.txbMessageBody.Name = "txbMessageBody";
             this.txbMessageBody.Size = new System.Drawing.Size(274, 139);
             this.txbMessageBody.TabIndex = 7;
-            this.txbMessageBody.Text = "Message Teacher Body";
             // 
             // picStTeTeacherPicture
             // 
@@ -254,7 +255,7 @@
             this.cmbTeacher.FormattingEnabled = true;
             this.cmbTeacher.Location = new System.Drawing.Point(38, 47);
             this.cmbTeacher.Name = "cmbTeacher";
-            this.cmbTeacher.Size = new System.Drawing.Size(201, 24);
+            this.cmbTeacher.Size = new System.Drawing.Size(201, 30);
             this.cmbTeacher.TabIndex = 4;
             this.cmbTeacher.Text = "Teachers";
             this.cmbTeacher.SelectedIndexChanged += new System.EventHandler(this.cmbTeacher_SelectedIndexChanged);

@@ -68,6 +68,7 @@
             this.grbNotifications.Controls.Add(this.btnDelete);
             this.grbNotifications.Controls.Add(this.txbNotifications);
             this.grbNotifications.Controls.Add(this.cmbHeading);
+            this.grbNotifications.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbNotifications.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grbNotifications.Location = new System.Drawing.Point(310, 111);
             this.grbNotifications.Name = "grbNotifications";
@@ -107,7 +108,7 @@
             this.cmbHeading.FormattingEnabled = true;
             this.cmbHeading.Location = new System.Drawing.Point(123, 64);
             this.cmbHeading.Name = "cmbHeading";
-            this.cmbHeading.Size = new System.Drawing.Size(198, 24);
+            this.cmbHeading.Size = new System.Drawing.Size(198, 30);
             this.cmbHeading.TabIndex = 1;
             this.cmbHeading.Text = "Heading";
             this.cmbHeading.SelectedIndexChanged += new System.EventHandler(this.LoadMessageBody);

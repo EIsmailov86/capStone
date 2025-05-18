@@ -30,14 +30,6 @@
         {
             this.grbScheduleApp = new System.Windows.Forms.GroupBox();
             this.btnTeShDeleteSession = new System.Windows.Forms.Button();
-            this.dgvTeShSchedule = new System.Windows.Forms.DataGridView();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbsTeShStudents = new System.Windows.Forms.ListBox();
             this.btnTeShUpdateCost = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,6 +41,14 @@
             this.cmbTeShTime = new System.Windows.Forms.ComboBox();
             this.lblDate = new System.Windows.Forms.Label();
             this.cmbTeShTScheduleSubject = new System.Windows.Forms.ComboBox();
+            this.dgvTeShSchedule = new System.Windows.Forms.DataGridView();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -80,11 +80,11 @@
             // 
             // grbScheduleApp
             // 
-            this.grbScheduleApp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.grbScheduleApp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grbScheduleApp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.grbScheduleApp.BackColor = System.Drawing.Color.Transparent;
             this.grbScheduleApp.Controls.Add(this.btnTeShDeleteSession);
-            this.grbScheduleApp.Controls.Add(this.dgvTeShSchedule);
             this.grbScheduleApp.Controls.Add(this.lbsTeShStudents);
             this.grbScheduleApp.Controls.Add(this.btnTeShUpdateCost);
             this.grbScheduleApp.Controls.Add(this.label2);
@@ -96,11 +96,12 @@
             this.grbScheduleApp.Controls.Add(this.cmbTeShTime);
             this.grbScheduleApp.Controls.Add(this.lblDate);
             this.grbScheduleApp.Controls.Add(this.cmbTeShTScheduleSubject);
+            this.grbScheduleApp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbScheduleApp.ForeColor = System.Drawing.Color.LightYellow;
             this.grbScheduleApp.Location = new System.Drawing.Point(168, 65);
             this.grbScheduleApp.MaximumSize = new System.Drawing.Size(800, 600);
             this.grbScheduleApp.Name = "grbScheduleApp";
-            this.grbScheduleApp.Size = new System.Drawing.Size(793, 560);
+            this.grbScheduleApp.Size = new System.Drawing.Size(793, 305);
             this.grbScheduleApp.TabIndex = 19;
             this.grbScheduleApp.TabStop = false;
             this.grbScheduleApp.Text = "Schedule Appointment";
@@ -109,8 +110,9 @@
             // 
             this.btnTeShDeleteSession.BackColor = System.Drawing.Color.Transparent;
             this.btnTeShDeleteSession.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTeShDeleteSession.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTeShDeleteSession.ForeColor = System.Drawing.Color.LightYellow;
+            this.btnTeShDeleteSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeShDeleteSession.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTeShDeleteSession.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnTeShDeleteSession.Image = global::JEM.Properties.Resources.smallDelete_trash;
             this.btnTeShDeleteSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTeShDeleteSession.Location = new System.Drawing.Point(612, 233);
@@ -119,15 +121,134 @@
             this.btnTeShDeleteSession.TabIndex = 21;
             this.btnTeShDeleteSession.Text = "Delete Session";
             this.btnTeShDeleteSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeShDeleteSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTeShDeleteSession.UseCompatibleTextRendering = true;
             this.btnTeShDeleteSession.UseVisualStyleBackColor = false;
             this.btnTeShDeleteSession.Click += new System.EventHandler(this.btnTeShDeleteSession_Click);
             // 
+            // lbsTeShStudents
+            // 
+            this.lbsTeShStudents.FormattingEnabled = true;
+            this.lbsTeShStudents.ItemHeight = 22;
+            this.lbsTeShStudents.Location = new System.Drawing.Point(370, 23);
+            this.lbsTeShStudents.Name = "lbsTeShStudents";
+            this.lbsTeShStudents.Size = new System.Drawing.Size(236, 268);
+            this.lbsTeShStudents.TabIndex = 20;
+            this.lbsTeShStudents.SelectedIndexChanged += new System.EventHandler(this.StudentSelectedIndexChanged);
+            // 
+            // btnTeShUpdateCost
+            // 
+            this.btnTeShUpdateCost.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTeShUpdateCost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeShUpdateCost.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTeShUpdateCost.ForeColor = System.Drawing.Color.Black;
+            this.btnTeShUpdateCost.Image = global::JEM.Properties.Resources._34px_updateCost;
+            this.btnTeShUpdateCost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeShUpdateCost.Location = new System.Drawing.Point(209, 233);
+            this.btnTeShUpdateCost.Name = "btnTeShUpdateCost";
+            this.btnTeShUpdateCost.Size = new System.Drawing.Size(155, 50);
+            this.btnTeShUpdateCost.TabIndex = 11;
+            this.btnTeShUpdateCost.Text = "Update Cost";
+            this.btnTeShUpdateCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeShUpdateCost.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTeShUpdateCost.UseCompatibleTextRendering = true;
+            this.btnTeShUpdateCost.UseVisualStyleBackColor = true;
+            this.btnTeShUpdateCost.Click += new System.EventHandler(this.btnTeShUpdateCost_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.LightYellow;
+            this.label2.Location = new System.Drawing.Point(35, 193);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Session Cost";
+            // 
+            // txbTeShSessionCost
+            // 
+            this.txbTeShSessionCost.Location = new System.Drawing.Point(150, 189);
+            this.txbTeShSessionCost.Name = "txbTeShSessionCost";
+            this.txbTeShSessionCost.Size = new System.Drawing.Size(182, 30);
+            this.txbTeShSessionCost.TabIndex = 9;
+            // 
+            // dtpTeShDateTime
+            // 
+            this.dtpTeShDateTime.Location = new System.Drawing.Point(132, 37);
+            this.dtpTeShDateTime.Name = "dtpTeShDateTime";
+            this.dtpTeShDateTime.Size = new System.Drawing.Size(200, 30);
+            this.dtpTeShDateTime.TabIndex = 5;
+            this.dtpTeShDateTime.ValueChanged += new System.EventHandler(this.SelectedDateChange);
+            // 
+            // lblSubject
+            // 
+            this.lblSubject.AutoSize = true;
+            this.lblSubject.ForeColor = System.Drawing.Color.LightYellow;
+            this.lblSubject.Location = new System.Drawing.Point(35, 145);
+            this.lblSubject.Name = "lblSubject";
+            this.lblSubject.Size = new System.Drawing.Size(69, 22);
+            this.lblSubject.TabIndex = 4;
+            this.lblSubject.Text = "Subject";
+            // 
+            // btnTeShScheduleSession
+            // 
+            this.btnTeShScheduleSession.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTeShScheduleSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTeShScheduleSession.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTeShScheduleSession.ForeColor = System.Drawing.Color.Black;
+            this.btnTeShScheduleSession.Image = global::JEM.Properties.Resources._34px_person_clock_calendar;
+            this.btnTeShScheduleSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTeShScheduleSession.Location = new System.Drawing.Point(19, 233);
+            this.btnTeShScheduleSession.Name = "btnTeShScheduleSession";
+            this.btnTeShScheduleSession.Size = new System.Drawing.Size(184, 50);
+            this.btnTeShScheduleSession.TabIndex = 8;
+            this.btnTeShScheduleSession.Text = "Schedule Session";
+            this.btnTeShScheduleSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTeShScheduleSession.UseVisualStyleBackColor = true;
+            this.btnTeShScheduleSession.Click += new System.EventHandler(this.btnTeShScheduleSession_Click);
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.ForeColor = System.Drawing.Color.LightYellow;
+            this.lblTime.Location = new System.Drawing.Point(35, 93);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(50, 22);
+            this.lblTime.TabIndex = 3;
+            this.lblTime.Text = "Time";
+            // 
+            // cmbTeShTime
+            // 
+            this.cmbTeShTime.FormattingEnabled = true;
+            this.cmbTeShTime.Location = new System.Drawing.Point(132, 85);
+            this.cmbTeShTime.Name = "cmbTeShTime";
+            this.cmbTeShTime.Size = new System.Drawing.Size(200, 30);
+            this.cmbTeShTime.TabIndex = 6;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.ForeColor = System.Drawing.Color.LightYellow;
+            this.lblDate.Location = new System.Drawing.Point(35, 42);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(47, 22);
+            this.lblDate.TabIndex = 2;
+            this.lblDate.Text = "Date";
+            // 
+            // cmbTeShTScheduleSubject
+            // 
+            this.cmbTeShTScheduleSubject.FormattingEnabled = true;
+            this.cmbTeShTScheduleSubject.Location = new System.Drawing.Point(132, 137);
+            this.cmbTeShTScheduleSubject.Name = "cmbTeShTScheduleSubject";
+            this.cmbTeShTScheduleSubject.Size = new System.Drawing.Size(200, 30);
+            this.cmbTeShTScheduleSubject.TabIndex = 7;
+            // 
             // dgvTeShSchedule
             // 
             this.dgvTeShSchedule.AllowUserToOrderColumns = true;
-            this.dgvTeShSchedule.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgvTeShSchedule.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTeShSchedule.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
             this.dgvTeShSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTeShSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Subject,
@@ -139,12 +260,12 @@
             this.Column4});
             this.dgvTeShSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvTeShSchedule.GridColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dgvTeShSchedule.Location = new System.Drawing.Point(6, 328);
+            this.dgvTeShSchedule.Location = new System.Drawing.Point(168, 415);
             this.dgvTeShSchedule.Name = "dgvTeShSchedule";
             this.dgvTeShSchedule.ReadOnly = true;
             this.dgvTeShSchedule.RowHeadersWidth = 51;
             this.dgvTeShSchedule.RowTemplate.Height = 24;
-            this.dgvTeShSchedule.Size = new System.Drawing.Size(775, 226);
+            this.dgvTeShSchedule.Size = new System.Drawing.Size(793, 226);
             this.dgvTeShSchedule.TabIndex = 20;
             // 
             // Subject
@@ -202,122 +323,6 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Width = 125;
-            // 
-            // lbsTeShStudents
-            // 
-            this.lbsTeShStudents.FormattingEnabled = true;
-            this.lbsTeShStudents.ItemHeight = 16;
-            this.lbsTeShStudents.Location = new System.Drawing.Point(370, 23);
-            this.lbsTeShStudents.Name = "lbsTeShStudents";
-            this.lbsTeShStudents.Size = new System.Drawing.Size(236, 276);
-            this.lbsTeShStudents.TabIndex = 20;
-            this.lbsTeShStudents.SelectedIndexChanged += new System.EventHandler(this.StudentSelectedIndexChanged);
-            // 
-            // btnTeShUpdateCost
-            // 
-            this.btnTeShUpdateCost.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTeShUpdateCost.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTeShUpdateCost.ForeColor = System.Drawing.Color.LightYellow;
-            this.btnTeShUpdateCost.Image = global::JEM.Properties.Resources._34px_updateCost;
-            this.btnTeShUpdateCost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeShUpdateCost.Location = new System.Drawing.Point(209, 233);
-            this.btnTeShUpdateCost.Name = "btnTeShUpdateCost";
-            this.btnTeShUpdateCost.Size = new System.Drawing.Size(155, 50);
-            this.btnTeShUpdateCost.TabIndex = 11;
-            this.btnTeShUpdateCost.Text = "Update Cost";
-            this.btnTeShUpdateCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeShUpdateCost.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeShUpdateCost.UseCompatibleTextRendering = true;
-            this.btnTeShUpdateCost.UseVisualStyleBackColor = true;
-            this.btnTeShUpdateCost.Click += new System.EventHandler(this.btnTeShUpdateCost_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.LightYellow;
-            this.label2.Location = new System.Drawing.Point(35, 192);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 16);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Session Cost";
-            // 
-            // txbTeShSessionCost
-            // 
-            this.txbTeShSessionCost.Location = new System.Drawing.Point(132, 189);
-            this.txbTeShSessionCost.Name = "txbTeShSessionCost";
-            this.txbTeShSessionCost.Size = new System.Drawing.Size(200, 22);
-            this.txbTeShSessionCost.TabIndex = 9;
-            // 
-            // dtpTeShDateTime
-            // 
-            this.dtpTeShDateTime.Location = new System.Drawing.Point(132, 37);
-            this.dtpTeShDateTime.Name = "dtpTeShDateTime";
-            this.dtpTeShDateTime.Size = new System.Drawing.Size(200, 22);
-            this.dtpTeShDateTime.TabIndex = 5;
-            this.dtpTeShDateTime.ValueChanged += new System.EventHandler(this.SelectedDateChange);
-            // 
-            // lblSubject
-            // 
-            this.lblSubject.AutoSize = true;
-            this.lblSubject.ForeColor = System.Drawing.Color.LightYellow;
-            this.lblSubject.Location = new System.Drawing.Point(35, 145);
-            this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Size = new System.Drawing.Size(52, 16);
-            this.lblSubject.TabIndex = 4;
-            this.lblSubject.Text = "Subject";
-            // 
-            // btnTeShScheduleSession
-            // 
-            this.btnTeShScheduleSession.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTeShScheduleSession.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTeShScheduleSession.ForeColor = System.Drawing.Color.LightYellow;
-            this.btnTeShScheduleSession.Image = global::JEM.Properties.Resources._34px_person_clock_calendar;
-            this.btnTeShScheduleSession.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTeShScheduleSession.Location = new System.Drawing.Point(19, 233);
-            this.btnTeShScheduleSession.Name = "btnTeShScheduleSession";
-            this.btnTeShScheduleSession.Size = new System.Drawing.Size(184, 50);
-            this.btnTeShScheduleSession.TabIndex = 8;
-            this.btnTeShScheduleSession.Text = "Schedule Session";
-            this.btnTeShScheduleSession.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTeShScheduleSession.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTeShScheduleSession.UseVisualStyleBackColor = true;
-            this.btnTeShScheduleSession.Click += new System.EventHandler(this.btnTeShScheduleSession_Click);
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.ForeColor = System.Drawing.Color.LightYellow;
-            this.lblTime.Location = new System.Drawing.Point(35, 93);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(38, 16);
-            this.lblTime.TabIndex = 3;
-            this.lblTime.Text = "Time";
-            // 
-            // cmbTeShTime
-            // 
-            this.cmbTeShTime.FormattingEnabled = true;
-            this.cmbTeShTime.Location = new System.Drawing.Point(132, 85);
-            this.cmbTeShTime.Name = "cmbTeShTime";
-            this.cmbTeShTime.Size = new System.Drawing.Size(200, 24);
-            this.cmbTeShTime.TabIndex = 6;
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.ForeColor = System.Drawing.Color.LightYellow;
-            this.lblDate.Location = new System.Drawing.Point(35, 42);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(36, 16);
-            this.lblDate.TabIndex = 2;
-            this.lblDate.Text = "Date";
-            // 
-            // cmbTeShTScheduleSubject
-            // 
-            this.cmbTeShTScheduleSubject.FormattingEnabled = true;
-            this.cmbTeShTScheduleSubject.Location = new System.Drawing.Point(132, 137);
-            this.cmbTeShTScheduleSubject.Name = "cmbTeShTScheduleSubject";
-            this.cmbTeShTScheduleSubject.Size = new System.Drawing.Size(200, 24);
-            this.cmbTeShTScheduleSubject.TabIndex = 7;
             // 
             // panel2
             // 
@@ -552,6 +557,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 653);
             this.Controls.Add(this.grbScheduleApp);
+            this.Controls.Add(this.dgvTeShSchedule);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "TeacherSchedule";

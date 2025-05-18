@@ -51,17 +51,17 @@ namespace JEM
 
             // this is the original connection string to the mysql workbench version, no touchy
             //LOCAL
-            string connectionString = $"Server=127.0.0.1;Database=jem_jed;Uid=root;Pwd=mysql;";
+            //string connectionString = $"Server=127.0.0.1;Database=jem_jed;Uid=root;Pwd=mysql;";
 
 
             // New logic for connecting remotely
             // We will need to whitelist the ip for each groupmember and especially for eric
-            //string server = "82.163.176.124";
-            //string database = "jem_capstonedbFinal";
-            //string uid = "jem_admin";
-            //string password = "U=)IZKf-aWzj";
+            string server = "82.163.176.124";
+            string database = "jem_capstonedbFinal";
+            string uid = "jem_admin";
+            string password = "U=)IZKf-aWzj";
             //REMOTE
-            //string connectionString = "SERVER=" + server + "; PORT = 3306 ;" + "DATABASE=" + database + ";" + "Uid=" + uid + ";" + "PASSWORD=" + password + ";";
+            string connectionString = "SERVER=" + server + "; PORT = 3306 ;" + "DATABASE=" + database + ";" + "Uid=" + uid + ";" + "PASSWORD=" + password + ";";
 
             MySqlConnection dbConnection = new MySqlConnection(connectionString);
             dbConnection.Open();

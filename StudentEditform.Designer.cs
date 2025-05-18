@@ -85,6 +85,7 @@
             this.grbStudentEdit.Controls.Add(this.txbAddress);
             this.grbStudentEdit.Controls.Add(this.txbEmail);
             this.grbStudentEdit.Controls.Add(this.txbName);
+            this.grbStudentEdit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbStudentEdit.Location = new System.Drawing.Point(209, 128);
             this.grbStudentEdit.Name = "grbStudentEdit";
             this.grbStudentEdit.Size = new System.Drawing.Size(511, 400);
@@ -94,13 +95,15 @@
             // 
             // btnClear
             // 
-            this.btnClear.BackgroundImage = global::JEM.Properties.Resources.smallClearPic;
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Image = global::JEM.Properties.Resources.smallClearPic;
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(309, 295);
+            this.btnClear.Location = new System.Drawing.Point(299, 295);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(179, 50);
+            this.btnClear.Size = new System.Drawing.Size(176, 50);
             this.btnClear.TabIndex = 17;
             this.btnClear.Text = "Clear Fields";
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -112,12 +115,14 @@
             // btnUpdate
             // 
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Image = global::JEM.Properties.Resources._34px_updateInfo;
             this.btnUpdate.Location = new System.Drawing.Point(33, 295);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(219, 50);
             this.btnUpdate.TabIndex = 16;
             this.btnUpdate.Text = "Update Student Info";
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUpdate.UseCompatibleTextRendering = true;
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -137,7 +142,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Location = new System.Drawing.Point(30, 221);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(41, 16);
+            this.lblEmail.Size = new System.Drawing.Size(57, 22);
             this.lblEmail.TabIndex = 11;
             this.lblEmail.Text = "Email";
             // 
@@ -146,7 +151,7 @@
             this.lblAddress.AutoSize = true;
             this.lblAddress.Location = new System.Drawing.Point(30, 176);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(58, 16);
+            this.lblAddress.Size = new System.Drawing.Size(76, 22);
             this.lblAddress.TabIndex = 10;
             this.lblAddress.Text = "Address";
             // 
@@ -155,7 +160,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Location = new System.Drawing.Point(30, 127);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(46, 16);
+            this.lblPhone.Size = new System.Drawing.Size(58, 22);
             this.lblPhone.TabIndex = 9;
             this.lblPhone.Text = "Phone";
             // 
@@ -164,7 +169,7 @@
             this.lblGrade.AutoSize = true;
             this.lblGrade.Location = new System.Drawing.Point(30, 77);
             this.lblGrade.Name = "lblGrade";
-            this.lblGrade.Size = new System.Drawing.Size(45, 16);
+            this.lblGrade.Size = new System.Drawing.Size(59, 22);
             this.lblGrade.TabIndex = 7;
             this.lblGrade.Text = "Grade";
             // 
@@ -174,7 +179,7 @@
             this.lblName.ForeColor = System.Drawing.Color.Lavender;
             this.lblName.Location = new System.Drawing.Point(30, 37);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(44, 16);
+            this.lblName.Size = new System.Drawing.Size(56, 22);
             this.lblName.TabIndex = 6;
             this.lblName.Text = "Name";
             // 
@@ -182,7 +187,7 @@
             // 
             this.txbPhone.Location = new System.Drawing.Point(131, 124);
             this.txbPhone.Name = "txbPhone";
-            this.txbPhone.Size = new System.Drawing.Size(121, 22);
+            this.txbPhone.Size = new System.Drawing.Size(121, 30);
             this.txbPhone.TabIndex = 5;
             // 
             // cmbGrade
@@ -190,28 +195,28 @@
             this.cmbGrade.FormattingEnabled = true;
             this.cmbGrade.Location = new System.Drawing.Point(131, 69);
             this.cmbGrade.Name = "cmbGrade";
-            this.cmbGrade.Size = new System.Drawing.Size(121, 24);
+            this.cmbGrade.Size = new System.Drawing.Size(121, 30);
             this.cmbGrade.TabIndex = 3;
             // 
             // txbAddress
             // 
             this.txbAddress.Location = new System.Drawing.Point(131, 170);
             this.txbAddress.Name = "txbAddress";
-            this.txbAddress.Size = new System.Drawing.Size(121, 22);
+            this.txbAddress.Size = new System.Drawing.Size(121, 30);
             this.txbAddress.TabIndex = 2;
             // 
             // txbEmail
             // 
             this.txbEmail.Location = new System.Drawing.Point(131, 215);
             this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(121, 22);
+            this.txbEmail.Size = new System.Drawing.Size(121, 30);
             this.txbEmail.TabIndex = 1;
             // 
             // txbName
             // 
             this.txbName.Location = new System.Drawing.Point(131, 32);
             this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(121, 22);
+            this.txbName.Size = new System.Drawing.Size(121, 30);
             this.txbName.TabIndex = 0;
             // 
             // panel1
@@ -248,6 +253,7 @@
             this.btnSEDMyInfo.FlatAppearance.BorderSize = 0;
             this.btnSEDMyInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSEDMyInfo.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSEDMyInfo.Image = global::JEM.Properties.Resources.xxsmallsettings_black;
             this.btnSEDMyInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSEDMyInfo.Location = new System.Drawing.Point(0, 611);
             this.btnSEDMyInfo.Name = "btnSEDMyInfo";
@@ -266,6 +272,7 @@
             this.btnSEDNotifications.FlatAppearance.BorderSize = 0;
             this.btnSEDNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSEDNotifications.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSEDNotifications.Image = global::JEM.Properties.Resources.xxsmallnotification;
             this.btnSEDNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSEDNotifications.Location = new System.Drawing.Point(0, 212);
             this.btnSEDNotifications.Name = "btnSEDNotifications";
@@ -284,6 +291,7 @@
             this.btnSEDMyTeacher.FlatAppearance.BorderSize = 0;
             this.btnSEDMyTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSEDMyTeacher.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSEDMyTeacher.Image = global::JEM.Properties.Resources.xxsmallteacher;
             this.btnSEDMyTeacher.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSEDMyTeacher.Location = new System.Drawing.Point(0, 170);
             this.btnSEDMyTeacher.Name = "btnSEDMyTeacher";
@@ -300,8 +308,9 @@
             this.btnSEDDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSEDDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSEDDashboard.FlatAppearance.BorderSize = 0;
-            this.btnSEDDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSEDDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSEDDashboard.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSEDDashboard.Image = global::JEM.Properties.Resources.xxsmall_home_black_square;
             this.btnSEDDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSEDDashboard.Location = new System.Drawing.Point(0, 128);
             this.btnSEDDashboard.Name = "btnSEDDashboard";
@@ -396,17 +405,21 @@
             // btnStEdUploadPicture
             // 
             this.btnStEdUploadPicture.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnStEdUploadPicture.BackColor = System.Drawing.Color.Transparent;
             this.btnStEdUploadPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStEdUploadPicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStEdUploadPicture.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStEdUploadPicture.Image = global::JEM.Properties.Resources._34px_uploadPic;
             this.btnStEdUploadPicture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStEdUploadPicture.Location = new System.Drawing.Point(763, 478);
             this.btnStEdUploadPicture.Name = "btnStEdUploadPicture";
-            this.btnStEdUploadPicture.Size = new System.Drawing.Size(180, 50);
+            this.btnStEdUploadPicture.Size = new System.Drawing.Size(192, 50);
             this.btnStEdUploadPicture.TabIndex = 3;
             this.btnStEdUploadPicture.Text = "Upload Picture";
             this.btnStEdUploadPicture.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStEdUploadPicture.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStEdUploadPicture.UseCompatibleTextRendering = true;
-            this.btnStEdUploadPicture.UseVisualStyleBackColor = true;
+            this.btnStEdUploadPicture.UseVisualStyleBackColor = false;
             this.btnStEdUploadPicture.Click += new System.EventHandler(this.btnStEdUploadPicture_Click);
             // 
             // picStEdStudentPicture
